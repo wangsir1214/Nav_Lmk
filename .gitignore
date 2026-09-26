@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Logs and temp
+*.log
+tmp/
+temp/
+.cache/
+
+# Large data
+data/raw/
+data/images/
+data/streetview/
+data/model_weights/
+model_weights/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Large arrays / embeddings
+*.npy
+*.npz
+*.parquet
+*.h5
+*.hdf5
+
+# Outputs that may be large
+outputs/raw/
+outputs/intermediate/
+runs/
+wandb/
+
+# Research synchronization repository: keep raw conversations and binary assets local/server-side
+Chats/
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.pdf
+*.pt
+*.pth
+*.safetensors
+*.dll
+*.exe
+*.pyd
+*.pyc
+01_Navigational_Landmarkness_Cognitive_Map/_audit_outputs/figures/
+01_Navigational_Landmarkness_Cognitive_Map/_audit_work/feasibility_deps/
+
+# Keep summaries, configs, samples
+!outputs/README.md
+!outputs/summary/
+!outputs/tables/
+!outputs/figures/
+!outputs/cases/
+!data/samples/

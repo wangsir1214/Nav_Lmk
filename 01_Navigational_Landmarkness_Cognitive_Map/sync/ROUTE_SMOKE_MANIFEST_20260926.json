@@ -1,0 +1,68 @@
+{
+  "manifest_id": "paris_route_qwen_smoke_v1_20260926",
+  "status": "candidate_smoke_not_gold",
+  "city": "Paris",
+  "image_root_server": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per",
+  "image_pattern": "{panoid}_{view_index}.jpg",
+  "heading_formula": "(heading_from_api + 90 * view_index) mod 360",
+  "source_steps": "01_Navigational_Landmarkness_Cognitive_Map/_audit_outputs/candidate_route_steps.csv",
+  "source_review": "01_Navigational_Landmarkness_Cognitive_Map/_audit_outputs/candidate_route_review_codex_v2.csv",
+  "routes": [
+    {
+      "route_id": "main_03",
+      "status": "candidate_smoke",
+      "provisional_maneuver": "left",
+      "decision_pano_id": "qxTdXHFI9twUe3Dy0bx9jA",
+      "legal_departure_segment_count": 3,
+      "action_confidence": "confirmed_but_not_gold",
+      "risk_notes": ["mixed_capture_months", "one_2012-06_step", "construction_change_unproven"],
+      "steps": [
+        {"step_idx": 0, "pano_id": "uJqWESwRAW0B56iNLrmt6Q"},
+        {"step_idx": 1, "pano_id": "yObsZtN-5fteyPmAWYW7TQ"},
+        {"step_idx": 2, "pano_id": "1gAAqYoZDnC1rGhFh5pt6Q"},
+        {"step_idx": 3, "pano_id": "qxTdXHFI9twUe3Dy0bx9jA", "role": "decision"},
+        {"step_idx": 4, "pano_id": "cMDG1a1heD-VRW30JoofEw"},
+        {"step_idx": 5, "pano_id": "2_yyvlJe9paF57ld3jbtgw"},
+        {"step_idx": 6, "pano_id": "mZu8Sktzofy2iiw2yq-mqA"},
+        {"step_idx": 7, "pano_id": "7jKoHOxJ_AVqB4P1jOXnMQ"}
+      ],
+      "proposal_cases": [
+        {"case_id": "main_03_pre", "step_idx": 2, "role": "pre_decision", "view_index": 0},
+        {"case_id": "main_03_dec", "step_idx": 3, "role": "decision", "view_index": 0},
+        {"case_id": "main_03_post", "step_idx": 4, "role": "post_decision", "view_index": 0}
+      ]
+    },
+    {
+      "route_id": "main_06",
+      "status": "candidate_smoke",
+      "provisional_maneuver": "right",
+      "decision_pano_id": "uyE0Z2Ph9ad4xz0EENt8XQ",
+      "legal_departure_segment_count": 3,
+      "action_confidence": "confirmed_but_not_gold",
+      "risk_notes": ["mixed_capture_months", "foliage_and_light_contrast", "near_duplicate_risk_medium"],
+      "steps": [
+        {"step_idx": 0, "pano_id": "oSa1tj_9Mt2_IXZ4K9fCeg"},
+        {"step_idx": 1, "pano_id": "xt9pCqCZvulRwxZtecg1-g"},
+        {"step_idx": 2, "pano_id": "G970Bulz6Nmd8_SOvRE0jg"},
+        {"step_idx": 3, "pano_id": "uyE0Z2Ph9ad4xz0EENt8XQ", "role": "decision"},
+        {"step_idx": 4, "pano_id": "Q5Bl2t-iHmndJ6I1Dh13gw"},
+        {"step_idx": 5, "pano_id": "5M5peQFcX-RBZ1rw4UAKOw"},
+        {"step_idx": 6, "pano_id": "bcoRBEULux2QiCCQWUKR_g"},
+        {"step_idx": 7, "pano_id": "RxGJGPbbHr7j8PZJKy8x-w"}
+      ],
+      "proposal_cases": [
+        {"case_id": "main_06_pre", "step_idx": 2, "role": "pre_decision", "view_index": 1},
+        {"case_id": "main_06_dec", "step_idx": 3, "role": "decision", "view_index": 1},
+        {"case_id": "main_06_post", "step_idx": 4, "role": "post_decision", "view_index": 1}
+      ]
+    }
+  ],
+  "smoke_policy": {
+    "first_pass_images": 2,
+    "first_pass_cases": ["main_03_dec", "main_06_dec"],
+    "full_smoke_cases": 6,
+    "input_resolution": "640x640",
+    "do_not_supply": ["GPS", "panoid_id", "reference_images", "P/N/I labels", "VLAD scores", "gold action"],
+    "route_prompt_must_not_reveal": ["correct maneuver", "decision step index", "ground-truth edge identity"]
+  }
+}

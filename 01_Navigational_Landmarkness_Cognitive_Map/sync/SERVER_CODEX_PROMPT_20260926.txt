@@ -1,0 +1,12 @@
+请在 /home/wangyq/Nav_Lmk 执行 01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md。先读取根目录 AGENTS.md、active project 的 PROJECT_CONTEXT.md、EXPERIMENT_DESIGN.md、DECISIONS.md、TODO.md 和本同步目录四个文件，复述研究问题与本轮边界。
+
+核验 GPU、磁盘、Python 和 /home/nas/wangyq/model_weights/Qwen 中已经下载的模型。确认该目录中实际选用的 checkpoint 是可接收图像的视觉模型并记录 config、processor、权重清单和 SHA-256；如果是 text-only 或缺少视觉 processor，立即 BLOCKED 并只回报第一处错误，不自行更换模型或下载替代版本。
+
+读取 ROUTE_SMOKE_MANIFEST_20260926.json 和 QWEN_OUTPUT_SCHEMAS_20260926.json。使用 /home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_{view_index}.jpg 的原始 640x640 图像；文件名是 _0/_1/_2/_3，不是 v0/v1/v2/v3。固定视图绝对中心严格使用 (heading_from_api + 90*view_index) mod 360。
+
+按阶段执行：
+1. 只用 main_03_dec 与 main_06_dec 两张图做严格 JSON/bbox smoke，每图最多 3 个候选，允许 no_clear_candidate。
+2. 阶段 1 成功后，对 main_03/main_06 各运行 pre_decision、decision、post_decision，共 6 个候选提议 case。输入仍为 640x640；不提供 GPS、panoid、reference、P/N/I、VLAD 分数、正确动作或 gold edge。
+3. 阶段 1 产物完整后，再运行 route_plus_current、current_only、route_shuffled 三个路线决策 smoke 条件。出口必须使用匿名 option ID，至少两个合法非回头选项；模型端不得看到正确动作、panoid、GPS 或真实 edge 名称。候选遮挡先只生成草稿，未人工审核不得报告科学结果。
+
+将原始输出、解析 JSONL、bbox overlay、人审模板、环境摘要、日志、错误和 SHA-256 写入 /home/nas/wangyq/outputs/Paris_route_qwen_smoke_20260926/。不重跑已通过的 G/14+VLAD，不改冻结 P/N/I，不上传大型图像、权重、patch cache 或 raw dump。候选和动作结果只能标为 smoke/provisional。长任务后台运行并实时写日志；正常运行期间保持安静，只有全部请求阶段成功或不可继续时才回报。成功时回报结果目录、阶段计数、模型/环境摘要、哈希清单和 HUMAN_REVIEW_REQUIRED.md；阻塞时回报 BLOCKED、第一处错误、最小复现、已完成阶段和建议动作。

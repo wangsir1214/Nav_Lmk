@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "candidate_proposal": {
+    "required": ["case_id", "image_path", "candidates", "model_revision", "prompt_hash", "parse_status"],
+    "candidate_fields": ["candidate_id", "bbox_xyxy_640", "type", "description", "hypothesized_role", "visibility", "uncertainty"],
+    "enums": {
+      "type": ["object", "structural", "text", "scene", "no_clear_candidate"],
+      "visibility": ["clear", "partial", "occluded", "uncertain"],
+      "parse_status": ["ok", "no_clear_candidate", "parse_error"]
+    },
+    "coordinate_contract": "bbox is [x1,y1,x2,y2] in the original 640x640 image; integers or finite numbers; 0<=x1<x2<=640 and 0<=y1<y2<=640"
+  },
+  "route_decision": {
+    "required": ["case_id", "condition", "chosen_edge_id", "maneuver", "evidence_view_id", "evidence_candidates", "reason", "uncertain"],
+    "condition_enum": ["route_plus_current", "current_only", "route_shuffled", "candidate_drop", "matched_control_drop"],
+    "chosen_edge_id": "anonymous option id supplied by the scorer; never a panoid",
+    "maneuver": ["left", "right", "forward", "unknown"],
+    "uncertain": "boolean; self-report only and not a calibrated probability",
+    "evidence_candidates": "zero or more candidate_id values from a separately frozen proposal file"
+  },
+  "audit_fields": ["timestamp_utc", "environment_digest", "raw_output_path", "overlay_path", "error_code", "notes"]
+}
