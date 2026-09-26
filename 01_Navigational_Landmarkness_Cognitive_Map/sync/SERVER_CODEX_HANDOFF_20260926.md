@@ -2,7 +2,7 @@
 
 ## 交接方式
 
-请在服务器项目 `/home/wangyq/Nav_Lmk` 执行。先读取本文件所在同步包对应的 Git commit；如果尚未同步 GitHub，可将本目录四个文件复制到项目的 `01_Navigational_Landmarkness_Cognitive_Map/sync/` 后按同一路径执行。
+请在服务器项目 `/home/wangyq/Nav_Lmk` 执行。先记录当前 commit，并在没有未提交冲突时执行 `git pull --ff-only origin main`，确保同步包更新到最新提交；如果本地改动阻止 fast-forward，不覆盖本地改动，改为报告 `BLOCKED`。如果服务器尚未使用 GitHub，则将本同步目录全部轻量文件复制到项目的 `01_Navigational_Landmarkness_Cognitive_Map/sync/` 后按同一路径执行。
 
 NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。不要把项目路径 `/home/wangyq` 替换成 `/home/nas/wangyq`。
 

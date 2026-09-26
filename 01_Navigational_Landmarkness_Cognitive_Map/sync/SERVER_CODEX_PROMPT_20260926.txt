@@ -1,4 +1,4 @@
-请在 /home/wangyq/Nav_Lmk 执行 01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md。先读取根目录 AGENTS.md、active project 的 PROJECT_CONTEXT.md、EXPERIMENT_DESIGN.md、DECISIONS.md、TODO.md 和本同步目录四个文件，复述研究问题与本轮边界。
+请在 /home/wangyq/Nav_Lmk 执行 01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md。先记录当前 commit；若没有未提交冲突，执行 git pull --ff-only origin main；若本地改动阻止 fast-forward，不覆盖本地改动并立即回报 BLOCKED。然后读取根目录 AGENTS.md、active project 的 PROJECT_CONTEXT.md、EXPERIMENT_DESIGN.md、DECISIONS.md、TODO.md 和同步目录中的全部轻量文件，复述研究问题与本轮边界。
 
 核验 GPU、磁盘、Python 和 /home/nas/wangyq/model_weights/Qwen 中已经下载的模型。确认该目录中实际选用的 checkpoint 是可接收图像的视觉模型并记录 config、processor、权重清单和 SHA-256；如果是 text-only 或缺少视觉 processor，立即 BLOCKED 并只回报第一处错误，不自行更换模型或下载替代版本。
 
