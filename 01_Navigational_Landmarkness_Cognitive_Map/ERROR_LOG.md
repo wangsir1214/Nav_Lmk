@@ -2,8 +2,8 @@
 
 ## 2026-09-26
 
-- `gh auth status`：GitHub 账户 `wangsir1214` 的默认 token 已失效。远程仓库创建和 push 暂停在认证步骤；本地同步包已完成，待 `gh auth login -h github.com` 成功后继续。
-- 未发现新的实验运行错误；Qwen 尚未在本地执行。
+- 初始 `gh auth status` 曾报告旧 token 失效；随后认证状态恢复，私有仓库已成功创建并 push，故该阻塞已解除。
+- 本轮未发现新的实验运行错误；Qwen 尚未在本地执行。
 
 ## 2026-09-24 - 本地路径可用性
 

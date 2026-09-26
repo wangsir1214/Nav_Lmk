@@ -4,8 +4,8 @@
 
 - [x] 读取两份 0926 最新研究对话并固化研究问题、证据边界和本轮实验顺序。
 - [x] 创建路线 smoke manifest、Qwen 输出 schema 和服务器低消耗执行交接。
-- [ ] 在 GitHub 认证恢复后创建私有同步仓库并 push 轻量 commit。
-- [ ] 将 `sync/` 文件同步到服务器 `/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/sync/`。
+- [x] 创建私有 GitHub 同步仓库并 push 轻量 commit（`wangsir1214/Nav_Lmk`，commit `e885037`）。
+- [ ] 将 `sync/` 文件同步到服务器 `/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/sync/`（可由服务器 Codex 从 `origin/main` 拉取）。
 - [ ] 服务器完成 Qwen 视觉权重核验、2 图 JSON/bbox smoke、六 case 候选提议和三条件路线 smoke。
 - [ ] 人工审核 `HUMAN_REVIEW_REQUIRED.md` 中的候选框；审核前不运行正式候选遮挡结论。
 - [ ] 路线 smoke 通过后，重新确认同月/时间稳定性、决策区和 gold action，再扩展正式路线样本。
@@ -33,7 +33,7 @@
 - [x] 本地：升级服务器交接包v2.1，修复评分器hashlib导入、收紧提取前预检顺序；10项CPU测试、目标脚本编译、17项冻结题库检查通过。
 - [x] 本地：处理AnyLoc SharePoint入口404，核验并接入AnyLoc/DINO Release v1 urban中心固定下载与SHA校验；准备v2.2交接包。
 - [x] 本地：重打包最终 `server_baseline_package_v2_2_final_20260924.zip`，并完成45文件SHA-256/大小/CRC验收。
-- [ ] 协作：确定 GitHub remote 与服务器路径配置，按白名单提交轻量任务包与代码。
+- [x] 协作：确定 GitHub remote 与服务器路径配置，按白名单提交轻量任务包与代码。
 - [x] 服务器：报告完成G/14与词典核验、12236张448 PNG、CUDA smoke、212图提取和P/N/I评分；本地独立确认44×168分数、Recall/margin与80P敏感性。
 - [x] 本地：核验当前NAS与证据副本、212个VLAD及全部7392相似度，复核11图卡、道路/pano及派生子片区、正例数分层；本轮未发现需修改标签的充分证据。
 - [ ] 服务器：按outputs/pilot0/server_return_audit_20260924/SERVER_FOLLOWUP.md把原始preflight/smoke/环境/最终完整性/执行命令与脚本镜像至NAS，补齐报告层子片区汇总；无需重跑baseline或上传新ZIP。

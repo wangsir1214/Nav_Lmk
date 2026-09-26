@@ -15,6 +15,12 @@
 - 服务器侧复用已下载的 `/home/nas/wangyq/model_weights/Qwen`，先检查视觉模型有效性，再进行 2 图 smoke、6 个候选 case 和三条件路线决策 smoke；正常运行不主动轮询，只有成功或 BLOCKED 回报。
 - 尚未创建远程 GitHub 仓库：本机 `gh auth status` 显示账户 token 已失效，需重新认证后才能创建和推送。
 
+## 2026-09-26 - GitHub 同步仓库完成
+
+- 已创建私有仓库 `https://github.com/wangsir1214/Nav_Lmk`，本地 `main` 与 `origin/main` 均指向轻量提交 `e885037`。
+- 提交内容仅包含研究设计、路线 smoke manifest、Qwen 输出 schema、服务器 handoff/prompt 和必要项目文档；图像、权重、patch cache、ZIP 与大型结果未提交。
+- 服务器可在 `/home/wangyq/Nav_Lmk` 执行 `git pull --ff-only origin main`，再运行 `sync/SERVER_CODEX_PROMPT_20260926.txt`；正常运行保持静默，仅成功或 BLOCKED 回报。
+
 ## 2026-09-26 - 0926 研究迭代同步包
 
 - 读取 `Chats/Branch · 研究方向概括_0926.html` 与 `Chats/Extensive reading papers - 解读文章提炼方法_0926.html`，确认研究主线为路线经验条件下的视觉线索空间功能与局部行动支持。

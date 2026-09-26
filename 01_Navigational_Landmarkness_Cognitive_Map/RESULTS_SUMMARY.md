@@ -7,6 +7,12 @@
 - 已写入 `sync/` 的服务器交接包，第一批路线为 `main_03`、`main_06`，六个候选提议 case；全部标记为 `candidate_smoke`/`provisional`。
 - 本轮没有新增模型结果、没有修改冻结题库、没有写入 NAS 大文件。
 
+## 2026-09-26 GitHub 交接状态
+
+- 私有同步仓库已建立：`https://github.com/wangsir1214/Nav_Lmk`。
+- `main`/`origin/main` 已同步到 `e885037`；同步包包含 0926 研究设计、路线 manifest、Qwen schema 和服务器交接文件。
+- 服务器下一步只需拉取轻量同步包并执行其中的 prompt；Qwen 权重继续使用 `/home/nas/wangyq/model_weights/Qwen`，无需重新上传 ZIP 或图像。
+
 ## 2026-09-26 研究同步状态
 
 - 0926 对话确认的主问题是：在给定路线经验和局部空间任务时，哪些城市视觉元素能作为地点、方向或通行结构参照并支持正确续行。
