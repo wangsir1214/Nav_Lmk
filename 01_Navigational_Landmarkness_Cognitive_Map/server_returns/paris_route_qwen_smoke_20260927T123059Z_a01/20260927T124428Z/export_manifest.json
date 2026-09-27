@@ -1,0 +1,231 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T123059Z_a01",
+  "export_utc": "20260927T124428Z",
+  "status": "partial",
+  "source_run_status": "BLOCKED",
+  "source_stage": "stage0",
+  "source_commit": "ccf88a6cdea0751401b523aece1e2e8873431e48",
+  "repository_base_commit": "ccf88a6cdea0751401b523aece1e2e8873431e48",
+  "model": {
+    "path": "/home/nas/wangyq/model_weights/Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "architecture": [
+      "Qwen3_5ForConditionalGeneration"
+    ],
+    "processor": "Qwen3VLProcessor"
+  },
+  "schema_version": "1.2",
+  "schema_sha256": "a5300eabbd3171e2a28a8860ef5a27a5142f82c66ececca525ad5a01f2f1edd9",
+  "run_manifest_sha256": "5ee95d46df76ca50f98c858ca2c4e0c610348f7b3bb22bb0c7f756805689ad8c",
+  "stage_counts": {
+    "stage0": {
+      "expected": 2,
+      "completed": 1,
+      "not_completed": 1
+    },
+    "stage1": {
+      "expected": 6,
+      "completed": 0,
+      "not_completed": 6
+    },
+    "stage2": {
+      "expected": 6,
+      "completed": 0,
+      "not_completed": 6
+    }
+  },
+  "completed_case_ids": {
+    "stage0": [
+      "main_03_dec"
+    ],
+    "stage1": [],
+    "stage2": []
+  },
+  "incomplete_case_ids": {
+    "stage0": [
+      "main_06_dec"
+    ],
+    "stage1": [
+      "main_03_pre",
+      "main_03_dec",
+      "main_03_post",
+      "main_06_pre",
+      "main_06_dec",
+      "main_06_post"
+    ],
+    "stage2": "two routes times three conditions; not started"
+  },
+  "incomplete_cases_are_not_scored_failures": true,
+  "scientific_status": "smoke_provisional",
+  "nas_result_root": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01",
+  "nas_local_mapping": {
+    "server_prefix": "/home/nas/wangyq",
+    "local_prefix": "Z:\\wangyq"
+  },
+  "files": [
+    {
+      "relative_path": "HUMAN_REVIEW_REQUIRED.md",
+      "size_bytes": 703,
+      "sha256": "81591041cf0f64e675f6479ef0c642bf80fd6921c67c34baa02ae1b82ae6226e"
+    },
+    {
+      "relative_path": "environment.json",
+      "size_bytes": 882,
+      "sha256": "e71c6406f5b582b5c1bbfa4644fed106071f2bdcbd384df8d4a63ce19b532f10"
+    },
+    {
+      "relative_path": "error_summary.json",
+      "size_bytes": 1030,
+      "sha256": "92a32ab9b922f47e9991877220f11acf8b36959a229853916f14645e00d859ec"
+    },
+    {
+      "relative_path": "model_verification.json",
+      "size_bytes": 547,
+      "sha256": "225a2b3d2f74f777fdeebc2f1abb785690c82b1bcb2f2d85c33ae838d7eea843"
+    },
+    {
+      "relative_path": "offline_regression.json",
+      "size_bytes": 1155,
+      "sha256": "f68fe52d571cbf98519f26869d77ef26f2b5c10c62855f2bbbdc60c81fd6b700"
+    },
+    {
+      "relative_path": "parser_validation_summary.json",
+      "size_bytes": 1350,
+      "sha256": "0d03b49b369272a30a5e2626030a61c872f409d382c8098510bd1b1b18132544"
+    },
+    {
+      "relative_path": "run_identity.json",
+      "size_bytes": 1089,
+      "sha256": "12f49093e102be3881fee656bedac981e999a6ee494465357a1586f99d34f92c"
+    },
+    {
+      "relative_path": "run_manifest.json",
+      "size_bytes": 8887,
+      "sha256": "5ee95d46df76ca50f98c858ca2c4e0c610348f7b3bb22bb0c7f756805689ad8c"
+    },
+    {
+      "relative_path": "runner.patch",
+      "size_bytes": 13481,
+      "sha256": "195639d4e7fba80008f41b278966a2d72b4e186f1b97a51473dece31286c7e8b"
+    },
+    {
+      "relative_path": "runner.py",
+      "size_bytes": 27674,
+      "sha256": "8bd65dc33d122f02d60e6ab90d5df6c2da81c0b3fa6da0ae7c40c87b75df4c5a"
+    },
+    {
+      "relative_path": "scoring_summary.json",
+      "size_bytes": 258,
+      "sha256": "28bc0a9d60a842d631756c47f5cab2fed053f9453cb29dc81ab7b4a8e5df5a30"
+    },
+    {
+      "relative_path": "stage0_parsed.jsonl",
+      "size_bytes": 2019,
+      "sha256": "d0a227808c296f91446c146917d51f014f802ee1a62c8f8f9b8cd5c7ddf99225"
+    },
+    {
+      "relative_path": "stage_status.json",
+      "size_bytes": 610,
+      "sha256": "9544fc259e83e97c03b530f341593770c9f684fc12598bde0acf56dcbd1198ea"
+    }
+  ],
+  "nas_artifacts": [
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_03_dec.attempt01.metadata.json",
+      "relative_to_nas_result": "stage0/candidate_raw/main_03_dec.attempt01.metadata.json",
+      "size_bytes": 2586,
+      "sha256": "166d8e051d35e5e1f74c1176a21f021a788597eac93f8b48ebc027504332df3b"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_03_dec.attempt01.normalized.txt",
+      "relative_to_nas_result": "stage0/candidate_raw/main_03_dec.attempt01.normalized.txt",
+      "size_bytes": 955,
+      "sha256": "cc3fb31ef3dda1f5746d3ae8bb716c4f554be9bc51328d6d55d1eca3e3a0c6b5"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_03_dec.attempt01.txt",
+      "relative_to_nas_result": "stage0/candidate_raw/main_03_dec.attempt01.txt",
+      "size_bytes": 968,
+      "sha256": "d0dbc82df7ff12585c9df27fc033839e7e0c0db7e8ac53d7550de28d300c5488"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt01.error.json",
+      "relative_to_nas_result": "stage0/candidate_raw/main_06_dec.attempt01.error.json",
+      "size_bytes": 349,
+      "sha256": "fb4b610a8735b5110cb89d87818809f2a2c182dd8ebc80429e89a7085b55d862"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt01.metadata.json",
+      "relative_to_nas_result": "stage0/candidate_raw/main_06_dec.attempt01.metadata.json",
+      "size_bytes": 2596,
+      "sha256": "81229e92715ea875619b70b016f0cc55277a800bacca8cfb326867e88383a701"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt01.normalized.txt",
+      "relative_to_nas_result": "stage0/candidate_raw/main_06_dec.attempt01.normalized.txt",
+      "size_bytes": 1003,
+      "sha256": "09c63dfb0abf032cf87f53a072210ac143847ae3a7ccedc63af774cd1424ea6e"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt01.txt",
+      "relative_to_nas_result": "stage0/candidate_raw/main_06_dec.attempt01.txt",
+      "size_bytes": 1016,
+      "sha256": "0ac02a37d42707d12e0092b1a13d9a23e0b605c4bc2f76ae059eda670676fa2c"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt02.error.json",
+      "relative_to_nas_result": "stage0/candidate_raw/main_06_dec.attempt02.error.json",
+      "size_bytes": 349,
+      "sha256": "cb70612720f9042591b090486711ca4830c5d335006bc6da536833ee0c1aed49"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt02.metadata.json",
+      "relative_to_nas_result": "stage0/candidate_raw/main_06_dec.attempt02.metadata.json",
+      "size_bytes": 2902,
+      "sha256": "eb67ed11a70db736b795c705f9d72f6b0870a3ba0cc5c97bda398550a79b8590"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt02.normalized.txt",
+      "relative_to_nas_result": "stage0/candidate_raw/main_06_dec.attempt02.normalized.txt",
+      "size_bytes": 971,
+      "sha256": "0bf630d3a0c6940ed00314e80f3d690603fcce72daa25e3784467a104e078341"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt02.txt",
+      "relative_to_nas_result": "stage0/candidate_raw/main_06_dec.attempt02.txt",
+      "size_bytes": 984,
+      "sha256": "d5486faf057368b0094ee8c453832c0094a810d9d0fc90a2997c1c576cc0aec7"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_overlays/main_03_dec.attempt01.png",
+      "relative_to_nas_result": "stage0/candidate_overlays/main_03_dec.attempt01.png",
+      "size_bytes": 701343,
+      "sha256": "8db74a4e741989e454d6fbcc77f5ffa07b7e5dd4351596b9cd74c25ac38b19d3"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/BLOCKED.json",
+      "relative_to_nas_result": "BLOCKED.json",
+      "size_bytes": 2788,
+      "sha256": "548815cbbb2f4189dacb6d46a74229c399b95ecce6a1fe18252e8735838d9031"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/errors.jsonl",
+      "relative_to_nas_result": "errors.jsonl",
+      "size_bytes": 2742,
+      "sha256": "2383d428663d562afb14b5902976c065b84dc2cdbd35d9c6d14bd36c10b267bd"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/run.log",
+      "relative_to_nas_result": "run.log",
+      "size_bytes": 892,
+      "sha256": "60b2527f7fe8b559ea84ae89a26915cf6f85c937e56fee1f36050477d5c0b55a"
+    },
+    {
+      "server_absolute_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/sha256sums.txt",
+      "relative_to_nas_result": "sha256sums.txt",
+      "size_bytes": 2181,
+      "sha256": "c2985177191221941b617e39b9f53a346052bc25f4116cb2a6009a31fed17459"
+    }
+  ],
+  "hash_note": "Payload SHA-256 entries cover all files except this self-referential export_manifest.json. The Git commit identifies the manifest bytes."
+}

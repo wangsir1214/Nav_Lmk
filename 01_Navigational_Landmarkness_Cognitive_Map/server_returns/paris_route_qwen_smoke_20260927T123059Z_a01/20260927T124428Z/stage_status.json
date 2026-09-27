@@ -1,0 +1,16 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T123059Z_a01",
+  "timestamp_utc": "20260927T123059Z",
+  "attempt": 1,
+  "source_commit": "ccf88a6cdea0751401b523aece1e2e8873431e48",
+  "sync_mode": "temporary_clone_update",
+  "stage": "stage0",
+  "status": "BLOCKED",
+  "completed": {
+    "stage0": 1,
+    "stage1": 0,
+    "stage2": 0
+  },
+  "time": "2026-09-27T12:32:12.837563+00:00",
+  "first_error": "stage0 main_06_dec attempt02: candidate 0: bbox outside 640x640: [776, 480, 800, 504]; raw=/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt02.txt"
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T123059Z_a01",
+  "model_path": "/home/nas/wangyq/model_weights/Qwen/Qwen3.5-9B",
+  "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "architecture": [
+    "Qwen3_5ForConditionalGeneration"
+  ],
+  "vision_config_present": true,
+  "processor": "Qwen3VLProcessor",
+  "file_count": 16,
+  "total_bytes": 19329393661,
+  "all_sha256_verified": true,
+  "source_manifest_sha256": "4e0b5bcb37cfd8cb9f1924e70b41ba73c2beab327fc8cd82daff229741bda967",
+  "verified_at": "2026-09-27T12:31:19.685045+00:00"
+}

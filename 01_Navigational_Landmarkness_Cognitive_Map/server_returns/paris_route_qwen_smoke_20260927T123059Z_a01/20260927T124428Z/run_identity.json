@@ -1,0 +1,17 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T123059Z_a01",
+  "timestamp_utc": "20260927T123059Z",
+  "attempt": 1,
+  "source_commit": "ccf88a6cdea0751401b523aece1e2e8873431e48",
+  "sync_mode": "temporary_clone_update",
+  "sync_backup": "/home/wangyq/Nav_Lmk_sync_backup_20260927T122545Z",
+  "nas_output_dir": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01",
+  "local_run_dir": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_route_qwen_smoke_20260927T123059Z_a01",
+  "runner_sha256": "8bd65dc33d122f02d60e6ab90d5df6c2da81c0b3fa6da0ae7c40c87b75df4c5a",
+  "runner_patch_sha256": "195639d4e7fba80008f41b278966a2d72b4e186f1b97a51473dece31286c7e8b",
+  "parser_sha256": "3cc7163d204233eb96a2896c650bc2dbb7558d5965590a60f928bdbb5c0beac6",
+  "schema_sha256": "a5300eabbd3171e2a28a8860ef5a27a5142f82c66ececca525ad5a01f2f1edd9",
+  "manifest_sha256": "5c2a83f5522f8bb54139ea5f21df3e4b629c5dc30a609f56494f16ac6c692014",
+  "route_csv_sha256": "e9da1f02ea9d5e9acd1dfe09691f50cbe3f91ed1007daae9b4e1246aea4042ad",
+  "offline_regression": "PASS"
+}

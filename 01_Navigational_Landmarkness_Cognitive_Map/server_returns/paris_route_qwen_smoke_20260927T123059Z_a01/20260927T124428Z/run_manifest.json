@@ -1,0 +1,218 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T123059Z_a01",
+  "timestamp_utc": "20260927T123059Z",
+  "attempt": 1,
+  "source_commit": "ccf88a6cdea0751401b523aece1e2e8873431e48",
+  "sync_mode": "temporary_clone_update",
+  "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "status": "smoke_provisional",
+  "manifest_sha256": "5c2a83f5522f8bb54139ea5f21df3e4b629c5dc30a609f56494f16ac6c692014",
+  "schema_sha256": "a5300eabbd3171e2a28a8860ef5a27a5142f82c66ececca525ad5a01f2f1edd9",
+  "route_csv_sha256": "e9da1f02ea9d5e9acd1dfe09691f50cbe3f91ed1007daae9b4e1246aea4042ad",
+  "cases": {
+    "main_03_pre": {
+      "case_id": "main_03_pre",
+      "route_id": "main_03",
+      "role": "pre_decision",
+      "primary_view_index": 0,
+      "views": [
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/1gAAqYoZDnC1rGhFh5pt6Q_panorama_0.jpg",
+          "view_index": 0,
+          "absolute_center_heading": 56.222424,
+          "sha256": "1c33815b3db9f22673647720d5f460734869af17e8c3f58ba74409ce80b5f6b8"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/1gAAqYoZDnC1rGhFh5pt6Q_panorama_1.jpg",
+          "view_index": 1,
+          "absolute_center_heading": 146.222424,
+          "sha256": "30234234fbb59bd4652a33f1a1a6f9a16c69d209eff988e46418c6f3e664f500"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/1gAAqYoZDnC1rGhFh5pt6Q_panorama_2.jpg",
+          "view_index": 2,
+          "absolute_center_heading": 236.222424,
+          "sha256": "708822dbb0ca5f6e5e11cb42d61163ade5595f7a9b90f9946c388bca84d12d2f"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/1gAAqYoZDnC1rGhFh5pt6Q_panorama_3.jpg",
+          "view_index": 3,
+          "absolute_center_heading": 326.222424,
+          "sha256": "1bd7ab80f6347128aaa18b5ae90abcd3c70181514757a9e7641e2cec2e091bee"
+        }
+      ]
+    },
+    "main_03_dec": {
+      "case_id": "main_03_dec",
+      "route_id": "main_03",
+      "role": "decision",
+      "primary_view_index": 0,
+      "views": [
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_0.jpg",
+          "view_index": 0,
+          "absolute_center_heading": 26.39868,
+          "sha256": "74accdc4e585edfe0cf9534e90f02cf39475d96eb8d9d2b2be79e97d285a8c4d"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_1.jpg",
+          "view_index": 1,
+          "absolute_center_heading": 116.39868,
+          "sha256": "f7565d1384c596e4f56cac772590bebb12d72b66ee560ee3d9f307c832e9f85d"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_2.jpg",
+          "view_index": 2,
+          "absolute_center_heading": 206.39868,
+          "sha256": "769e421b5f1a06b033b07e8d72f4f12f62d4fd1f43a339628d3dce994092004c"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_3.jpg",
+          "view_index": 3,
+          "absolute_center_heading": 296.39868,
+          "sha256": "903995a04b3b4fc7e9ec754549db0be4ae761d2242ce9339a5697ed3ef4bc9f0"
+        }
+      ]
+    },
+    "main_03_post": {
+      "case_id": "main_03_post",
+      "route_id": "main_03",
+      "role": "post_decision",
+      "primary_view_index": 0,
+      "views": [
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/cMDG1a1heD-VRW30JoofEw_panorama_0.jpg",
+          "view_index": 0,
+          "absolute_center_heading": 327.43652,
+          "sha256": "2326b74beccc7b647912bc35d964d4647895dfc3f55081df15b98c16644b3cea"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/cMDG1a1heD-VRW30JoofEw_panorama_1.jpg",
+          "view_index": 1,
+          "absolute_center_heading": 57.43651999999997,
+          "sha256": "c629f4854e2b05f3e85a80cddb672fd642e07faabf464cd6b0050674066e417c"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/cMDG1a1heD-VRW30JoofEw_panorama_2.jpg",
+          "view_index": 2,
+          "absolute_center_heading": 147.43651999999997,
+          "sha256": "af292d2a68dde6e122252a8b1f094c29ec888e566c0a6b794bbe5bc9acdc6b97"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/cMDG1a1heD-VRW30JoofEw_panorama_3.jpg",
+          "view_index": 3,
+          "absolute_center_heading": 237.43651999999997,
+          "sha256": "8d94fb8a1f66c10f4b15b6bc5c93d0142f7a912da2c47874a3a05b6e93a87525"
+        }
+      ]
+    },
+    "main_06_pre": {
+      "case_id": "main_06_pre",
+      "route_id": "main_06",
+      "role": "pre_decision",
+      "primary_view_index": 1,
+      "views": [
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/G970Bulz6Nmd8_SOvRE0jg_panorama_0.jpg",
+          "view_index": 0,
+          "absolute_center_heading": 283.09937,
+          "sha256": "1c8716911ad98c1c7203606e7f22529636d5160393c284359ab7382308a7b896"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/G970Bulz6Nmd8_SOvRE0jg_panorama_1.jpg",
+          "view_index": 1,
+          "absolute_center_heading": 13.099370000000022,
+          "sha256": "cae7b8af09b951274e4277bcfcf1f0bb8beba9c9190a0fd1b705245678a113fb"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/G970Bulz6Nmd8_SOvRE0jg_panorama_2.jpg",
+          "view_index": 2,
+          "absolute_center_heading": 103.09937000000002,
+          "sha256": "a8fb814469bde5ba263cdd2c95223694071c63c475e7a7982abf64de35341989"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/G970Bulz6Nmd8_SOvRE0jg_panorama_3.jpg",
+          "view_index": 3,
+          "absolute_center_heading": 193.09937000000002,
+          "sha256": "00427f075c31adafc4c4dd9a351ebb52248734fc87aae8b8dd1752be472408a0"
+        }
+      ]
+    },
+    "main_06_dec": {
+      "case_id": "main_06_dec",
+      "route_id": "main_06",
+      "role": "decision",
+      "primary_view_index": 1,
+      "views": [
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_0.jpg",
+          "view_index": 0,
+          "absolute_center_heading": 288.90182,
+          "sha256": "ed40b153aaac9ca922ca0708152107f0b6ff0f4a9a3b48fa88f37921d50905de"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_1.jpg",
+          "view_index": 1,
+          "absolute_center_heading": 18.901819999999987,
+          "sha256": "fca1954e75969dbbc8ec21273ef09e9f38b4f5025f73b30ee6fbb62ecd69d74f"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_2.jpg",
+          "view_index": 2,
+          "absolute_center_heading": 108.90181999999999,
+          "sha256": "8a2ceda23bea875408f4935fc96a89de34a1f2adebe370188518cfefb45844dd"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_3.jpg",
+          "view_index": 3,
+          "absolute_center_heading": 198.90182000000004,
+          "sha256": "cb98c1af0b98aa3d9374f79d068ed974772f79319f8d751b626cdd89b3a4b2ae"
+        }
+      ]
+    },
+    "main_06_post": {
+      "case_id": "main_06_post",
+      "route_id": "main_06",
+      "role": "post_decision",
+      "primary_view_index": 1,
+      "views": [
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_0.jpg",
+          "view_index": 0,
+          "absolute_center_heading": 182.84898,
+          "sha256": "34db6a71abe4e76aaf084d10165c30226c2951b45ed14b95114e439fdda15739"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_1.jpg",
+          "view_index": 1,
+          "absolute_center_heading": 272.84898,
+          "sha256": "68d6df236896c869ae05658cb1066c33d7bddac063c82d0c1ba265255a86a62b"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_2.jpg",
+          "view_index": 2,
+          "absolute_center_heading": 2.848979999999983,
+          "sha256": "a5a219c01d6c8174db0b56ad96cf0a4cc2422037970a3a3453880e2493461a6c"
+        },
+        {
+          "path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_3.jpg",
+          "view_index": 3,
+          "absolute_center_heading": 92.84897999999998,
+          "sha256": "9ab4977d57abc3c9f275e523ee412d171bd454a0331f37e8a4dbfc32661a58d0"
+        }
+      ]
+    }
+  },
+  "stage0_order": [
+    "main_03_dec",
+    "main_06_dec"
+  ],
+  "model_input_excludes": [
+    "GPS",
+    "panoid",
+    "P/N/I",
+    "VLAD scores",
+    "gold action"
+  ],
+  "third_party_dinov2_read_only": true
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T123059Z_a01",
+  "source_status": "BLOCKED",
+  "stage": "stage0",
+  "blocked_case_id": "main_06_dec",
+  "first_terminal_error": "stage0 main_06_dec attempt02: candidate 0: bbox outside 640x640: [776, 480, 800, 504]; raw=/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt02.txt",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error_kind": "out_of_bounds",
+      "error": "candidate 0: bbox outside 640x640: [776, 480, 800, 504]",
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt01.txt"
+    },
+    {
+      "attempt": 2,
+      "error_kind": "out_of_bounds",
+      "error": "candidate 0: bbox outside 640x640: [776, 480, 800, 504]",
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T123059Z_a01/stage0/candidate_raw/main_06_dec.attempt02.txt"
+    }
+  ],
+  "incomplete_case_is_not_a_scored_failure": true
+}

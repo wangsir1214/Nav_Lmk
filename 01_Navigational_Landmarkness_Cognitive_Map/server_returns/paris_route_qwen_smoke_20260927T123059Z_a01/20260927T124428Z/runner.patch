@@ -1,0 +1,150 @@
+--- /home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_route_qwen_smoke_20260927T113729Z_a01/runner.py
++++ /home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/qwen_parser_patch_ccf88a6/runner.py
+@@ -8,6 +8,8 @@
+ IDENTITY=json.loads((RUN_DIR/'run_identity.json').read_text())
+ RUN_ID=IDENTITY['run_id']; OUT=Path(IDENTITY['nas_output_dir'])
+ SYNC=Path('/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/sync')
++sys.path.insert(0,str(SYNC))
++from qwen_json_parser import parse_model_json, _FULL_JSON_FENCE
+ MODEL=Path('/home/nas/wangyq/model_weights/Qwen/Qwen3.5-9B')
+ ROAD=Path('/home/nas/wangyq/Street_view_and_points_Paris/road')
+ PANOROAD=Path('/home/nas/wangyq/Street_view_and_points_Paris/Line_After_heading_clear_Paris_center_street_from0309_4_v1/Line_Points_3_to_road.shp')
+@@ -95,9 +97,7 @@
+ class FormatError(ValueError):
+  def __init__(self,kind,message):super().__init__(message);self.kind=kind
+ 
+-def check_candidate(raw):
+- try:obj=json.loads(raw.strip())
+- except json.JSONDecodeError as exc:raise FormatError('json',f'Invalid JSON: {exc}')
++def check_candidate(obj):
+  if not isinstance(obj,dict) or set(obj)!={'candidates'}:raise FormatError('extra_or_missing','Root object must contain only candidates')
+  cand=obj['candidates']
+  if not isinstance(cand,list) or len(cand)>3:raise FormatError('structure','candidates must be list with at most 3 items')
+@@ -111,7 +111,7 @@
+   id_=c['candidate_id']
+   if isinstance(id_,bool) or not isinstance(id_,(int,str)) or isinstance(id_,str) and not 0<len(id_)<=24 or id_ in ids:raise FormatError('structure',f'candidate {idx}: invalid candidate_id')
+   ids.add(id_)
+-  if c['type'] not in set(SCHEMA['candidate_proposal']['enums']['type'])-{'no_clear_candidate'}:raise FormatError('enum',f'candidate {idx}: invalid type')
++  if not isinstance(c['type'],str) or c['type'] not in set(SCHEMA['candidate_proposal']['enums']['type'])-{'no_clear_candidate'}:raise FormatError('enum',f'candidate {idx}: invalid type')
+   if c['visibility'] not in SCHEMA['candidate_proposal']['enums']['visibility']:raise FormatError('enum',f'candidate {idx}: invalid visibility')
+   if not isinstance(c['description'],str) or not isinstance(c['hypothesized_role'],str):raise FormatError('structure',f'candidate {idx}: invalid description/role')
+   u=c['uncertainty']
+@@ -121,6 +121,35 @@
+   x1,y1,x2,y2=b
+   if not(0<=x1<x2<=640 and 0<=y1<y2<=640):raise FormatError('out_of_bounds',f'candidate {idx}: bbox outside 640x640: {b}')
+  return cand,'ok'
++
++def parse_attempt(raw,rawpath,meta):
++ """Audit the exact reply and the only permitted wrapper removal before schema checks."""
++ rawpath=Path(rawpath)
++ try:
++  obj,kind,normalized=parse_model_json(raw)
++ except (ValueError,json.JSONDecodeError) as exc:
++  trimmed=raw.strip()
++  match=_FULL_JSON_FENCE.fullmatch(trimmed) if trimmed.startswith(chr(96)*3) else None
++  if match is not None:
++   kind='full_json_fence';normalized=match.group('body').strip()
++  elif trimmed.startswith(chr(96)*3):
++   kind='rejected_wrapper';normalized=None
++  else:
++   kind='none';normalized=trimmed
++  meta.update(normalization_type=kind,normalization_error=str(exc))
++  if normalized is not None:
++   normpath=rawpath.with_suffix('.normalized.txt')
++   write_new(normpath,normalized)
++   meta.update(normalized_path=str(normpath),normalized_sha256=hashfile(normpath))
++  else:
++   meta.update(normalized_path=None,normalized_sha256=None)
++  save(rawpath.with_suffix('.metadata.json'),meta)
++  raise FormatError('json',f'Invalid model JSON: {exc}') from exc
++ normpath=rawpath.with_suffix('.normalized.txt')
++ write_new(normpath,normalized)
++ meta.update(normalization_type=kind,normalized_path=str(normpath),normalized_sha256=hashfile(normpath))
++ save(rawpath.with_suffix('.metadata.json'),meta)
++ return obj
+ 
+ def image_inputs(images,prompt):
+  content=[]
+@@ -158,16 +187,16 @@
+   write_new(rawpath,raw)
+   meta=dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=attempt,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],case_id=case_id,image_path=image['path'],view_index=v,absolute_center_heading=image['absolute_center_heading'],image_sha256=image['sha256'],prompt_hash=prompt_hash,prompt=prompt,model_revision=REVISION,processing_shapes=shapes,raw_output_path=str(rawpath),raw_sha256=hashfile(rawpath))
+   save(rawpath.with_suffix('.metadata.json'),meta)
+-  try:candidates,parse_status=check_candidate(raw)
++  try:candidates,parse_status=check_candidate(parse_attempt(raw,rawpath,meta))
+   except FormatError as error:
+    save(rawpath.with_suffix('.error.json'),dict(run_id=RUN_ID,case_id=case_id,attempt=attempt,error_kind=error.kind,error=str(error),raw_output_path=str(rawpath)))
+    log(f'{phase} {case_id} attempt{attempt:02d} parse error: {error}')
+-   if attempt==1 and error.kind in ['extra_or_missing','out_of_bounds']:
++   if attempt==1:
+     retry_error=str(error);continue
+    raise RuntimeError(f'{phase} {case_id} attempt{attempt:02d}: {error}; raw={rawpath}')
+   overlay=OUT/phase/'candidate_overlays'/f'{case_id}.attempt{attempt:02d}.png'
+   draw_box(image['path'],candidates,overlay)
+-  return dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=attempt,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],case_id=case_id,image_path=image['path'],view_index=v,absolute_center_heading=image['absolute_center_heading'],candidates=candidates,model_revision=REVISION,prompt_hash=prompt_hash,parse_status=parse_status,raw_output_path=str(rawpath),overlay_path=str(overlay),status='smoke_provisional')
++  return dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=attempt,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],case_id=case_id,image_path=image['path'],view_index=v,absolute_center_heading=image['absolute_center_heading'],candidates=candidates,model_revision=REVISION,prompt_hash=prompt_hash,parse_status=parse_status,raw_output_path=str(rawpath),raw_sha256=meta['raw_sha256'],normalization_type=meta['normalization_type'],normalized_sha256=meta['normalized_sha256'],normalized_path=meta['normalized_path'],overlay_path=str(overlay),status='smoke_provisional')
+  raise AssertionError('Unreachable retry state')
+ 
+ def route_options(route_id,lookup):
+@@ -208,20 +237,19 @@
+  for label,item in zip(['A','B'],valid):item['option_id']=label
+  return dict(route_id=route_id,decision_node=node,incoming_edge_index=in_id,provisional_continuation_edge_index=correct_id,approach_bearing=round(approach_bearing,2),options=valid,road_edges_sha256=hashfile(ROAD/'edges.shp'),road_dbf_sha256=hashfile(ROAD/'edges.dbf'),status='provisional_geometry_check_not_gold')
+ 
+-def route_prompt(condition,options,route_images):
++def route_prompt(condition,options,route_images,retry=False,error=''):
+  base='You are at a street intersection. Select one of the two LEGAL non-return exits listed below. IDs are anonymous. Use only the supplied images; do not guess place names or coordinates. If evidence is insufficient, set uncertain=true and make a tentative selection. '+ ' '.join(f"Option {x['option_id']}: path {x['relative_description']} relative to the approach." for x in options)
+  if condition=='route_plus_current':base+=' The earlier route images are in observed travel order. Use them as visual memory together with the current four-view observation.'
+  elif condition=='route_shuffled':base+=' The earlier route images are shown out of travel order. Compare them with the current four-view observation.'
+  else:base+=' Only the current four-view observation is available.'
+  base+=' Return exactly one JSON object with only chosen_edge_id, maneuver, evidence_view_id, evidence_candidates, reason, uncertain. chosen_edge_id must be A or B; maneuver must be left, right, forward, or unknown; evidence_view_id must be view_0..view_3 or empty string; evidence_candidates must be []; reason must describe visible evidence only; uncertain must be a JSON boolean. Example FORMAT only: {"chosen_edge_id":"A","maneuver":"unknown","evidence_view_id":"view_0","evidence_candidates":[],"reason":"visual evidence is limited","uncertain":true}. Replace values. No markdown or other text.'
++ if retry:base+=' This is a formatting retry on the SAME images. Re-emit a complete JSON object with exactly the required fields. The previous reply failed: '+error+'. No markdown or explanation.'
+  return base
+ 
+-def check_decision(raw,case_id,condition):
+- try:o=json.loads(raw.strip())
+- except json.JSONDecodeError as e:raise RuntimeError(f'Invalid route_decision JSON: {e}')
++def check_decision(o,case_id,condition):
+  expected=set(SCHEMA['route_decision']['required'])-{'case_id','condition'}
+- if not isinstance(o,dict) or set(o)!=expected:raise RuntimeError('Route decision fields mismatch: '+str(set(o) if isinstance(o,dict) else type(o)))
+- if o['chosen_edge_id'] not in ['A','B'] or o['maneuver'] not in SCHEMA['route_decision']['maneuver'] or o['evidence_view_id'] not in ['', 'view_0','view_1','view_2','view_3'] or o['evidence_candidates']!=[] or not isinstance(o['reason'],str) or not isinstance(o['uncertain'],bool):raise RuntimeError('Route decision value contract failed')
++ if not isinstance(o,dict) or set(o)!=expected:raise FormatError('extra_or_missing','Route decision fields mismatch: '+str(set(o) if isinstance(o,dict) else type(o)))
++ if o['chosen_edge_id'] not in ['A','B'] or o['maneuver'] not in SCHEMA['route_decision']['maneuver'] or o['evidence_view_id'] not in ['', 'view_0','view_1','view_2','view_3'] or o['evidence_candidates']!=[] or not isinstance(o['reason'],str) or not isinstance(o['uncertain'],bool):raise FormatError('structure','Route decision value contract failed')
+  return dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=1,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],case_id=case_id,condition=condition,**o,status='smoke_provisional')
+ 
+ def stage2(lookup):
+@@ -245,14 +273,28 @@
+    else:order=[]
+    imgs=[(f'route memory image {j+1}',path(learn_steps[k],target_view)) for j,k in enumerate(order)]
+    imgs += [(f'current view_{v}',path(3,v)) for v in range(4)]
+-   prompt=route_prompt(condition,maps[route_id]['options'],imgs)
+-   log('Route decision '+route_id+' '+condition)
+-   raw,shapes=infer(imgs,prompt,limit=320)
+-   name=f'{route_id}.{condition}.attempt01.txt';rawpath=OUT/'route_raw'/name;write_new(rawpath,raw)
+-   save(rawpath.with_suffix('.metadata.json'),dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=1,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],model_revision=REVISION,route_id=route_id,condition=condition,prompt=prompt,prompt_hash=hashlib.sha256(prompt.encode()).hexdigest(),input_image_sha256=[hashfile(p) for _,p in imgs],input_image_paths=imgs,processing_shapes=shapes,raw_output_path=str(rawpath)))
+-   decision=check_decision(raw,route_id+'_'+condition,condition)
+-   decision['raw_output_path']=str(rawpath);decision['prompt_hash']=hashlib.sha256(prompt.encode()).hexdigest();decision['model_revision']=REVISION
+-   decision['provisional_correct']=next(x['road_edge_index'] for x in maps[route_id]['options'] if x['option_id']==decision['chosen_edge_id'])==maps[route_id]['provisional_continuation_edge_index']
++   retry_error=''
++   for attempt in [1,2]:
++    prompt=route_prompt(condition,maps[route_id]['options'],imgs,retry=attempt==2,error=retry_error)
++    log(f'Route decision {route_id} {condition} attempt{attempt:02d}')
++    raw,shapes=infer(imgs,prompt,limit=320)
++    name=f'{route_id}.{condition}.attempt{attempt:02d}.txt'
++    rawpath=OUT/'route_raw'/name
++    write_new(rawpath,raw)
++    meta=dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=attempt,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],model_revision=REVISION,route_id=route_id,condition=condition,prompt=prompt,prompt_hash=hashlib.sha256(prompt.encode()).hexdigest(),input_image_sha256=[hashfile(p) for _,p in imgs],input_image_paths=imgs,processing_shapes=shapes,raw_output_path=str(rawpath),raw_sha256=hashfile(rawpath))
++    save(rawpath.with_suffix('.metadata.json'),meta)
++    try:
++     decision=check_decision(parse_attempt(raw,rawpath,meta),route_id+'_'+condition,condition)
++    except FormatError as error:
++     save(rawpath.with_suffix('.error.json'),dict(run_id=RUN_ID,route_id=route_id,condition=condition,attempt=attempt,error_kind=error.kind,error=str(error),raw_output_path=str(rawpath)))
++     log(f'route {route_id} {condition} attempt{attempt:02d} parse error: {error}')
++     if attempt==1:
++      retry_error=str(error)
++      continue
++     raise RuntimeError(f'route {route_id} {condition} attempt{attempt:02d}: {error}; raw={rawpath}')
++    decision.update(attempt=attempt,raw_output_path=str(rawpath),raw_sha256=meta['raw_sha256'],normalization_type=meta['normalization_type'],normalized_sha256=meta['normalized_sha256'],normalized_path=meta['normalized_path'],prompt_hash=meta['prompt_hash'],model_revision=REVISION)
++    decision['provisional_correct']=next(x['road_edge_index'] for x in maps[route_id]['options'] if x['option_id']==decision['chosen_edge_id'])==maps[route_id]['provisional_continuation_edge_index']
++    break
+    with (OUT/'route_decisions.jsonl').open('a') as f:f.write(line(decision))
+    COUNTS['stage2']+=1;status('RUNNING')
+  status('COMPLETE');log('Stage 2 completed six provisional decisions')

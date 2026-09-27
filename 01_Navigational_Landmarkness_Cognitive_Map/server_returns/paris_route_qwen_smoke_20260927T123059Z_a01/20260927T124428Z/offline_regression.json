@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "source_raw_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T113729Z_a01/stage0/candidate_raw/main_03_dec.attempt01.txt",
+  "raw_sha256": "d0dbc82df7ff12585c9df27fc033839e7e0c0db7e8ac53d7550de28d300c5488",
+  "normalization_type": "full_json_fence",
+  "normalized_sha256": "cc3fb31ef3dda1f5746d3ae8bb716c4f554be9bc51328d6d55d1eca3e3a0c6b5",
+  "normalized_path": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/qwen_parser_patch_ccf88a6/offline_main_03_dec.attempt01.normalized.txt",
+  "candidate_count": 3,
+  "candidate_ids": [
+    1,
+    2,
+    3
+  ],
+  "schema_version": "1.2",
+  "bbox_640_valid": true,
+  "seven_fields_valid": true,
+  "rerun_after_final_patch": true,
+  "runner_sha256": "8bd65dc33d122f02d60e6ab90d5df6c2da81c0b3fa6da0ae7c40c87b75df4c5a",
+  "runner_patch_sha256": "195639d4e7fba80008f41b278966a2d72b4e186f1b97a51473dece31286c7e8b",
+  "parser_source_sha256": "3cc7163d204233eb96a2896c650bc2dbb7558d5965590a60f928bdbb5c0beac6",
+  "parser_test_log": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/qwen_parser_patch_ccf88a6/parser_tests.log"
+}

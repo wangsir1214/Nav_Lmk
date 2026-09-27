@@ -1,0 +1,8 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T123059Z_a01",
+  "status": "not_run",
+  "scored_case_count": 0,
+  "metrics": null,
+  "reason": "Stage 0 stopped at strict bbox validation; no route scoring was run.",
+  "scientific_status": "smoke_provisional"
+}
