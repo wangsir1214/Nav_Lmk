@@ -1,0 +1,33 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": 1,
+      "bbox_xyxy_1000": [240, 440, 330, 460],
+      "type": "text",
+      "description": "Storefront sign with text 'CASA HOME' visible on the building facade",
+      "hypothesized_role": "possible navigation cue",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    },
+    {
+      "candidate_id": 2,
+      "bbox_xyxy_1000": [390, 440, 480, 460],
+      "type": "text",
+      "description": "Storefront sign with text 'CASA HOME' visible on the building facade",
+      "hypothesized_role": "possible navigation cue",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    },
+    {
+      "candidate_id": 3,
+      "bbox_xyxy_1000": [250, 520, 280, 560],
+      "type": "object",
+      "description": "Circular traffic sign with a white arrow pointing left",
+      "hypothesized_role": "possible navigation cue",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    }
+  ]
+}
+```

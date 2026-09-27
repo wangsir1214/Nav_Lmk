@@ -1,0 +1,1 @@
+{"chosen_edge_id":"B","maneuver":"left","evidence_view_id":"view_0","evidence_candidates":[],"reason":"The intersection in view_0 shows a clear left turn path with a pedestrian crossing and parked cars on the left side, indicating a legal exit to the left. The right side appears to be a continuation of the current road, not an exit.","uncertain":false}

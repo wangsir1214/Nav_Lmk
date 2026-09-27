@@ -1,0 +1,38 @@
+{
+  "runner.py": {
+    "sha256": "d8762b74278fac111b6454889b5323c6c27245b97535849ac92f98b38641e799",
+    "size_bytes": 28355
+  },
+  "runner.patch": {
+    "sha256": "c0999608c221cc83a3728954c4aa51a738e8a7d9f1aa89fbd96679ac6ac4e917",
+    "size_bytes": 18923
+  },
+  "coordinate_contract.py": {
+    "sha256": "fc451405fb0e32d02499621349887fb535d9d923658f0a82b91073ab36cf51bb",
+    "size_bytes": 4808
+  },
+  "QWEN_OUTPUT_SCHEMAS_COORD1000_20260927.json": {
+    "sha256": "9024c809c6d1b8a9e8236ee9bdc11db795adcdcaf1ff90f11d86bd0fd89b6b34",
+    "size_bytes": 4354
+  },
+  "test_coordinate_contract.py": {
+    "sha256": "72b47baa8d830601da648a8059aa9313453db86f7973315daa0ecb22ad735e4b",
+    "size_bytes": 3381
+  },
+  "test_runner_offline.py": {
+    "sha256": "7f04ca687ee4157efda3713adeaa07a654e7f1ecc852dc551b3cd788ab69d4f1",
+    "size_bytes": 2564
+  },
+  "coordinate_tests.log": {
+    "sha256": "564796251d517425c6b1c489854acad9ca84dfe364efee470ef2eec16499a8b7",
+    "size_bytes": 1302
+  },
+  "integration_tests.log": {
+    "sha256": "fbbb7ed299c30ae7574fb0c316b01ffbca01bdd943695d73e237e647bb7cabb4",
+    "size_bytes": 1899
+  },
+  "parser_tests.log": {
+    "sha256": "5d9429428ba4875a3594b847f300ac0aeb3e60b91b578e12cdeebb33f6b2c383",
+    "size_bytes": 676
+  }
+}

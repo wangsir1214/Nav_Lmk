@@ -1,0 +1,208 @@
+{
+  "diagnostic_dir": "/home/nas/wangyq/outputs/coordinate_audit_20260927T140445Z",
+  "coordinate_audit_sha256": "8c9c340028129ad0735da813f0a2b57aa010c98521d35e9c32ee4168a2e1dd26",
+  "shared_interpretation_supported": true,
+  "conclusion": "Shared 0-1000 coordinate interpretation supported by visible ZARA HOME signage in main_03_dec and no-entry sign in main_06_dec; some individual boxes remain inaccurate or duplicated.",
+  "reviewed_raw_replies": 3,
+  "candidate_judgments": [
+    {
+      "case_id": "main_03_dec",
+      "attempt": 1,
+      "candidate_id": 1,
+      "raw_bbox": [
+        248,
+        448,
+        328,
+        464
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        158.72,
+        286.72,
+        209.92,
+        296.96
+      ],
+      "described_target_visible": "yes",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "yes",
+      "duplicate_or_repeat": "same_storefront_as_2",
+      "review_note": "Left ZARA HOME sign visible; scaled box covers text; raw-as-640 falls on roadway."
+    },
+    {
+      "case_id": "main_03_dec",
+      "attempt": 1,
+      "candidate_id": 2,
+      "raw_bbox": [
+        400,
+        464,
+        504,
+        484
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        256.0,
+        296.96,
+        322.56,
+        309.76
+      ],
+      "described_target_visible": "yes",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "yes",
+      "duplicate_or_repeat": "same_storefront_as_1",
+      "review_note": "Second ZARA HOME sign on adjoining facade visible; scaled box covers it; raw-as-640 falls on roadway."
+    },
+    {
+      "case_id": "main_03_dec",
+      "attempt": 1,
+      "candidate_id": 3,
+      "raw_bbox": [
+        248,
+        536,
+        272,
+        576
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        158.72,
+        343.04,
+        174.08,
+        368.64
+      ],
+      "described_target_visible": "partial",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "no",
+      "duplicate_or_repeat": "none",
+      "review_note": "White circular sign visible but arrow illegible; scaled box falls below it; raw-as-640 falls on roadway."
+    },
+    {
+      "case_id": "main_06_dec",
+      "attempt": 1,
+      "candidate_id": 1,
+      "raw_bbox": [
+        776,
+        480,
+        800,
+        504
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        496.64,
+        307.2,
+        512.0,
+        322.56
+      ],
+      "described_target_visible": "yes",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "yes",
+      "duplicate_or_repeat": "same_target_across_retry",
+      "review_note": "No-entry sign visible near x=500,y=315; scaled box covers it; raw-as-640 is off-image."
+    },
+    {
+      "case_id": "main_06_dec",
+      "attempt": 1,
+      "candidate_id": 2,
+      "raw_bbox": [
+        352,
+        448,
+        380,
+        472
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        225.28,
+        286.72,
+        243.2,
+        302.08
+      ],
+      "described_target_visible": "yes",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "no",
+      "duplicate_or_repeat": "same_target_claimed_in_retry",
+      "review_note": "White roadside sign visible lower than scaled box; raw-as-640 falls on road."
+    },
+    {
+      "case_id": "main_06_dec",
+      "attempt": 1,
+      "candidate_id": 3,
+      "raw_bbox": [
+        640,
+        480,
+        999,
+        540
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        409.6,
+        307.2,
+        639.36,
+        345.6
+      ],
+      "described_target_visible": "yes",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "partial",
+      "duplicate_or_repeat": "none",
+      "review_note": "Green kiosk and awning visible; scaled box broadly crosses them and neighboring frontage; raw-as-640 is off-image."
+    },
+    {
+      "case_id": "main_06_dec",
+      "attempt": 2,
+      "candidate_id": 1,
+      "raw_bbox": [
+        776,
+        480,
+        800,
+        504
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        496.64,
+        307.2,
+        512.0,
+        322.56
+      ],
+      "described_target_visible": "yes",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "yes",
+      "duplicate_or_repeat": "same_target_across_retry",
+      "review_note": "No-entry sign again covered by scaled box; raw-as-640 is off-image."
+    },
+    {
+      "case_id": "main_06_dec",
+      "attempt": 2,
+      "candidate_id": 2,
+      "raw_bbox": [
+        360,
+        440,
+        380,
+        460
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        230.4,
+        281.6,
+        243.2,
+        294.4
+      ],
+      "described_target_visible": "yes",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "no",
+      "duplicate_or_repeat": "exact_duplicate_of_3",
+      "review_note": "White sign visible below scaled box; proposed box is over foliage; raw-as-640 falls on road."
+    },
+    {
+      "case_id": "main_06_dec",
+      "attempt": 2,
+      "candidate_id": 3,
+      "raw_bbox": [
+        360,
+        440,
+        380,
+        460
+      ],
+      "bbox_if_0_1000_scaled_to_640": [
+        230.4,
+        281.6,
+        243.2,
+        294.4
+      ],
+      "described_target_visible": "yes",
+      "raw_as_640_fit": "no",
+      "raw_as_1000_fit": "no",
+      "duplicate_or_repeat": "exact_duplicate_of_2",
+      "review_note": "Exact same box and description as candidate 2; it misses the visible white sign."
+    }
+  ],
+  "old_run_remains_blocked": true
+}

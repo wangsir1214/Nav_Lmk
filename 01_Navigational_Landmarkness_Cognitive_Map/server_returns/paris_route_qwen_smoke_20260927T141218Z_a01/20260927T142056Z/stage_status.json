@@ -1,0 +1,15 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+  "timestamp_utc": "20260927T141218Z",
+  "attempt": 1,
+  "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+  "sync_mode": "temporary_clone_update",
+  "stage": "final",
+  "status": "COMPLETE",
+  "completed": {
+    "stage0": 2,
+    "stage1": 6,
+    "stage2": 6
+  },
+  "time": "2026-09-27T14:17:11.640173+00:00"
+}

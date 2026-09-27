@@ -1,0 +1,121 @@
+{
+  "version": "1.3-coordinate1000",
+  "model_reply_normalization": {
+    "scope": "Apply to every model reply parsed as JSON, including candidate proposals and route decisions.",
+    "allowed": "Accept plain JSON or remove exactly one Markdown code fence that covers the entire trimmed reply, with language tag json (case-insensitive) or no language tag. The opening and closing fences must each be on their own line.",
+    "forbidden": "Do not extract JSON from prose, remove partial or nested fences, repair JSON syntax, add or drop keys, synthesize values, or clip coordinates.",
+    "audit": "Preserve the untouched raw response. Record normalization_type (none or full_json_fence), raw_sha256, normalized_sha256, and the normalized text or its path before schema validation."
+  },
+  "candidate_proposal": {
+    "required": [
+      "case_id",
+      "image_path",
+      "candidates",
+      "model_revision",
+      "prompt_hash",
+      "parse_status"
+    ],
+    "candidate_fields": [
+      "candidate_id",
+      "bbox_xyxy_1000",
+      "type",
+      "description",
+      "hypothesized_role",
+      "visibility",
+      "uncertainty"
+    ],
+    "candidate_field_contract": {
+      "candidate_id": "integer or short string unique within the case",
+      "type": "one of the listed type enums",
+      "description": "short visible description grounded in the image",
+      "hypothesized_role": "navigation-relevant role hypothesis, not a gold label",
+      "visibility": "one of the listed visibility enums",
+      "uncertainty": "required numeric self-report in [0,1]; 0 means low uncertainty and 1 means high uncertainty; not calibrated",
+      "bbox_xyxy_1000": "four finite numbers [x1,y1,x2,y2] in a 0-1000 frame; 0<=x1<x2<=1000 and 0<=y1<y2<=1000"
+    },
+    "candidate_object_exact_keys": [
+      "candidate_id",
+      "bbox_xyxy_1000",
+      "type",
+      "description",
+      "hypothesized_role",
+      "visibility",
+      "uncertainty"
+    ],
+    "empty_candidate_rule": "If no clear candidate is visible, emit candidates=[] and parse_status=no_clear_candidate; do not invent a dummy box.",
+    "format_retry_policy": "After full-fence normalization, retry once on the same image for JSON syntax or strict raw-schema failure. Preserve both attempts and normalization hashes. No field repair or coordinate clipping.",
+    "enums": {
+      "type": [
+        "object",
+        "structural",
+        "text",
+        "scene",
+        "no_clear_candidate"
+      ],
+      "visibility": [
+        "clear",
+        "partial",
+        "occluded",
+        "uncertain"
+      ],
+      "parse_status": [
+        "ok",
+        "no_clear_candidate",
+        "parse_error"
+      ]
+    },
+    "coordinate_contract": "Model raw reply uses only bbox_xyxy_1000. Preserve that box. Use actual 640x640 image dimensions to derive a separate bbox_xyxy_640 by x*width/1000 and y*height/1000; apply this conversion to every raw coordinate including values below 640. Never clip or relabel the raw box.",
+    "derived_candidate_fields": [
+      "bbox_xyxy_640",
+      "duplicate_review_flags"
+    ],
+    "duplicate_review_policy": "Flag identical raw boxes and identical descriptions for human review; do not silently count them as independent landmarks."
+  },
+  "route_decision": {
+    "required": [
+      "case_id",
+      "condition",
+      "chosen_edge_id",
+      "maneuver",
+      "evidence_view_id",
+      "evidence_candidates",
+      "reason",
+      "uncertain"
+    ],
+    "condition_enum": [
+      "route_plus_current",
+      "current_only",
+      "route_shuffled",
+      "candidate_drop",
+      "matched_control_drop"
+    ],
+    "chosen_edge_id": "anonymous option id supplied by the scorer; never a panoid",
+    "maneuver": [
+      "left",
+      "right",
+      "forward",
+      "unknown"
+    ],
+    "uncertain": "boolean; self-report only and not a calibrated probability",
+    "evidence_candidates": "zero or more candidate_id values from a separately frozen proposal file"
+  },
+  "audit_fields": [
+    "run_id",
+    "timestamp_utc",
+    "attempt",
+    "source_commit",
+    "sync_mode",
+    "environment_digest",
+    "raw_output_path",
+    "normalization_type",
+    "raw_sha256",
+    "normalized_sha256",
+    "overlay_path",
+    "error_code",
+    "notes",
+    "bbox_xyxy_1000",
+    "bbox_xyxy_640",
+    "duplicate_review_flags",
+    "coordinate_conversion"
+  ]
+}

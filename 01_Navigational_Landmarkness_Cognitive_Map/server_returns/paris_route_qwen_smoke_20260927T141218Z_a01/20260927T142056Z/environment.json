@@ -1,0 +1,23 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+  "timestamp_utc": "20260927T141218Z",
+  "attempt": 1,
+  "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+  "sync_mode": "temporary_clone_update",
+  "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+  "transformers": "5.18.0.dev0",
+  "cuda": "12.8",
+  "gpu": "NVIDIA L20",
+  "vram_bytes": 47665709056,
+  "free_project_bytes": 10082996764672,
+  "free_nas_bytes": 37172556070912,
+  "model_path": "/home/nas/wangyq/model_weights/Qwen/Qwen3.5-9B",
+  "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "processor": "Qwen3VLProcessor",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "transformers_git_commit": "96331a9f93b72697f160a958d2883d4b49a56739",
+  "inference_offline": true
+}

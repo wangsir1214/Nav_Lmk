@@ -1,0 +1,1 @@
+{"chosen_edge_id":"B","maneuver":"forward","evidence_view_id":"view_0","evidence_candidates":[],"reason":"The road ahead is clear with vehicles proceeding straight, and the crosswalk indicates a forward path is available. No immediate obstacles or signs prohibit moving forward.","uncertain":false}

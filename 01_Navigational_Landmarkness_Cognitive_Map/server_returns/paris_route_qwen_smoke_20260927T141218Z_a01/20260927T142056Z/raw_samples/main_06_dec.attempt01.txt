@@ -1,0 +1,33 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": 1,
+      "bbox_xyxy_1000": [770, 480, 800, 510],
+      "type": "text",
+      "description": "A red circular sign with a white horizontal bar, commonly known as a 'No Entry' sign.",
+      "hypothesized_role": "Traffic regulation sign indicating no entry for vehicles",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    },
+    {
+      "candidate_id": 2,
+      "bbox_xyxy_1000": [350, 440, 380, 470],
+      "type": "text",
+      "description": "A rectangular white sign with black text, likely a street name or directional sign.",
+      "hypothesized_role": "Street name or directional sign",
+      "visibility": "clear",
+      "uncertainty": 0.2
+    },
+    {
+      "candidate_id": 3,
+      "bbox_xyxy_1000": [650, 500, 680, 530],
+      "type": "object",
+      "description": "A green awning or canopy structure, possibly part of a market stall or shop.",
+      "hypothesized_role": "Commercial structure or market stall",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    }
+  ]
+}
+```

@@ -1,0 +1,41 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+  "reviewed_at_utc": "2026-09-27T14:15:09.107982+00:00",
+  "decision": "PASS",
+  "systematic_misalignment": false,
+  "coordinate_interpretation": "model raw bbox_xyxy_1000 converted by actual 640x640 width and height",
+  "reviewed_overlays": {
+    "main_03_dec": {
+      "path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/stage0/candidate_overlays/main_03_dec.attempt01.converted_640.png",
+      "sha256": "2da2cdfe8a0636f05804fd4b54fe37f6f7063dfb7f7c14e02052cd5d3154f0f6"
+    },
+    "main_06_dec": {
+      "path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/stage0/candidate_overlays/main_06_dec.attempt01.converted_640.png",
+      "sha256": "9fafd0318412190221edc4d648fedf86382116a49053a9b07c6e4bd5a34434c1"
+    }
+  },
+  "case_observations": {
+    "main_03_dec": {
+      "anchor_boxes_fit": [
+        1,
+        2
+      ],
+      "requires_human_review": [
+        3
+      ],
+      "notes": "Both storefront-sign boxes land on visible signs. Model reads CASA HOME but visible lettering appears ZARA HOME; candidate 3 is below the circular sign. Candidates 1 and 2 identify the same storefront and are flagged for review."
+    },
+    "main_06_dec": {
+      "anchor_boxes_fit": [
+        1
+      ],
+      "requires_human_review": [
+        2,
+        3
+      ],
+      "notes": "No-entry box lands on the visible sign. White street-sign box is above its apparent target; green-awning box is over lower facade. These are individual grounding errors, not a common scaling shift."
+    }
+  },
+  "reason": "Visible storefront signs in main_03_dec and no-entry sign in main_06_dec align after deterministic conversion. There is no systematic coordinate-frame offset across the two images. Other candidate localization/OCR errors remain provisional and require human review.",
+  "audit_reference": "/home/nas/wangyq/outputs/coordinate_audit_20260927T140445Z/coordinate_audit.json"
+}

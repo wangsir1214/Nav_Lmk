@@ -1,0 +1,21 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+  "timestamp_utc": "20260927T141218Z",
+  "attempt": 1,
+  "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+  "main_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+  "sync_mode": "temporary_clone_update",
+  "sync_backup": "/home/wangyq/Nav_Lmk_sync_backup_20260927T140307Z",
+  "nas_output_dir": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01",
+  "local_run_dir": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_route_qwen_smoke_20260927T141218Z_a01",
+  "diagnostic_audit_path": "/home/nas/wangyq/outputs/coordinate_audit_20260927T140445Z/coordinate_audit.json",
+  "diagnostic_audit_sha256": "8c9c340028129ad0735da813f0a2b57aa010c98521d35e9c32ee4168a2e1dd26",
+  "schema_version": "1.3-coordinate1000",
+  "runner_sha256": "d8762b74278fac111b6454889b5323c6c27245b97535849ac92f98b38641e799",
+  "runner_patch_sha256": "c0999608c221cc83a3728954c4aa51a738e8a7d9f1aa89fbd96679ac6ac4e917",
+  "schema_sha256": "9024c809c6d1b8a9e8236ee9bdc11db795adcdcaf1ff90f11d86bd0fd89b6b34",
+  "coordinate_contract_sha256": "fc451405fb0e32d02499621349887fb535d9d923658f0a82b91073ab36cf51bb",
+  "parser_sha256": "3cc7163d204233eb96a2896c650bc2dbb7558d5965590a60f928bdbb5c0beac6",
+  "route_csv_sha256": "e9da1f02ea9d5e9acd1dfe09691f50cbe3f91ed1007daae9b4e1246aea4042ad",
+  "test_status": "12 coordinate/integration + 5 parser passed"
+}

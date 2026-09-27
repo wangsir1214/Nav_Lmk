@@ -1,0 +1,17 @@
+test_degenerate_out_of_range_nonfinite_and_boolean_rejected (test_coordinate_contract.CoordinateContractTests.test_degenerate_out_of_range_nonfinite_and_boolean_rejected) ... ok
+test_empty_candidate_response_is_allowed (test_coordinate_contract.CoordinateContractTests.test_empty_candidate_response_is_allowed) ... ok
+test_exact_duplicate_box_is_flagged_not_merged (test_coordinate_contract.CoordinateContractTests.test_exact_duplicate_box_is_flagged_not_merged) ... ok
+test_no_entry_values_above_640 (test_coordinate_contract.CoordinateContractTests.test_no_entry_values_above_640) ... ok
+test_old_misnamed_field_and_extra_key_rejected (test_coordinate_contract.CoordinateContractTests.test_old_misnamed_field_and_extra_key_rejected) ... ok
+test_same_storefront_text_at_two_boxes_is_flagged_for_review (test_coordinate_contract.CoordinateContractTests.test_same_storefront_text_at_two_boxes_is_flagged_for_review) ... ok
+test_zara_home_values_below_640_are_still_scaled (test_coordinate_contract.CoordinateContractTests.test_zara_home_values_below_640_are_still_scaled) ... ok
+test_zero_and_thousand_boundaries (test_coordinate_contract.CoordinateContractTests.test_zero_and_thousand_boundaries) ... ok
+test_converted_overlay_uses_pixel_box (test_runner_offline.RunnerCoordinateIntegrationTests.test_converted_overlay_uses_pixel_box) ... ok
+test_fenced_reply_converts_every_raw_value (test_runner_offline.RunnerCoordinateIntegrationTests.test_fenced_reply_converts_every_raw_value) ... ok
+test_old_reply_field_does_not_pass_new_schema (test_runner_offline.RunnerCoordinateIntegrationTests.test_old_reply_field_does_not_pass_new_schema) ... ok
+test_route_json_still_uses_shared_fence_parser (test_runner_offline.RunnerCoordinateIntegrationTests.test_route_json_still_uses_shared_fence_parser) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.045s
+
+OK

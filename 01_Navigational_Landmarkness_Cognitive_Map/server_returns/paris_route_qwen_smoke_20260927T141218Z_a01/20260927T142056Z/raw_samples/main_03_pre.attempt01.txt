@@ -1,0 +1,48 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": 1,
+      "bbox_xyxy_1000": [
+        100,
+        500,
+        250,
+        600
+      ],
+      "type": "object",
+      "description": "Green and white construction barriers lining the left side of the street",
+      "hypothesized_role": "Possible construction zone marker",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    },
+    {
+      "candidate_id": 2,
+      "bbox_xyxy_1000": [
+        800,
+        550,
+        1000,
+        800
+      ],
+      "type": "object",
+      "description": "Blue van parked on the right side of the street",
+      "hypothesized_role": "Possible vehicle identification",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    },
+    {
+      "candidate_id": 3,
+      "bbox_xyxy_1000": [
+        300,
+        500,
+        400,
+        550
+      ],
+      "type": "object",
+      "description": "White car driving on the left side of the street",
+      "hypothesized_role": "Possible vehicle identification",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    }
+  ]
+}
+```

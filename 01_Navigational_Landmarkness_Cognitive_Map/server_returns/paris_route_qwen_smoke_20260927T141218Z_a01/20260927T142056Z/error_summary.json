@@ -1,0 +1,9 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+  "status": "COMPLETE",
+  "first_error": null,
+  "terminal_error_count": 0,
+  "format_retry_error_sidecars": 0,
+  "duplicate_candidate_pairs_for_human_review": 2,
+  "notes": "Some candidate descriptions and boxes still require human review; no failed or gold navigation score is inferred."
+}

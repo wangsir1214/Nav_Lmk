@@ -1,0 +1,33 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": 1,
+      "bbox_xyxy_1000": [420, 470, 480, 490],
+      "type": "text",
+      "description": "white rectangular street sign with black text mounted on a pole",
+      "hypothesized_role": "street name or location identifier",
+      "visibility": "clear",
+      "uncertainty": 0.1
+    },
+    {
+      "candidate_id": 2,
+      "bbox_xyxy_1000": [230, 530, 260, 560],
+      "type": "object",
+      "description": "yellow rectangular sign with black text mounted on a pole",
+      "hypothesized_role": "informational or regulatory sign",
+      "visibility": "clear",
+      "uncertainty": 0.2
+    },
+    {
+      "candidate_id": 3,
+      "bbox_xyxy_1000": [960, 510, 1000, 550],
+      "type": "text",
+      "description": "red circular sign with white text and symbol",
+      "hypothesized_role": "traffic regulation sign",
+      "visibility": "partial",
+      "uncertainty": 0.3
+    }
+  ]
+}
+```

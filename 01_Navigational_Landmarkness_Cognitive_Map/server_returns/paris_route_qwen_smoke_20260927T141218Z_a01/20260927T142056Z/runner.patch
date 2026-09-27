@@ -1,0 +1,178 @@
+--- /home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_route_qwen_smoke_20260927T123059Z_a01/runner.py
++++ /home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/coordinate_fix_20260927T140726Z/runner.py
+@@ -10,6 +10,9 @@
+ SYNC=Path('/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/sync')
+ sys.path.insert(0,str(SYNC))
+ from qwen_json_parser import parse_model_json, _FULL_JSON_FENCE
++sys.path.insert(0,str(RUN_DIR))
++from coordinate_contract import CoordinateContractError, validate_candidates
++SCHEMA_PATH=RUN_DIR/'QWEN_OUTPUT_SCHEMAS_COORD1000_20260927.json'
+ MODEL=Path('/home/nas/wangyq/model_weights/Qwen/Qwen3.5-9B')
+ ROAD=Path('/home/nas/wangyq/Street_view_and_points_Paris/road')
+ PANOROAD=Path('/home/nas/wangyq/Street_view_and_points_Paris/Line_After_heading_clear_Paris_center_street_from0309_4_v1/Line_Points_3_to_road.shp')
+@@ -52,7 +55,7 @@
+ def load_contract():
+  global SCHEMA,MANIFEST,CASES,ROUTES
+  MANIFEST=json.loads((SYNC/'ROUTE_SMOKE_MANIFEST_20260926.json').read_text())
+- SCHEMA=json.loads((SYNC/'QWEN_OUTPUT_SCHEMAS_20260926.json').read_text())
++ SCHEMA=json.loads(SCHEMA_PATH.read_text())
+  if MANIFEST['image_pattern']!='{panoid}_panorama_{view_index}.jpg':raise ValueError('Image filename contract changed unexpectedly')
+  with (RUN_DIR/'inputs/candidate_route_steps.csv').open(encoding='utf-8-sig',newline='') as f:
+   records=list(csv.DictReader(f))
+@@ -70,7 +73,8 @@
+     if not p.is_file():raise FileNotFoundError(str(p))
+     with Image.open(p) as im:
+      if im.size!=(640,640):raise ValueError('Original image is not 640x640: '+str(p))
+-    views.append(dict(path=str(p),view_index=v,absolute_center_heading=(float(row['heading_from_api'])+90*v)%360,sha256=hashfile(p)))
++     image_size=list(im.size)
++    views.append(dict(path=str(p),image_size=image_size,view_index=v,absolute_center_heading=(float(row['heading_from_api'])+90*v)%360,sha256=hashfile(p)))
+    CASES[c['case_id']]=dict(case_id=c['case_id'],route_id=route['route_id'],role=c['role'],primary_view_index=c['view_index'],views=views)
+  return lookup
+ 
+@@ -87,40 +91,20 @@
+  save(OUT/'model_verification.json',dict(run_id=RUN_ID,model_path=str(MODEL),revision=provenance['revision'],architecture=config['architectures'],vision_config_present=True,processor=processor['processor_class'],file_count=len(manifest),total_bytes=sum(x['size_bytes'] for x in manifest),all_sha256_verified=True,source_manifest_sha256=hashfile(MODEL/'_provenance/file_manifest.json'),verified_at=utc()))
+  return provenance['revision']
+ 
+-PROMPT_TEMPLATE='{"candidates":[{"candidate_id":1,"bbox_xyxy_640":[0,0,1,1],"type":"object","description":"visible cue","hypothesized_role":"possible navigation cue","visibility":"clear","uncertainty":0.5}]}'
++PROMPT_TEMPLATE='{"candidates":[{"candidate_id":1,"bbox_xyxy_1000":[100,100,300,300],"type":"object","description":"visible cue","hypothesized_role":"possible navigation cue","visibility":"clear","uncertainty":0.5}]}'
+ def candidate_prompt(retry=False,error=''):
+- intro=('This is a formatting retry on the SAME original 640x640 street-view image. Re-emit a COMPLETE JSON object from the image; do not copy an earlier answer. ' if retry else 'Review the original 640x640 street-view image. ')
+- instructions='Return at most three clearly visible place or wayfinding cues; use only pixels. Describe observations, not a route choice. Respond with exactly one JSON object with only root key candidates. Every candidate has exactly these seven keys: candidate_id, bbox_xyxy_640, type, description, hypothesized_role, visibility, uncertainty. candidate_id is an integer or short string unique here. type is object, structural, text, or scene. visibility is clear, partial, occluded, or uncertain. uncertainty is a NUMBER from 0 to 1. Every bbox is [x1,y1,x2,y2] with finite original-image coordinates and 0<=x1<x2<=640, 0<=y1<y2<=640. Do not add view_index inside a candidate. Here is the exact FORMAT TEMPLATE; replace every placeholder value with your own image-grounded answer: '+PROMPT_TEMPLATE+' If nothing clear is visible, respond exactly {"candidates":[]}. No markdown, no explanation, no extra keys.'
+- if retry:instructions+=' The previous response violated: '+error+'. Ensure every candidate includes uncertainty and every coordinate is within 640; never omit fields or add keys.'
++ intro=('This is one formatting retry on the SAME original street-view image. Re-emit a COMPLETE JSON object from the image. ' if retry else 'Review this original 640x640 street-view image. ')
++ instructions='Return at most three clearly visible place or wayfinding cues using only image pixels. Describe observations, not a route choice. Respond with exactly one JSON object with only root key candidates. Every candidate has exactly these seven keys: candidate_id, bbox_xyxy_1000, type, description, hypothesized_role, visibility, uncertainty. IMPORTANT: express each bbox in a 0 to 1000 normalized coordinate frame, NOT 640 pixel coordinates; x=0 is the left image edge, x=1000 the right edge, y=0 the top edge, y=1000 the bottom edge. bbox_xyxy_1000 is [x1,y1,x2,y2] with finite values and 0<=x1<x2<=1000, 0<=y1<y2<=1000. The server will deterministically convert to pixel coordinates using the actual image size; do not output bbox_xyxy_640. candidate_id is a unique integer or short string. type is object, structural, text, or scene. visibility is clear, partial, occluded, or uncertain. uncertainty is a NUMBER from 0 to 1. Do not add view_index inside a candidate. If two signs might identify one storefront, describe each visible instance but do not claim they are separate landmarks. FORMAT TEMPLATE only, replace values with image-grounded answers: '+PROMPT_TEMPLATE+' If nothing clear is visible, respond exactly {"candidates":[]}. No markdown, no explanation, no extra keys.'
++ if retry:instructions+=' The previous response violated: '+error+'. Use only bbox_xyxy_1000 and keep every value within 0 to 1000; never omit or add fields.'
+  return intro+instructions
+ 
+ class FormatError(ValueError):
+  def __init__(self,kind,message):super().__init__(message);self.kind=kind
+ 
+-def check_candidate(obj):
++def check_candidate(obj,image_size):
+  if not isinstance(obj,dict) or set(obj)!={'candidates'}:raise FormatError('extra_or_missing','Root object must contain only candidates')
+- cand=obj['candidates']
+- if not isinstance(cand,list) or len(cand)>3:raise FormatError('structure','candidates must be list with at most 3 items')
+- if not cand:return [],'no_clear_candidate'
+- exact=set(SCHEMA['candidate_proposal']['candidate_object_exact_keys'])
+- ids=set()
+- for idx,c in enumerate(cand):
+-  if not isinstance(c,dict):raise FormatError('structure',f'candidate {idx} not an object')
+-  miss=exact-set(c);extra=set(c)-exact
+-  if miss or extra:raise FormatError('extra_or_missing',f'candidate {idx}: missing={sorted(miss)} extra={sorted(extra)}')
+-  id_=c['candidate_id']
+-  if isinstance(id_,bool) or not isinstance(id_,(int,str)) or isinstance(id_,str) and not 0<len(id_)<=24 or id_ in ids:raise FormatError('structure',f'candidate {idx}: invalid candidate_id')
+-  ids.add(id_)
+-  if not isinstance(c['type'],str) or c['type'] not in set(SCHEMA['candidate_proposal']['enums']['type'])-{'no_clear_candidate'}:raise FormatError('enum',f'candidate {idx}: invalid type')
+-  if c['visibility'] not in SCHEMA['candidate_proposal']['enums']['visibility']:raise FormatError('enum',f'candidate {idx}: invalid visibility')
+-  if not isinstance(c['description'],str) or not isinstance(c['hypothesized_role'],str):raise FormatError('structure',f'candidate {idx}: invalid description/role')
+-  u=c['uncertainty']
+-  if isinstance(u,bool) or not isinstance(u,(int,float)) or not math.isfinite(u) or not 0<=u<=1:raise FormatError('structure',f'candidate {idx}: uncertainty outside [0,1]')
+-  b=c['bbox_xyxy_640']
+-  if not isinstance(b,list) or len(b)!=4 or any(isinstance(x,bool) or not isinstance(x,(int,float)) or not math.isfinite(x) for x in b):raise FormatError('structure',f'candidate {idx}: bbox has invalid numbers')
+-  x1,y1,x2,y2=b
+-  if not(0<=x1<x2<=640 and 0<=y1<y2<=640):raise FormatError('out_of_bounds',f'candidate {idx}: bbox outside 640x640: {b}')
+- return cand,'ok'
++ try:return validate_candidates(obj['candidates'],tuple(image_size),SCHEMA)
++ except CoordinateContractError as error:raise FormatError(error.kind,str(error)) from error
+ 
+ def parse_attempt(raw,rawpath,meta):
+  """Audit the exact reply and the only permitted wrapper removal before schema checks."""
+@@ -172,8 +156,10 @@
+  with Image.open(image_path) as im:canvas=im.convert('RGB')
+  d=ImageDraw.Draw(canvas)
+  for c in candidates:
+-  box=c['bbox_xyxy_640'];d.rectangle(box,outline=(255,0,0),width=3)
+-  d.text((box[0],max(0,box[1]-14)),str(c['candidate_id']),fill=(255,0,0))
++  box=c['bbox_xyxy_640']
++  color=(255,130,0) if c['duplicate_review_flags'] else (255,0,0)
++  d.rectangle(box,outline=color,width=3)
++  d.text((box[0],max(0,box[1]-14)),str(c['candidate_id']),fill=color)
+  outpath.parent.mkdir(parents=True,exist_ok=True);canvas.save(outpath)
+ 
+ def one_candidate(case_id,phase):
+@@ -187,16 +173,18 @@
+   write_new(rawpath,raw)
+   meta=dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=attempt,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],case_id=case_id,image_path=image['path'],view_index=v,absolute_center_heading=image['absolute_center_heading'],image_sha256=image['sha256'],prompt_hash=prompt_hash,prompt=prompt,model_revision=REVISION,processing_shapes=shapes,raw_output_path=str(rawpath),raw_sha256=hashfile(rawpath))
+   save(rawpath.with_suffix('.metadata.json'),meta)
+-  try:candidates,parse_status=check_candidate(parse_attempt(raw,rawpath,meta))
++  try:candidates,parse_status,duplicate_pairs=check_candidate(parse_attempt(raw,rawpath,meta),image['image_size'])
+   except FormatError as error:
+    save(rawpath.with_suffix('.error.json'),dict(run_id=RUN_ID,case_id=case_id,attempt=attempt,error_kind=error.kind,error=str(error),raw_output_path=str(rawpath)))
+    log(f'{phase} {case_id} attempt{attempt:02d} parse error: {error}')
+    if attempt==1:
+     retry_error=str(error);continue
+    raise RuntimeError(f'{phase} {case_id} attempt{attempt:02d}: {error}; raw={rawpath}')
+-  overlay=OUT/phase/'candidate_overlays'/f'{case_id}.attempt{attempt:02d}.png'
++  overlay=OUT/phase/'candidate_overlays'/f'{case_id}.attempt{attempt:02d}.converted_640.png'
+   draw_box(image['path'],candidates,overlay)
+-  return dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=attempt,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],case_id=case_id,image_path=image['path'],view_index=v,absolute_center_heading=image['absolute_center_heading'],candidates=candidates,model_revision=REVISION,prompt_hash=prompt_hash,parse_status=parse_status,raw_output_path=str(rawpath),raw_sha256=meta['raw_sha256'],normalization_type=meta['normalization_type'],normalized_sha256=meta['normalized_sha256'],normalized_path=meta['normalized_path'],overlay_path=str(overlay),status='smoke_provisional')
++  meta.update(schema_version=SCHEMA['version'],image_size=image['image_size'],coordinate_conversion='bbox_xyxy_1000 raw to bbox_xyxy_640 via actual width,height divided by 1000; no clipping',duplicate_review_pairs=duplicate_pairs,converted_overlay_path=str(overlay),converted_overlay_sha256=hashfile(overlay))
++  save(rawpath.with_suffix('.metadata.json'),meta)
++  return dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=attempt,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],case_id=case_id,image_path=image['path'],view_index=v,absolute_center_heading=image['absolute_center_heading'],candidates=candidates,duplicate_review_pairs=duplicate_pairs,coordinate_conversion=meta['coordinate_conversion'],image_size=image['image_size'],schema_version=SCHEMA['version'],model_revision=REVISION,prompt_hash=prompt_hash,parse_status=parse_status,raw_output_path=str(rawpath),raw_sha256=meta['raw_sha256'],normalization_type=meta['normalization_type'],normalized_sha256=meta['normalized_sha256'],normalized_path=meta['normalized_path'],overlay_path=str(overlay),status='smoke_provisional')
+  raise AssertionError('Unreachable retry state')
+ 
+ def route_options(route_id,lookup):
+@@ -300,13 +288,32 @@
+  status('COMPLETE');log('Stage 2 completed six provisional decisions')
+ 
+ def review_doc():
+- lines=['# HUMAN_REVIEW_REQUIRED — smoke/provisional','','Run ID: `'+RUN_ID+'`','','Every candidate is an unverified visual proposal. Review each box for actual visibility, fit to the described cue, duplication, transient occlusion, and recognition from neighboring views. Enter ACCEPT/EDIT/REJECT/UNCERTAIN; record the final box, reason, and whether it is identifiable nearby.','','| Case | Candidate | View index | Proposed bbox 640 | Review (ACCEPT/EDIT/REJECT/UNCERTAIN) | Final bbox 640 | Reason | Identifiable nearby? |','|---|---|---:|---|---|---|---|---|']
+- for row in (json.loads(x) for x in (OUT/'candidate_proposals.jsonl').read_text().splitlines()):
+-  for c in row['candidates']:
+-   lines.append(f"| {row['case_id']} | {c['candidate_id']} | {row['view_index']} | {c['bbox_xyxy_640']} |  |  |  |  |")
+- lines+=['','## Route choices','', 'The option mapping and choices are provisional geometry checks. A human must confirm exit legality, route continuity, capture-time stability, and the actual intended continuation before treating any action as gold. No candidate-drop conclusion was computed.','']
++ lines=['# HUMAN_REVIEW_REQUIRED — smoke/provisional','','Run ID: '+RUN_ID,'','Candidate boxes and route decisions remain unverified. Each raw bbox_xyxy_1000 was converted to bbox_xyxy_640 using the actual 640x640 source image. Orange overlays or duplicate flags need extra review.','','| Case | Candidate | View index | Raw bbox 0-1000 | Converted bbox 640 | Duplicate flags | Review (ACCEPT/EDIT/REJECT/UNCERTAIN) | Final bbox 640 | Reason | Identifiable nearby? |','|---|---|---:|---|---|---|---|---|---|---|']
++ for source in [OUT/'stage0_parsed.jsonl',OUT/'candidate_proposals.jsonl']:
++  if not source.is_file():continue
++  for row in (json.loads(x) for x in source.read_text().splitlines()):
++   for c in row['candidates']:
++    lines.append(f"| {row['case_id']} | {c['candidate_id']} | {row['view_index']} | {c['bbox_xyxy_1000']} | {c['bbox_xyxy_640']} | {c['duplicate_review_flags']} |  |  |  |  |")
++ lines+=['','## Route choices','', 'Anonymous option mapping and route choices are provisional geometry checks. Human review must confirm exit legality, route continuity and intended continuation before any action is treated as gold. No candidate-drop conclusion was computed.','']
+  (OUT/'HUMAN_REVIEW_REQUIRED.md').write_text('\n'.join(lines))
+  shutil.copy2(OUT/'HUMAN_REVIEW_REQUIRED.md',RUN_DIR/'HUMAN_REVIEW_REQUIRED.md')
++
++def wait_stage0_visual_gate():
++ global STAGE
++ STAGE='stage0_visual_gate';status('WAITING_VISUAL_GATE')
++ gate_path=RUN_DIR/'stage0_visual_gate.json'
++ log('Stage0 converted overlays ready; waiting for offline visual gate at '+str(gate_path))
++ deadline=time.monotonic()+3600
++ while not gate_path.is_file():
++  if time.monotonic()>deadline:raise RuntimeError('Stage0 visual gate timed out')
++  time.sleep(10)
++ gate=json.loads(gate_path.read_text())
++ if gate.get('run_id')!=RUN_ID or gate.get('decision') not in ['PASS','BLOCKED']:
++  raise RuntimeError('Stage0 visual gate identity or decision invalid')
++ save(OUT/'stage0_visual_gate.json',gate)
++ if gate['decision']!='PASS' or gate.get('systematic_misalignment') is not False:
++  raise RuntimeError('Stage0 visual gate BLOCKED: '+str(gate.get('reason')))
++ log('Stage0 visual gate PASS; continuing stage1')
+ 
+ def main():
+  global STAGE,PROCESSOR,MODEL_OBJ,REVISION
+@@ -319,7 +326,7 @@
+  lookup=load_contract()
+  REVISION=verify_weights()
+  save(OUT/'environment.json',dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=1,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],python=sys.version,platform=platform.platform(),torch=torch.__version__,transformers=transformers.__version__,cuda=torch.version.cuda,gpu=torch.cuda.get_device_name(0),vram_bytes=torch.cuda.get_device_properties(0).total_memory,free_project_bytes=shutil.disk_usage('/home/wangyq').free,free_nas_bytes=shutil.disk_usage('/home/nas/wangyq').free,model_path=str(MODEL),model_revision=REVISION,processor='Qwen3VLProcessor',dtype='bfloat16',attention='sdpa',transformers_git_commit='96331a9f93b72697f160a958d2883d4b49a56739',inference_offline=True))
+- save(OUT/'run_manifest.json',dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=1,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],model_revision=REVISION,status='smoke_provisional',manifest_sha256=hashfile(SYNC/'ROUTE_SMOKE_MANIFEST_20260926.json'),schema_sha256=hashfile(SYNC/'QWEN_OUTPUT_SCHEMAS_20260926.json'),route_csv_sha256=hashfile(RUN_DIR/'inputs/candidate_route_steps.csv'),cases=CASES,stage0_order=MANIFEST['smoke_policy']['first_pass_cases'],model_input_excludes=['GPS','panoid','P/N/I','VLAD scores','gold action'],third_party_dinov2_read_only=True))
++ save(OUT/'run_manifest.json',dict(run_id=RUN_ID,timestamp_utc=IDENTITY['timestamp_utc'],attempt=1,source_commit=IDENTITY['source_commit'],sync_mode=IDENTITY['sync_mode'],model_revision=REVISION,status='smoke_provisional',manifest_sha256=hashfile(SYNC/'ROUTE_SMOKE_MANIFEST_20260926.json'),schema_sha256=hashfile(SCHEMA_PATH),schema_version=SCHEMA['version'],coordinate_contract_sha256=hashfile(RUN_DIR/'coordinate_contract.py'),runner_sha256=hashfile(RUN_DIR/'runner.py'),diagnostic_audit_path=IDENTITY['diagnostic_audit_path'],diagnostic_audit_sha256=IDENTITY['diagnostic_audit_sha256'],route_csv_sha256=hashfile(RUN_DIR/'inputs/candidate_route_steps.csv'),cases=CASES,stage0_order=MANIFEST['smoke_policy']['first_pass_cases'],model_input_excludes=['GPS','panoid','P/N/I','VLAD scores','gold action'],third_party_dinov2_read_only=True))
+  (OUT/'errors.jsonl').touch(exist_ok=True)
+  STAGE='stage0';status('LOADING_MODEL');log('Loading Qwen3.5-9B locally')
+  PROCESSOR=AutoProcessor.from_pretrained(str(MODEL),local_files_only=True)
+@@ -332,6 +339,8 @@
+   COUNTS['stage0']+=1;status('RUNNING')
+  if COUNTS['stage0']!=2:raise RuntimeError('Stage0 count mismatch')
+  log('Stage0 complete: 2 cases validated')
++ review_doc()
++ wait_stage0_visual_gate()
+  STAGE='stage1';status('RUNNING')
+  for r in MANIFEST['routes']:
+   for c in r['proposal_cases']:
+@@ -341,6 +350,7 @@
+    COUNTS['stage1']+=1;status('RUNNING')
+  if COUNTS['stage1']!=6:raise RuntimeError('Stage1 count mismatch')
+  log('Stage1 complete: 6 cases validated')
++ review_doc()
+  stage2(lookup)
+  review_doc()
+  STAGE='final';status('COMPLETE');log('All requested stages completed; all outputs provisional smoke')

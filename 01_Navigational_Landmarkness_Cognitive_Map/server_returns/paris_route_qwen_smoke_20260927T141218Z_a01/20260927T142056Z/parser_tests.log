@@ -1,0 +1,10 @@
+test_full_json_fence (test_qwen_json_parser.ModelJsonParserTests.test_full_json_fence) ... ok
+test_invalid_json_inside_fence_is_rejected (test_qwen_json_parser.ModelJsonParserTests.test_invalid_json_inside_fence_is_rejected) ... ok
+test_plain_json_is_unchanged (test_qwen_json_parser.ModelJsonParserTests.test_plain_json_is_unchanged) ... ok
+test_prose_or_partial_fence_is_rejected (test_qwen_json_parser.ModelJsonParserTests.test_prose_or_partial_fence_is_rejected) ... ok
+test_unlabeled_crlf_fence (test_qwen_json_parser.ModelJsonParserTests.test_unlabeled_crlf_fence) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

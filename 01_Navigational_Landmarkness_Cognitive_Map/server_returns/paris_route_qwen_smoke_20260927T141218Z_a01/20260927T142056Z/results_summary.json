@@ -1,0 +1,15 @@
+{
+  "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+  "status": "smoke_provisional",
+  "stage_counts": {
+    "stage0": 2,
+    "stage1": 6,
+    "stage2": 6
+  },
+  "stage0_visual_gate": "PASS",
+  "candidate_cases": 8,
+  "route_decision_conditions": 6,
+  "formal_navigation_accuracy": null,
+  "score_status": "not_reported_as_formal_accuracy",
+  "reason": "Candidate boxes and route actions remain provisional; geometry continuation checks are not human gold."
+}
