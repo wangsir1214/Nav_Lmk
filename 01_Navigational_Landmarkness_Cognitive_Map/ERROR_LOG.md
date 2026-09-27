@@ -1,5 +1,11 @@
 # Error Log
 
+## 2026-09-27 - Qwen stage-0 coordinate contract BLOCKED
+
+- Run `paris_route_qwen_smoke_20260927T123059Z_a01` stopped at `main_06_dec`: both replies contained `[776,480,800,504]`, beyond 640x640. Attempt 1 also contained `[640,480,999,540]`; attempt 2 repeated one street-sign box under two types. Stage 1/2 never started.
+- `main_03_dec` passed bounds but its overlay disagrees with the descriptions, so numerical validation failed to detect a likely 0-1000 coordinate-system mismatch. Do not silently clip or reinterpret the historical output as verified 640 coordinates; retain raw replies and mark parsed boxes as unverified.
+- Local standard `exec_command` again failed at process startup with `helper_unknown_error`. A scoped read-only fallback succeeded after one automatic approval timeout. The timeout did not indicate an unsafe action; project files and NAS outputs were not affected by the failed calls.
+
 ## 2026-09-27 - Qwen stage-0 Markdown fence BLOCKED
 
 - Server run `paris_route_qwen_smoke_20260927T113729Z_a01` stopped at `main_03_dec` because `json.loads` received an entire fenced reply. The old retry policy did not include JSON syntax failures, so no retry ran; stage 0/1/2 success counts remained zero.

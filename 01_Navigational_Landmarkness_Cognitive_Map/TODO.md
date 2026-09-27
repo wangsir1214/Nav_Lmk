@@ -1,5 +1,14 @@
 # TODO
 
+## 2026-09-27 Qwen coordinate calibration and rerun
+
+- [x] Inspect the versioned partial server return for `paris_route_qwen_smoke_20260927T123059Z_a01` and preserve its `BLOCKED` status; do not count stage-0 `1/2` as visual success.
+- [ ] Server: offline overlay audit of both decision images using untouched boxes and a separately labeled 0-1000-to-640 hypothesis; record per-candidate human-readable matching evidence and ambiguity.
+- [ ] Server: revise the coordinate contract only after the diagnostic images establish the source convention. Test in-range 0-1000 coordinates as well as values over 640; never use a bounds-only rule to infer the convention or silently clip boxes.
+- [ ] Server: create a fresh UTC `run_id`, rerun stage 0, then stages 1/2 only if the grounded candidate gate passes. Keep the previous run and all attempts immutable.
+- [ ] Server: export a small, versioned results snapshot to a dedicated `server-results/{run_id}` GitHub branch, with source commit, code/schema revisions, hashes, stage counts, raw reply excerpts or small files, diagnostic overlays, and review status. Do not upload NAS images, weights, caches, or large dumps.
+- [ ] Local: fetch that exact branch and commit for visual/semantic audit before any formal landmark or route interpretation.
+
 ## 2026-09-26 当前队列
 
 - [x] 本地：针对完整 JSON 代码围栏发布 schema v1.2、解析 helper、回归检查和服务器交接修订；历史首例离线解析通过。

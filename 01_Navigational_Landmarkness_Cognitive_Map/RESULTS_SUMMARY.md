@@ -1,5 +1,12 @@
 # Results Summary
 
+## 2026-09-27 Qwen route smoke partial return
+
+- Snapshot: run `paris_route_qwen_smoke_20260927T123059Z_a01`, export `20260927T124428Z`, commit `fb25faf78f93874d4601e6ade4027201694d0cf2`. The source run is `BLOCKED`: stage 0 reports 1/2 schema-valid cases; stages 1/2 report zero. No route-choice score exists.
+- `main_06_dec` returned `[776,480,800,504]` for a no-entry sign on both attempts, outside the stated 640x640 contract. Its location after a hypothetical 1000-to-640 conversion is visually plausible. The accepted `main_03_dec` boxes are in numeric range but the saved overlay places them away from the described signs; the same conversion appears more plausible there.
+- The present `1/2` is a parser/bounds count, not a validated visual-grounding rate. The candidate JSONL, overlays, and human-review draft must not be treated as accepted landmark evidence until coordinate calibration and visual review. Qwen self-reported `uncertainty` is not calibrated confidence.
+- Next evidence gate: compare unmodified and explicitly scaled boxes on the two source images, document the coordinate convention and review outcome, then rerun under a new UTC `run_id`. Stage 1/2 results remain provisional even after a technically successful smoke; mined maneuvers are not gold actions.
+
 ## 2026-09-27 Qwen reply-format recovery
 
 - The blocked stage-0 output is a complete Markdown JSON fence whose inner JSON parses. All three proposed candidates have the required fields and in-bounds boxes; visual accuracy still needs human review.

@@ -1,5 +1,12 @@
 # Worklog
 
+## 2026-09-27 - Qwen route smoke partial return and coordinate audit
+
+- Read the versioned GitHub snapshot at `fb25faf78f93874d4601e6ade4027201694d0cf2` for run `paris_route_qwen_smoke_20260927T123059Z_a01` (export `20260927T124428Z`), without merging the server-results branch into `main`.
+- Checked stage status and the saved raw replies on the mapped NAS path. Stage 0 recorded 1/2 schema-valid cases; stages 1/2 did not run. `main_06_dec` failed twice on an out-of-bounds box; `main_03_dec` passed numeric bounds only.
+- Compared candidate descriptions and overlays with the 640x640 source views. Both cases strongly suggest 0-1000-style coordinates despite the `bbox_xyxy_640` field. This is a coordinate-contract hypothesis pending a separate visual calibration, not a validated scale conversion.
+- Prepared a server follow-up limited to offline coordinate diagnosis, explicit coordinate handling, a fresh versioned run, and a lightweight GitHub return. Existing run files and frozen baseline inputs remain untouched.
+
 ## 2026-09-27 - Qwen JSON fence parser sync
 
 - Inspected blocked run `paris_route_qwen_smoke_20260927T113729Z_a01`: the first raw reply is one complete `json` fence around valid JSON, not an empty or missing response.

@@ -1,5 +1,11 @@
 # Decisions
 
+## 2026-09-27 - Qwen bbox coordinate evidence gate
+
+- The `paris_route_qwen_smoke_20260927T123059Z_a01` stage-0 count is a schema/bounds result only. Apparent 0-1000-style coordinates affect both rejected and numerically accepted candidates, so neither the `1/2` count nor its overlays are valid grounded-candidate evidence.
+- Preserve original raw replies and boxes. Determine the actual coordinate convention with labeled diagnostic overlays and independent visual review before changing parsing or converting coordinates. A box value below 640 does not establish 640-coordinate provenance; a value above 640 must not simply be clipped.
+- After a documented coordinate fix, use a new UTC run ID and retain all prior runs. Only visually grounded candidate output may proceed to stage 1/2; those stages remain feasibility smoke, not verified navigation or cognitive-map evidence.
+
 ## 2026-09-26 0926 研究迭代
 
 1. 主科学问题收敛为“城市视觉元素在给定空间任务和路线经验下的功能价值”，具体先测路线经验是否帮助局部续行选择；不把 Qwen leaderboard 作为研究目标。
