@@ -5,7 +5,8 @@
 - [x] 读取两份 0926 最新研究对话并固化研究问题、证据边界和本轮实验顺序。
 - [x] 创建路线 smoke manifest、Qwen 输出 schema 和服务器低消耗执行交接。
 - [x] 创建私有 GitHub 同步仓库并 push 轻量 commit（`wangsir1214/Nav_Lmk`，commit `e885037`）。
-- [ ] 将 `sync/` 文件同步到服务器 `/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/sync/`（可由服务器 Codex 从 `origin/main` 拉取）。
+- [ ] 将 `sync/` 文件同步到服务器 `/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/sync/`（可由服务器 Codex 按 `SERVER_SYNC_SETUP_20260927.md` 从 `origin/main` 拉取）。
+- [ ] 服务器只读核对 `/home/wangyq/Nav_Lmk/third_party` 的创建时间、内容和 Git 状态；在来源明确前不删除、不移动、不纳入实验。
 - [ ] 服务器完成 Qwen 视觉权重核验、2 图 JSON/bbox smoke、六 case 候选提议和三条件路线 smoke。
 - [ ] 人工审核 `HUMAN_REVIEW_REQUIRED.md` 中的候选框；审核前不运行正式候选遮挡结论。
 - [ ] 路线 smoke 通过后，重新确认同月/时间稳定性、决策区和 gold action，再扩展正式路线样本。

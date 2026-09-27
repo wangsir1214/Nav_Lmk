@@ -21,6 +21,11 @@
 - 提交内容仅包含研究设计、路线 smoke manifest、Qwen 输出 schema、服务器 handoff/prompt 和必要项目文档；图像、权重、patch cache、ZIP 与大型结果未提交。
 - 服务器可在 `/home/wangyq/Nav_Lmk` 执行 `git pull --ff-only origin main`，再运行 `sync/SERVER_CODEX_PROMPT_20260926.txt`；正常运行保持静默，仅成功或 BLOCKED 回报。
 
+## 2026-09-27 - 服务器同步目录与 third_party 核查
+
+- 本地 `F:\Codex_local\Nav_Lmk` 及其递归目录未发现 `third_party`；当前 Git 提交和同步包也不包含该目录。
+- 用户服务器截图显示 `/home/wangyq/Nav_Lmk/third_party`，但服务器尚未出现 `01_Navigational_Landmarkness_Cognitive_Map/sync/`。已补充 `SERVER_SYNC_SETUP_20260927.md`，要求服务器先检查 Git 状态并 fast-forward 拉取，禁止覆盖项目或删除/纳入 `third_party`。
+
 ## 2026-09-26 - 0926 研究迭代同步包
 
 - 读取 `Chats/Branch · 研究方向概括_0926.html` 与 `Chats/Extensive reading papers - 解读文章提炼方法_0926.html`，确认研究主线为路线经验条件下的视觉线索空间功能与局部行动支持。

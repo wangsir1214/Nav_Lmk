@@ -5,6 +5,11 @@
 - 初始 `gh auth status` 曾报告旧 token 失效；随后认证状态恢复，私有仓库已成功创建并 push，故该阻塞已解除。
 - 本轮未发现新的实验运行错误；Qwen 尚未在本地执行。
 
+## 2026-09-27
+
+- 用户服务器截图显示 `/home/wangyq/Nav_Lmk/third_party`，而本地工作区、Git 历史和同步包均无该目录；来源和创建者无法仅凭本地证据确定。已要求服务器只读检查 `stat`、文件时间、Git 状态和历史，不删除或移动。
+- 服务器尚未拉取 `01_Navigational_Landmarkness_Cognitive_Map/sync/`；已新增首次同步说明和阻塞处理规则。
+
 ## 2026-09-24 - 本地路径可用性
 
 - 当前普通会话无法看到 `Z:` 映射盘，`Get-ChildItem Z:\wangyq\outputs\Paris_local_v1_20260923` 返回 `Cannot find drive`。后续设计核对使用已保存且核验的本地审计副本与服务器交接归档；这不表示 NAS 文件缺失。服务器执行仍使用 `/home/nas/wangyq/...`，不需重新扫盘或重跑 baseline。
