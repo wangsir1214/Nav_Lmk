@@ -19,4 +19,8 @@ Qwen 是候选区域提议器和行为探针，不是地标真值生成器；DIN
 
 服务器项目即使不是 Git 工作树，也不要在原目录初始化 Git；按 `SERVER_SYNC_SETUP_20260927.md` 使用独立临时 clone 或手动上传 `sync/`。
 
+候选提议 schema v1.1 要求完整字段和 640×640 坐标边界；格式错误只允许一次同图重试，不自动填充置信度或裁剪框。
+
+每次服务器运行使用新的 UTC `run_id` 目录；同一 case 的格式重试使用 `.attempt01`、`.attempt02` 后缀，旧结果和 BLOCKED 诊断不得覆盖。
+
 大文件保留在服务器/NAS，不进入 GitHub：原始图像、ERP、模型权重、patch cache、完整推理转储和大型 overlay 集合。

@@ -64,5 +64,14 @@
     "input_resolution": "640x640",
     "do_not_supply": ["GPS", "panoid_id", "reference_images", "P/N/I labels", "VLAD scores", "gold action"],
     "route_prompt_must_not_reveal": ["correct maneuver", "decision step index", "ground-truth edge identity"]
+  },
+  "output_naming": {
+    "run_id_format": "paris_route_qwen_smoke_{UTC_COMPACT}_a{ATTEMPT_2DIGIT}",
+    "utc_compact_format": "YYYYMMDDTHHMMSSZ",
+    "nas_output_root_template": "/home/nas/wangyq/outputs/{run_id}/",
+    "server_run_root_template": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/{run_id}/",
+    "case_attempt_suffix": ".attempt{ATTEMPT_2DIGIT}",
+    "no_overwrite_rule": "Every run receives a new run_id; preserve prior outputs and BLOCKED diagnostics.",
+    "required_metadata": ["run_id", "timestamp_utc", "attempt", "source_commit", "sync_mode"]
   }
 }

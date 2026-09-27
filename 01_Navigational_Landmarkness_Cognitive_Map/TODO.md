@@ -9,6 +9,9 @@
 - [ ] 若服务器工程保持非 Git 状态，记录 `temporary_clone` 或 `manual_upload` 的同步来源后继续 Qwen smoke。
 - [ ] 服务器重新同步图像命名修订后，重跑 preflight 并开始 Qwen smoke 阶段 0。
 - [ ] 服务器更新旧 sync 包时记录备份目录和 `sync_source_commit=b877e46`。
+- [ ] 服务器安装 schema v1.1 后对 `main_03_dec`、`main_06_dec` 各执行最多一次格式重试，再决定是否进入阶段 1。
+- [ ] 每次服务器重跑使用新的 UTC run_id，并核验旧结果未被覆盖。
+- [x] 已将同步包全部产物路径统一为 UTC timestamp/run_id 目录；handoff 不再引用固定历史输出目录。
 - [ ] 服务器只读核对 `/home/wangyq/Nav_Lmk/third_party` 的创建时间、内容和 Git 状态；在来源明确前不删除、不移动、不纳入实验。
 - [x] 固化 `/home/wangyq` 与 `/home/nas/wangyq` 的存储分工和 GitHub 低 token 同步节奏。
 - [ ] 服务器完成 Qwen 视觉权重核验、2 图 JSON/bbox smoke、六 case 候选提议和三条件路线 smoke。

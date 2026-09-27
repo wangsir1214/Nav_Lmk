@@ -20,7 +20,15 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wan
 
 ### 阶段 0：2 图 JSON/坐标 smoke
 
-只使用 `main_03_dec` 和 `main_06_dec` 的一个固定视图，原始输入为 640x640。提示词要求最多 3 个可见候选；允许 `no_clear_candidate`；输出严格 JSON。不给 GPS、panoid、路线动作、reference、P/N/I、VLAD 分数或正确答案。保存原始回复、解析后的 JSON、失败原因、prompt hash、模型 revision 和 bbox overlay。
+只使用 `main_03_dec` 和 `main_06_dec` 的一个固定视图，原始输入为 640x640。提示词要求最多 3 个可见候选；允许 `no_clear_candidate`；输出严格 JSON。每个候选必须且只能包含 `candidate_id`、`bbox_xyxy_640`、`type`、`description`、`hypothesized_role`、`visibility`、`uncertainty` 七个字段；`uncertainty` 必须是 [0,1] 数值，`bbox_xyxy_640` 必须满足 0<=x1<x2<=640、0<=y1<y2<=640。不要把 `view_index` 放入候选对象；它属于 case 元数据。没有清晰候选时输出 `candidates: []`，不得伪造框。不给 GPS、panoid、路线动作、reference、P/N/I、VLAD 分数或正确答案。若首轮只因缺字段、额外字段或坐标越界解析失败，在同一张图上进行一次格式重试并保存两次原始回复；不得自动补 uncertainty 或静默裁剪坐标。重试仍失败才 BLOCKED。保存原始回复、解析后的 JSON、失败原因、prompt hash、模型 revision 和 bbox overlay。
+
+发送给模型的输出模板固定为：
+
+```json
+{"candidates":[{"candidate_id":1,"bbox_xyxy_640":[0,0,1,1],"type":"object","description":"visible cue","hypothesized_role":"possible navigation cue","visibility":"clear","uncertainty":0.5}]}
+```
+
+要求模型替换模板值并只返回 JSON；不得省略 `uncertainty`，不得输出模板之外的候选键。若没有清晰候选，返回 `{"candidates":[]}`。
 
 阶段 0 失败时立即 BLOCKED，保留诊断和最小复现，不进入后续阶段。
 
@@ -52,9 +60,19 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wan
 
 ## 预期输出目录
 
-建议使用：
+开始推理前生成新的 UTC `timestamp_utc`（格式 `YYYYMMDDTHHMMSSZ`）和 `run_id`：
 
-`/home/nas/wangyq/outputs/Paris_route_qwen_smoke_20260926/`
+`paris_route_qwen_smoke_{timestamp_utc}_a{attempt_2digit}`
+
+建议输出目录：
+
+`/home/nas/wangyq/outputs/{run_id}/`
+
+服务器侧轻量运行目录：
+
+`/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/{run_id}/`
+
+每次重跑必须生成新的 `run_id`，不得覆盖旧结果或 `BLOCKED.json`。同一 case 的格式重试在文件名中使用 `.attempt01`、`.attempt02` 后缀；manifest、sidecar 和最终回报必须包含 `run_id`、`timestamp_utc`、`attempt`、`source_commit`、`sync_mode`。
 
 目录至少包含：
 
@@ -64,4 +82,4 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wan
 
 ## Prompt 入口
 
-请在 `/home/wangyq/Nav_Lmk` 执行 `01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md`。先读取根目录 `AGENTS.md`、active project 的 `PROJECT_CONTEXT.md`、`EXPERIMENT_DESIGN.md`、`DECISIONS.md`、`TODO.md` 和本同步目录四个文件。复述研究问题与本轮边界后执行：核验 GPU、磁盘、Python 和 `/home/nas/wangyq/model_weights/Qwen` 中已下载的 Qwen 模型；确认它是可接收图像的视觉模型，否则立即 BLOCKED。读取 `ROUTE_SMOKE_MANIFEST_20260926.json`，用 `/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_panorama_{view_index}.jpg` 的 640x640 原图，先只做 main_03_dec 与 main_06_dec 两图 JSON/bbox smoke，再做两条路线的六个候选提议 case，最后在产物完整时做 route_plus_current/current_only/route_shuffled 三条件决策 smoke。不要重跑 G/14+VLAD，不改 P/N/I，不给模型 GPS、panoid、reference、VLAD 分数或 gold action；固定视图绝对朝向遵循 `(heading_from_api+90*view_index) mod 360`。将原始输出、解析 JSONL、overlay、人审模板、环境摘要、日志、错误和 SHA-256 写入 `/home/nas/wangyq/outputs/Paris_route_qwen_smoke_20260926/`。候选和动作只能标为 smoke/provisional。长任务后台运行并实时写日志；正常运行期间保持安静，只有全部成功或不可继续时才回报，回报中给出结果目录和 `HUMAN_REVIEW_REQUIRED.md`，或给出 BLOCKED 的第一处错误、最小复现和已完成阶段。
+请在 `/home/wangyq/Nav_Lmk` 执行 `01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md`。先读取根目录 `AGENTS.md`、active project 的 `PROJECT_CONTEXT.md`、`EXPERIMENT_DESIGN.md`、`DECISIONS.md`、`TODO.md` 和本同步目录四个文件。复述研究问题与本轮边界后执行：核验 GPU、磁盘、Python 和 `/home/nas/wangyq/model_weights/Qwen` 中已下载的 Qwen 模型；确认它是可接收图像的视觉模型，否则立即 BLOCKED。读取 `ROUTE_SMOKE_MANIFEST_20260926.json`，用 `/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_panorama_{view_index}.jpg` 的 640x640 原图，先只做 main_03_dec 与 main_06_dec 两图 JSON/bbox smoke，再做两条路线的六个候选提议 case，最后在产物完整时做 route_plus_current/current_only/route_shuffled 三条件决策 smoke。不要重跑 G/14+VLAD，不改 P/N/I，不给模型 GPS、panoid、reference、VLAD 分数或 gold action；固定视图绝对朝向遵循 `(heading_from_api+90*view_index) mod 360`。运行前生成新的 UTC timestamp 和 `run_id`，将原始输出、解析 JSONL、overlay、人审模板、环境摘要、日志、错误和 SHA-256 写入 `/home/nas/wangyq/outputs/{run_id}/`。候选和动作只能标为 smoke/provisional。长任务后台运行并实时写日志；正常运行期间保持安静，只有全部成功或不可继续时才回报，回报中给出带 `run_id` 的结果目录和 `HUMAN_REVIEW_REQUIRED.md`，或给出带 `run_id` 的 BLOCKED 第一处错误、最小复现和已完成阶段。

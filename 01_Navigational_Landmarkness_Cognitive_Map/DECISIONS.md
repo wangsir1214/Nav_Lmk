@@ -16,6 +16,8 @@
 4. 服务器现有 `/home/wangyq/Nav_Lmk` 可能不是 Git 工作树；不得在原目录 `git init` 或覆盖。此时用独立临时 clone 或手动上传同步目录，并记录同步模式与来源 commit。
 5. 路线 smoke 的四视角服务器物理文件名固定为 `{panoid}_panorama_{view_index}.jpg`；`view_index` 仍为 `0..3`，不能简化为 `{panoid}_{view_index}.jpg`，也不能写成 `v0..v3`。
 6. 非 Git 服务器已有旧同步包需要更新时，先将旧 `sync/` 移到带时间戳的备份目录，再安装指定新提交；不直接删除或覆盖旧同步包。
+7. Qwen 候选提议采用严格 schema v1.1：`uncertainty` 必须由模型显式输出，bbox 必须在 640×640 内；首轮格式失败允许一次同图重试，但不自动补字段或裁剪坐标。
+8. 所有服务器实验产物按 UTC `run_id` 分目录保存；同一 case 的重试用 attempt 后缀，禁止覆盖先前结果和阻塞诊断。
 
 ## 2026-09-24 - Qwen candidate and route pilot execution
 
@@ -134,6 +136,12 @@
 - The raw undirected pano graph is an indexing/mining substrate, not an unverified action graph. Formal online navigation requires a direction-correct road-level or decision-zone graph.
 - Current snapped coordinates can be used for pilot review, but formal graph freezing must reproject to roads in a metric CRS and recheck the two decision panos whose metric alternative differs by more than 1 m.
 - Arc de Triomphe cases are a super-landmark data stratum, not the within-image matched control for later interventions.
+
+## 2026-09-27 - 产物版本化
+
+- 服务器每次运行生成唯一 UTC `timestamp_utc` 和 `run_id`，结果目录使用 `/home/nas/wangyq/outputs/{run_id}/`，轻量运行目录使用 `server_run/{run_id}/`。
+- 同一 case 的格式重试使用 `.attempt01`、`.attempt02` 后缀；旧结果、旧 `BLOCKED.json` 和旧同步目录必须保留，不得覆盖。
+- manifest、sidecar、日志和最终回报必须携带 `run_id`、`timestamp_utc`、`attempt`、`source_commit`、`sync_mode`，以区分不同实验版本和同步来源。
 
 ## Pending decisions
 

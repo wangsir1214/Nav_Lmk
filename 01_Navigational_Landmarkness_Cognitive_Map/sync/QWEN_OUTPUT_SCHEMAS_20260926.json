@@ -1,8 +1,20 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "candidate_proposal": {
     "required": ["case_id", "image_path", "candidates", "model_revision", "prompt_hash", "parse_status"],
     "candidate_fields": ["candidate_id", "bbox_xyxy_640", "type", "description", "hypothesized_role", "visibility", "uncertainty"],
+    "candidate_field_contract": {
+      "candidate_id": "integer or short string unique within the case",
+      "bbox_xyxy_640": "four finite numbers [x1,y1,x2,y2] in the original 640x640 image; 0<=x1<x2<=640 and 0<=y1<y2<=640",
+      "type": "one of the listed type enums",
+      "description": "short visible description grounded in the image",
+      "hypothesized_role": "navigation-relevant role hypothesis, not a gold label",
+      "visibility": "one of the listed visibility enums",
+      "uncertainty": "required numeric self-report in [0,1]; 0 means low uncertainty and 1 means high uncertainty; not calibrated"
+    },
+    "candidate_object_exact_keys": ["candidate_id", "bbox_xyxy_640", "type", "description", "hypothesized_role", "visibility", "uncertainty"],
+    "empty_candidate_rule": "If no clear candidate is visible, emit candidates=[] and parse_status=no_clear_candidate; do not invent a dummy box.",
+    "format_retry_policy": "On a missing-field, extra-key, or out-of-range-coordinate parse failure, re-prompt once on the same image for a complete JSON re-emission. Preserve both raw responses. Do not synthesize uncertainty or silently clip coordinates.",
     "enums": {
       "type": ["object", "structural", "text", "scene", "no_clear_candidate"],
       "visibility": ["clear", "partial", "occluded", "uncertain"],
@@ -18,5 +30,5 @@
     "uncertain": "boolean; self-report only and not a calibrated probability",
     "evidence_candidates": "zero or more candidate_id values from a separately frozen proposal file"
   },
-  "audit_fields": ["timestamp_utc", "environment_digest", "raw_output_path", "overlay_path", "error_code", "notes"]
+  "audit_fields": ["run_id", "timestamp_utc", "attempt", "source_commit", "sync_mode", "environment_digest", "raw_output_path", "overlay_path", "error_code", "notes"]
 }

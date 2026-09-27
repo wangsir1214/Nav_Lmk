@@ -16,3 +16,5 @@
 GitHub 只同步轻量文本、代码、schema、manifest、摘要和错误报告；不上传图像、权重、patch cache、ZIP 或大型 raw dump。
 
 每个新任务开始时服务器拉取一次 `origin/main`。运行期间不轮询 GitHub、不推送中间进度。完成或阻塞时写入服务器日志并在对话中一次性回报；只有需要本地读取的轻量摘要，才在明确要求后提交并推送。
+
+每次实验运行都生成唯一 UTC `run_id` 和时间戳目录；重试不得覆盖旧结果。大文件仍留在 NAS，GitHub 只保存带 run_id 的轻量 manifest、摘要和错误索引。

@@ -9,6 +9,7 @@
 
 - 用户服务器截图显示 `/home/wangyq/Nav_Lmk/third_party`，而本地工作区、Git 历史和同步包均无该目录；来源和创建者无法仅凭本地证据确定。已要求服务器只读检查 `stat`、文件时间、Git 状态和历史，不删除或移动。
 - 服务器尚未拉取 `01_Navigational_Landmarkness_Cognitive_Map/sync/`；已新增首次同步说明和阻塞处理规则。
+- 本轮未产生新的实验错误；仅修正 handoff 中残留的固定输出目录引用，使其遵循 UTC `run_id` 版本化规则。
 
 ## 2026-09-24 - 本地路径可用性
 

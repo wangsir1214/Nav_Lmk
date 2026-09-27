@@ -33,6 +33,14 @@
 - 服务器反馈 `/home/wangyq/Nav_Lmk` 不是 Git 工作树；已补充独立临时 clone/手动上传同步方案，禁止在现有工程执行 `git init` 或覆盖。
 - 服务器 preflight 发现路线 manifest 的图像模式缺少 `_panorama_`；实际文件为 `{panoid}_panorama_{view_index}.jpg`，已统一修正同步包。
 - 已补充非 Git 服务器更新旧同步包的可逆备份步骤，避免新旧 manifest 混用。
+- 复核阶段 0 原始回复：三个候选缺少 uncertainty，两个 bbox 越过 640 边界，且候选对象含 view_index；已收紧 schema v1.1 并增加一次格式重试策略。
+- 根据后续运行管理要求，已将输出组织改为 UTC timestamp/run_id 分目录，并为同一 case 的格式重试增加 attempt 后缀规则。
+
+## 2026-09-27 - 产物时间戳收口
+
+- 审计同步包中的输出路径引用，确认 manifest、prompt、README 和存储策略已使用带 UTC `run_id` 的目录。
+- 修正 handoff 的 Prompt 入口，禁止将新运行写入固定的 `Paris_route_qwen_smoke_20260926` 历史目录；保留旧运行和阻塞诊断。
+- 未改动图像、权重、冻结标签或既有实验结果。
 
 ## 2026-09-26 - 0926 研究迭代同步包
 
