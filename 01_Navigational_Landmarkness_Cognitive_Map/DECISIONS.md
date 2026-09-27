@@ -15,6 +15,7 @@
 3. 每个服务器任务开始时从 `origin/main` 拉取一次；运行期间保持静默，不轮询或推送中间进度。完成或 BLOCKED 时一次性回报；仅在需要本地读取轻量摘要时再提交/推送。
 4. 服务器现有 `/home/wangyq/Nav_Lmk` 可能不是 Git 工作树；不得在原目录 `git init` 或覆盖。此时用独立临时 clone 或手动上传同步目录，并记录同步模式与来源 commit。
 5. 路线 smoke 的四视角服务器物理文件名固定为 `{panoid}_panorama_{view_index}.jpg`；`view_index` 仍为 `0..3`，不能简化为 `{panoid}_{view_index}.jpg`，也不能写成 `v0..v3`。
+6. 非 Git 服务器已有旧同步包需要更新时，先将旧 `sync/` 移到带时间戳的备份目录，再安装指定新提交；不直接删除或覆盖旧同步包。
 
 ## 2026-09-24 - Qwen candidate and route pilot execution
 
