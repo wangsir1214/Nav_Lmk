@@ -8,6 +8,12 @@
 4. GitHub 同步只保存轻量代码、schema、manifest、handoff、日志索引和摘要；图像、权重、patch cache、完整结果留在 NAS。
 5. 服务器任务采用阶段性后台运行：正常状态静默并写日志，只有全流程成功或不可继续时主动回报，以降低 token 消耗。
 
+## 2026-09-27 路径与同步协议
+
+1. `/home/wangyq/Nav_Lmk` 固定存放项目代码、脚本、研究文档、schema、manifest、轻量摘要和第三方源码；`/home/wangyq/Nav_Lmk/third_party/dinov2` 属于源码依赖，不存放权重。
+2. `/home/nas/wangyq` 固定存放 Qwen、DINOv2、VLAD 权重，原始和派生图像、448 缓存、patch cache 及大型实验结果；该前缀对应本地 `Z:\wangyq`。
+3. 每个服务器任务开始时从 `origin/main` 拉取一次；运行期间保持静默，不轮询或推送中间进度。完成或 BLOCKED 时一次性回报；仅在需要本地读取轻量摘要时再提交/推送。
+
 ## 2026-09-24 - Qwen candidate and route pilot execution
 
 - The existing 44-query task is sufficient for the first candidate-region assay; construct a distinct, human-reviewed same-road hard-negative version only for finer localization claims. Do not relabel frozen I as N.

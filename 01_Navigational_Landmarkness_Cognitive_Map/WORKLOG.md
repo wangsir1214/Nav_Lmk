@@ -26,6 +26,11 @@
 - 本地 `F:\Codex_local\Nav_Lmk` 及其递归目录未发现 `third_party`；当前 Git 提交和同步包也不包含该目录。
 - 用户服务器截图显示 `/home/wangyq/Nav_Lmk/third_party`，但服务器尚未出现 `01_Navigational_Landmarkness_Cognitive_Map/sync/`。已补充 `SERVER_SYNC_SETUP_20260927.md`，要求服务器先检查 Git 状态并 fast-forward 拉取，禁止覆盖项目或删除/纳入 `third_party`。
 
+## 2026-09-27 - 路径与低 token 同步协议
+
+- 固化代码/第三方源码与 NAS 权重、图像、patch cache、大型结果的存储分工，写入 `PATH_STORAGE_POLICY_20260927.md`。
+- 交接 prompt 要求每个任务开始时拉取一次 GitHub；运行期间不轮询、不推送中间进度，只在成功或 BLOCKED 时一次性回报。
+
 ## 2026-09-26 - 0926 研究迭代同步包
 
 - 读取 `Chats/Branch · 研究方向概括_0926.html` 与 `Chats/Extensive reading papers - 解读文章提炼方法_0926.html`，确认研究主线为路线经验条件下的视觉线索空间功能与局部行动支持。

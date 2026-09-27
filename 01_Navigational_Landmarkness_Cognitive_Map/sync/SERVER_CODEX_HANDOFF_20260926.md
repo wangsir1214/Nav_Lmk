@@ -2,11 +2,11 @@
 
 ## 交接方式
 
-请在服务器项目 `/home/wangyq/Nav_Lmk` 执行。先记录当前 commit，并在没有未提交冲突时执行 `git pull --ff-only origin main`，确保同步包更新到最新提交；如果本地改动阻止 fast-forward，不覆盖本地改动，改为报告 `BLOCKED`。如果服务器尚未使用 GitHub，则将本同步目录全部轻量文件复制到项目的 `01_Navigational_Landmarkness_Cognitive_Map/sync/` 后按同一路径执行。
+请在服务器项目 `/home/wangyq/Nav_Lmk` 执行。先记录当前 commit、remote 和工作区状态；若是干净 Git 工作树且 `origin` 为 `https://github.com/wangsir1214/Nav_Lmk.git`，执行 `git pull --ff-only origin main`。若 `sync/` 不存在，先读取 `SERVER_SYNC_SETUP_20260927.md`；若本地有改动、没有 origin 或不是 Git 工作树，立即报告 `BLOCKED`，不得覆盖、初始化或删除现有项目。
 
-NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。不要把项目路径 `/home/wangyq` 替换成 `/home/nas/wangyq`。
+NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wangyq/Nav_Lmk` 不等同于 Z 盘路径。读取并遵守 `PATH_STORAGE_POLICY_20260927.md`：代码和轻量文件留在项目目录，权重、图像、448 缓存、patch cache 和大型结果留在 NAS。
 
-本轮不重新运行已通过的 G/14+VLAD baseline，不修改冻结 P/N/I，不上传图像、权重、patch cache 或大型 raw dump。
+本轮不重新运行已通过的 G/14+VLAD baseline，不修改冻结 P/N/I，不上传图像、权重、patch cache 或大型 raw dump。`third_party/dinov2` 是既有源码目录，只读记录来源，不删除、不移动、不纳入本轮结果。
 
 ## 必须核验的输入
 
@@ -44,7 +44,7 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。不要把项目路径 `
 
 ## 运行和回报约束
 
-- 长任务后台执行，实时写入 `run.log` 和阶段状态文件。正常运行期间不要向用户或本对话持续发送进度消息，也不要轮询式生成摘要。
+- 长任务后台执行，实时写入 `run.log` 和阶段状态文件。正常运行期间不要向用户或本对话持续发送进度消息，不轮询 GitHub，不推送中间进度。
 - 只有以下两种情况主动回报：
   1. 全部请求阶段成功，回报结果目录、阶段计数、模型/环境摘要、SHA-256 清单和需要人工审核的表；
   2. 出现无法继续的错误，回报 `BLOCKED`、第一处阻塞、最小复现命令、已完成阶段和建议动作。
@@ -62,6 +62,6 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。不要把项目路径 `
 
 不要把上述大型目录复制进 GitHub；只回传轻量 manifest、摘要、错误和审核表路径/哈希。
 
-## 可直接复制给服务器 Codex 的 prompt
+## Prompt 入口
 
 请在 `/home/wangyq/Nav_Lmk` 执行 `01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md`。先读取根目录 `AGENTS.md`、active project 的 `PROJECT_CONTEXT.md`、`EXPERIMENT_DESIGN.md`、`DECISIONS.md`、`TODO.md` 和本同步目录四个文件。复述研究问题与本轮边界后执行：核验 GPU、磁盘、Python 和 `/home/nas/wangyq/model_weights/Qwen` 中已下载的 Qwen 模型；确认它是可接收图像的视觉模型，否则立即 BLOCKED。读取 `ROUTE_SMOKE_MANIFEST_20260926.json`，用 `/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_{view_index}.jpg` 的 640x640 原图，先只做 main_03_dec 与 main_06_dec 两图 JSON/bbox smoke，再做两条路线的六个候选提议 case，最后在产物完整时做 route_plus_current/current_only/route_shuffled 三条件决策 smoke。不要重跑 G/14+VLAD，不改 P/N/I，不给模型 GPS、panoid、reference、VLAD 分数或 gold action；固定视图绝对朝向遵循 `(heading_from_api+90*view_index) mod 360`。将原始输出、解析 JSONL、overlay、人审模板、环境摘要、日志、错误和 SHA-256 写入 `/home/nas/wangyq/outputs/Paris_route_qwen_smoke_20260926/`。候选和动作只能标为 smoke/provisional。长任务后台运行并实时写日志；正常运行期间保持安静，只有全部成功或不可继续时才回报，回报中给出结果目录和 `HUMAN_REVIEW_REQUIRED.md`，或给出 BLOCKED 的第一处错误、最小复现和已完成阶段。

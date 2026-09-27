@@ -2,6 +2,8 @@
 
 本文件只处理轻量 GitHub 同步，不创建或搬运图像、模型权重、patch cache 或大型结果。
 
+路径分工以 `PATH_STORAGE_POLICY_20260927.md` 为准：`/home/wangyq/Nav_Lmk` 放代码和轻量文件，`/home/nas/wangyq` 放权重、图像、patch cache 和大型结果。
+
 服务器项目路径：`/home/wangyq/Nav_Lmk`。
 
 ## 首次检查
