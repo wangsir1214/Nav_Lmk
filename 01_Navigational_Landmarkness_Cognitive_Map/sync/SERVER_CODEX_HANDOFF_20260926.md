@@ -13,7 +13,7 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wan
 1. 运行环境：`pwd`、Python 版本、CUDA/GPU、可用磁盘；记录环境摘要。
 2. Qwen 权重：检查 `/home/nas/wangyq/model_weights/Qwen` 下实际目录、`config.json`、processor/tokenizer 和权重文件。确认它是可接收图像的视觉模型；如果目录是 text-only Qwen 或缺少视觉 processor，标记 BLOCKED 并只回报阻塞原因，不下载替代模型、不自行改变模型版本。
 3. 读取本同步包中的 `ROUTE_SMOKE_MANIFEST_20260926.json` 和 `QWEN_OUTPUT_SCHEMAS_20260926.json`。
-4. 核验路线 pano ID 能在 `candidate_route_steps.csv` 中找到，并按 `{panoid}_{view_index}.jpg` 从 `/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per` 解析图像。不得使用 `v0/v1/v2/v3` 命名。
+4. 核验路线 pano ID 能在 `candidate_route_steps.csv` 中找到，并按 `{panoid}_panorama_{view_index}.jpg` 从 `/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per` 解析图像。不得使用 `{panoid}_{view_index}.jpg` 或 `v0/v1/v2/v3` 命名。
 5. 固定 view 的绝对方向只使用 `(heading_from_api + 90*view_index) mod 360`。不要把 view_0..3 直接写成 front/right/back/left。
 
 ## 执行顺序
@@ -64,4 +64,4 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wan
 
 ## Prompt 入口
 
-请在 `/home/wangyq/Nav_Lmk` 执行 `01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md`。先读取根目录 `AGENTS.md`、active project 的 `PROJECT_CONTEXT.md`、`EXPERIMENT_DESIGN.md`、`DECISIONS.md`、`TODO.md` 和本同步目录四个文件。复述研究问题与本轮边界后执行：核验 GPU、磁盘、Python 和 `/home/nas/wangyq/model_weights/Qwen` 中已下载的 Qwen 模型；确认它是可接收图像的视觉模型，否则立即 BLOCKED。读取 `ROUTE_SMOKE_MANIFEST_20260926.json`，用 `/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_{view_index}.jpg` 的 640x640 原图，先只做 main_03_dec 与 main_06_dec 两图 JSON/bbox smoke，再做两条路线的六个候选提议 case，最后在产物完整时做 route_plus_current/current_only/route_shuffled 三条件决策 smoke。不要重跑 G/14+VLAD，不改 P/N/I，不给模型 GPS、panoid、reference、VLAD 分数或 gold action；固定视图绝对朝向遵循 `(heading_from_api+90*view_index) mod 360`。将原始输出、解析 JSONL、overlay、人审模板、环境摘要、日志、错误和 SHA-256 写入 `/home/nas/wangyq/outputs/Paris_route_qwen_smoke_20260926/`。候选和动作只能标为 smoke/provisional。长任务后台运行并实时写日志；正常运行期间保持安静，只有全部成功或不可继续时才回报，回报中给出结果目录和 `HUMAN_REVIEW_REQUIRED.md`，或给出 BLOCKED 的第一处错误、最小复现和已完成阶段。
+请在 `/home/wangyq/Nav_Lmk` 执行 `01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md`。先读取根目录 `AGENTS.md`、active project 的 `PROJECT_CONTEXT.md`、`EXPERIMENT_DESIGN.md`、`DECISIONS.md`、`TODO.md` 和本同步目录四个文件。复述研究问题与本轮边界后执行：核验 GPU、磁盘、Python 和 `/home/nas/wangyq/model_weights/Qwen` 中已下载的 Qwen 模型；确认它是可接收图像的视觉模型，否则立即 BLOCKED。读取 `ROUTE_SMOKE_MANIFEST_20260926.json`，用 `/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_panorama_{view_index}.jpg` 的 640x640 原图，先只做 main_03_dec 与 main_06_dec 两图 JSON/bbox smoke，再做两条路线的六个候选提议 case，最后在产物完整时做 route_plus_current/current_only/route_shuffled 三条件决策 smoke。不要重跑 G/14+VLAD，不改 P/N/I，不给模型 GPS、panoid、reference、VLAD 分数或 gold action；固定视图绝对朝向遵循 `(heading_from_api+90*view_index) mod 360`。将原始输出、解析 JSONL、overlay、人审模板、环境摘要、日志、错误和 SHA-256 写入 `/home/nas/wangyq/outputs/Paris_route_qwen_smoke_20260926/`。候选和动作只能标为 smoke/provisional。长任务后台运行并实时写日志；正常运行期间保持安静，只有全部成功或不可继续时才回报，回报中给出结果目录和 `HUMAN_REVIEW_REQUIRED.md`，或给出 BLOCKED 的第一处错误、最小复现和已完成阶段。

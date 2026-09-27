@@ -2,7 +2,7 @@
 
 核验 GPU、磁盘、Python 和 /home/nas/wangyq/model_weights/Qwen 中已经下载的模型。确认该目录中实际选用的 checkpoint 是可接收图像的视觉模型并记录 config、processor、权重清单和 SHA-256；如果是 text-only 或缺少视觉 processor，立即 BLOCKED 并只回报第一处错误，不自行更换模型或下载替代版本。
 
-读取 ROUTE_SMOKE_MANIFEST_20260926.json 和 QWEN_OUTPUT_SCHEMAS_20260926.json。使用 /home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_{view_index}.jpg 的原始 640x640 图像；文件名是 _0/_1/_2/_3，不是 v0/v1/v2/v3。固定视图绝对中心严格使用 (heading_from_api + 90*view_index) mod 360。
+读取 ROUTE_SMOKE_MANIFEST_20260926.json 和 QWEN_OUTPUT_SCHEMAS_20260926.json。使用 /home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_panorama_{view_index}.jpg 的原始 640x640 图像；服务器物理文件名是 `_panorama_0`/`_panorama_1`/`_panorama_2`/`_panorama_3`，不是 `{panoid}_{view_index}.jpg`，也不是 v0/v1/v2/v3。固定视图绝对中心严格使用 (heading_from_api + 90*view_index) mod 360。
 
 按阶段执行：
 1. 只用 main_03_dec 与 main_06_dec 两张图做严格 JSON/bbox smoke，每图最多 3 个候选，允许 no_clear_candidate。

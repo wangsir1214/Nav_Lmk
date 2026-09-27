@@ -31,6 +31,7 @@
 - 固化代码/第三方源码与 NAS 权重、图像、patch cache、大型结果的存储分工，写入 `PATH_STORAGE_POLICY_20260927.md`。
 - 交接 prompt 要求每个任务开始时拉取一次 GitHub；运行期间不轮询、不推送中间进度，只在成功或 BLOCKED 时一次性回报。
 - 服务器反馈 `/home/wangyq/Nav_Lmk` 不是 Git 工作树；已补充独立临时 clone/手动上传同步方案，禁止在现有工程执行 `git init` 或覆盖。
+- 服务器 preflight 发现路线 manifest 的图像模式缺少 `_panorama_`；实际文件为 `{panoid}_panorama_{view_index}.jpg`，已统一修正同步包。
 
 ## 2026-09-26 - 0926 研究迭代同步包
 

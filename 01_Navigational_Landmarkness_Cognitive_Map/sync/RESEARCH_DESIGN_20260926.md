@@ -42,8 +42,8 @@ Qwen 的判断不能决定 gold action，也不能单独把候选称为“地标
 ## 4. 方向与命名合同
 
 - NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`；项目代码为 `/home/wangyq/Nav_Lmk`。
-- 四视角原图：`/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/panoid_0.jpg` 到 `panoid_3.jpg`。
-- 文件名中的 `_0.._3` 是固定视图索引，不能改称 `v0..v3`。
+- 四视角原图：`/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/{panoid}_panorama_0.jpg` 到 `{panoid}_panorama_3.jpg`。
+- 文件名中的 `_panorama_0.._panorama_3` 是服务器物理文件名；固定视图索引仍是 `0..3`，不能改称 `v0..v3`。
 - 固定视图绝对中心：`(heading_from_api + 90 * view_index) mod 360`。
 - 不能把固定 view 直接称为永久 front/right/back/left；正式方向任务应从 ERP 按路线 bearing 重投影。
 

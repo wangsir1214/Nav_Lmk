@@ -3,7 +3,7 @@
   "status": "candidate_smoke_not_gold",
   "city": "Paris",
   "image_root_server": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per",
-  "image_pattern": "{panoid}_{view_index}.jpg",
+  "image_pattern": "{panoid}_panorama_{view_index}.jpg",
   "heading_formula": "(heading_from_api + 90 * view_index) mod 360",
   "source_steps": "01_Navigational_Landmarkness_Cognitive_Map/_audit_outputs/candidate_route_steps.csv",
   "source_review": "01_Navigational_Landmarkness_Cognitive_Map/_audit_outputs/candidate_route_review_codex_v2.csv",
