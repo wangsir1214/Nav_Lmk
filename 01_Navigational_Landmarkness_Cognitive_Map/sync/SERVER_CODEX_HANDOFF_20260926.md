@@ -2,7 +2,7 @@
 
 ## 交接方式
 
-请在服务器项目 `/home/wangyq/Nav_Lmk` 执行。先记录当前 commit、remote 和工作区状态；若是干净 Git 工作树且 `origin` 为 `https://github.com/wangsir1214/Nav_Lmk.git`，执行 `git pull --ff-only origin main`。若 `sync/` 不存在，先读取 `SERVER_SYNC_SETUP_20260927.md`；若本地有改动、没有 origin 或不是 Git 工作树，立即报告 `BLOCKED`，不得覆盖、初始化或删除现有项目。
+请在服务器项目 `/home/wangyq/Nav_Lmk` 执行。先记录当前 commit、remote 和工作区状态。若是干净 Git 工作树且 `origin` 为 `https://github.com/wangsir1214/Nav_Lmk.git`，执行一次 `git pull --ff-only origin main`。若现有项目不是 Git 工作树，读取 `SERVER_SYNC_SETUP_20260927.md`，在独立临时目录 clone GitHub 并只同步 `01_Navigational_Landmarkness_Cognitive_Map/sync/`；若 GitHub 不可访问，等待用户手动上传该 sync 目录。不要在现有项目执行 `git init`、`git clone`、覆盖或删除文件。完成 Git 或非 Git 同步后再继续本 handoff；记录 `sync_mode` 和来源 commit。
 
 NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wangyq/Nav_Lmk` 不等同于 Z 盘路径。读取并遵守 `PATH_STORAGE_POLICY_20260927.md`：代码和轻量文件留在项目目录，权重、图像、448 缓存、patch cache 和大型结果留在 NAS。
 

@@ -22,7 +22,24 @@ git pull --ff-only origin main
 test -f 01_Navigational_Landmarkness_Cognitive_Map/sync/SERVER_CODEX_HANDOFF_20260926.md
 ```
 
-如果仓库不是 Git 工作树或没有 `origin`，不要在现有项目上强行初始化、覆盖或删除文件；回报 `BLOCKED`，并保留当前目录状态。可由用户或管理员将 GitHub 仓库安全克隆到独立临时目录后，再把同步目录复制到项目中。
+如果现有项目不是 Git 工作树或没有 `origin`，不要在现有项目上执行 `git init`、`git clone`、覆盖或删除文件。使用下面的非 Git 同步模式：先将 GitHub 仓库克隆到独立临时目录，只把 `01_Navigational_Landmarkness_Cognitive_Map/sync/` 同步到现有项目；记录临时 clone 的 commit 作为 `sync_source_commit`，之后不在现有项目目录执行 `git pull`。
+
+```bash
+tmp_dir="$(mktemp -d /tmp/nav_lmk_sync.XXXXXX)"
+git clone --depth 1 https://github.com/wangsir1214/Nav_Lmk.git "$tmp_dir"
+sync_src="$tmp_dir/01_Navigational_Landmarkness_Cognitive_Map/sync"
+sync_dst="/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/sync"
+test -f "$sync_src/SERVER_CODEX_HANDOFF_20260926.md"
+if [ -e "$sync_dst" ]; then
+  diff -qr "$sync_src" "$sync_dst" || { echo "BLOCKED: existing sync directory differs"; exit 2; }
+else
+  mkdir -p "$(dirname "$sync_dst")"
+  cp -a "$sync_src" "$sync_dst"
+fi
+git -C "$tmp_dir" rev-parse HEAD
+```
+
+如果服务器无法访问 GitHub，则由用户手动上传整个本地 `sync/` 目录到同一 `sync_dst`，保留文件名；上传后记录 `manual_upload`，不要初始化现有项目的 Git 仓库。
 
 ## third_party 说明
 

@@ -17,4 +17,6 @@ Qwen 是候选区域提议器和行为探针，不是地标真值生成器；DIN
 - `SERVER_SYNC_SETUP_20260927.md`：服务器首次同步及 `third_party` 只读溯源说明。
 - `PATH_STORAGE_POLICY_20260927.md`：代码、源码、权重、图像和结果的固定存储路径及低 token 同步规则。
 
+服务器项目即使不是 Git 工作树，也不要在原目录初始化 Git；按 `SERVER_SYNC_SETUP_20260927.md` 使用独立临时 clone 或手动上传 `sync/`。
+
 大文件保留在服务器/NAS，不进入 GitHub：原始图像、ERP、模型权重、patch cache、完整推理转储和大型 overlay 集合。
