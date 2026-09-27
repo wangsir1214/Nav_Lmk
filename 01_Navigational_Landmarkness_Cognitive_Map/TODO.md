@@ -2,14 +2,16 @@
 
 ## 2026-09-26 当前队列
 
+- [x] 本地：针对完整 JSON 代码围栏发布 schema v1.2、解析 helper、回归检查和服务器交接修订；历史首例离线解析通过。
+- [ ] 服务器：同步新 commit，先用历史 raw 验证实际 runner 的解析和严格 schema，再用新 UTC `run_id` 重跑阶段 0/1/2；保留旧 BLOCKED 结果。
 - [x] 读取两份 0926 最新研究对话并固化研究问题、证据边界和本轮实验顺序。
 - [x] 创建路线 smoke manifest、Qwen 输出 schema 和服务器低消耗执行交接。
 - [x] 创建私有 GitHub 同步仓库并 push 轻量 commit（`wangsir1214/Nav_Lmk`，commit `e885037`）。
 - [ ] 将 `sync/` 文件同步到服务器 `/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/sync/`（可由服务器 Codex 按 `SERVER_SYNC_SETUP_20260927.md` 从 `origin/main` 拉取）。
 - [ ] 若服务器工程保持非 Git 状态，记录 `temporary_clone` 或 `manual_upload` 的同步来源后继续 Qwen smoke。
 - [ ] 服务器重新同步图像命名修订后，重跑 preflight 并开始 Qwen smoke 阶段 0。
-- [ ] 服务器更新旧 sync 包时记录备份目录和 `sync_source_commit=b877e46`。
-- [ ] 服务器安装 schema v1.1 后对 `main_03_dec`、`main_06_dec` 各执行最多一次格式重试，再决定是否进入阶段 1。
+- [ ] 服务器更新旧 sync 包时记录备份目录和本次来源 commit。
+- [ ] 服务器安装 schema v1.2 后对 `main_03_dec`、`main_06_dec` 各执行最多一次格式重试，再决定是否进入阶段 1。
 - [ ] 每次服务器重跑使用新的 UTC run_id，并核验旧结果未被覆盖。
 - [x] 已将同步包全部产物路径统一为 UTC timestamp/run_id 目录；handoff 不再引用固定历史输出目录。
 - [ ] 服务器只读核对 `/home/wangyq/Nav_Lmk/third_party` 的创建时间、内容和 Git 状态；在来源明确前不删除、不移动、不纳入实验。

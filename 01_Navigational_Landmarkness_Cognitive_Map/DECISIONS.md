@@ -143,6 +143,12 @@
 - 同一 case 的格式重试使用 `.attempt01`、`.attempt02` 后缀；旧结果、旧 `BLOCKED.json` 和旧同步目录必须保留，不得覆盖。
 - manifest、sidecar、日志和最终回报必须携带 `run_id`、`timestamp_utc`、`attempt`、`source_commit`、`sync_mode`，以区分不同实验版本和同步来源。
 
+## 2026-09-27 - Qwen JSON 回复归一化
+
+- 对完整覆盖回复的单层 `json` 或无语言标记 Markdown 围栏允许确定性剥离；纯 JSON 原样解析。不得从解释性文字提取 JSON、修复内部语法、补字段或裁剪坐标。
+- 候选提议和路线决策使用同一归一化入口，之后继续执行各自严格 schema 校验；JSON 语法或 schema 失败时同图最多一次格式重试。
+- 保留原始回复并记录归一化类型及前后 SHA-256。旧 BLOCKED 目录只读保留，重跑使用新的 UTC `run_id`。候选视觉真实性仍需人工审核。
+
 ## Pending decisions
 
 - Whether provisional ADAPT becomes GO after minimal human confirmation, targeted reprocessing/re-mining and route/action quality checks.

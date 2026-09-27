@@ -1,5 +1,11 @@
 # Results Summary
 
+## 2026-09-27 Qwen reply-format recovery
+
+- The blocked stage-0 output is a complete Markdown JSON fence whose inner JSON parses. All three proposed candidates have the required fields and in-bounds boxes; visual accuracy still needs human review.
+- Sync schema v1.2 permits only whole-reply fence removal, then the existing strict candidate/route schema checks. Invalid JSON or schema can trigger at most one same-image format retry.
+- Local offline checks passed. No new Qwen inference or stage-0/1/2 result was produced in this session; the server must install the new sync commit and use a fresh UTC run ID.
+
 ## 2026-09-26 研究同步状态
 
 - 0926 对话确认的主问题是：在给定路线经验和局部空间任务时，哪些城市视觉元素能作为地点、方向或通行结构参照并支持正确续行。

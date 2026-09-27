@@ -1,5 +1,12 @@
 # Worklog
 
+## 2026-09-27 - Qwen JSON fence parser sync
+
+- Inspected blocked run `paris_route_qwen_smoke_20260927T113729Z_a01`: the first raw reply is one complete `json` fence around valid JSON, not an empty or missing response.
+- Updated sync schema to v1.2, server handoff/prompt, and added a standard-library parser limited to full-response fences. JSON syntax failures now qualify for one same-image format retry; schema validation remains strict.
+- Verified five parser tests, JSON schema syntax, and the historical raw reply offline: three candidates each have the seven required fields and valid 640x640 boxes. This does not validate visual truth.
+- GitHub handoff includes only light sync files and project records; no NAS data or historical outputs were changed.
+
 ## 2026-09-24 - 下一阶段实验细化与服务器交接
 
 - 针对用户八项问题核对本地基线审计、212 图 feature_index、路线候选/人工 gate 与输入朝向合同。

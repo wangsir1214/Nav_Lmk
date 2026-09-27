@@ -1,5 +1,11 @@
 {
-  "version": "1.1",
+  "version": "1.2",
+  "model_reply_normalization": {
+    "scope": "Apply to every model reply parsed as JSON, including candidate proposals and route decisions.",
+    "allowed": "Accept plain JSON or remove exactly one Markdown code fence that covers the entire trimmed reply, with language tag json (case-insensitive) or no language tag. The opening and closing fences must each be on their own line.",
+    "forbidden": "Do not extract JSON from prose, remove partial or nested fences, repair JSON syntax, add or drop keys, synthesize values, or clip coordinates.",
+    "audit": "Preserve the untouched raw response. Record normalization_type (none or full_json_fence), raw_sha256, normalized_sha256, and the normalized text or its path before schema validation."
+  },
   "candidate_proposal": {
     "required": ["case_id", "image_path", "candidates", "model_revision", "prompt_hash", "parse_status"],
     "candidate_fields": ["candidate_id", "bbox_xyxy_640", "type", "description", "hypothesized_role", "visibility", "uncertainty"],
@@ -14,7 +20,7 @@
     },
     "candidate_object_exact_keys": ["candidate_id", "bbox_xyxy_640", "type", "description", "hypothesized_role", "visibility", "uncertainty"],
     "empty_candidate_rule": "If no clear candidate is visible, emit candidates=[] and parse_status=no_clear_candidate; do not invent a dummy box.",
-    "format_retry_policy": "On a missing-field, extra-key, or out-of-range-coordinate parse failure, re-prompt once on the same image for a complete JSON re-emission. Preserve both raw responses. Do not synthesize uncertainty or silently clip coordinates.",
+    "format_retry_policy": "After the permitted full-fence normalization, retry once on the same image if JSON syntax or candidate schema validation fails, including missing fields, extra keys, or out-of-range coordinates. Preserve both raw responses and their normalization metadata. A normalized reply that passes the existing schema needs no retry. Never repair JSON, synthesize uncertainty, or clip coordinates.",
     "enums": {
       "type": ["object", "structural", "text", "scene", "no_clear_candidate"],
       "visibility": ["clear", "partial", "occluded", "uncertain"],
@@ -30,5 +36,5 @@
     "uncertain": "boolean; self-report only and not a calibrated probability",
     "evidence_candidates": "zero or more candidate_id values from a separately frozen proposal file"
   },
-  "audit_fields": ["run_id", "timestamp_utc", "attempt", "source_commit", "sync_mode", "environment_digest", "raw_output_path", "overlay_path", "error_code", "notes"]
+  "audit_fields": ["run_id", "timestamp_utc", "attempt", "source_commit", "sync_mode", "environment_digest", "raw_output_path", "normalization_type", "raw_sha256", "normalized_sha256", "overlay_path", "error_code", "notes"]
 }

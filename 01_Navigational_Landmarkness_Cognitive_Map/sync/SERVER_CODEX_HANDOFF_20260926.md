@@ -12,7 +12,7 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wan
 
 1. 运行环境：`pwd`、Python 版本、CUDA/GPU、可用磁盘；记录环境摘要。
 2. Qwen 权重：检查 `/home/nas/wangyq/model_weights/Qwen` 下实际目录、`config.json`、processor/tokenizer 和权重文件。确认它是可接收图像的视觉模型；如果目录是 text-only Qwen 或缺少视觉 processor，标记 BLOCKED 并只回报阻塞原因，不下载替代模型、不自行改变模型版本。
-3. 读取本同步包中的 `ROUTE_SMOKE_MANIFEST_20260926.json` 和 `QWEN_OUTPUT_SCHEMAS_20260926.json`。
+3. 读取本同步包中的 `ROUTE_SMOKE_MANIFEST_20260926.json`、`QWEN_OUTPUT_SCHEMAS_20260926.json` 和 `qwen_json_parser.py`。本轮 schema 为 v1.2；更新实际 runner 的共同 JSON 解析入口，并运行 `test_qwen_json_parser.py`。
 4. 核验路线 pano ID 能在 `candidate_route_steps.csv` 中找到，并按 `{panoid}_panorama_{view_index}.jpg` 从 `/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per` 解析图像。不得使用 `{panoid}_{view_index}.jpg` 或 `v0/v1/v2/v3` 命名。
 5. 固定 view 的绝对方向只使用 `(heading_from_api + 90*view_index) mod 360`。不要把 view_0..3 直接写成 front/right/back/left。
 
@@ -20,7 +20,9 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wan
 
 ### 阶段 0：2 图 JSON/坐标 smoke
 
-只使用 `main_03_dec` 和 `main_06_dec` 的一个固定视图，原始输入为 640x640。提示词要求最多 3 个可见候选；允许 `no_clear_candidate`；输出严格 JSON。每个候选必须且只能包含 `candidate_id`、`bbox_xyxy_640`、`type`、`description`、`hypothesized_role`、`visibility`、`uncertainty` 七个字段；`uncertainty` 必须是 [0,1] 数值，`bbox_xyxy_640` 必须满足 0<=x1<x2<=640、0<=y1<y2<=640。不要把 `view_index` 放入候选对象；它属于 case 元数据。没有清晰候选时输出 `candidates: []`，不得伪造框。不给 GPS、panoid、路线动作、reference、P/N/I、VLAD 分数或正确答案。若首轮只因缺字段、额外字段或坐标越界解析失败，在同一张图上进行一次格式重试并保存两次原始回复；不得自动补 uncertainty 或静默裁剪坐标。重试仍失败才 BLOCKED。保存原始回复、解析后的 JSON、失败原因、prompt hash、模型 revision 和 bbox overlay。
+只使用 `main_03_dec` 和 `main_06_dec` 的一个固定视图，原始输入为 640x640。提示词要求最多 3 个可见候选；允许 `no_clear_candidate`；输出严格 JSON。每个候选必须且只能包含 `candidate_id`、`bbox_xyxy_640`、`type`、`description`、`hypothesized_role`、`visibility`、`uncertainty` 七个字段；`uncertainty` 必须是 [0,1] 数值，`bbox_xyxy_640` 必须满足 0<=x1<x2<=640、0<=y1<y2<=640。不要把 `view_index` 放入候选对象；它属于 case 元数据。没有清晰候选时输出 `candidates: []`，不得伪造框。不给 GPS、panoid、路线动作、reference、P/N/I、VLAD 分数或正确答案。先用共同解析入口仅剥离覆盖完整回复的单层 `json` 或无标记代码围栏，再执行原有严格 schema 校验。纯 JSON 原样解析；不得从带解释文字的回复中抽取 JSON。若归一化后 JSON 语法或 schema 仍无效，在同一张图上最多进行一次格式重试，保存两次原始回复；不得补字段、改值或裁剪坐标。重试仍失败才 BLOCKED。保存原始回复、归一化类型与前后 SHA-256、解析后的 JSON、失败原因、prompt hash、模型 revision 和 bbox overlay。
+
+开始 GPU 推理前，对旧原始回复 `/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T113729Z_a01/stage0/candidate_raw/main_03_dec.attempt01.txt` 做离线解析回归。预期完整围栏被剥离，内部 3 个候选通过既有七字段、`uncertainty` 与 bbox 校验；这只是格式核验，不能替代候选视觉真实性的人审。离线回归失败时先修复解析入口，不重复消耗 GPU 推理。
 
 发送给模型的输出模板固定为：
 
@@ -48,11 +50,11 @@ NAS 前缀 `/home/nas/wangyq` 对应本地 `Z:\wangyq`。项目代码 `/home/wan
 
 使用同一条路线的学习序列和一个当前决策观察，比较 `route_plus_current`、`current_only`、`route_shuffled` 三个条件；候选遮挡条件在框未人工审核前只能生成输入草稿，不能报告科学结果。候选出口使用匿名 option ID，至少两个合法非回头选项；模型端不看正确 action、panoid、GPS 或真实 edge 名称。
 
-输出严格遵循 `route_decision` schema。评分脚本在模型外使用路线/道路几何核验 `chosen_edge_id`；不要用模型自己的理由当 gold。
+输出严格遵循 `route_decision` schema。路线决策 JSON 也使用同一完整围栏归一化入口，再做 `route_decision` 校验；JSON 语法或 schema 无效时同图最多一次格式重试。评分脚本在模型外使用路线/道路几何核验 `chosen_edge_id`；不要用模型自己的理由当 gold。
 
 ## 运行和回报约束
 
-- 长任务后台执行，实时写入 `run.log` 和阶段状态文件。正常运行期间不要向用户或本对话持续发送进度消息，不轮询 GitHub，不推送中间进度。
+- 长任务后台执行，实时写入 `run.log` 和阶段状态文件。正常运行期间不要向用户或本对话持续发送进度消息，不轮询 GitHub，不推送中间进度。运行代码须保存可追溯快照或补丁；若本次修复由服务器先完成，成功或 BLOCKED 时一并回报补丁路径与代码哈希。
 - 只有以下两种情况主动回报：
   1. 全部请求阶段成功，回报结果目录、阶段计数、模型/环境摘要、SHA-256 清单和需要人工审核的表；
   2. 出现无法继续的错误，回报 `BLOCKED`、第一处阻塞、最小复现命令、已完成阶段和建议动作。

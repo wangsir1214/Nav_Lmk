@@ -1,5 +1,11 @@
 # Error Log
 
+## 2026-09-27 - Qwen stage-0 Markdown fence BLOCKED
+
+- Server run `paris_route_qwen_smoke_20260927T113729Z_a01` stopped at `main_03_dec` because `json.loads` received an entire fenced reply. The old retry policy did not include JSON syntax failures, so no retry ran; stage 0/1/2 success counts remained zero.
+- Local offline inspection confirmed a single complete `json` fence and valid inner JSON with three seven-field, in-bounds candidates. Sync v1.2 defines bounded normalization and a one-retry rule; server rerun remains pending.
+- Standard sandbox command startup failed with `helper_unknown_error`; scoped approved process execution restored read-only inspection and tests. This did not affect project files or NAS results.
+
 ## 2026-09-26
 
 - 初始 `gh auth status` 曾报告旧 token 失效；随后认证状态恢复，私有仓库已成功创建并 push，故该阻塞已解除。

@@ -12,14 +12,15 @@ Qwen 是候选区域提议器和行为探针，不是地标真值生成器；DIN
 
 - `RESEARCH_DESIGN_20260926.md`：最新研究问题、实验顺序、条件和证据边界。
 - `ROUTE_SMOKE_MANIFEST_20260926.json`：第一批连续路线 smoke 的轻量清单。
-- `QWEN_OUTPUT_SCHEMAS_20260926.json`：候选提议和路线选择的 JSON 结构。
+- `QWEN_OUTPUT_SCHEMAS_20260926.json`：候选提议和路线选择的 JSON 结构及完整围栏归一化合同。
+- `qwen_json_parser.py`、`test_qwen_json_parser.py`：标准库解析入口及聚焦回归检查；仍须由 runner 执行完整 schema 校验。
 - `SERVER_CODEX_HANDOFF_20260926.md`：可直接交给服务器 Codex 的执行说明。
 - `SERVER_SYNC_SETUP_20260927.md`：服务器首次同步及 `third_party` 只读溯源说明。
 - `PATH_STORAGE_POLICY_20260927.md`：代码、源码、权重、图像和结果的固定存储路径及低 token 同步规则。
 
 服务器项目即使不是 Git 工作树，也不要在原目录初始化 Git；按 `SERVER_SYNC_SETUP_20260927.md` 使用独立临时 clone 或手动上传 `sync/`。
 
-候选提议 schema v1.1 要求完整字段和 640×640 坐标边界；格式错误只允许一次同图重试，不自动填充置信度或裁剪框。
+候选提议 schema v1.2 要求完整字段和 640×640 坐标边界；只允许剥离覆盖整个回复的单层 JSON 代码围栏。归一化后 JSON 语法或 schema 错误最多允许一次同图重试，不自动填充字段或裁剪框。
 
 每次服务器运行使用新的 UTC `run_id` 目录；同一 case 的格式重试使用 `.attempt01`、`.attempt02` 后缀，旧结果和 BLOCKED 诊断不得覆盖。
 
