@@ -1,5 +1,11 @@
 # Error Log
 
+## 2026-09-28 - Complete Qwen smoke interpretation limits
+
+- No new server runtime error in `paris_route_qwen_smoke_20260927T141218Z_a01`. The stage-0 visual gate resolves a systematic coordinate-scale failure only; individual OCR, box placement, duplicate storefront identity, and unstable vehicle proposals still require review.
+- Stage-2 `learn_steps=[0,1,2,4,5]` contains views after decision step 3. These are legitimate only for an explicitly defined prior route-learning/replay task, not an online unseen continuation. The actual prompt does not provide a destination or explicit replay objective, so provisional geometry matches must not be published as navigation accuracy.
+- `HUMAN_REVIEW_REQUIRED.md` lists stage-0 and stage-1 decision proposals twice. Review six unique cases and retain the duplicated rows as provenance, not independent observations. `evidence_candidates=[]` was required by the stage-2 schema; no landmark contribution result exists.
+
 ## 2026-09-27 - Qwen stage-0 coordinate contract BLOCKED
 
 - Run `paris_route_qwen_smoke_20260927T123059Z_a01` stopped at `main_06_dec`: both replies contained `[776,480,800,504]`, beyond 640x640. Attempt 1 also contained `[640,480,999,540]`; attempt 2 repeated one street-sign box under two types. Stage 1/2 never started.

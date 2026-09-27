@@ -1,5 +1,12 @@
 # Results Summary
 
+## 2026-09-28 Qwen route smoke complete, scientific status provisional
+
+- GitHub snapshot verified on `origin/server-results/paris_route_qwen_smoke_20260927T141218Z_a01`, commit `253d27b047d7e421e35be56245f6d7017622c3db`; NAS source maps to `Z:\wangyq\outputs\paris_route_qwen_smoke_20260927T141218Z_a01`. The run completed 2/2 stage-0, 6/6 stage-1, and 6/6 stage-2 calls. These are successful executions, not accuracy denominators.
+- Stage 1 yielded 16 candidate boxes on six distinct 640x640 fixed views. Raw 0-1000 coordinates were converted to image pixels. The two decision overlays support the coordinate convention but show wrong `CASA HOME` reading of `ZARA HOME`, a box below a circular sign, and other misplaced boxes. Candidate identities, boundaries, stability, and navigation utility are unreviewed.
+- Stage 2 compared ordered route memory plus current four views, current four views only, and shuffled route memory plus current four views. Against the unverified geometry continuation, `main_03` is false/true/false and `main_06` is false/false/false. The summary intentionally reports `formal_navigation_accuracy: null`.
+- The memory sequence includes post-decision steps 4 and 5; the task text does not define a destination or instruct replay of a learned route. The current-only condition therefore has no uniquely correct legal exit. Candidate proposals were not supplied to the choice prompt, and no masking or matched-control intervention was run. This experiment demonstrates a functioning input/output pipeline, not learned navigation, cognitive-map formation, or the causal value of a landmark.
+
 ## 2026-09-27 Qwen route smoke partial return
 
 - Snapshot: run `paris_route_qwen_smoke_20260927T123059Z_a01`, export `20260927T124428Z`, commit `fb25faf78f93874d4601e6ade4027201694d0cf2`. The source run is `BLOCKED`: stage 0 reports 1/2 schema-valid cases; stages 1/2 report zero. No route-choice score exists.

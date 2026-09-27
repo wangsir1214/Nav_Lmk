@@ -1,5 +1,11 @@
 # Decisions
 
+## 2026-09-28 - Route smoke evidence boundary
+
+- Keep run `paris_route_qwen_smoke_20260927T141218Z_a01` immutable as a completed feasibility smoke. Do not report its provisional geometry comparison as formal route-choice accuracy.
+- Before a scored P1B experiment, define whether the task is route replay after observing a complete demonstration or online continuation from a prefix. State the goal and decision-time information explicitly, use route-aligned views, and have the intended exit and legal alternatives independently confirmed by people. Post-decision images are allowed in a prior demonstration only when that timing is explicit.
+- Audit candidate boxes and identities before using them in a separate, paired candidate-versus-matched-control intervention. The current route prompt does not test whether any proposed landmark contributes to a choice.
+
 ## 2026-09-27 - Qwen bbox coordinate evidence gate
 
 - The `paris_route_qwen_smoke_20260927T123059Z_a01` stage-0 count is a schema/bounds result only. Apparent 0-1000-style coordinates affect both rejected and numerically accepted candidates, so neither the `1/2` count nor its overlays are valid grounded-candidate evidence.

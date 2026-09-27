@@ -1,5 +1,14 @@
 # TODO
 
+## 2026-09-28 Completed smoke and next gates
+
+- [x] Fetch and inspect exact server-results commit `253d27b047d7e421e35be56245f6d7017622c3db`, NAS scorer mapping, stage outputs, and the two decision overlays.
+- [x] Confirm schema v1.3 coordinate conversion and completed stage counts; retain all earlier BLOCKED runs unchanged.
+- [ ] Human-review the 16 unique proposals across six views: visible target, corrected text/type, box fit, repeated identity, stability, and route usefulness. Reject transient vehicles as stable landmarks unless a distinct task justifies them.
+- [ ] Independently verify `main_03` and `main_06` route continuity, legal exits, intended action, capture-time confounds, and decision viewpoint; mark KEEP/ADAPT/REJECT before defining gold.
+- [ ] Freeze an explicit P1B task (complete-route learning then replay, or online prefix continuation), a goal instruction, time-legal image sequence, route-aligned four views, and equivalent condition prompts. Only then rerun a small paired pilot and report scored behavior.
+- [ ] After candidate approval, test approved cue versus size/position-matched control regions under fixed route conditions; measure paired choice changes, including null and adverse effects.
+
 ## 2026-09-27 Qwen coordinate calibration and rerun
 
 - [x] Inspect the versioned partial server return for `paris_route_qwen_smoke_20260927T123059Z_a01` and preserve its `BLOCKED` status; do not count stage-0 `1/2` as visual success.

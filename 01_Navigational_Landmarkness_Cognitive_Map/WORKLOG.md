@@ -1,5 +1,13 @@
 # Worklog
 
+## 2026-09-28 - Qwen route smoke complete return audit
+
+- Fetched and inspected `origin/server-results/paris_route_qwen_smoke_20260927T141218Z_a01` at exact commit `253d27b047d7e421e35be56245f6d7017622c3db` (export `20260927T142056Z`); did not merge its branch into `main`. Source run commit: `db2ac24a6d247b16cee2d1218bdb10ef42135168`.
+- Checked exported runner, stage counts, six candidate cases, six route decisions, visual gate, and NAS-only scorer mapping. Viewed both mapped stage-0 overlays via `Z:\wangyq`; the `main_03_dec` overlay hash matches the visual-gate record.
+- Run completed stage 0 `2/2`, stage 1 `6/6`, stage 2 `6/6` with no execution error. Stage 1 contains 16 proposed boxes across six unique views; stage 0 repeats the two decision views. The review table has duplicate rows for those views and remains blank.
+- The 0-1000 to 640 conversion removes the earlier systematic scale mismatch, but visible OCR, grounding, and duplicate-identity errors remain. The six route decisions are only provisional geometry comparisons: `main_03` matches the continuation in `current_only` alone; `main_06` matches in none.
+- Runner inspection found that stage-2 route memory includes steps 4 and 5 after the decision step 3, while the prompt supplies no destination or explicit learned-route replay objective. This prevents interpreting the smoke as online continuation accuracy or a causal landmark effect. No candidate boxes were passed into route decisions; `evidence_candidates` was forced empty.
+
 ## 2026-09-27 - Qwen route smoke partial return and coordinate audit
 
 - Read the versioned GitHub snapshot at `fb25faf78f93874d4601e6ade4027201694d0cf2` for run `paris_route_qwen_smoke_20260927T123059Z_a01` (export `20260927T124428Z`), without merging the server-results branch into `main`.
