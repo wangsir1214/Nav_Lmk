@@ -1,5 +1,11 @@
 # Error Log
 
+## 2026-09-28T070320Z - 任务理解和本地执行记录
+
+- 普通本地执行再次在启动时返回helper_unknown_error；路径限定的授权读取/写入成功。此前失败没有改动文件。
+- 纠正上一轮可能造成的歧义：看过路线续行是0926已有主任务，不应把在线首次导航当作同一任务的随意替代；演示中的路口后图像是否允许由时间语义决定。
+- runner按OSM单行方向筛出口，但正式任务的步行/驾车语义仍需明确；不能自动把机动车禁入标志用于行人路线gold。当前无新增服务器错误，无新推理。
+
 ## 2026-09-28 - Complete Qwen smoke interpretation limits
 
 - No new server runtime error in `paris_route_qwen_smoke_20260927T141218Z_a01`. The stage-0 visual gate resolves a systematic coordinate-scale failure only; individual OCR, box placement, duplicate storefront identity, and unstable vehicle proposals still require review.

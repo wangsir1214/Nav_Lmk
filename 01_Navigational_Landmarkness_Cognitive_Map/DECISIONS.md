@@ -1,5 +1,11 @@
 # Decisions
 
+## 2026-09-28T070320Z - 澄清既定主任务与执行依赖
+
+- 依据 `sync/RESEARCH_DESIGN_20260926.md`，保持“看过短路线后，依据新的路口观察重走原路线”为主设计；不是本轮新授权的运行。无路线是缺少路线信息的对照，不是没有目的地也应存在唯一正确出口的完整导航题。
+- 提供演示路线是上下文输入，不是训练/SFT；当前固定Qwen权重保持不变。正式通行模式和人审gold尚未冻结。
+- 候选框用于可审计的局部线索测量和后续干预，不是全图路线决策的必需输入或前置门槛。区域干预前仍需候选与匹配控制审核。
+
 ## 2026-09-28 - Route smoke evidence boundary
 
 - Keep run `paris_route_qwen_smoke_20260927T141218Z_a01` immutable as a completed feasibility smoke. Do not report its provisional geometry comparison as formal route-choice accuracy.

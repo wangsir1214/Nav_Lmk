@@ -1,0 +1,570 @@
+[
+  {
+    "source_metadata": "Z:\\wangyq\\outputs\\paris_route_qwen_smoke_20260927T141218Z_a01\\stage1\\candidate_raw\\main_03_dec.attempt01.metadata.json",
+    "source_sha256": "c155c277a3f8fefb8ba81b1b34946275f7ef41299cd531b3640c2bc9fed3983b",
+    "request": {
+      "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+      "timestamp_utc": "20260927T141218Z",
+      "attempt": 1,
+      "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+      "sync_mode": "temporary_clone_update",
+      "case_id": "main_03_dec",
+      "image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_0.jpg",
+      "view_index": 0,
+      "absolute_center_heading": 26.39868,
+      "image_sha256": "74accdc4e585edfe0cf9534e90f02cf39475d96eb8d9d2b2be79e97d285a8c4d",
+      "prompt_hash": "8139e6e5fb5053c2404611ee9399990f6757e9fb3a712507a1d1509138abcb3e",
+      "prompt": "Review this original 640x640 street-view image. Return at most three clearly visible place or wayfinding cues using only image pixels. Describe observations, not a route choice. Respond with exactly one JSON object with only root key candidates. Every candidate has exactly these seven keys: candidate_id, bbox_xyxy_1000, type, description, hypothesized_role, visibility, uncertainty. IMPORTANT: express each bbox in a 0 to 1000 normalized coordinate frame, NOT 640 pixel coordinates; x=0 is the left image edge, x=1000 the right edge, y=0 the top edge, y=1000 the bottom edge. bbox_xyxy_1000 is [x1,y1,x2,y2] with finite values and 0<=x1<x2<=1000, 0<=y1<y2<=1000. The server will deterministically convert to pixel coordinates using the actual image size; do not output bbox_xyxy_640. candidate_id is a unique integer or short string. type is object, structural, text, or scene. visibility is clear, partial, occluded, or uncertain. uncertainty is a NUMBER from 0 to 1. Do not add view_index inside a candidate. If two signs might identify one storefront, describe each visible instance but do not claim they are separate landmarks. FORMAT TEMPLATE only, replace values with image-grounded answers: {\"candidates\":[{\"candidate_id\":1,\"bbox_xyxy_1000\":[100,100,300,300],\"type\":\"object\",\"description\":\"visible cue\",\"hypothesized_role\":\"possible navigation cue\",\"visibility\":\"clear\",\"uncertainty\":0.5}]} If nothing clear is visible, respond exactly {\"candidates\":[]}. No markdown, no explanation, no extra keys.",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "processing_shapes": {
+        "input_ids": [
+          1,
+          811
+        ],
+        "attention_mask": [
+          1,
+          811
+        ],
+        "mm_token_type_ids": [
+          1,
+          811
+        ],
+        "pixel_values": [
+          1600,
+          1536
+        ],
+        "image_grid_thw": [
+          1,
+          3
+        ]
+      },
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/stage1/candidate_raw/main_03_dec.attempt01.txt",
+      "raw_sha256": "c78b85d47e2370aadd6e12e6b00e3946048d47b6c48ed4fadfc96998a1bc5df7",
+      "normalization_type": "full_json_fence",
+      "normalized_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/stage1/candidate_raw/main_03_dec.attempt01.normalized.txt",
+      "normalized_sha256": "43c2664df64b4bb0e90206ef1387356f5d41f3c9dad5a7ad9b4a786e664f2bac",
+      "schema_version": "1.3-coordinate1000",
+      "image_size": [
+        640,
+        640
+      ],
+      "coordinate_conversion": "bbox_xyxy_1000 raw to bbox_xyxy_640 via actual width,height divided by 1000; no clipping",
+      "duplicate_review_pairs": [
+        {
+          "candidate_ids": [
+            1,
+            2
+          ],
+          "reasons": [
+            "same_description_possible_same_landmark"
+          ],
+          "review_required": true
+        }
+      ],
+      "converted_overlay_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/stage1/candidate_overlays/main_03_dec.attempt01.converted_640.png",
+      "converted_overlay_sha256": "2da2cdfe8a0636f05804fd4b54fe37f6f7063dfb7f7c14e02052cd5d3154f0f6"
+    }
+  },
+  {
+    "source_metadata": "Z:\\wangyq\\outputs\\paris_route_qwen_smoke_20260927T141218Z_a01\\route_raw\\main_03.route_plus_current.attempt01.metadata.json",
+    "source_sha256": "a0f5d096bd1347b080e013adf6b97df34b34b4a159acaa453e9430911ebc2886",
+    "request": {
+      "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+      "timestamp_utc": "20260927T141218Z",
+      "attempt": 1,
+      "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+      "sync_mode": "temporary_clone_update",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "route_id": "main_03",
+      "condition": "route_plus_current",
+      "prompt": "You are at a street intersection. Select one of the two LEGAL non-return exits listed below. IDs are anonymous. Use only the supplied images; do not guess place names or coordinates. If evidence is insufficient, set uncertain=true and make a tentative selection. Option A: path roughly straight relative to the approach. Option B: path left relative to the approach. The earlier route images are in observed travel order. Use them as visual memory together with the current four-view observation. Return exactly one JSON object with only chosen_edge_id, maneuver, evidence_view_id, evidence_candidates, reason, uncertain. chosen_edge_id must be A or B; maneuver must be left, right, forward, or unknown; evidence_view_id must be view_0..view_3 or empty string; evidence_candidates must be []; reason must describe visible evidence only; uncertain must be a JSON boolean. Example FORMAT only: {\"chosen_edge_id\":\"A\",\"maneuver\":\"unknown\",\"evidence_view_id\":\"view_0\",\"evidence_candidates\":[],\"reason\":\"visual evidence is limited\",\"uncertain\":true}. Replace values. No markdown or other text.",
+      "prompt_hash": "a24375b4634828037e3e1b7226a70d9b8eb9f120532c46b4442b2318f0d99eb4",
+      "input_image_sha256": [
+        "57cd5f83ffc51eaeeffe17964c39561b5cdbbea13b399e215c273984b6748057",
+        "23359ab34f40ae9baf4621761a9ee7ba8721f812142db924146f83c333c1b470",
+        "1c33815b3db9f22673647720d5f460734869af17e8c3f58ba74409ce80b5f6b8",
+        "2326b74beccc7b647912bc35d964d4647895dfc3f55081df15b98c16644b3cea",
+        "a3b29e7859e7f7a7f3abea54ede6b948367254696f250d519ca3b8ab8db82d0c",
+        "74accdc4e585edfe0cf9534e90f02cf39475d96eb8d9d2b2be79e97d285a8c4d",
+        "f7565d1384c596e4f56cac772590bebb12d72b66ee560ee3d9f307c832e9f85d",
+        "769e421b5f1a06b033b07e8d72f4f12f62d4fd1f43a339628d3dce994092004c",
+        "903995a04b3b4fc7e9ec754549db0be4ae761d2242ce9339a5697ed3ef4bc9f0"
+      ],
+      "input_image_paths": [
+        [
+          "route memory image 1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uJqWESwRAW0B56iNLrmt6Q_panorama_0.jpg"
+        ],
+        [
+          "route memory image 2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/yObsZtN-5fteyPmAWYW7TQ_panorama_0.jpg"
+        ],
+        [
+          "route memory image 3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/1gAAqYoZDnC1rGhFh5pt6Q_panorama_0.jpg"
+        ],
+        [
+          "route memory image 4",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/cMDG1a1heD-VRW30JoofEw_panorama_0.jpg"
+        ],
+        [
+          "route memory image 5",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/2_yyvlJe9paF57ld3jbtgw_panorama_0.jpg"
+        ],
+        [
+          "current view_0",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_0.jpg"
+        ],
+        [
+          "current view_1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_1.jpg"
+        ],
+        [
+          "current view_2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_2.jpg"
+        ],
+        [
+          "current view_3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_3.jpg"
+        ]
+      ],
+      "processing_shapes": {
+        "input_ids": [
+          1,
+          3908
+        ],
+        "attention_mask": [
+          1,
+          3908
+        ],
+        "mm_token_type_ids": [
+          1,
+          3908
+        ],
+        "pixel_values": [
+          14400,
+          1536
+        ],
+        "image_grid_thw": [
+          9,
+          3
+        ]
+      },
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_03.route_plus_current.attempt01.txt",
+      "raw_sha256": "5b8d3f0f411b13933b42e95c831f223c61965b19cf6d20ac51a0db3931ffae2f",
+      "normalization_type": "none",
+      "normalized_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_03.route_plus_current.attempt01.normalized.txt",
+      "normalized_sha256": "4323f03c701f05a0c1c2d73719dd669f73150134738c9d851a5a4c22f43c6c2e"
+    }
+  },
+  {
+    "source_metadata": "Z:\\wangyq\\outputs\\paris_route_qwen_smoke_20260927T141218Z_a01\\route_raw\\main_03.current_only.attempt01.metadata.json",
+    "source_sha256": "a3990f3ee321a9f0fbc08c744f1f51f8a7b188ed98bb5260d9c11867baf68a7a",
+    "request": {
+      "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+      "timestamp_utc": "20260927T141218Z",
+      "attempt": 1,
+      "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+      "sync_mode": "temporary_clone_update",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "route_id": "main_03",
+      "condition": "current_only",
+      "prompt": "You are at a street intersection. Select one of the two LEGAL non-return exits listed below. IDs are anonymous. Use only the supplied images; do not guess place names or coordinates. If evidence is insufficient, set uncertain=true and make a tentative selection. Option A: path roughly straight relative to the approach. Option B: path left relative to the approach. Only the current four-view observation is available. Return exactly one JSON object with only chosen_edge_id, maneuver, evidence_view_id, evidence_candidates, reason, uncertain. chosen_edge_id must be A or B; maneuver must be left, right, forward, or unknown; evidence_view_id must be view_0..view_3 or empty string; evidence_candidates must be []; reason must describe visible evidence only; uncertain must be a JSON boolean. Example FORMAT only: {\"chosen_edge_id\":\"A\",\"maneuver\":\"unknown\",\"evidence_view_id\":\"view_0\",\"evidence_candidates\":[],\"reason\":\"visual evidence is limited\",\"uncertain\":true}. Replace values. No markdown or other text.",
+      "prompt_hash": "ec61fb49213faf4bcac1750a2801858f3d4ba56d4119e3183edb74162352033c",
+      "input_image_sha256": [
+        "74accdc4e585edfe0cf9534e90f02cf39475d96eb8d9d2b2be79e97d285a8c4d",
+        "f7565d1384c596e4f56cac772590bebb12d72b66ee560ee3d9f307c832e9f85d",
+        "769e421b5f1a06b033b07e8d72f4f12f62d4fd1f43a339628d3dce994092004c",
+        "903995a04b3b4fc7e9ec754549db0be4ae761d2242ce9339a5697ed3ef4bc9f0"
+      ],
+      "input_image_paths": [
+        [
+          "current view_0",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_0.jpg"
+        ],
+        [
+          "current view_1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_1.jpg"
+        ],
+        [
+          "current view_2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_2.jpg"
+        ],
+        [
+          "current view_3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_3.jpg"
+        ]
+      ],
+      "processing_shapes": {
+        "input_ids": [
+          1,
+          1854
+        ],
+        "attention_mask": [
+          1,
+          1854
+        ],
+        "mm_token_type_ids": [
+          1,
+          1854
+        ],
+        "pixel_values": [
+          6400,
+          1536
+        ],
+        "image_grid_thw": [
+          4,
+          3
+        ]
+      },
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_03.current_only.attempt01.txt",
+      "raw_sha256": "ebdeb6d0f46f80a4b8c7a652a0e163e279b2b71e8c18c90874d358287cc67de7",
+      "normalization_type": "none",
+      "normalized_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_03.current_only.attempt01.normalized.txt",
+      "normalized_sha256": "16f7b345015018df01aaf7569b4a2d32279b266e47bc9dd017ccaaec7f468727"
+    }
+  },
+  {
+    "source_metadata": "Z:\\wangyq\\outputs\\paris_route_qwen_smoke_20260927T141218Z_a01\\route_raw\\main_03.route_shuffled.attempt01.metadata.json",
+    "source_sha256": "e718b3b499eff040ed269959ad84f3084a089e4dfcebada74796f7286ea21684",
+    "request": {
+      "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+      "timestamp_utc": "20260927T141218Z",
+      "attempt": 1,
+      "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+      "sync_mode": "temporary_clone_update",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "route_id": "main_03",
+      "condition": "route_shuffled",
+      "prompt": "You are at a street intersection. Select one of the two LEGAL non-return exits listed below. IDs are anonymous. Use only the supplied images; do not guess place names or coordinates. If evidence is insufficient, set uncertain=true and make a tentative selection. Option A: path roughly straight relative to the approach. Option B: path left relative to the approach. The earlier route images are shown out of travel order. Compare them with the current four-view observation. Return exactly one JSON object with only chosen_edge_id, maneuver, evidence_view_id, evidence_candidates, reason, uncertain. chosen_edge_id must be A or B; maneuver must be left, right, forward, or unknown; evidence_view_id must be view_0..view_3 or empty string; evidence_candidates must be []; reason must describe visible evidence only; uncertain must be a JSON boolean. Example FORMAT only: {\"chosen_edge_id\":\"A\",\"maneuver\":\"unknown\",\"evidence_view_id\":\"view_0\",\"evidence_candidates\":[],\"reason\":\"visual evidence is limited\",\"uncertain\":true}. Replace values. No markdown or other text.",
+      "prompt_hash": "8b00b70d17620ba3304bc5c9b67aef280c74892fa6ea9d8ff57387eea826768d",
+      "input_image_sha256": [
+        "a3b29e7859e7f7a7f3abea54ede6b948367254696f250d519ca3b8ab8db82d0c",
+        "23359ab34f40ae9baf4621761a9ee7ba8721f812142db924146f83c333c1b470",
+        "57cd5f83ffc51eaeeffe17964c39561b5cdbbea13b399e215c273984b6748057",
+        "2326b74beccc7b647912bc35d964d4647895dfc3f55081df15b98c16644b3cea",
+        "1c33815b3db9f22673647720d5f460734869af17e8c3f58ba74409ce80b5f6b8",
+        "74accdc4e585edfe0cf9534e90f02cf39475d96eb8d9d2b2be79e97d285a8c4d",
+        "f7565d1384c596e4f56cac772590bebb12d72b66ee560ee3d9f307c832e9f85d",
+        "769e421b5f1a06b033b07e8d72f4f12f62d4fd1f43a339628d3dce994092004c",
+        "903995a04b3b4fc7e9ec754549db0be4ae761d2242ce9339a5697ed3ef4bc9f0"
+      ],
+      "input_image_paths": [
+        [
+          "route memory image 1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/2_yyvlJe9paF57ld3jbtgw_panorama_0.jpg"
+        ],
+        [
+          "route memory image 2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/yObsZtN-5fteyPmAWYW7TQ_panorama_0.jpg"
+        ],
+        [
+          "route memory image 3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uJqWESwRAW0B56iNLrmt6Q_panorama_0.jpg"
+        ],
+        [
+          "route memory image 4",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/cMDG1a1heD-VRW30JoofEw_panorama_0.jpg"
+        ],
+        [
+          "route memory image 5",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/1gAAqYoZDnC1rGhFh5pt6Q_panorama_0.jpg"
+        ],
+        [
+          "current view_0",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_0.jpg"
+        ],
+        [
+          "current view_1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_1.jpg"
+        ],
+        [
+          "current view_2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_2.jpg"
+        ],
+        [
+          "current view_3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/qxTdXHFI9twUe3Dy0bx9jA_panorama_3.jpg"
+        ]
+      ],
+      "processing_shapes": {
+        "input_ids": [
+          1,
+          3905
+        ],
+        "attention_mask": [
+          1,
+          3905
+        ],
+        "mm_token_type_ids": [
+          1,
+          3905
+        ],
+        "pixel_values": [
+          14400,
+          1536
+        ],
+        "image_grid_thw": [
+          9,
+          3
+        ]
+      },
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_03.route_shuffled.attempt01.txt",
+      "raw_sha256": "c23609e7e589df754c2a0d72f0393d0eadd5aba14d15906f7c46a0dded502510",
+      "normalization_type": "none",
+      "normalized_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_03.route_shuffled.attempt01.normalized.txt",
+      "normalized_sha256": "41977e1c581249720f232b33866a08c21c505bd426af7e99c5ea91ce80ef2b07"
+    }
+  },
+  {
+    "source_metadata": "Z:\\wangyq\\outputs\\paris_route_qwen_smoke_20260927T141218Z_a01\\route_raw\\main_06.route_plus_current.attempt01.metadata.json",
+    "source_sha256": "8025c49120f5b9118e3d698280b09b1726bdaa1cd0b776054eca2701f710df6e",
+    "request": {
+      "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+      "timestamp_utc": "20260927T141218Z",
+      "attempt": 1,
+      "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+      "sync_mode": "temporary_clone_update",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "route_id": "main_06",
+      "condition": "route_plus_current",
+      "prompt": "You are at a street intersection. Select one of the two LEGAL non-return exits listed below. IDs are anonymous. Use only the supplied images; do not guess place names or coordinates. If evidence is insufficient, set uncertain=true and make a tentative selection. Option A: path right relative to the approach. Option B: path roughly straight relative to the approach. The earlier route images are in observed travel order. Use them as visual memory together with the current four-view observation. Return exactly one JSON object with only chosen_edge_id, maneuver, evidence_view_id, evidence_candidates, reason, uncertain. chosen_edge_id must be A or B; maneuver must be left, right, forward, or unknown; evidence_view_id must be view_0..view_3 or empty string; evidence_candidates must be []; reason must describe visible evidence only; uncertain must be a JSON boolean. Example FORMAT only: {\"chosen_edge_id\":\"A\",\"maneuver\":\"unknown\",\"evidence_view_id\":\"view_0\",\"evidence_candidates\":[],\"reason\":\"visual evidence is limited\",\"uncertain\":true}. Replace values. No markdown or other text.",
+      "prompt_hash": "e0862b3b54340312cbda8b02acc121bfb8f04dde2964ff86deaf9f1ad8cd1b38",
+      "input_image_sha256": [
+        "a92921fb056faf335e0a79e31678a6a0a040b454d4864ee2928be3e500e3fca6",
+        "11d4a4c08d07f946102c9806278ea1b3fa7eed414592befd26c3935a58b413da",
+        "cae7b8af09b951274e4277bcfcf1f0bb8beba9c9190a0fd1b705245678a113fb",
+        "68d6df236896c869ae05658cb1066c33d7bddac063c82d0c1ba265255a86a62b",
+        "547012aab0d8dec3df695f7565e646eecdba383a03e045912ffbba6a71e9391d",
+        "ed40b153aaac9ca922ca0708152107f0b6ff0f4a9a3b48fa88f37921d50905de",
+        "fca1954e75969dbbc8ec21273ef09e9f38b4f5025f73b30ee6fbb62ecd69d74f",
+        "8a2ceda23bea875408f4935fc96a89de34a1f2adebe370188518cfefb45844dd",
+        "cb98c1af0b98aa3d9374f79d068ed974772f79319f8d751b626cdd89b3a4b2ae"
+      ],
+      "input_image_paths": [
+        [
+          "route memory image 1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/oSa1tj_9Mt2_IXZ4K9fCeg_panorama_1.jpg"
+        ],
+        [
+          "route memory image 2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/xt9pCqCZvulRwxZtecg1-g_panorama_1.jpg"
+        ],
+        [
+          "route memory image 3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/G970Bulz6Nmd8_SOvRE0jg_panorama_1.jpg"
+        ],
+        [
+          "route memory image 4",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_1.jpg"
+        ],
+        [
+          "route memory image 5",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/5M5peQFcX-RBZ1rw4UAKOw_panorama_1.jpg"
+        ],
+        [
+          "current view_0",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_0.jpg"
+        ],
+        [
+          "current view_1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_1.jpg"
+        ],
+        [
+          "current view_2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_2.jpg"
+        ],
+        [
+          "current view_3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_3.jpg"
+        ]
+      ],
+      "processing_shapes": {
+        "input_ids": [
+          1,
+          3908
+        ],
+        "attention_mask": [
+          1,
+          3908
+        ],
+        "mm_token_type_ids": [
+          1,
+          3908
+        ],
+        "pixel_values": [
+          14400,
+          1536
+        ],
+        "image_grid_thw": [
+          9,
+          3
+        ]
+      },
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_06.route_plus_current.attempt01.txt",
+      "raw_sha256": "b81220740428ed78c60e90260867ab186ab0b67826c1ddec09a753a52ed3b544",
+      "normalization_type": "none",
+      "normalized_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_06.route_plus_current.attempt01.normalized.txt",
+      "normalized_sha256": "ec8ab902b9f2658fe5bc13908435201a629b700e3f598dfc2112899ebef12bc0"
+    }
+  },
+  {
+    "source_metadata": "Z:\\wangyq\\outputs\\paris_route_qwen_smoke_20260927T141218Z_a01\\route_raw\\main_06.current_only.attempt01.metadata.json",
+    "source_sha256": "6203d8f58b863ba2df193483a8b896e33f149e365659ee42bb03b488d3d622b3",
+    "request": {
+      "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+      "timestamp_utc": "20260927T141218Z",
+      "attempt": 1,
+      "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+      "sync_mode": "temporary_clone_update",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "route_id": "main_06",
+      "condition": "current_only",
+      "prompt": "You are at a street intersection. Select one of the two LEGAL non-return exits listed below. IDs are anonymous. Use only the supplied images; do not guess place names or coordinates. If evidence is insufficient, set uncertain=true and make a tentative selection. Option A: path right relative to the approach. Option B: path roughly straight relative to the approach. Only the current four-view observation is available. Return exactly one JSON object with only chosen_edge_id, maneuver, evidence_view_id, evidence_candidates, reason, uncertain. chosen_edge_id must be A or B; maneuver must be left, right, forward, or unknown; evidence_view_id must be view_0..view_3 or empty string; evidence_candidates must be []; reason must describe visible evidence only; uncertain must be a JSON boolean. Example FORMAT only: {\"chosen_edge_id\":\"A\",\"maneuver\":\"unknown\",\"evidence_view_id\":\"view_0\",\"evidence_candidates\":[],\"reason\":\"visual evidence is limited\",\"uncertain\":true}. Replace values. No markdown or other text.",
+      "prompt_hash": "6ce0606c6e18e96148585b513d3ae1b40dccc2b6e5f6ba6e7565af0516efeb88",
+      "input_image_sha256": [
+        "ed40b153aaac9ca922ca0708152107f0b6ff0f4a9a3b48fa88f37921d50905de",
+        "fca1954e75969dbbc8ec21273ef09e9f38b4f5025f73b30ee6fbb62ecd69d74f",
+        "8a2ceda23bea875408f4935fc96a89de34a1f2adebe370188518cfefb45844dd",
+        "cb98c1af0b98aa3d9374f79d068ed974772f79319f8d751b626cdd89b3a4b2ae"
+      ],
+      "input_image_paths": [
+        [
+          "current view_0",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_0.jpg"
+        ],
+        [
+          "current view_1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_1.jpg"
+        ],
+        [
+          "current view_2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_2.jpg"
+        ],
+        [
+          "current view_3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_3.jpg"
+        ]
+      ],
+      "processing_shapes": {
+        "input_ids": [
+          1,
+          1854
+        ],
+        "attention_mask": [
+          1,
+          1854
+        ],
+        "mm_token_type_ids": [
+          1,
+          1854
+        ],
+        "pixel_values": [
+          6400,
+          1536
+        ],
+        "image_grid_thw": [
+          4,
+          3
+        ]
+      },
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_06.current_only.attempt01.txt",
+      "raw_sha256": "313f07e0b14721d266bf58792092240801b9455dd8639db0a01dfecc9d2a10af",
+      "normalization_type": "none",
+      "normalized_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_06.current_only.attempt01.normalized.txt",
+      "normalized_sha256": "aa999116ec8750645e7c70d93a901239c3a4115115164afc0d81f2440e113159"
+    }
+  },
+  {
+    "source_metadata": "Z:\\wangyq\\outputs\\paris_route_qwen_smoke_20260927T141218Z_a01\\route_raw\\main_06.route_shuffled.attempt01.metadata.json",
+    "source_sha256": "ffcd6d79e9889273635a2f7ecbfd9fed55fb14867d4f8308053131766b4e062a",
+    "request": {
+      "run_id": "paris_route_qwen_smoke_20260927T141218Z_a01",
+      "timestamp_utc": "20260927T141218Z",
+      "attempt": 1,
+      "source_commit": "db2ac24a6d247b16cee2d1218bdb10ef42135168",
+      "sync_mode": "temporary_clone_update",
+      "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "route_id": "main_06",
+      "condition": "route_shuffled",
+      "prompt": "You are at a street intersection. Select one of the two LEGAL non-return exits listed below. IDs are anonymous. Use only the supplied images; do not guess place names or coordinates. If evidence is insufficient, set uncertain=true and make a tentative selection. Option A: path right relative to the approach. Option B: path roughly straight relative to the approach. The earlier route images are shown out of travel order. Compare them with the current four-view observation. Return exactly one JSON object with only chosen_edge_id, maneuver, evidence_view_id, evidence_candidates, reason, uncertain. chosen_edge_id must be A or B; maneuver must be left, right, forward, or unknown; evidence_view_id must be view_0..view_3 or empty string; evidence_candidates must be []; reason must describe visible evidence only; uncertain must be a JSON boolean. Example FORMAT only: {\"chosen_edge_id\":\"A\",\"maneuver\":\"unknown\",\"evidence_view_id\":\"view_0\",\"evidence_candidates\":[],\"reason\":\"visual evidence is limited\",\"uncertain\":true}. Replace values. No markdown or other text.",
+      "prompt_hash": "6548be7ca9ed87f634d63e2dd3a282dab38a97845afa68389d53c997cb57b2b7",
+      "input_image_sha256": [
+        "547012aab0d8dec3df695f7565e646eecdba383a03e045912ffbba6a71e9391d",
+        "11d4a4c08d07f946102c9806278ea1b3fa7eed414592befd26c3935a58b413da",
+        "a92921fb056faf335e0a79e31678a6a0a040b454d4864ee2928be3e500e3fca6",
+        "68d6df236896c869ae05658cb1066c33d7bddac063c82d0c1ba265255a86a62b",
+        "cae7b8af09b951274e4277bcfcf1f0bb8beba9c9190a0fd1b705245678a113fb",
+        "ed40b153aaac9ca922ca0708152107f0b6ff0f4a9a3b48fa88f37921d50905de",
+        "fca1954e75969dbbc8ec21273ef09e9f38b4f5025f73b30ee6fbb62ecd69d74f",
+        "8a2ceda23bea875408f4935fc96a89de34a1f2adebe370188518cfefb45844dd",
+        "cb98c1af0b98aa3d9374f79d068ed974772f79319f8d751b626cdd89b3a4b2ae"
+      ],
+      "input_image_paths": [
+        [
+          "route memory image 1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/5M5peQFcX-RBZ1rw4UAKOw_panorama_1.jpg"
+        ],
+        [
+          "route memory image 2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/xt9pCqCZvulRwxZtecg1-g_panorama_1.jpg"
+        ],
+        [
+          "route memory image 3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/oSa1tj_9Mt2_IXZ4K9fCeg_panorama_1.jpg"
+        ],
+        [
+          "route memory image 4",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_1.jpg"
+        ],
+        [
+          "route memory image 5",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/G970Bulz6Nmd8_SOvRE0jg_panorama_1.jpg"
+        ],
+        [
+          "current view_0",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_0.jpg"
+        ],
+        [
+          "current view_1",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_1.jpg"
+        ],
+        [
+          "current view_2",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_2.jpg"
+        ],
+        [
+          "current view_3",
+          "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_3.jpg"
+        ]
+      ],
+      "processing_shapes": {
+        "input_ids": [
+          1,
+          3905
+        ],
+        "attention_mask": [
+          1,
+          3905
+        ],
+        "mm_token_type_ids": [
+          1,
+          3905
+        ],
+        "pixel_values": [
+          14400,
+          1536
+        ],
+        "image_grid_thw": [
+          9,
+          3
+        ]
+      },
+      "raw_output_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_06.route_shuffled.attempt01.txt",
+      "raw_sha256": "c97d6860c117b590457779795c7e93a04121a0f736086f8b64e9000ea7f63bf5",
+      "normalization_type": "none",
+      "normalized_path": "/home/nas/wangyq/outputs/paris_route_qwen_smoke_20260927T141218Z_a01/route_raw/main_06.route_shuffled.attempt01.normalized.txt",
+      "normalized_sha256": "c47b97190a1c30bb2319a1b8f226ee994429a79d36b64b541fd4075b597a8f5a"
+    }
+  }
+]

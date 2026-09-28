@@ -1,5 +1,12 @@
 # Worklog
 
+## 2026-09-28T070320Z - Qwen用法与人工审核澄清
+
+- 定点读取七份NAS请求metadata并保存来源哈希、实际prompt与图像顺序至 `_audit_outputs/qwen_usage_20260928T070320Z/`；原始结果未改。
+- 核实main_03/main_06人填审核字段仍空白；当前是本地权重推理，无训练/SFT。路线条件使用一次请求中的有序多图，不继承前一调用的对话。
+- 对照0926设计，澄清主线本已是看过短路线后的续行；此次runner缺少明确重走目标。区分轨迹顺序与相机朝向，以及路线基线与候选框干预的依赖。
+- 形成中文 `EXPLANATION_AND_REVIEW.md`，列出人工需审核的连续性、来向、通行方式、出口映射、任务答案和候选真实性；未替用户确认gold，也未启动新实验。
+
 ## 2026-09-28 - Qwen route smoke complete return audit
 
 - Fetched and inspected `origin/server-results/paris_route_qwen_smoke_20260927T141218Z_a01` at exact commit `253d27b047d7e421e35be56245f6d7017622c3db` (export `20260927T142056Z`); did not merge its branch into `main`. Source run commit: `db2ac24a6d247b16cee2d1218bdb10ef42135168`.

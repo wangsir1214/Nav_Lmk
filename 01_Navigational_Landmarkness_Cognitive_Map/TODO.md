@@ -1,5 +1,13 @@
 # TODO
 
+## 2026-09-28T070320Z - 当前直接下一步
+
+- [x] 说明当前Qwen用法，保存实际请求及路线顺序，核查main_03/main_06人工表仍为空。
+- [ ] 本地复用两条路线图板，补齐来向、匿名出口、示范路线和拍摄时间问题的统一审核包；不要求用户重新查盘或算heading。
+- [ ] 人工确认通行模式、路线连贯性、来向/视图解释、可选出口和沿演示路线的正确出口；保留UNSURE与修订理由。
+- [ ] 按审核结果冻结明确的已学路线续行任务与新测试观察，制作路线对齐输入；交服务器运行全图路线对照，暂不SFT。
+- [ ] 另行审核6图16候选；候选审核不阻塞全图路线基线，但必须先于区域遮挡和匹配控制实验完成。
+
 ## 2026-09-28 Completed smoke and next gates
 
 - [x] Fetch and inspect exact server-results commit `253d27b047d7e421e35be56245f6d7017622c3db`, NAS scorer mapping, stage outputs, and the two decision overlays.

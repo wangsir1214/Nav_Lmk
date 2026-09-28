@@ -1,0 +1,18 @@
+[
+  {
+    "name": "official_qwen_model_card",
+    "url": "https://huggingface.co/Qwen/Qwen3.5-9B/raw/main/README.md",
+    "checked_utc": "2026-09-28T07:13:36.8457792Z",
+    "sha256_of_response_text_utf8": "c5f5a8c2dddab69cfbf05279235aa5fddb137939a06539c4c7637aa900fef6d0",
+    "status": 200,
+    "note": "官方模型卡标明该9B模型经过预训练与后训练，并提供将权重部署为API的示例。API本身不表示训练方式；未据此确认网页使用同一checkpoint。"
+  },
+  {
+    "name": "official_aliyun_vision_api",
+    "url": "https://help.aliyun.com/zh/model-studio/qwen-vl-compatible-with-openai",
+    "checked_utc": "2026-09-28T07:13:37.2395242Z",
+    "sha256_of_response_text_utf8": "ea73bbf2ae7659bafabbf92f5af03cf1d3dfbc1105582351aa9bcb7cb074c686",
+    "status": 200,
+    "note": "官方视觉API文档要求指定model、图像/消息和请求参数。此文档不证明任意托管型号与本项目9B权重完全等价。"
+  }
+]

@@ -1,5 +1,11 @@
 # Results Summary
 
+## 2026-09-28T070320Z - 已运行内容与下一步任务澄清
+
+- 本轮无新增模型结果。实际有序输入为step0/1/2/4/5加step3四视角；打乱为step5/1/0/4/2加同一当前四视角；无路线条件只有当前四视角。模型只看到图像、序号标签及提示，不读取文件名、GPS或绝对heading。
+- 阶段1候选框未接入阶段2。原图路线选择可先做，不必等待全部候选框人审；候选干预仍需先审框和冻结控制区域。
+- 0926主问题本已采用已看短路线的续行，当前提示未完整落实。看示范属于上下文证据，不是SFT或权重训练。main_03/main_06的人工确认仍为空。
+
 ## 2026-09-28 Qwen route smoke complete, scientific status provisional
 
 - GitHub snapshot verified on `origin/server-results/paris_route_qwen_smoke_20260927T141218Z_a01`, commit `253d27b047d7e421e35be56245f6d7017622c3db`; NAS source maps to `Z:\wangyq\outputs\paris_route_qwen_smoke_20260927T141218Z_a01`. The run completed 2/2 stage-0, 6/6 stage-1, and 6/6 stage-2 calls. These are successful executions, not accuracy denominators.
