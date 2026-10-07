@@ -1,0 +1,4 @@
+No demonstration route images are provided in this condition. CURRENT is the only observation.
+Perform the same action classification using CURRENT alone. Do not infer a previously travelled route from hidden metadata. If the action cannot be determined from CURRENT alone, use UNSURE.
+
+Return exactly one JSON object with one key named `action` and no other text. The value must be one of: LEFT, RIGHT, FORWARD, UNSURE.

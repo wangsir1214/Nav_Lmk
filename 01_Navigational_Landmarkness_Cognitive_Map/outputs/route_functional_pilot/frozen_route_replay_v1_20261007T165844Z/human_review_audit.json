@@ -1,0 +1,49 @@
+{
+  "schema_version": "route_replay_human_review_audit_v1",
+  "created_utc": "2026-10-07T16:59:31.620899+00:00",
+  "rows": [
+    {
+      "question_id": "q_main02_decision_step3",
+      "route_id": "main_02",
+      "review_file": "replacement_main03_20261007T150150Z/route_replay_replacement_review.csv",
+      "review_accept": "ACCEPT",
+      "review_fields": {
+        "route_continuous": "YES",
+        "decision_region_valid": "YES",
+        "incoming_direction_correct": "YES",
+        "demo_action": "LEFT",
+        "demo_test_same_region": "YES",
+        "test_is_distinct_pano": "YES",
+        "visual_interpretable": "YES",
+        "answer_leakage_absent": "YES",
+        "confounds_acceptable": "YES"
+      },
+      "decision_pano_id": "NsK2Gax4YNWuf_bfPSwS5w",
+      "test_pano_id": "JMIs1c9ykOODxLe-P7334g",
+      "gold_action": "LEFT",
+      "user_confirmation_note": "Human review completed and accepted; see the source CSV row."
+    },
+    {
+      "question_id": "q_main06_decision_step3",
+      "route_id": "main_06",
+      "review_file": "preparation_20261007T131613Z/route_replay_review.csv",
+      "review_accept": "ACCEPT",
+      "review_fields": {
+        "route_continuous": "YES",
+        "decision_region_valid": "YES",
+        "incoming_direction_correct": "YES",
+        "demo_action": "YES",
+        "demo_test_same_region": "YES",
+        "test_is_distinct_pano": "YES",
+        "visual_interpretable": "YES",
+        "answer_leakage_absent": "YES",
+        "confounds_acceptable": "YES"
+      },
+      "decision_pano_id": "uyE0Z2Ph9ad4xz0EENt8XQ",
+      "test_pano_id": "xt9pCqCZvulRwxZtecg1-g",
+      "gold_action": "RIGHT",
+      "user_confirmation_note": "Human review accepted; demo_action=YES means the reviewer approved provisional_action."
+    }
+  ],
+  "note": "main_02 ACCEPT was explicitly confirmed by the user in the Codex conversation; this confirmation was recorded in the CSV notes before freezing."
+}

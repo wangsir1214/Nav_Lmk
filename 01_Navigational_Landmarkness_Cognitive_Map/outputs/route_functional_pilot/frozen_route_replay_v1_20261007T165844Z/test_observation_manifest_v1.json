@@ -1,0 +1,105 @@
+{
+  "schema_version": "route_replay_test_manifest_v1",
+  "status": "FROZEN_TWO_QUESTION_SANITY_ONLY",
+  "created_utc": "2026-10-07T16:59:31.620899+00:00",
+  "image_policy": {
+    "server_input": "four_route_aligned_perspective_views",
+    "fov_deg": 90,
+    "heading_zero": "incoming_bearing_deg",
+    "view_order": [
+      "front",
+      "right",
+      "back",
+      "left"
+    ],
+    "fixed_views_are_audit_only": true
+  },
+  "questions": [
+    {
+      "question_id": "q_main02_decision_step3",
+      "route_id_internal": "main_02",
+      "current_label": "CURRENT",
+      "pano_id": "JMIs1c9ykOODxLe-P7334g",
+      "capture_yyyymm": "2014-08",
+      "distance_to_decision_m": 20.2,
+      "incoming_bearing_deg": 123.7,
+      "route_aligned_views": [
+        {
+          "view_label": "front",
+          "center_heading_deg": 123.7,
+          "fov_deg": 90,
+          "projection": "perspective_from_erp",
+          "source_pano_id": "JMIs1c9ykOODxLe-P7334g",
+          "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/JMIs1c9ykOODxLe-P7334g_panorama_0.jpg"
+        },
+        {
+          "view_label": "right",
+          "center_heading_deg": 213.7,
+          "fov_deg": 90,
+          "projection": "perspective_from_erp",
+          "source_pano_id": "JMIs1c9ykOODxLe-P7334g",
+          "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/JMIs1c9ykOODxLe-P7334g_panorama_1.jpg"
+        },
+        {
+          "view_label": "back",
+          "center_heading_deg": 303.7,
+          "fov_deg": 90,
+          "projection": "perspective_from_erp",
+          "source_pano_id": "JMIs1c9ykOODxLe-P7334g",
+          "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/JMIs1c9ykOODxLe-P7334g_panorama_2.jpg"
+        },
+        {
+          "view_label": "left",
+          "center_heading_deg": 33.7,
+          "fov_deg": 90,
+          "projection": "perspective_from_erp",
+          "source_pano_id": "JMIs1c9ykOODxLe-P7334g",
+          "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/JMIs1c9ykOODxLe-P7334g_panorama_3.jpg"
+        }
+      ]
+    },
+    {
+      "question_id": "q_main06_decision_step3",
+      "route_id_internal": "main_06",
+      "current_label": "CURRENT",
+      "pano_id": "xt9pCqCZvulRwxZtecg1-g",
+      "capture_yyyymm": "2014-05",
+      "distance_to_decision_m": 12.44,
+      "incoming_bearing_deg": 108.319,
+      "route_aligned_views": [
+        {
+          "view_label": "front",
+          "center_heading_deg": 108.319,
+          "fov_deg": 90,
+          "projection": "perspective_from_erp",
+          "source_pano_id": "xt9pCqCZvulRwxZtecg1-g",
+          "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/xt9pCqCZvulRwxZtecg1-g_panorama_0.jpg"
+        },
+        {
+          "view_label": "right",
+          "center_heading_deg": 198.319,
+          "fov_deg": 90,
+          "projection": "perspective_from_erp",
+          "source_pano_id": "xt9pCqCZvulRwxZtecg1-g",
+          "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/xt9pCqCZvulRwxZtecg1-g_panorama_1.jpg"
+        },
+        {
+          "view_label": "back",
+          "center_heading_deg": 288.319,
+          "fov_deg": 90,
+          "projection": "perspective_from_erp",
+          "source_pano_id": "xt9pCqCZvulRwxZtecg1-g",
+          "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/xt9pCqCZvulRwxZtecg1-g_panorama_2.jpg"
+        },
+        {
+          "view_label": "left",
+          "center_heading_deg": 18.319,
+          "fov_deg": 90,
+          "projection": "perspective_from_erp",
+          "source_pano_id": "xt9pCqCZvulRwxZtecg1-g",
+          "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/xt9pCqCZvulRwxZtecg1-g_panorama_3.jpg"
+        }
+      ]
+    }
+  ]
+}

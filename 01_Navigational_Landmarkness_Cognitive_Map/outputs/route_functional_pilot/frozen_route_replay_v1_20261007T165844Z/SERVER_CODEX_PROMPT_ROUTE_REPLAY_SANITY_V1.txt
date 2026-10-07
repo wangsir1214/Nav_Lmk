@@ -1,0 +1,20 @@
+请在服务器端执行一次新的 route-replay sanity run。先同步 GitHub 中本实验包，并记录实际 source commit；如果包不存在、文件哈希不一致或 gold 与 prompt 混在同一模型请求中，立即停止并报告。
+
+实验包目录：
+`01_Navigational_Landmarkness_Cognitive_Map/outputs/route_functional_pilot/frozen_route_replay_v1_20261007T165844Z/`
+
+只使用这两个题：`q_main02_decision_step3`、`q_main06_decision_step3`。每题独立运行三个条件，共 6 次模型调用：
+
+1. `Full`：示范路线图像 + `CURRENT`，使用 `prompt_route_replay_v1_full.txt`。
+2. `NoDemo`：只给 `CURRENT`，使用 `prompt_route_replay_v1_nodemo.txt`。
+3. `NoCurrent`：只给示范路线图像，不给当前图，使用 `prompt_route_replay_v1_nocurrent.txt`。若 processor 必须保留图像槽位，使用一个固定中性 placeholder，并记录其哈希。
+
+示范和当前图必须按照 manifest 从 ERP 生成 route-aligned、FOV=90° 的四视图；包中的 fixed-view 路径只用于人工审计，不能直接作为正式路线方向输入。
+
+复用已经成功的 `Qwen/Qwen3.5-9B` 权重、processor 和运行设置：模型只加载一次，`do_sample=False`，`enable_thinking=False`。输出严格为一个 JSON 对象，键为 `action`，值只能是 `LEFT`、`RIGHT`、`FORWARD` 或 `UNSURE`。
+
+模型请求中禁止出现 pano ID、step ID、GPS、route ID、`scorer_gold_v1.json` 内容、旧 Qwen 答案或人工 gold。gold 只能由独立 scorer 读取；`demo_action=YES` 的 CSV 语义已在 gold 中归一化为其 `provisional_action`。
+
+生成新的 UTC `run_id`，不要覆盖旧 smoke。保存实际 prompt/message、所有图像 SHA-256、prompt SHA-256、模型 revision、raw output、parsed action、parse status 和失败原因。此轮禁止 candidate proposal、candidate masking 和 control masking。
+
+轻量结果推送到新的 `server-results/<run_id>` 分支，至少返回：`actual_requests.jsonl`、`predictions.jsonl`、`RUN_SUMMARY.md`、运行参数/哈希摘要，以及逐题的 Full/NoDemo/NoCurrent 表。完成 6 次调用后停止，不自动扩题。

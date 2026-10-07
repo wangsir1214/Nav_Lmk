@@ -1,0 +1,26 @@
+{
+  "schema_version": "route_replay_scorer_gold_v1",
+  "status": "FROZEN_HUMAN_ACCEPTED",
+  "created_utc": "2026-10-07T16:59:31.620899+00:00",
+  "source_policy": "independent_human_review_csv_and_explicit_user_confirmation",
+  "questions": [
+    {
+      "question_id": "q_main02_decision_step3",
+      "route_id_internal": "main_02",
+      "gold_action": "LEFT",
+      "demo_action_raw": "LEFT",
+      "action_source": "explicit_demo_action",
+      "review_status": "ACCEPT",
+      "review_source": "replacement_main03_20261007T150150Z/route_replay_replacement_review.csv"
+    },
+    {
+      "question_id": "q_main06_decision_step3",
+      "route_id_internal": "main_06",
+      "gold_action": "RIGHT",
+      "demo_action_raw": "YES",
+      "action_source": "provisional_action_approved_by_YES",
+      "review_status": "ACCEPT",
+      "review_source": "preparation_20261007T131613Z/route_replay_review.csv"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "route_replay_question_v1",
+  "status": "FROZEN_TWO_QUESTION_SANITY_ONLY",
+  "created_utc": "2026-10-07T16:59:31.620899+00:00",
+  "task": {
+    "name": "route_replay_maneuver_classification",
+    "description": "Given a previously travelled route in demonstration order and a new observation from one of its decision regions, recover the demonstrated maneuver.",
+    "allowed_actions": [
+      "LEFT",
+      "RIGHT",
+      "FORWARD",
+      "UNSURE"
+    ],
+    "model_input_must_exclude": [
+      "gold_action",
+      "pano_id",
+      "step_id",
+      "GPS",
+      "route_id",
+      "old_model_answer"
+    ],
+    "image_policy": "route_aligned_fov90_from_erp_required_for_server"
+  },
+  "questions": [
+    {
+      "question_id": "q_main02_decision_step3",
+      "route_id_internal": "main_02",
+      "demonstration_labels": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "current_label": "CURRENT",
+      "prompt_visible_content": {
+        "demonstration_order": "D01 through D06",
+        "current_observation_label": "CURRENT",
+        "route_id_visible": false
+      },
+      "diagnostic_limitations": [
+        "This route contributes one accepted decision question.",
+        "Same-demonstration action diversity is not established in this two-question sanity package."
+      ]
+    },
+    {
+      "question_id": "q_main06_decision_step3",
+      "route_id_internal": "main_06",
+      "demonstration_labels": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "current_label": "CURRENT",
+      "prompt_visible_content": {
+        "demonstration_order": "D01 through D06",
+        "current_observation_label": "CURRENT",
+        "route_id_visible": false
+      },
+      "diagnostic_limitations": [
+        "This route contributes one accepted decision question.",
+        "Same-demonstration action diversity is not established in this two-question sanity package."
+      ]
+    }
+  ]
+}

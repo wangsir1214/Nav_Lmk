@@ -1,0 +1,8 @@
+You previously travelled the route shown by the DEMONSTRATION images.
+The demonstration images are presented in travel order and are visual memories of that route.
+CURRENT is a new observation from one of the route's decision regions. The original route step is not provided.
+
+Infer which demonstrated decision state CURRENT corresponds to, then recover the maneuver that continued the previously travelled route at that place.
+Use LEFT, RIGHT, or FORWARD. If the visual evidence is insufficient, use UNSURE. Do not choose the most generally passable road and do not use any hidden file names or metadata.
+
+Return exactly one JSON object with one key named `action` and no other text. The value must be one of: LEFT, RIGHT, FORWARD, UNSURE.

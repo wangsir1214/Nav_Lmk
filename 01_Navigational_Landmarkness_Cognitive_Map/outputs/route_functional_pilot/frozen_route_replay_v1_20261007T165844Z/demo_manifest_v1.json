@@ -1,0 +1,523 @@
+{
+  "schema_version": "route_replay_demo_manifest_v1",
+  "status": "FROZEN_TWO_QUESTION_SANITY_ONLY",
+  "created_utc": "2026-10-07T16:59:31.620899+00:00",
+  "image_policy": {
+    "server_input": "four_route_aligned_perspective_views",
+    "fov_deg": 90,
+    "heading_zero": "incoming_bearing_deg",
+    "view_order": [
+      "front",
+      "right",
+      "back",
+      "left"
+    ],
+    "fixed_views_are_audit_only": true
+  },
+  "questions": [
+    {
+      "question_id": "q_main02_decision_step3",
+      "route_id_internal": "main_02",
+      "demonstrations": [
+        {
+          "demo_label": "D01",
+          "sequence_index": 1,
+          "step_idx": 0,
+          "pano_id": "tv58N7KlxXRMT0UCAuZo9Q",
+          "capture_yyyymm": "2014-08",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 123.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "tv58N7KlxXRMT0UCAuZo9Q",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/tv58N7KlxXRMT0UCAuZo9Q_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 213.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "tv58N7KlxXRMT0UCAuZo9Q",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/tv58N7KlxXRMT0UCAuZo9Q_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 303.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "tv58N7KlxXRMT0UCAuZo9Q",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/tv58N7KlxXRMT0UCAuZo9Q_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 33.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "tv58N7KlxXRMT0UCAuZo9Q",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/tv58N7KlxXRMT0UCAuZo9Q_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D02",
+          "sequence_index": 2,
+          "step_idx": 3,
+          "pano_id": "NsK2Gax4YNWuf_bfPSwS5w",
+          "capture_yyyymm": "2014-08",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 123.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "NsK2Gax4YNWuf_bfPSwS5w",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/NsK2Gax4YNWuf_bfPSwS5w_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 213.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "NsK2Gax4YNWuf_bfPSwS5w",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/NsK2Gax4YNWuf_bfPSwS5w_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 303.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "NsK2Gax4YNWuf_bfPSwS5w",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/NsK2Gax4YNWuf_bfPSwS5w_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 33.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "NsK2Gax4YNWuf_bfPSwS5w",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/NsK2Gax4YNWuf_bfPSwS5w_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D03",
+          "sequence_index": 3,
+          "step_idx": 4,
+          "pano_id": "k-M-i4nI4yxyPsEgk01sjA",
+          "capture_yyyymm": "2014-09",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 123.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "k-M-i4nI4yxyPsEgk01sjA",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/k-M-i4nI4yxyPsEgk01sjA_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 213.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "k-M-i4nI4yxyPsEgk01sjA",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/k-M-i4nI4yxyPsEgk01sjA_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 303.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "k-M-i4nI4yxyPsEgk01sjA",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/k-M-i4nI4yxyPsEgk01sjA_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 33.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "k-M-i4nI4yxyPsEgk01sjA",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/k-M-i4nI4yxyPsEgk01sjA_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D04",
+          "sequence_index": 4,
+          "step_idx": 5,
+          "pano_id": "CxSS6yccK2TQzZRCBcPi2g",
+          "capture_yyyymm": "2014-05",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 123.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "CxSS6yccK2TQzZRCBcPi2g",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/CxSS6yccK2TQzZRCBcPi2g_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 213.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "CxSS6yccK2TQzZRCBcPi2g",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/CxSS6yccK2TQzZRCBcPi2g_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 303.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "CxSS6yccK2TQzZRCBcPi2g",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/CxSS6yccK2TQzZRCBcPi2g_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 33.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "CxSS6yccK2TQzZRCBcPi2g",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/CxSS6yccK2TQzZRCBcPi2g_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D05",
+          "sequence_index": 5,
+          "step_idx": 6,
+          "pano_id": "WtNRuF-5DYTsVipzzOSalw",
+          "capture_yyyymm": "2014-05",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 123.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "WtNRuF-5DYTsVipzzOSalw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/WtNRuF-5DYTsVipzzOSalw_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 213.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "WtNRuF-5DYTsVipzzOSalw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/WtNRuF-5DYTsVipzzOSalw_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 303.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "WtNRuF-5DYTsVipzzOSalw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/WtNRuF-5DYTsVipzzOSalw_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 33.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "WtNRuF-5DYTsVipzzOSalw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/WtNRuF-5DYTsVipzzOSalw_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D06",
+          "sequence_index": 6,
+          "step_idx": 7,
+          "pano_id": "tijh3FLjgApEOKHb0ruPiQ",
+          "capture_yyyymm": "2014-09",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 123.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "tijh3FLjgApEOKHb0ruPiQ",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/tijh3FLjgApEOKHb0ruPiQ_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 213.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "tijh3FLjgApEOKHb0ruPiQ",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/tijh3FLjgApEOKHb0ruPiQ_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 303.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "tijh3FLjgApEOKHb0ruPiQ",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/tijh3FLjgApEOKHb0ruPiQ_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 33.7,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "tijh3FLjgApEOKHb0ruPiQ",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/tijh3FLjgApEOKHb0ruPiQ_panorama_3.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "q_main06_decision_step3",
+      "route_id_internal": "main_06",
+      "demonstrations": [
+        {
+          "demo_label": "D01",
+          "sequence_index": 1,
+          "step_idx": 0,
+          "pano_id": "oSa1tj_9Mt2_IXZ4K9fCeg",
+          "capture_yyyymm": "2014-09",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 108.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "oSa1tj_9Mt2_IXZ4K9fCeg",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/oSa1tj_9Mt2_IXZ4K9fCeg_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 198.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "oSa1tj_9Mt2_IXZ4K9fCeg",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/oSa1tj_9Mt2_IXZ4K9fCeg_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 288.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "oSa1tj_9Mt2_IXZ4K9fCeg",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/oSa1tj_9Mt2_IXZ4K9fCeg_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 18.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "oSa1tj_9Mt2_IXZ4K9fCeg",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/oSa1tj_9Mt2_IXZ4K9fCeg_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D02",
+          "sequence_index": 2,
+          "step_idx": 3,
+          "pano_id": "uyE0Z2Ph9ad4xz0EENt8XQ",
+          "capture_yyyymm": "2014-05",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 108.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "uyE0Z2Ph9ad4xz0EENt8XQ",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 198.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "uyE0Z2Ph9ad4xz0EENt8XQ",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 288.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "uyE0Z2Ph9ad4xz0EENt8XQ",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 18.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "uyE0Z2Ph9ad4xz0EENt8XQ",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/uyE0Z2Ph9ad4xz0EENt8XQ_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D03",
+          "sequence_index": 3,
+          "step_idx": 4,
+          "pano_id": "Q5Bl2t-iHmndJ6I1Dh13gw",
+          "capture_yyyymm": "2014-05",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 108.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "Q5Bl2t-iHmndJ6I1Dh13gw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 198.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "Q5Bl2t-iHmndJ6I1Dh13gw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 288.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "Q5Bl2t-iHmndJ6I1Dh13gw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 18.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "Q5Bl2t-iHmndJ6I1Dh13gw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/Q5Bl2t-iHmndJ6I1Dh13gw_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D04",
+          "sequence_index": 4,
+          "step_idx": 5,
+          "pano_id": "5M5peQFcX-RBZ1rw4UAKOw",
+          "capture_yyyymm": "2014-05",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 108.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "5M5peQFcX-RBZ1rw4UAKOw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/5M5peQFcX-RBZ1rw4UAKOw_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 198.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "5M5peQFcX-RBZ1rw4UAKOw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/5M5peQFcX-RBZ1rw4UAKOw_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 288.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "5M5peQFcX-RBZ1rw4UAKOw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/5M5peQFcX-RBZ1rw4UAKOw_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 18.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "5M5peQFcX-RBZ1rw4UAKOw",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/5M5peQFcX-RBZ1rw4UAKOw_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D05",
+          "sequence_index": 5,
+          "step_idx": 6,
+          "pano_id": "bcoRBEULux2QiCCQWUKR_g",
+          "capture_yyyymm": "2014-05",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 108.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "bcoRBEULux2QiCCQWUKR_g",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/bcoRBEULux2QiCCQWUKR_g_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 198.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "bcoRBEULux2QiCCQWUKR_g",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/bcoRBEULux2QiCCQWUKR_g_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 288.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "bcoRBEULux2QiCCQWUKR_g",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/bcoRBEULux2QiCCQWUKR_g_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 18.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "bcoRBEULux2QiCCQWUKR_g",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/bcoRBEULux2QiCCQWUKR_g_panorama_3.jpg"
+            }
+          ]
+        },
+        {
+          "demo_label": "D06",
+          "sequence_index": 6,
+          "step_idx": 7,
+          "pano_id": "RxGJGPbbHr7j8PZJKy8x-w",
+          "capture_yyyymm": "2014-09",
+          "route_aligned_views": [
+            {
+              "view_label": "front",
+              "center_heading_deg": 108.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "RxGJGPbbHr7j8PZJKy8x-w",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/RxGJGPbbHr7j8PZJKy8x-w_panorama_0.jpg"
+            },
+            {
+              "view_label": "right",
+              "center_heading_deg": 198.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "RxGJGPbbHr7j8PZJKy8x-w",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/RxGJGPbbHr7j8PZJKy8x-w_panorama_1.jpg"
+            },
+            {
+              "view_label": "back",
+              "center_heading_deg": 288.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "RxGJGPbbHr7j8PZJKy8x-w",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/RxGJGPbbHr7j8PZJKy8x-w_panorama_2.jpg"
+            },
+            {
+              "view_label": "left",
+              "center_heading_deg": 18.319,
+              "fov_deg": 90,
+              "projection": "perspective_from_erp",
+              "source_pano_id": "RxGJGPbbHr7j8PZJKy8x-w",
+              "fixed_view_audit_path": "Z:/wangyq/GSV_Paris/0-All_GSV_3059_4per/RxGJGPbbHr7j8PZJKy8x-w_panorama_3.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

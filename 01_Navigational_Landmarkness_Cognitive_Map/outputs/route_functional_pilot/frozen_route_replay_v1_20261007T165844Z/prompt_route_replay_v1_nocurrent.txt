@@ -1,0 +1,4 @@
+The DEMONSTRATION images show a previously travelled route, but the CURRENT observation is unavailable in this condition.
+Use only the demonstration images. Do not invent a current location or visual evidence. If the action cannot be determined without CURRENT, use UNSURE; do not force a choice.
+
+Return exactly one JSON object with one key named `action` and no other text. The value must be one of: LEFT, RIGHT, FORWARD, UNSURE.
