@@ -1,0 +1,7 @@
+question,condition,gold,prediction,category,attempts,status
+q_main02_decision_step3,Full,LEFT,FORWARD,INCORRECT,1,VALID
+q_main02_decision_step3,NoDemo,LEFT,FORWARD,INCORRECT,1,VALID
+q_main02_decision_step3,NoCurrent,LEFT,UNSURE,UNSURE,1,VALID
+q_main06_decision_step3,Full,RIGHT,FORWARD,INCORRECT,1,VALID
+q_main06_decision_step3,NoDemo,RIGHT,FORWARD,INCORRECT,1,VALID
+q_main06_decision_step3,NoCurrent,RIGHT,UNSURE,UNSURE,1,VALID

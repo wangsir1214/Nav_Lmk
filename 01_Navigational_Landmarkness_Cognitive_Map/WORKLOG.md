@@ -449,3 +449,9 @@ candidate strata before Codex generates route-aligned views or intervention data
 The audit establishes technical feasibility and a reviewable candidate pool, not
 functional landmark validity. Human review must freeze task-valid routes and
 candidate strata before Codex generates route-aligned views or intervention data.
+
+## 2026-10-08 route-replay two-question sanity
+
+- Executed frozen package from `9d46f5d7a069be873ce30f13c4647f1d235a18aa` for exactly two questions and six independent Qwen3.5-9B requests; projected 56 route-aligned FOV=90 views from ERP.
+- Saved complete run at `/home/nas/wangyq/outputs/paris_route_replay_sanity_20261008T080158Z_a01/` and one lightweight `server-results/paris_route_replay_sanity_20261008T080158Z_a01` export.
+- Independent post-inference scorer: six valid JSON actions, zero format retries or format failures. Full answered FORWARD on both questions; gold is LEFT and RIGHT respectively.

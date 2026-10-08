@@ -167,3 +167,7 @@ Detailed earlier audit issues are in `_audit_outputs/ERROR_LOG.md`.
 - The remaining scientific gaps are unchanged: human route/task review,
   route-aligned projection provenance, metric-CRS snapping recheck, and the
   security rotation of historical credentials.
+
+## 2026-10-08 route-replay sanity
+
+- `paris_route_replay_sanity_20261008T080158Z_a01`: no projection, inference, JSON schema, scoring, or export validation error. The two incorrect Full actions are valid experimental outcomes, not execution failures.

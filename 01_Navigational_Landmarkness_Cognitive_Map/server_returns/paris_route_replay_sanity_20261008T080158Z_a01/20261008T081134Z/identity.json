@@ -1,0 +1,9 @@
+{
+  "run_id": "paris_route_replay_sanity_20261008T080158Z_a01",
+  "created_utc": "2026-10-08T08:01:58.315277+00:00",
+  "source_commit": "9d46f5d7a069be873ce30f13c4647f1d235a18aa",
+  "source_clone": "/home/wangyq/nav_lmk_route_replay.nT11GW",
+  "package_rel": "01_Navigational_Landmarkness_Cognitive_Map/outputs/route_functional_pilot/frozen_route_replay_v1_20261007T165844Z",
+  "nas_output_dir": "/home/nas/wangyq/outputs/paris_route_replay_sanity_20261008T080158Z_a01",
+  "light_dir": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_route_replay_sanity_20261008T080158Z_a01"
+}

@@ -1,0 +1,52 @@
+{
+  "run_id": "paris_route_replay_sanity_20261008T080158Z_a01",
+  "created_utc": "2026-10-08T08:01:58.315277+00:00",
+  "source_commit": "9d46f5d7a069be873ce30f13c4647f1d235a18aa",
+  "source_repo": "https://github.com/wangsir1214/Nav_Lmk",
+  "package_path": "/home/wangyq/nav_lmk_route_replay.nT11GW/01_Navigational_Landmarkness_Cognitive_Map/outputs/route_functional_pilot/frozen_route_replay_v1_20261007T165844Z",
+  "package_file_sha256": {
+    "prompt_route_replay_v1_nodemo.txt": "95758b1162cd8edcfa6e9c078040ce89dc4dd339bfec7fbe3057131de1ae05eb",
+    "question_manifest_v1.json": "db730342797a3608c1973f77ed3b3451c6c89455447e61cda56bca2c85425a41",
+    "test_observation_manifest_v1.json": "ccef2ca40a9f64ad9c54b15783f36ad1e24ec2e322b86246710ceaa26deda694",
+    "prompt_route_replay_v1_nocurrent.txt": "ff67babdc9a484ad3d4e34b4a679b856f8f1b5b28c28b88235106169771f4588",
+    "prompt_route_replay_v1_full.txt": "80b2232e8e6751641505099c4693f361b63d09fe73fc449644c7af667cc47ce1",
+    "scorer_gold_v1.json": "4c656351bf94afc36a734c1cc262ebd50ee1f75871ee97b742071028c834117c",
+    "demo_manifest_v1.json": "9c7be34e940443f5832261bf5ae8123b56c9494fba1a9b4f8f56d9bc5b95da92",
+    "human_review_audit.json": "309d81c96d434f0988f0ea873d758cfdb85ddca1d3b84a4106be4aa44cb63c37"
+  },
+  "runner_path": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_route_replay_sanity_20261008T080158Z_a01/runner.py",
+  "runner_sha256": "922d8e8b58a5375356e62277efed4272d048ed27df601c28f88dc25372502e22",
+  "parser_sha256": "3cc7163d204233eb96a2896c650bc2dbb7558d5965590a60f928bdbb5c0beac6",
+  "projector_sha256": "cb828195a47e924bbe0aa6620d6a06bfb03907715cc242fde43a508bd67f50b0",
+  "model_path": "/home/nas/wangyq/model_weights/Qwen/Qwen3.5-9B",
+  "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "processor": "Qwen3VLProcessor via AutoProcessor",
+  "dtype": "torch.bfloat16",
+  "attention_implementation": "sdpa",
+  "device_map": "cuda:0",
+  "do_sample": false,
+  "enable_thinking": false,
+  "max_new_tokens": 320,
+  "image_processing_budget": {
+    "longest_edge": 16777216,
+    "shortest_edge": 65536
+  },
+  "output_image_size": [
+    640,
+    640
+  ],
+  "projection_fov_deg": 90,
+  "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "status": "SUCCESS",
+  "torch_version": "2.7.0a0+7c8ec84dab.nv25.03",
+  "transformers_version": "5.18.0.dev0",
+  "cuda_device": "NVIDIA L20",
+  "completed_utc": "2026-10-08T08:09:36.073116+00:00",
+  "scored_utc": "2026-10-08T08:09:51.374567+00:00",
+  "scorer_sha256": "63809811f33a7c27cd17f8095075e3d90cb8b3644b1e6eafb23e2f019fd0a08b",
+  "scorer_gold_sha256": "4c656351bf94afc36a734c1cc262ebd50ee1f75871ee97b742071028c834117c",
+  "main_requests": 6,
+  "format_retries": 0,
+  "format_failures": 0
+}

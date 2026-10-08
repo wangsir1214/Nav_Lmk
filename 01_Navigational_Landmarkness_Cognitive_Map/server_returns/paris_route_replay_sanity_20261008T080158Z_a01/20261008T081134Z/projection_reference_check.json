@@ -1,0 +1,17 @@
+{
+  "source_erp": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_panorama/tv58N7KlxXRMT0UCAuZo9Q_panorama.jpg",
+  "fixed_view_audit_reference": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/tv58N7KlxXRMT0UCAuZo9Q_panorama_0.jpg",
+  "projection_local_theta_deg": 0,
+  "mean_absolute_pixel_difference": 1.8713419596354166,
+  "cosine_similarity": 0.9997910319575702,
+  "reference_size": [
+    640,
+    640,
+    3
+  ],
+  "projected_size": [
+    640,
+    640,
+    3
+  ]
+}

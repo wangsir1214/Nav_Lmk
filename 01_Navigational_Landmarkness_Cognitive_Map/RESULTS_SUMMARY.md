@@ -339,3 +339,7 @@ a behaviorally correct action.
 Review the 15 route boards, confirm task definition and action semantics, score
 stability/spatial relevance/intervention feasibility, and freeze KEEP/ADAPT/
 REJECT strata. Only then generate route-aligned views and run P1A/P1B.
+
+## 2026-10-08 frozen route-replay sanity (two questions)
+
+`paris_route_replay_sanity_20261008T080158Z_a01` completed six valid model requests. For q_main02_decision_step3: gold LEFT, Full FORWARD, NoDemo FORWARD, NoCurrent UNSURE. For q_main06_decision_step3: gold RIGHT, Full FORWARD, NoDemo FORWARD, NoCurrent UNSURE. The run checks the task and interface; these two points do not establish landmark functional value, cognitive-map ability, or general navigation accuracy.

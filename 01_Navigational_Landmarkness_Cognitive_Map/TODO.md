@@ -144,3 +144,8 @@
 
 - [ ] Revoke/rotate hard-coded historical service credentials.
 - [ ] Replace literals with environment-variable or secret-manager configuration before running historical code.
+
+## 2026-10-08 route-replay sanity handoff
+
+- [x] Execute and return the frozen two-question, six-condition sanity run `paris_route_replay_sanity_20261008T080158Z_a01`.
+- [ ] Wait for human analysis of the returned branch before changing the task or extending the question set.
