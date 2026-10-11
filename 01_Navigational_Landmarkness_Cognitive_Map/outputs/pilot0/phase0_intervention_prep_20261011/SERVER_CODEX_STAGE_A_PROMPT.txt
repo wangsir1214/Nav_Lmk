@@ -1,0 +1,7 @@
+请只执行Phase 0的Stage A：Qwen单图候选提议；本轮禁止遮挡、禁止DINO重推理、禁止修改题库。
+
+先从授权的wangsir1214/Nav_Lmk同步本地交接包对应的实际commit，记录完整source SHA；如果本包尚未提交到远端，就报BLOCKED，不要从聊天内容自行重建manifest。读取项目下outputs/pilot0/phase0_intervention_prep_20261011/selection_manifest.json、proposal_input_only.json、PHASE0_PROTOCOL.md和QWEN_QUERY_PROPOSAL_V1.txt。服务器原冻结paris_local_v1_20260923任务目录可能不在Git跟踪；先查NAS/旧任务目录，找不到则报BLOCKED，禁止用本次prompt自行重建gold。校验20个query ID/图片原始SHA与冻结旧任务一致。仅使用proposal_input_only.json构造模型请求；selection_manifest.json含旧baseline的rank/margin，仅限运行外的记录与后续分析，绝不进入Qwen上下文。
+
+复用已成功的Qwen3.5-9B本地权重与processor。每图独立调用，输入仅该640图+同一候选prompt；不展示gold、gallery、旧Full分数或此前答复。无采样，记录模型/processor revision、实际消息、prompt和图像SHA、原回复、解析结果、坐标系。最多两候选，格式失败最多一次重试；绝不自动改bbox、剪裁或挑选看起来有效的框。输出原始bbox及可视化overlay（标出0/500/1000坐标），并逐图做可见性预检。没有候选或解析失败也保留逐题记录。
+
+本Stage只生成唯一UTC run_id和轻量proposal/QA结果，原始图与大文件留NAS，旧run不覆盖。轻量结果推送至新的server-results/<run_id>分支，回复source commit、run_id、result branch、完整结果commit、成功/失败数量和审核包路径。到Stage A即停止，等待本地/人工候选与控制几何审核；不要自行进入Stage B/C。正常后台阶段尽量不发token更新；只在不可继续错误、需要输入或完成时回报。

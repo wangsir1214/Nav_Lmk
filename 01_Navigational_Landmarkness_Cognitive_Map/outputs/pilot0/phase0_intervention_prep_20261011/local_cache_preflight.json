@@ -1,0 +1,18 @@
+{
+  "status": "PASS_LOCAL_CACHE_CHECK",
+  "scope": "selected 20 query images + all 168 reference VLAD files + small centers file; no GPU",
+  "checked": {
+    "reference_vlad": 168,
+    "source_jpeg": 20,
+    "cached_png": 20,
+    "resize_pixel_equal": 20
+  },
+  "pillow_version": "12.3.0",
+  "pillow_version_expected": "12.3.0",
+  "centers_hash_match": true,
+  "model_weight_hash_status": "RECORDED_NOT_REHASHED_LOCAL_4.55GB",
+  "feature_index_sha256": "89e776af6bff8931d179d4e8d5faf96d99ce17a132a6b0c41a1ecfbe2b0fb3ae",
+  "expected_feature_index_sha256": "89e776af6bff8931d179d4e8d5faf96d99ce17a132a6b0c41a1ecfbe2b0fb3ae",
+  "failures": [],
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+}

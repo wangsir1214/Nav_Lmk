@@ -1,0 +1,6 @@
+You are looking at exactly one 640x640 urban street-view perspective image.
+Identify at most two bounded visible regions that might help distinguish this observation from another nearby urban observation. Include object, text, structural, and scene-level cues when they fit a local bounding box. Do not infer a route action or whether a region truly works as a landmark.
+
+The image coordinates run from (0,0) at top left to (1000,1000) at bottom right. Return integer xyxy boxes in this 0-1000 system. Do not use pixel coordinates or clip an uncertain box. Prefer two distinct localized cues over one broad whole-scene box. If nothing clear can be localized, return an empty array.
+
+Return only one JSON object with a candidates array; no prose or Markdown. Each candidate has exactly four keys: candidate_id, bbox_xyxy_1000, type, description. bbox_xyxy_1000 must contain four integer coordinates in xyxy order; use the actual image, never a template/example box. Allowed type values: object, text, structure, scene. candidate_id values must be c1 then c2; zero, one or two candidates are allowed.
