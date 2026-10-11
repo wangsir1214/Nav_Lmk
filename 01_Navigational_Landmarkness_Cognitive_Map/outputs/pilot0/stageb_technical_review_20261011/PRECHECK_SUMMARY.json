@@ -1,0 +1,34 @@
+{
+  "run_id": "paris_phase0_stagea_20261011T070533Z_a01",
+  "query_count": 20,
+  "candidate_count": 40,
+  "geometry_status": {
+    "CONTROL_GEOMETRY_FAIL": 12,
+    "PASS": 25,
+    "AREA_LIMIT_FAIL": 3
+  },
+  "primary_c1_failures": [
+    "gmm8vQR8CBzuJ5JomU4xVA__v1",
+    "BrLJ2FJOw6JtoQks8TRVeQ__v1",
+    "vpRGwoLifY8oPQ6oU_QPHg__v1",
+    "ZhfB_keAYo1tE3eAt9S_Sw__v0",
+    "xnVV6BHnFOXVpWAFGADsLA__v1",
+    "xnVV6BHnFOXVpWAFGADsLA__v2",
+    "fZ7bO6pDSX9hMw3mVdj-SA__v2",
+    "fZ7bO6pDSX9hMw3mVdj-SA__v1",
+    "vpRGwoLifY8oPQ6oU_QPHg__v3"
+  ],
+  "both_candidates_fail": [
+    "BrLJ2FJOw6JtoQks8TRVeQ__v1",
+    "xnVV6BHnFOXVpWAFGADsLA__v1",
+    "fZ7bO6pDSX9hMw3mVdj-SA__v1",
+    "vpRGwoLifY8oPQ6oU_QPHg__v3"
+  ],
+  "source_sha256": {
+    "selection": "9ada08a15a62dfc705bebdafd0f0a1bcffc26f17d76e5194b0cad12a6e71a804",
+    "proposals": "e08530ab80e58eb1118cb3787ba6f8313ec35ac7f299376cfb57fcd42c7a5b5b",
+    "review": "442b9eea8507393040b46a204d87875e6f85e1cdeff62f6c6e192f873e8197f8"
+  },
+  "status": "PRELIMINARY_GEOMETRY_ONLY_HUMAN_QC_PENDING",
+  "model_or_mask_run": false
+}

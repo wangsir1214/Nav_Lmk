@@ -1,0 +1,694 @@
+{
+  "status": "FROZEN_PRE_INTERVENTION_NOT_EXPERIMENT_RESULT",
+  "stage_a_run_id": "paris_phase0_stagea_20261011T070533Z_a01",
+  "stage_a_commit": "7c81f717cf7ca539725e0ca777bb0dc104f41f99",
+  "stage_a_proposals_sha256": "e08530ab80e58eb1118cb3787ba6f8313ec35ac7f299376cfb57fcd42c7a5b5b",
+  "base_main_commit": "1acca803418ad069c8d2123486f75046b6d41487",
+  "selection_sha256": "9ada08a15a62dfc705bebdafd0f0a1bcffc26f17d76e5194b0cad12a6e71a804",
+  "human_qc_sha256": "c22b46ecfdfaeb7dd125c805f9c14ee78dad13cb6ef34e36019b54ef3f411466",
+  "geometry_script_sha256": "9d8b38fcc633c342c069513296c6bf7711edad2e4968961fbd4cc11ab3617eee",
+  "mask_contract": {
+    "source": "query_image_only",
+    "fill_rgb": [
+      127,
+      127,
+      127
+    ],
+    "resize": "Pillow 12.3.0 RGB bicubic 640x640 to 448x448 PNG",
+    "reference_descriptors": "unchanged"
+  },
+  "queries": [
+    {
+      "query_view_id": "7U8oALO-ZaBG4HwWmyuwvg__v1",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/7U8oALO-ZaBG4HwWmyuwvg_panorama_1.jpg",
+      "source_image_sha256": "e3ea6cf252810ae627762e96ff6fc0d653ff6de0c2677751b54e53c8135c2cbf",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        180,
+        0,
+        256,
+        240
+      ],
+      "candidate_bbox_xyxy_640": [
+        115,
+        0,
+        164,
+        154
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          64,
+          0,
+          113,
+          154
+        ],
+        [
+          168,
+          0,
+          217,
+          154
+        ],
+        [
+          8,
+          0,
+          57,
+          154
+        ]
+      ]
+    },
+    {
+      "query_view_id": "7U8oALO-ZaBG4HwWmyuwvg__v2",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/7U8oALO-ZaBG4HwWmyuwvg_panorama_2.jpg",
+      "source_image_sha256": "1d6bac7b65fc719c9ca9b89563dcf0e22e5ec41efe93677fdf261b0af6fb8797",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        100,
+        190,
+        200,
+        310
+      ],
+      "candidate_bbox_xyxy_640": [
+        64,
+        121,
+        128,
+        199
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          0,
+          120,
+          64,
+          198
+        ],
+        [
+          128,
+          120,
+          192,
+          198
+        ],
+        [
+          192,
+          120,
+          256,
+          198
+        ]
+      ]
+    },
+    {
+      "query_view_id": "BrLJ2FJOw6JtoQks8TRVeQ__v2",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/BrLJ2FJOw6JtoQks8TRVeQ_panorama_2.jpg",
+      "source_image_sha256": "1cf4f3da48d6a62461b82b3e0db5572b3cb322f8a973ecde8a2ae4de531bb881",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        250,
+        125,
+        295,
+        330
+      ],
+      "candidate_bbox_xyxy_640": [
+        160,
+        80,
+        189,
+        212
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          192,
+          80,
+          221,
+          212
+        ],
+        [
+          128,
+          80,
+          157,
+          212
+        ],
+        [
+          224,
+          80,
+          253,
+          212
+        ]
+      ]
+    },
+    {
+      "query_view_id": "HutLgjnKQDJRjIfP417bDw__v0",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/HutLgjnKQDJRjIfP417bDw_panorama_0.jpg",
+      "source_image_sha256": "33ee213a25ba53569c7f06346e2ba9b2b2659a1ae1acff346c859229afc8e4ae",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        165,
+        506,
+        382,
+        682
+      ],
+      "candidate_bbox_xyxy_640": [
+        105,
+        323,
+        245,
+        437
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          248,
+          320,
+          388,
+          434
+        ],
+        [
+          104,
+          208,
+          244,
+          322
+        ],
+        [
+          104,
+          440,
+          244,
+          554
+        ]
+      ]
+    },
+    {
+      "query_view_id": "OjL_DIwEgAjZGKVyxNO1mw__v1",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/OjL_DIwEgAjZGKVyxNO1mw_panorama_1.jpg",
+      "source_image_sha256": "56b28a996986ce418527b149f8de5938240617d90080f23f9fdbfddb1e3a847b",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        670,
+        408,
+        840,
+        448
+      ],
+      "candidate_bbox_xyxy_640": [
+        428,
+        261,
+        538,
+        287
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          312,
+          264,
+          422,
+          290
+        ],
+        [
+          200,
+          264,
+          310,
+          290
+        ],
+        [
+          432,
+          288,
+          542,
+          314
+        ]
+      ]
+    },
+    {
+      "query_view_id": "OjL_DIwEgAjZGKVyxNO1mw__v2",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/OjL_DIwEgAjZGKVyxNO1mw_panorama_2.jpg",
+      "source_image_sha256": "8828fa5b6abfb5723f5773f921ba05ff5c2e39abba63ab07d15570df09f393fe",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        92,
+        360,
+        160,
+        560
+      ],
+      "candidate_bbox_xyxy_640": [
+        58,
+        230,
+        103,
+        359
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          104,
+          232,
+          149,
+          361
+        ],
+        [
+          8,
+          232,
+          53,
+          361
+        ],
+        [
+          152,
+          232,
+          197,
+          361
+        ]
+      ]
+    },
+    {
+      "query_view_id": "ZhfB_keAYo1tE3eAt9S_Sw__v0",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/ZhfB_keAYo1tE3eAt9S_Sw_panorama_0.jpg",
+      "source_image_sha256": "a4c26823164bc43818aef69e2336b506a8ad66cf0c0632355224f54e1b0610b8",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c2",
+      "candidate_bbox_xyxy_1000": [
+        715,
+        600,
+        999,
+        795
+      ],
+      "candidate_bbox_xyxy_640": [
+        457,
+        384,
+        640,
+        509
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          272,
+          384,
+          455,
+          509
+        ],
+        [
+          457,
+          512,
+          640,
+          637
+        ],
+        [
+          457,
+          256,
+          640,
+          381
+        ]
+      ]
+    },
+    {
+      "query_view_id": "fZ7bO6pDSX9hMw3mVdj-SA__v0",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/fZ7bO6pDSX9hMw3mVdj-SA_panorama_0.jpg",
+      "source_image_sha256": "c65aacd9ee66de5f3393108e7573f6e34f7efbe9ef2293caf385a422c164f855",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        880,
+        380,
+        1000,
+        580
+      ],
+      "candidate_bbox_xyxy_640": [
+        563,
+        243,
+        640,
+        372
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          480,
+          240,
+          557,
+          369
+        ],
+        [
+          400,
+          240,
+          477,
+          369
+        ],
+        [
+          320,
+          240,
+          397,
+          369
+        ]
+      ]
+    },
+    {
+      "query_view_id": "fZ7bO6pDSX9hMw3mVdj-SA__v2",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/fZ7bO6pDSX9hMw3mVdj-SA_panorama_2.jpg",
+      "source_image_sha256": "c3ba8db0c88ed9d143fd179671b0abb3d85822d263b1df4ce18c1f7f95361632",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c2",
+      "candidate_bbox_xyxy_1000": [
+        775,
+        420,
+        835,
+        480
+      ],
+      "candidate_bbox_xyxy_640": [
+        496,
+        268,
+        535,
+        308
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          536,
+          272,
+          575,
+          312
+        ],
+        [
+          456,
+          264,
+          495,
+          304
+        ],
+        [
+          416,
+          272,
+          455,
+          312
+        ]
+      ]
+    },
+    {
+      "query_view_id": "gmm8vQR8CBzuJ5JomU4xVA__v1",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/gmm8vQR8CBzuJ5JomU4xVA_panorama_1.jpg",
+      "source_image_sha256": "3c34c2e21f7bb74d0d2547407747cc9a1361c13eee7217a6113c4d044fa0f962",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c2",
+      "candidate_bbox_xyxy_1000": [
+        615,
+        448,
+        812,
+        558
+      ],
+      "candidate_bbox_xyxy_640": [
+        393,
+        286,
+        520,
+        358
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          264,
+          288,
+          391,
+          360
+        ],
+        [
+          264,
+          216,
+          391,
+          288
+        ],
+        [
+          392,
+          360,
+          519,
+          432
+        ]
+      ]
+    },
+    {
+      "query_view_id": "gmm8vQR8CBzuJ5JomU4xVA__v3",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/gmm8vQR8CBzuJ5JomU4xVA_panorama_3.jpg",
+      "source_image_sha256": "f28ad385761c7ffcf0b3d112d4a937cae93aae002bec467507450b47932745e6",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        0,
+        525,
+        93,
+        618
+      ],
+      "candidate_bbox_xyxy_640": [
+        0,
+        336,
+        60,
+        396
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          64,
+          336,
+          124,
+          396
+        ],
+        [
+          128,
+          336,
+          188,
+          396
+        ],
+        [
+          192,
+          336,
+          252,
+          396
+        ]
+      ]
+    },
+    {
+      "query_view_id": "jqMbtUb4csuPJ3XDhARbOQ__v3",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/jqMbtUb4csuPJ3XDhARbOQ_panorama_3.jpg",
+      "source_image_sha256": "6cf4a8434393e6c26c243893e2846695a4fbc6efc30aa6b412da75890a4ab8cc",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        406,
+        470,
+        572,
+        580
+      ],
+      "candidate_bbox_xyxy_640": [
+        259,
+        300,
+        367,
+        372
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          368,
+          296,
+          476,
+          368
+        ],
+        [
+          144,
+          304,
+          252,
+          376
+        ],
+        [
+          480,
+          296,
+          588,
+          368
+        ]
+      ]
+    },
+    {
+      "query_view_id": "m8kS42vmkv1DD5bphiusDA__v2",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/m8kS42vmkv1DD5bphiusDA_panorama_2.jpg",
+      "source_image_sha256": "e2c7e323c0acc5b904175ef1de80830c4524cebca40d42951b6ea509df33ff47",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        165,
+        465,
+        265,
+        575
+      ],
+      "candidate_bbox_xyxy_640": [
+        105,
+        297,
+        170,
+        368
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          40,
+          296,
+          105,
+          367
+        ],
+        [
+          176,
+          296,
+          241,
+          367
+        ],
+        [
+          248,
+          296,
+          313,
+          367
+        ]
+      ]
+    },
+    {
+      "query_view_id": "vpRGwoLifY8oPQ6oU_QPHg__v1",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/vpRGwoLifY8oPQ6oU_QPHg_panorama_1.jpg",
+      "source_image_sha256": "6ce071b53a4ef476b567870ab15ef28b7a47105742a3997d6c87bf0476ac2dbe",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c2",
+      "candidate_bbox_xyxy_1000": [
+        240,
+        600,
+        320,
+        710
+      ],
+      "candidate_bbox_xyxy_640": [
+        153,
+        384,
+        205,
+        455
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          208,
+          384,
+          260,
+          455
+        ],
+        [
+          96,
+          384,
+          148,
+          455
+        ],
+        [
+          264,
+          384,
+          316,
+          455
+        ]
+      ]
+    },
+    {
+      "query_view_id": "xnVV6BHnFOXVpWAFGADsLA__v2",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/xnVV6BHnFOXVpWAFGADsLA_panorama_2.jpg",
+      "source_image_sha256": "a4c13675dd4c5eddcdacc8362f59caf4f2469b74c45313a0fbcad05ab82ad4fb",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c2",
+      "candidate_bbox_xyxy_1000": [
+        550,
+        525,
+        615,
+        585
+      ],
+      "candidate_bbox_xyxy_640": [
+        352,
+        336,
+        394,
+        375
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          400,
+          336,
+          442,
+          375
+        ],
+        [
+          304,
+          336,
+          346,
+          375
+        ],
+        [
+          256,
+          336,
+          298,
+          375
+        ]
+      ]
+    },
+    {
+      "query_view_id": "yY7mlgKgDgWOyoucgqWX_g__v0",
+      "source_image_path": "/home/nas/wangyq/GSV_Paris/0-All_GSV_3059_4per/yY7mlgKgDgWOyoucgqWX_g_panorama_0.jpg",
+      "source_image_sha256": "38b9c8905b19aa85b9ea7d8f6c9fcdc484ed1fabf8db2b1e648d9272d1e5826e",
+      "source_image_size": [
+        640,
+        640
+      ],
+      "candidate_id": "c1",
+      "candidate_bbox_xyxy_1000": [
+        0,
+        270,
+        190,
+        390
+      ],
+      "candidate_bbox_xyxy_640": [
+        0,
+        172,
+        122,
+        250
+      ],
+      "control_bboxes_xyxy_640": [
+        [
+          128,
+          168,
+          250,
+          246
+        ],
+        [
+          256,
+          176,
+          378,
+          254
+        ],
+        [
+          128,
+          248,
+          250,
+          326
+        ]
+      ]
+    }
+  ]
+}

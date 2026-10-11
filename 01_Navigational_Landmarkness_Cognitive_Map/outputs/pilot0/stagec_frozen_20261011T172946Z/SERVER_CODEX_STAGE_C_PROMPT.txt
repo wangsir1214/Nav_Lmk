@@ -1,0 +1,19 @@
+请只执行 Nav_Lmk Phase 0 的 Stage C：已审核区域的 query-only 输入遮挡与冻结 DINOv2+VLAD 检索。不要调用 Qwen、改候选/控制框、扩样本、运行 route-replay 或 Phase 1。正常运行详细进度写日志；只在预检/执行错误、确需用户输入或最终完成时简短报告。
+
+一、同步与输入合同
+1. 同步 wangsir1214/Nav_Lmk 的 main；记录实际完整 HEAD，确认它包含本 Stage C 包提交（由用户随本 prompt 提供 SHA）及原 Phase 0 提交 1acca803418ad069c8d2123486f75046b6d41487。Stage A 源是分支 server-results/paris_phase0_stagea_20261011T070533Z_a01 的提交 7c81f717cf7ca539725e0ca777bb0dc104f41f99。
+2. 唯一执行清单：01_Navigational_Landmarkness_Cognitive_Map/outputs/pilot0/stagec_frozen_20261011T172946Z/stagec_execution_manifest.json。还需读取同目录 stageb_disposition_all20.json、MINIMAL_HUMAN_QC_frozen.csv，以及 outputs/pilot0/phase0_intervention_prep_20261011/PHASE0_PROTOCOL.md。使用仓库中的 scripts/phase0_intervention_geometry.py，先核对其 SHA-256 与清单。不得从审核表或 Stage A 输出重新选框。16 个 RUN 视图均为旧 Full 正确主分析；4 个未运行保留在报告中，含 2 个主分析、2 个 Full 失败诊断。人审 ACCEPT 不能解除几何失败。
+3. 核对每张 640×640 原图 SHA-256，selection、human QC 与 Stage A proposal 的哈希和来源。若旧资产不在 Git 中可读取指定 NAS 原任务的只读副本。缺失、哈希不符、协议不符时记录具体错误并停止；不使用相似图替代，不推断 gold。
+
+二、固定观察器预检，先于正式遮挡推理
+4. 复用 Paris_local_v1_20260923 / baseline_g14_v2 的原 P/N/I、168 reference、reference VLAD、32 urban 词典、DINOv2 ViT-G/14 无 register、block31 value、hard/cosine VLAD、640 JPEG → Pillow 12.3.0 RGB bicubic 448 PNG → ToTensor/ImageNet Normalize。旧完整 pair_scores.csv SHA-256：3c3de24cc72794650f318252992c7be981c15c9726c57ff2bc9ef7e75237f29e；原 run_config.json：a02a091f69ba95a79690e36f87746a1a833844747f1313b83801cf0e441566bf。G/14 权重预期 SHA-256：baf8467e50af277596bbbafa06887c177ee899ab46033649c383577d7e9309d3；词典：a684e571f05c85c804e7301547d8620c28ae759e824adb9ac88294b080feaba0。核对旧 212 图 index、168 reference 描述符与 P/N/I。缺失即停止，不重训、更换模型或 reference gallery。
+5. 将 16 个 RUN 按 query_view_id 排序，取首、中、末三题，沿旧 pipeline 从原图重算未遮挡 Full 对全部 168 reference 的分数；每分数与旧 Full 绝对差 <1e-5，且屏蔽 I 后 positive rank 一致，才允许复用旧 Full。保存逐参考图比对明细。失败立即停止，不能用缓存的旧 Full 描述符冒充重算。
+
+三、只跑冻结的四种遮挡
+6. 新建唯一 UTC run_id 和目录，不覆盖旧 run。对清单中每题只按固定 640px 框生成 candidate、control1、control2、control3 四张版本：解码原 640 JPEG 为 RGB，在矩形内填 (127,127,127)，再对整图以相同 Pillow bicubic 缩为 448 PNG。共 16×4=64 张 masked query。旧 Full 是第五条件但不算 mask。保留 640/448 掩膜图、源图及输出哈希、框、Pillow 版本。不要 inpaint、改框、遮 reference、增加候选。
+7. 四种 448 图通过相同 G/14+VLAD pipeline；只新算 query 描述符，和旧 168 个固定 reference 描述符点积。输出全部 16×4×168=10752 行原始 cosine 分数，字段至少 query_view_id, variant, reference_view_id, cosine_similarity。保存模型、词典、代码、哈希和日志。P/N/I 仅供独立评分；本阶段不运行 Qwen。
+8. 按原 P/N/I 先屏蔽 I，再按分数降序、reference ID 升序排名。S+ = max_P sim，S- = max_N sim，M = S+ - S-。逐题保留 Full/candidate/三个 controls 的 margin、positive rank、top1；delta_candidate = M_full - M_candidate；U = mean(M_control1,M_control2,M_control3) - M_candidate。零效应/负效应也保留。另附全部 20 题去向；四题几何失败不悄然删去。八处 controls 与另一候选重叠标记保留供敏感性描述，不按结果换框。
+
+四、核验与回传
+9. 做行数、字段、NaN/重复、168 reference 覆盖、P/N/I、图像哈希核验。轻量结果（manifest、完整分数、逐题 readout、Full 等价性核验、日志/哈希、四题未运行表）提交至新 server-results/<run_id> 分支；NAS 保留大图/特征，轻量结果写绝对路径与哈希。不得自动进入下一阶段。
+10. 最终只报告 SUCCESS 或 BLOCKED、run_id、源 main HEAD、结果分支、完整 commit SHA、Full 等价性结论、16 运行/4 未运行是否对账、成功/失败数与轻量结果路径。错误时报告具体资产/步骤，不做静默替代。
