@@ -1,0 +1,14 @@
+{
+  "run_id": "paris_phase0_stagea_20261011T070533Z_a01",
+  "validation": "PASS",
+  "issues": [],
+  "requests": 20,
+  "results": 20,
+  "successful": 20,
+  "empty": 0,
+  "failed": 0,
+  "review_overlay_count": 20,
+  "source_head_matches_frozen": true,
+  "model_message_is_exact_uniform_prompt": true,
+  "stage_scope": "Qwen proposal only"
+}

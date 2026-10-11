@@ -1,0 +1,16 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [0, 525, 93, 618],
+      "type": "object",
+      "description": "A red van parked on the left side of the street, which is a distinctive object that can help distinguish this observation from another nearby urban observation."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [380, 475, 500, 555],
+      "type": "structure",
+      "description": "An arched entranceway in the center of the building, which is a distinctive structural feature that can help distinguish this observation from another nearby urban observation."
+    }
+  ]
+}

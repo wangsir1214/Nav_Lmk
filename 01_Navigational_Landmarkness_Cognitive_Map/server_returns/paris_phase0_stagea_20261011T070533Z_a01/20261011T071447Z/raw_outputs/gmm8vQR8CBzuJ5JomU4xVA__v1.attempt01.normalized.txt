@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        0,
+        448,
+        442,
+        600
+      ],
+      "type": "structure",
+      "description": "A red awning with white text 'Le Marais' and 'BRASSERIE' above an outdoor seating area with tables and chairs."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        615,
+        448,
+        812,
+        558
+      ],
+      "type": "structure",
+      "description": "A storefront with a green cross sign and text 'Pharmacie de la Gare' above a glass window."
+    }
+  ]
+}

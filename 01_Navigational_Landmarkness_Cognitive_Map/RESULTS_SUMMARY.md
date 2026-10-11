@@ -339,3 +339,7 @@ a behaviorally correct action.
 Review the 15 route boards, confirm task definition and action semantics, score
 stability/spatial relevance/intervention feasibility, and freeze KEEP/ADAPT/
 REJECT strata. Only then generate route-aligned views and run P1A/P1B.
+
+## 2026-10-11 Phase 0 Stage A (proposal only)
+
+`paris_phase0_stagea_20261011T070533Z_a01` completed all 20 frozen query images: 20 valid candidate JSON results, 0 empty candidate arrays, 0 format failures. Candidate coordinates were converted from 0–1000 to 640 pixels without clipping and rendered as provisional review overlays. This is not a masking or landmark-effect result.

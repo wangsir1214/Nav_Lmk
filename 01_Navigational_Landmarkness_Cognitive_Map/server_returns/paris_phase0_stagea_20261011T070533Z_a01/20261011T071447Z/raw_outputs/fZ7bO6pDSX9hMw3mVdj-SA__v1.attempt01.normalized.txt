@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        0,
+        380,
+        225,
+        720
+      ],
+      "type": "text",
+      "description": "A storefront with the text 'ON B&P' visible on the black awning above the entrance."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        750,
+        370,
+        1000,
+        700
+      ],
+      "type": "text",
+      "description": "A storefront with the text 'Le Marrakech' visible on the green awning above the entrance."
+    }
+  ]
+}

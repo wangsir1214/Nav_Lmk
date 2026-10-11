@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        180,
+        0,
+        256,
+        240
+      ],
+      "type": "text",
+      "description": "A blue vertical sign with white text, partially visible, mounted on the building facade."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        420,
+        290,
+        570,
+        540
+      ],
+      "type": "structure",
+      "description": "A closed wooden shuttered window with a small balcony railing below it."
+    }
+  ]
+}

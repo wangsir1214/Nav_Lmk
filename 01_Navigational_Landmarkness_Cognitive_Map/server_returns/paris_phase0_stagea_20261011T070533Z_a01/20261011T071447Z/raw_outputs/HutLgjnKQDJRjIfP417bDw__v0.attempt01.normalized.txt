@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        165,
+        506,
+        382,
+        682
+      ],
+      "type": "object",
+      "description": "A white van parked on the left side of the street, with a ladder attached to its rear door."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        0,
+        640,
+        256,
+        958
+      ],
+      "type": "object",
+      "description": "A black car parked on the left side of the street, partially visible in the foreground."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        0,
+        496,
+        375,
+        925
+      ],
+      "type": "object",
+      "description": "A white van with red and white reflective stripes on the side, parked on the left side of the street."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        775,
+        420,
+        835,
+        480
+      ],
+      "type": "text",
+      "description": "A sign with the text 'Boulangerie' visible on the right side of the street."
+    }
+  ]
+}
+```

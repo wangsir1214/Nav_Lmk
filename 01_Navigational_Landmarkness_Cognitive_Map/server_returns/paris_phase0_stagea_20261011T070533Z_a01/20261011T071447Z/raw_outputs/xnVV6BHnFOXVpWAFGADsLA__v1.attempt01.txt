@@ -1,0 +1,28 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        0,
+        0,
+        342,
+        722
+      ],
+      "type": "structure",
+      "description": "A large, ornate wooden double door with a decorative crest above it, set within an arched stone frame on the left side of the building."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        425,
+        0,
+        1000,
+        750
+      ],
+      "type": "structure",
+      "description": "A tall, arched window with white curtains and a small balcony railing below it, set into a light-colored stone facade on the right side of the building."
+    }
+  ]
+}
+```

@@ -1,0 +1,48 @@
+{
+  "run_id": "paris_phase0_stagea_20261011T070533Z_a01",
+  "source_commit": "1acca803418ad069c8d2123486f75046b6d41487",
+  "actual_main_head": "1acca803418ad069c8d2123486f75046b6d41487",
+  "created_utc": "2026-10-11T07:05:33.305375+00:00",
+  "runner_path": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_phase0_stagea_20261011T070533Z_a01/runner.py",
+  "runner_sha256": "5d3e3da508579d82130bc164b8f04223a44212234951e570e0542826dfe6339e",
+  "parser_sha256": "3cc7163d204233eb96a2896c650bc2dbb7558d5965590a60f928bdbb5c0beac6",
+  "prior_successful_runner": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_route_qwen_smoke_20260927T141218Z_a01/runner.py",
+  "model_path": "/home/nas/wangyq/model_weights/Qwen/Qwen3.5-9B",
+  "settings": {
+    "model_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "processor": "Qwen3VLProcessor via AutoProcessor",
+    "dtype": "torch.bfloat16",
+    "attention_implementation": "sdpa",
+    "device_map": "cuda:0",
+    "do_sample": false,
+    "enable_thinking": false,
+    "max_new_tokens": 512,
+    "image_processing_budget": {
+      "longest_edge": 16777216,
+      "shortest_edge": 65536
+    },
+    "torch_version": "2.7.0a0+7c8ec84dab.nv25.03",
+    "transformers_version": "5.18.0.dev0",
+    "cuda_device": "NVIDIA L20",
+    "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39"
+  },
+  "prompt_sha256": "46497c66d03a90f4d76715c4ae04951bc69613117f8e139ae4230fd3af93e468",
+  "input_manifest_sha256": "b5cfcd742e3c87028bbe7f8aef99abf23435eb3e762c83ccf82a99c28e2a96e0",
+  "protocol_sha256": "93c5ec275391819490007a73adf492b4bcfd0da9363fa205d1da6d9989b895b1",
+  "status": "COMPLETE",
+  "generation_config": {
+    "temperature": null,
+    "top_p": null,
+    "top_k": null,
+    "num_beams": null,
+    "repetition_penalty": null
+  },
+  "completed_utc": "2026-10-11T07:14:25.254066+00:00",
+  "counts": {
+    "success": 20,
+    "empty": 0,
+    "format_failed": 0,
+    "format_retries": 0
+  }
+}

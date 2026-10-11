@@ -1,0 +1,28 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        670,
+        408,
+        840,
+        448
+      ],
+      "type": "text",
+      "description": "Blue Barclays bank sign on the building facade"
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        440,
+        530,
+        999,
+        845
+      ],
+      "type": "object",
+      "description": "White van parked on the street"
+    }
+  ]
+}
+```

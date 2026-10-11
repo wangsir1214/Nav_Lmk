@@ -1,0 +1,10 @@
+{
+  "run_id": "paris_phase0_stagea_20261011T070533Z_a01",
+  "created_utc": "2026-10-11T07:05:33.305375+00:00",
+  "source_commit": "1acca803418ad069c8d2123486f75046b6d41487",
+  "actual_main_head": "1acca803418ad069c8d2123486f75046b6d41487",
+  "isolated_checkout": "/home/wangyq/nav_lmk_stagea.0ssrg8",
+  "package_rel": "01_Navigational_Landmarkness_Cognitive_Map/outputs/pilot0/phase0_intervention_prep_20261011",
+  "nas_output_dir": "/home/nas/wangyq/outputs/paris_phase0_stagea_20261011T070533Z_a01",
+  "light_dir": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_phase0_stagea_20261011T070533Z_a01"
+}

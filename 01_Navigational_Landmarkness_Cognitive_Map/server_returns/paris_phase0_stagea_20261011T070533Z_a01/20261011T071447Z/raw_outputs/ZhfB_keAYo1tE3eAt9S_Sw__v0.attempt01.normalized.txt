@@ -1,0 +1,16 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [0, 578, 282, 900],
+      "type": "object",
+      "description": "A white Fiat 500 car with a red roof parked on the left side of the street."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [715, 600, 999, 795],
+      "type": "object",
+      "description": "A dark grey Toyota Yaris parked on the right side of the street."
+    }
+  ]
+}

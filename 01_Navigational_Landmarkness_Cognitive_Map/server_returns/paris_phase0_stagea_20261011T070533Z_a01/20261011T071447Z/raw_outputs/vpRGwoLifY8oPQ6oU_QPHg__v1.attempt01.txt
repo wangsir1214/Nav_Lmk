@@ -1,0 +1,28 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        315,
+        345,
+        600,
+        670
+      ],
+      "type": "structure",
+      "description": "The arched entranceway with a glass canopy and double doors, flanked by two circular decorative panels on the wall."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        240,
+        600,
+        320,
+        710
+      ],
+      "type": "object",
+      "description": "A neatly trimmed spherical topiary plant in a dark rectangular planter, positioned to the left of the entrance."
+    }
+  ]
+}
+```

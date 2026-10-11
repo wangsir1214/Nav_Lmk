@@ -167,3 +167,7 @@ Detailed earlier audit issues are in `_audit_outputs/ERROR_LOG.md`.
 - The remaining scientific gaps are unchanged: human route/task review,
   route-aligned projection provenance, metric-CRS snapping recheck, and the
   security rotation of historical credentials.
+
+## 2026-10-11 Phase 0 Stage A
+
+- `paris_phase0_stagea_20261011T070533Z_a01`: no asset mismatch, environment mismatch, execution error, or format retry. Offline request/schema/hash validation passed.

@@ -1,0 +1,28 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        880,
+        380,
+        1000,
+        580
+      ],
+      "type": "text",
+      "description": "A black storefront sign with white text 'SAU' visible on the right side of the street."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        120,
+        440,
+        230,
+        680
+      ],
+      "type": "structure",
+      "description": "A large green double door entrance with a decorative archway on the left side of the street."
+    }
+  ]
+}
+```

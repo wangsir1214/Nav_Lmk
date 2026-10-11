@@ -1,0 +1,18 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [0, 667, 747, 1000],
+      "type": "object",
+      "description": "A dark blue car parked on the street, partially visible with its rear and side in view."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [307, 342, 592, 677],
+      "type": "structure",
+      "description": "A large glass window with black frames on the building facade, reflecting the street scene."
+    }
+  ]
+}
+```

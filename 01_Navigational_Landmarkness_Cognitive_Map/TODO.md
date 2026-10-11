@@ -144,3 +144,8 @@
 
 - [ ] Revoke/rotate hard-coded historical service credentials.
 - [ ] Replace literals with environment-variable or secret-manager configuration before running historical code.
+
+## 2026-10-11 Phase 0 Stage A handoff
+
+- [x] Return the 20 single-image provisional Qwen proposals and overlays from `paris_phase0_stagea_20261011T070533Z_a01`.
+- [ ] Human-review the returned candidate coordinates and visibility before any later-stage controls or masking work.

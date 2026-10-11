@@ -1,0 +1,28 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        406,
+        470,
+        572,
+        580
+      ],
+      "type": "structure",
+      "description": "A building with a distinctive orange awning and outdoor seating area, which is a unique feature in the scene."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        790,
+        470,
+        860,
+        570
+      ],
+      "type": "text",
+      "description": "A storefront with visible text 'GRAND' and '50%' on the window, providing a specific textual cue."
+    }
+  ]
+}
+```

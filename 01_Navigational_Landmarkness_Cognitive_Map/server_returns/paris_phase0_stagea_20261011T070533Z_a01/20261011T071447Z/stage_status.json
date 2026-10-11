@@ -1,0 +1,13 @@
+{
+  "run_id": "paris_phase0_stagea_20261011T070533Z_a01",
+  "state": "COMPLETE",
+  "utc": "2026-10-11T07:14:25.256968+00:00",
+  "completed": 20,
+  "total": 20,
+  "counts": {
+    "success": 20,
+    "empty": 0,
+    "format_failed": 0,
+    "format_retries": 0
+  }
+}

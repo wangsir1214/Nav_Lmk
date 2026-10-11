@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        100,
+        190,
+        200,
+        310
+      ],
+      "type": "object",
+      "description": "A flower box with red flowers on the balcony of the building on the left side of the street."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        570,
+        530,
+        670,
+        620
+      ],
+      "type": "object",
+      "description": "A parked car on the right side of the street, near the center of the image."
+    }
+  ]
+}

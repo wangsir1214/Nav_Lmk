@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        92,
+        360,
+        160,
+        560
+      ],
+      "type": "structure",
+      "description": "A distinctive red arched doorway with a black metal gate, located on the left side of the street."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        340,
+        510,
+        420,
+        570
+      ],
+      "type": "object",
+      "description": "A white van parked on the left side of the street, facing towards the camera."
+    }
+  ]
+}

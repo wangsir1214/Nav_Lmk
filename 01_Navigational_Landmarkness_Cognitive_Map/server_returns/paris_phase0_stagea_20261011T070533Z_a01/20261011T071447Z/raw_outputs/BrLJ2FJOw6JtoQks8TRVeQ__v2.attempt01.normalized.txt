@@ -1,0 +1,26 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        250,
+        125,
+        295,
+        330
+      ],
+      "type": "text",
+      "description": "A blue vertical banner with white text reading 'ETUILES SAINT-HONORE' hanging from the building on the left side of the street."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        50,
+        510,
+        65,
+        530
+      ],
+      "type": "text",
+      "description": "The number '6' displayed on the building facade on the left side of the street."
+    }
+  ]
+}

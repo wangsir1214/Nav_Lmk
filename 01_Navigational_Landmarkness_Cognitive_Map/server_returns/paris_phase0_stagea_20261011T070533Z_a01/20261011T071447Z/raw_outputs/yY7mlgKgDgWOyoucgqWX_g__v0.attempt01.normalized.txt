@@ -1,0 +1,16 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [0, 270, 190, 390],
+      "type": "text",
+      "description": "A brown sign with the word 'MOBILIER' in white capital letters, located on the left side of the street."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [590, 520, 690, 600],
+      "type": "object",
+      "description": "A dark-colored car parked on the right side of the street, with visible license plate and rear lights."
+    }
+  ]
+}

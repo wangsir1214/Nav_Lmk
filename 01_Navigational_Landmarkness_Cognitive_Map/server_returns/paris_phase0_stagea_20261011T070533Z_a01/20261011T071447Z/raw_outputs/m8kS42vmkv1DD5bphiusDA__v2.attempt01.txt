@@ -1,0 +1,28 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        165,
+        465,
+        265,
+        575
+      ],
+      "type": "text",
+      "description": "A large, faded 'UC-61' text painted on the side of a green container or wall on the left side of the street."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        675,
+        445,
+        755,
+        525
+      ],
+      "type": "structure",
+      "description": "A storefront with a blue awning and signage, located on the right side of the street."
+    }
+  ]
+}
+```

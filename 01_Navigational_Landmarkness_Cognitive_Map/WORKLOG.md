@@ -449,3 +449,8 @@ candidate strata before Codex generates route-aligned views or intervention data
 The audit establishes technical feasibility and a reviewable candidate pool, not
 functional landmark validity. Human review must freeze task-valid routes and
 candidate strata before Codex generates route-aligned views or intervention data.
+
+## 2026-10-11 Phase 0 Stage A
+
+- Ran only the frozen 20-image Qwen3.5-9B single-query proposal stage from source/main `1acca803418ad069c8d2123486f75046b6d41487`. Exact image size/SHA-256, prompt, prior model revision and no-sampling environment passed preflight.
+- `paris_phase0_stagea_20261011T070533Z_a01` produced 20 independent requests and 20 provisional proposal records; 20 success, 0 empty, 0 format failure, 0 retry. NAS overlays and raw outputs are retained for human review. No controls, masking, DINO or retrieval were run.

@@ -1,0 +1,28 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [
+        137,
+        528,
+        425,
+        770
+      ],
+      "type": "object",
+      "description": "A silver Nissan Pathfinder SUV parked on the left side of the street, with a visible license plate and distinctive front grille."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [
+        550,
+        525,
+        615,
+        585
+      ],
+      "type": "object",
+      "description": "A silver car parked on the right side of the street, partially obscured by other vehicles."
+    }
+  ]
+}
+```

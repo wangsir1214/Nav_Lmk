@@ -1,0 +1,18 @@
+```json
+{
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "bbox_xyxy_1000": [0, 635, 503, 999],
+      "type": "object",
+      "description": "A silver minivan parked on the left side of the street, with visible side mirrors and wheels."
+    },
+    {
+      "candidate_id": "c2",
+      "bbox_xyxy_1000": [562, 647, 1000, 999],
+      "type": "object",
+      "description": "A black hatchback car parked on the right side of the street, with visible rear lights and wheels."
+    }
+  ]
+}
+```
