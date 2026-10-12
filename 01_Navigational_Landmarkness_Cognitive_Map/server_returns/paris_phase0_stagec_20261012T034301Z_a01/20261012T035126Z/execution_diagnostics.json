@@ -1,0 +1,21 @@
+{
+  "run_id": "paris_phase0_stagec_20261012T034301Z_a01",
+  "status": "RESOLVED_PRE_INFERENCE_DIAGNOSTICS",
+  "diagnostics": [
+    {
+      "kind": "git_text_line_endings",
+      "path": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/diagnostics/preflight_initial_line_endings.json",
+      "sha256": "796b49324222f81f1bdc21dbfd053671ea428e990a8c4ce0e88ef7a67d242e72",
+      "resolved": true
+    },
+    {
+      "kind": "runner_metadata_key",
+      "path": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/diagnostics/runner_preload_keyerror.json",
+      "sha256": "2b412c155db099c9a8e6a741a904a10843f5797dcef1f1f8ad267fa304ef30d6",
+      "resolved": true
+    }
+  ],
+  "resolution": "Verified original Windows CRLF SHA for selection/QC after Git LF normalization; corrected runner to read the already verified weights/centers sha256 fields. No Full or masked inference occurred before runner correction. Frozen inputs, observer and boxes were unchanged.",
+  "final_preflight_sha256": "ce90fc9ef811ba0e3d84f91432580291bd0ff121fd588c990aa4ce4a931dffad",
+  "final_runner_sha256": "827a6205ad00473a75b42ff2429b2b9aeb5467f8f541855dbe49737eb21f6a27"
+}

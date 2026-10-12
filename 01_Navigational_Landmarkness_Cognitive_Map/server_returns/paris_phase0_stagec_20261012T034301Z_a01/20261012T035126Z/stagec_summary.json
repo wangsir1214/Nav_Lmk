@@ -1,0 +1,20 @@
+{
+  "run_id": "paris_phase0_stagec_20261012T034301Z_a01",
+  "status": "SUCCESS",
+  "source_main_head": "b0f166e312e1914ede77a38d89ed566b19557132",
+  "full_equivalence": "PASS",
+  "full_recomputed_queries": 3,
+  "full_compared_reference_scores": 504,
+  "run_queries": 16,
+  "nonrun_queries": 4,
+  "nonrun_primary": 2,
+  "nonrun_diagnostic": 2,
+  "masked_variants": 64,
+  "masked_score_rows": 10752,
+  "overlap_flags_preserved": 8,
+  "candidate_flip_count": 0,
+  "candidate_U_positive_count": 6,
+  "candidate_U_zero_count": 0,
+  "candidate_U_negative_count": 10,
+  "scientific_scope": "development-stage fixed observer input-mask effect; not landmark truth or general navigation accuracy"
+}

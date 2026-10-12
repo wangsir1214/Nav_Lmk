@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "selection_rule": "sorted query_view_id: indices 0, 8, 15",
+  "tolerance_strict_less_than": 1e-05,
+  "cases": [
+    {
+      "query_view_id": "7U8oALO-ZaBG4HwWmyuwvg__v1",
+      "gate_position": "first",
+      "new_full_448_png_path": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/full_gate/7U8oALO-ZaBG4HwWmyuwvg__v1_recomputed_448.png",
+      "new_full_448_png_sha256": "eab2db5c4717da9a8d191fc0fdc60daea87537308420f193318c8b7c9f7acd67",
+      "new_full_vlad_path": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/full_gate/7U8oALO-ZaBG4HwWmyuwvg__v1_recomputed_vlad.npy",
+      "new_full_vlad_sha256": "e6fec0e79c60312d165874ba3a80d2e4900951033a982a8d63c8af55c13396ea",
+      "max_absolute_score_difference": 1.7917446903936707e-07,
+      "reference_count": 168,
+      "old_positive_rank": 1,
+      "recomputed_positive_rank": 1,
+      "passed": true
+    },
+    {
+      "query_view_id": "fZ7bO6pDSX9hMw3mVdj-SA__v2",
+      "gate_position": "middle",
+      "new_full_448_png_path": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/full_gate/fZ7bO6pDSX9hMw3mVdj-SA__v2_recomputed_448.png",
+      "new_full_448_png_sha256": "08b76d43287a44aff29f6e17b910802b779d9a66ed6baf62ae7993cccd54d6e4",
+      "new_full_vlad_path": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/full_gate/fZ7bO6pDSX9hMw3mVdj-SA__v2_recomputed_vlad.npy",
+      "new_full_vlad_sha256": "a8b22e9203fa135feb2fba14d8ea7a269b693e34c3ff8ce1c9f51e51dd01765d",
+      "max_absolute_score_difference": 2.984750061552077e-07,
+      "reference_count": 168,
+      "old_positive_rank": 1,
+      "recomputed_positive_rank": 1,
+      "passed": true
+    },
+    {
+      "query_view_id": "yY7mlgKgDgWOyoucgqWX_g__v0",
+      "gate_position": "last",
+      "new_full_448_png_path": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/full_gate/yY7mlgKgDgWOyoucgqWX_g__v0_recomputed_448.png",
+      "new_full_448_png_sha256": "d7f15d819a0e8cda9421bacfc3f8b8f913813855cd600eb43ef66886b96d6e5a",
+      "new_full_vlad_path": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/full_gate/yY7mlgKgDgWOyoucgqWX_g__v0_recomputed_vlad.npy",
+      "new_full_vlad_sha256": "f83da9d6f05c56c89b665261932044050eeb44b32f28fc70b57b980f37744038",
+      "max_absolute_score_difference": 2.982249145411231e-07,
+      "reference_count": 168,
+      "old_positive_rank": 1,
+      "recomputed_positive_rank": 1,
+      "passed": true
+    }
+  ],
+  "compared_scores": 504,
+  "all_ranks_match": true
+}

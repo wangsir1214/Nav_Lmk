@@ -167,3 +167,7 @@ Detailed earlier audit issues are in `_audit_outputs/ERROR_LOG.md`.
 - The remaining scientific gaps are unchanged: human route/task review,
   route-aligned projection provenance, metric-CRS snapping recheck, and the
   security rotation of historical credentials.
+
+## 2026-10-12 Phase 0 Stage C
+
+- Two pre-inference issues were resolved in `paris_phase0_stagec_20261012T034301Z_a01`: Git normalized the original Windows CRLF selection/QC files to LF (reconstructed CRLF bytes matched the manifest SHA-256 exactly), and the first runner attempt used an incorrect preflight metadata key. Both diagnostics were retained; no model inference occurred before correction. Final asset, Full gate, mask and score validation passed.

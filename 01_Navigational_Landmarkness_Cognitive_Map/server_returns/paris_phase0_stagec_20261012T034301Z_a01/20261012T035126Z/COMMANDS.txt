@@ -1,0 +1,7 @@
+Source: isolated git clone of https://github.com/wangsir1214/Nav_Lmk.git; main HEAD b0f166e312e1914ede77a38d89ed566b19557132
+Preflight: /home/wangyq/Nav_Lmk/.venv_pilot0_v2/bin/python preflight.py
+Stage C: /home/wangyq/Nav_Lmk/.venv_pilot0_v2/bin/python -u runner.py
+Environment: /home/wangyq/Nav_Lmk/.venv_pilot0_v2; CUDA_VISIBLE_DEVICES=0; TF32 disabled
+Scope: frozen 16 RUN views, three fresh Full gate queries, 64 query-only masked variants, unchanged 168 reference VLAD vectors
+Validation: /home/wangyq/Nav_Lmk/.venv_pilot0_v2/bin/python validate_outputs.py
+Pre-inference diagnostics: first preflight/runner attempts failed and were corrected as documented in execution_diagnostics.json; same run_id, no model result reused.

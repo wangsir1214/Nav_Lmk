@@ -144,3 +144,8 @@
 
 - [ ] Revoke/rotate hard-coded historical service credentials.
 - [ ] Replace literals with environment-variable or secret-manager configuration before running historical code.
+
+## 2026-10-12 Phase 0 Stage C handoff
+
+- [x] Return frozen Stage C 16-query mask/retrieval readout with all 20 dispositions in `paris_phase0_stagec_20261012T034301Z_a01`.
+- [ ] Human analysis of pre-frozen candidate/control effects and eight overlap flags before any next-stage decision.

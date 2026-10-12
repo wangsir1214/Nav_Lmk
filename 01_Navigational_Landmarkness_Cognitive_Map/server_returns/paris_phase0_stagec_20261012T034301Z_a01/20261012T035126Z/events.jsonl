@@ -1,0 +1,24 @@
+{"utc": "2026-10-12T03:47:56.490638+00:00", "event": "blocked", "error": "'frozen_original_sha256'"}
+{"utc": "2026-10-12T03:49:30.459373+00:00", "event": "observer_load_start"}
+{"utc": "2026-10-12T03:49:49.710328+00:00", "event": "observer_loaded"}
+{"utc": "2026-10-12T03:49:51.687255+00:00", "event": "full_gate_case", "query_view_id": "7U8oALO-ZaBG4HwWmyuwvg__v1", "gate_position": "first", "max_abs_diff": 1.7917446903936707e-07, "rank_ok": true, "passed": true}
+{"utc": "2026-10-12T03:49:52.414117+00:00", "event": "full_gate_case", "query_view_id": "fZ7bO6pDSX9hMw3mVdj-SA__v2", "gate_position": "middle", "max_abs_diff": 2.984750061552077e-07, "rank_ok": true, "passed": true}
+{"utc": "2026-10-12T03:49:53.142304+00:00", "event": "full_gate_case", "query_view_id": "yY7mlgKgDgWOyoucgqWX_g__v0", "gate_position": "last", "max_abs_diff": 2.982249145411231e-07, "rank_ok": true, "passed": true}
+{"utc": "2026-10-12T03:49:53.252174+00:00", "event": "full_gate_passed", "compared_scores": 504}
+{"utc": "2026-10-12T03:49:56.960429+00:00", "event": "query_complete", "index": 1, "query_view_id": "7U8oALO-ZaBG4HwWmyuwvg__v1", "variants": 4}
+{"utc": "2026-10-12T03:49:59.943185+00:00", "event": "query_complete", "index": 2, "query_view_id": "7U8oALO-ZaBG4HwWmyuwvg__v2", "variants": 4}
+{"utc": "2026-10-12T03:50:03.099653+00:00", "event": "query_complete", "index": 3, "query_view_id": "BrLJ2FJOw6JtoQks8TRVeQ__v2", "variants": 4}
+{"utc": "2026-10-12T03:50:06.505049+00:00", "event": "query_complete", "index": 4, "query_view_id": "HutLgjnKQDJRjIfP417bDw__v0", "variants": 4}
+{"utc": "2026-10-12T03:50:09.542349+00:00", "event": "query_complete", "index": 5, "query_view_id": "OjL_DIwEgAjZGKVyxNO1mw__v1", "variants": 4}
+{"utc": "2026-10-12T03:50:12.407525+00:00", "event": "query_complete", "index": 6, "query_view_id": "OjL_DIwEgAjZGKVyxNO1mw__v2", "variants": 4}
+{"utc": "2026-10-12T03:50:15.376840+00:00", "event": "query_complete", "index": 7, "query_view_id": "ZhfB_keAYo1tE3eAt9S_Sw__v0", "variants": 4}
+{"utc": "2026-10-12T03:50:18.322991+00:00", "event": "query_complete", "index": 8, "query_view_id": "fZ7bO6pDSX9hMw3mVdj-SA__v0", "variants": 4}
+{"utc": "2026-10-12T03:50:21.470826+00:00", "event": "query_complete", "index": 9, "query_view_id": "fZ7bO6pDSX9hMw3mVdj-SA__v2", "variants": 4}
+{"utc": "2026-10-12T03:50:24.372901+00:00", "event": "query_complete", "index": 10, "query_view_id": "gmm8vQR8CBzuJ5JomU4xVA__v1", "variants": 4}
+{"utc": "2026-10-12T03:50:27.820933+00:00", "event": "query_complete", "index": 11, "query_view_id": "gmm8vQR8CBzuJ5JomU4xVA__v3", "variants": 4}
+{"utc": "2026-10-12T03:50:31.196627+00:00", "event": "query_complete", "index": 12, "query_view_id": "jqMbtUb4csuPJ3XDhARbOQ__v3", "variants": 4}
+{"utc": "2026-10-12T03:50:34.139700+00:00", "event": "query_complete", "index": 13, "query_view_id": "m8kS42vmkv1DD5bphiusDA__v2", "variants": 4}
+{"utc": "2026-10-12T03:50:37.184974+00:00", "event": "query_complete", "index": 14, "query_view_id": "vpRGwoLifY8oPQ6oU_QPHg__v1", "variants": 4}
+{"utc": "2026-10-12T03:50:40.227525+00:00", "event": "query_complete", "index": 15, "query_view_id": "xnVV6BHnFOXVpWAFGADsLA__v2", "variants": 4}
+{"utc": "2026-10-12T03:50:43.268241+00:00", "event": "query_complete", "index": 16, "query_view_id": "yY7mlgKgDgWOyoucgqWX_g__v0", "variants": 4}
+{"utc": "2026-10-12T03:50:43.659185+00:00", "event": "stagec_complete", "summary": {"run_id": "paris_phase0_stagec_20261012T034301Z_a01", "status": "SUCCESS", "source_main_head": "b0f166e312e1914ede77a38d89ed566b19557132", "full_equivalence": "PASS", "full_recomputed_queries": 3, "full_compared_reference_scores": 504, "run_queries": 16, "nonrun_queries": 4, "nonrun_primary": 2, "nonrun_diagnostic": 2, "masked_variants": 64, "masked_score_rows": 10752, "overlap_flags_preserved": 8, "candidate_flip_count": 0, "candidate_U_positive_count": 6, "candidate_U_zero_count": 0, "candidate_U_negative_count": 10, "scientific_scope": "development-stage fixed observer input-mask effect; not landmark truth or general navigation accuracy"}}

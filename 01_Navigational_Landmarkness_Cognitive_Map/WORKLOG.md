@@ -449,3 +449,9 @@ candidate strata before Codex generates route-aligned views or intervention data
 The audit establishes technical feasibility and a reviewable candidate pool, not
 functional landmark validity. Human review must freeze task-valid routes and
 candidate strata before Codex generates route-aligned views or intervention data.
+
+## 2026-10-12 Phase 0 Stage C frozen mask retrieval
+
+- Executed exactly the 16 RUN queries in frozen source/main `b0f166e312e1914ede77a38d89ed566b19557132`; retained the original 20-case disposition, including 2 primary and 2 diagnostic geometry exclusions. Stage A provenance and all original observer assets passed integrity checks.
+- Three freshly recomputed Full queries matched all 504 old reference scores within 1e-5 and preserved positive ranks. Generated 64 query-only gray masks; scored all 10,752 query-variant/reference pairs with unchanged G/14+VLAD and P/N/I. Full audit passed. NAS run: `/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01/`.
+- No Qwen, route replay, box reselection, reference masking, retraining or Phase 1 work occurred.

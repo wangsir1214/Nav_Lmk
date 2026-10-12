@@ -1,0 +1,18 @@
+{
+  "run_id": "paris_phase0_stagec_20261012T034301Z_a01",
+  "validation": "PASS",
+  "full_equivalence_scores": 504,
+  "full_gate_queries": 3,
+  "run_queries": 16,
+  "nonrun_queries": 4,
+  "masked_images_640": 64,
+  "masked_images_448": 64,
+  "query_vlad_vectors": 64,
+  "all_reference_score_rows": 10752,
+  "reference_coverage_each_variant": 168,
+  "readout_queries": 16,
+  "disposition_rows": 20,
+  "preserved_overlap_flags": 8,
+  "mask_pixels_and_448_resizes_exact": true,
+  "pni_and_readout_consistent": true
+}

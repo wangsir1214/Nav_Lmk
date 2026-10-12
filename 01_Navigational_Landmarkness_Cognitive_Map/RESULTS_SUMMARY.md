@@ -339,3 +339,7 @@ a behaviorally correct action.
 Review the 15 route boards, confirm task definition and action semantics, score
 stability/spatial relevance/intervention feasibility, and freeze KEEP/ADAPT/
 REJECT strata. Only then generate route-aligned views and run P1A/P1B.
+
+## 2026-10-12 Phase 0 Stage C (frozen input masking)
+
+`paris_phase0_stagec_20261012T034301Z_a01` passed its Full-equivalence gate (504 pairwise scores, maximum absolute difference 2.985e-7; all three positive ranks identical). The geometry-eligible sample was 16/18 primary Full-correct views; the original 20-view disposition retains two primary and two diagnostic non-RUN cases. All 64 masks and 10,752 masked scores were validated; eight frozen other-candidate/control-overlap flags remain. These descriptive effects do not establish landmark function or general navigation accuracy.

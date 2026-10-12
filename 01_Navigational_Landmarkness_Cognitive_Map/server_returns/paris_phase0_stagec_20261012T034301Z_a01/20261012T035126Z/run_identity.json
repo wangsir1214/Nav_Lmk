@@ -1,0 +1,11 @@
+{
+  "run_id": "paris_phase0_stagec_20261012T034301Z_a01",
+  "created_utc": "2026-10-12T03:43:01.632662+00:00",
+  "source_main_head": "b0f166e312e1914ede77a38d89ed566b19557132",
+  "frozen_stagec_commit": "b0f166e312e1914ede77a38d89ed566b19557132",
+  "phase0_base_commit": "1acca803418ad069c8d2123486f75046b6d41487",
+  "stagea_result_commit": "7c81f717cf7ca539725e0ca777bb0dc104f41f99",
+  "isolated_checkout": "/home/wangyq/nav_lmk_stagec.EawpUB",
+  "nas_output_dir": "/home/nas/wangyq/outputs/paris_phase0_stagec_20261012T034301Z_a01",
+  "light_dir": "/home/wangyq/Nav_Lmk/01_Navigational_Landmarkness_Cognitive_Map/server_run/paris_phase0_stagec_20261012T034301Z_a01"
+}
