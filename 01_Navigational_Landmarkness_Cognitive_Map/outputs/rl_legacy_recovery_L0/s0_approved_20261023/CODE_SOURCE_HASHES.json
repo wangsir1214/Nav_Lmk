@@ -1,0 +1,385 @@
+[
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\experiments_deepmind_real.py",
+    "audit_copy": "sources\\code\\experiments_deepmind_real.py",
+    "bytes": 42277,
+    "sha256_original": "922364d73f2d99b3f961ec17b19db5adb386b5e35a26577b62c2b344492dbb1b",
+    "redacted_lines": [
+      244,
+      428,
+      574,
+      758
+    ]
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\Equirec2Perspec.py",
+    "audit_copy": "sources\\code\\Equirec2Perspec.py",
+    "bytes": 3462,
+    "sha256_original": "cb828195a47e924bbe0aa6620d6a06bfb03907715cc242fde43a508bd67f50b0",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\generate_perspective_data.py",
+    "audit_copy": "sources\\code\\generate_perspective_data.py",
+    "bytes": 3072,
+    "sha256_original": "811fd3560a6115db75bb91f09acc8f781ee7ccf78406b4a919e8143de6796ac1",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\default_config.py",
+    "audit_copy": "sources\\code\\default_config.py",
+    "bytes": 906,
+    "sha256_original": "7c496aaf1d3a20919f16c1019e08a6d0a6f52527136850166bf9aa588b1dff07",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\courier_game.py",
+    "audit_copy": "sources\\code\\courier_game.py",
+    "bytes": 26936,
+    "sha256_original": "38fab06e0d1df1ced025b2785c54b4cc55fbd9e5136e029eba4babd5da77e97f",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\curriculum_courier_game.py",
+    "audit_copy": "sources\\code\\curriculum_courier_game.py",
+    "bytes": 6888,
+    "sha256_original": "d192916eca2c4c87b44e463fcb66fd8b560e493a7bbecd40e266ee71ef010217",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\game.py",
+    "audit_copy": "sources\\code\\game.py",
+    "bytes": 18090,
+    "sha256_original": "adbcec687dbe43bc0332fb9afd18359c38b8335c5dc590efd379dede1b220430",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\observations.py",
+    "audit_copy": "sources\\code\\observations.py",
+    "bytes": 16026,
+    "sha256_original": "6c7e5c26f307540a5421bec5d1fa48e0dd2ade14dd73a6f7c6e7c3db05a1314e",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\pano_data.py",
+    "audit_copy": "sources\\code\\pano_data.py",
+    "bytes": 4171,
+    "sha256_original": "64933903f45b32ed675d4146ab10c82692d75bdcf5241d8a13334591a4882309",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\pano_graph.py",
+    "audit_copy": "sources\\code\\pano_graph.py",
+    "bytes": 46065,
+    "sha256_original": "e4034ec9bf3436a81595eb8e49728ef8c873077090643185fd88a73517bad9de",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\urbannav_vec.py",
+    "audit_copy": "sources\\code\\urbannav_vec.py",
+    "bytes": 21879,
+    "sha256_original": "d4913708c060defa5558a83adf68ca958edafe81660415677d9ebd090a16a8dc",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\urbannav.py",
+    "audit_copy": "sources\\code\\urbannav.py",
+    "bytes": 23199,
+    "sha256_original": "a113f9e6daeca12a109c517c28f669fa3fa5f92b43dc16ac7a59137e17918737",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\vector_env.py",
+    "audit_copy": "sources\\code\\vector_env.py",
+    "bytes": 18398,
+    "sha256_original": "8bf6ef708a846d6f5f9d382bfe2b71014b7e8831e6bb81591e830688e95f93cd",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\oracle_agent.py",
+    "audit_copy": "sources\\code\\oracle_agent.py",
+    "bytes": 6745,
+    "sha256_original": "003da11dd3ead3ccca9ec446064fa018aa9c6f9ab9108d7dd687ddd2824008ef",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\requirements.txt",
+    "audit_copy": "sources\\code\\requirements.txt",
+    "bytes": 8081,
+    "sha256_original": "00dc204e6bf1bb4d03e501c387760ffb19dfb27755f4af9a783ee95b450dbb8a",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\agents\\goal_nav_agent.py",
+    "audit_copy": "sources\\code\\agents\\goal_nav_agent.py",
+    "bytes": 6285,
+    "sha256_original": "2f9192fb9863cf657d1ecb0bdb339fb8eb1519c6fa86473738df4ad7b7324d8d",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\agents\\locale_pathway.py",
+    "audit_copy": "sources\\code\\agents\\locale_pathway.py",
+    "bytes": 6333,
+    "sha256_original": "31f614bbbec8949368afe5d2d5cdf1186218db6f898867d5f3df4245127264af",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\ppo\\ppo_trainer.py",
+    "audit_copy": "sources\\code\\ppo\\ppo_trainer.py",
+    "bytes": 17159,
+    "sha256_original": "ca73ce2a4119f9924f8f463291c9313f3d312356294835ff91bf6ce8fb176d7c",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\config_deepmind_real.yml",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\config_deepmind_real.yml",
+    "bytes": 2315,
+    "sha256_original": "8abb465faddab8151280e34aac3bd3dbec4a3ede12a98074dcfd4cd66f4d48a4",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\config_new_baseline.yml",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\config_new_baseline.yml",
+    "bytes": 1627,
+    "sha256_original": "5c9c90a3cb2f3675245d89fd6e1450bed5ed8eba32371c4da2c648513cb750dc",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\policy2.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\policy2.py",
+    "bytes": 20349,
+    "sha256_original": "d149f689c08a1328c77094a324ab26675686814a3f6ff2f39074b1c1849f8e7e",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\ppo.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\ppo.py",
+    "bytes": 10904,
+    "sha256_original": "1b53a31f90fed2e6651efad887171166637ae5b43f8a57e68077da5997133059",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\rollout_storage.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\rollout_storage.py",
+    "bytes": 20001,
+    "sha256_original": "2ebda7a907d99e573029e9e5daa314a1093ddc579c015a805b1293618b555cbb",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\common\\utils.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\common\\utils.py",
+    "bytes": 4106,
+    "sha256_original": "959b4c48bd26dd912757acebfa5d9587bb449d9389e6beaefc074e77d42876d6",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\models\\__init__.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\models\\__init__.py",
+    "bytes": 0,
+    "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\models\\deepmind_models.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\models\\deepmind_models.py",
+    "bytes": 5581,
+    "sha256_original": "66f51f8a01758a0e89637606633f55776c61ef5521bc88db59b96acac24d6380",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\models\\geoclip_cnn.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\models\\geoclip_cnn.py",
+    "bytes": 6303,
+    "sha256_original": "22c8fef235bb71f8eadd77583c4520f01bdd7ab67ecb88a86c33e2cb7bf03d06",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\models\\rnn_state_encoder.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\models\\rnn_state_encoder.py",
+    "bytes": 4704,
+    "sha256_original": "d2e57ca1808515d8420bc475a0c45690dd0c07a92d2df27fea3545ddfff09d3a",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\new_baseline_ppo\\models\\simple_cnn.py",
+    "audit_copy": "sources\\code\\new_baseline_ppo\\models\\simple_cnn.py",
+    "bytes": 9515,
+    "sha256_original": "33157800c6b57321a4b5f36210657bf7da8993c1e63c848db16dc1e04b81e93a",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\multion_ppo\\config_multion_baseline.yml",
+    "audit_copy": "sources\\code\\multion_ppo\\config_multion_baseline.yml",
+    "bytes": 1673,
+    "sha256_original": "6627bc3afc957f78defc75b2dcf611f01947af3a4c71d8c4465cd82366fda685",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\multion_ppo\\policy2.py",
+    "audit_copy": "sources\\code\\multion_ppo\\policy2.py",
+    "bytes": 7608,
+    "sha256_original": "4380a6c953ebe11b7c20d2aed66735303d239cd20d7cb50b56cdb6298573abb4",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\multion_ppo\\ppo.py",
+    "audit_copy": "sources\\code\\multion_ppo\\ppo.py",
+    "bytes": 6482,
+    "sha256_original": "1dbebe7fc0d1a5b6bc9c5cba2575ede365790d31da62ecc66c248797d9911140",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\multion_ppo\\rollout_storage.py",
+    "audit_copy": "sources\\code\\multion_ppo\\rollout_storage.py",
+    "bytes": 11104,
+    "sha256_original": "f8404d52ef6d32c7714991b1a25211fd866fc1a3411f62d796b1361ae00cc7e4",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\multion_ppo\\common\\utils.py",
+    "audit_copy": "sources\\code\\multion_ppo\\common\\utils.py",
+    "bytes": 4106,
+    "sha256_original": "959b4c48bd26dd912757acebfa5d9587bb449d9389e6beaefc074e77d42876d6",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\multion_ppo\\models\\__init__.py",
+    "audit_copy": "sources\\code\\multion_ppo\\models\\__init__.py",
+    "bytes": 0,
+    "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\multion_ppo\\models\\rnn_state_encoder.py",
+    "audit_copy": "sources\\code\\multion_ppo\\models\\rnn_state_encoder.py",
+    "bytes": 4714,
+    "sha256_original": "b265517fcfc3bdedabd4395611bc412886fe47c74fc3935b5320a020781ef607",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\multion_ppo\\models\\simple_cnn.py",
+    "audit_copy": "sources\\code\\multion_ppo\\models\\simple_cnn.py",
+    "bytes": 9416,
+    "sha256_original": "46b944a2334758b512d5cac78d6ad1f70765afaddb99728648116b084cfe692b",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\common\\base_trainer.py",
+    "audit_copy": "sources\\code\\common\\base_trainer.py",
+    "bytes": 5113,
+    "sha256_original": "a38e59dfe1f84e0a1fca39a2c6fd642d522b86b964bfe981371806e18fd6e411",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\common\\env_utils.py",
+    "audit_copy": "sources\\code\\common\\env_utils.py",
+    "bytes": 1865,
+    "sha256_original": "f47cfdb1a342cb54b49766886d96b21fe7e1c49f3a3a651e0e39a94869fce6ab",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\common\\logging.py",
+    "audit_copy": "sources\\code\\common\\logging.py",
+    "bytes": 1101,
+    "sha256_original": "3a5aec28f58a3c2cecf2040262ce187fa10b9f5f308320cb48907620dc83740a",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\common\\utils.py",
+    "audit_copy": "sources\\code\\common\\utils.py",
+    "bytes": 1213,
+    "sha256_original": "083da0ad19bf4f388e2c271d0803d46230652b67ab0dfcf74391971bbf4fc00d",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\common\\visualize_utils.py",
+    "audit_copy": "sources\\code\\common\\visualize_utils.py",
+    "bytes": 65,
+    "sha256_original": "6f446b69770bd92147bca92e340d573fa25edb6b2d8d6d177cd53c0766c13e61",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\__init__.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\__init__.py",
+    "bytes": 0,
+    "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\arguments.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\arguments.py",
+    "bytes": 5057,
+    "sha256_original": "1bedcbe8f341a0ae2cab43eaff51afe6f69c0160fe21f58e46f5a2dcb4bf841f",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\distributions.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\distributions.py",
+    "bytes": 2964,
+    "sha256_original": "de557d15991ff9076bac826187aebe67396992fb1f1a9255b1169628d71aa26b",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\envs.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\envs.py",
+    "bytes": 8410,
+    "sha256_original": "60ca7c541489cb36cb677b16e9f243a1e31b840f07245e61deea2d4ba84ee3c6",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\model.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\model.py",
+    "bytes": 33750,
+    "sha256_original": "5c3bc01d7de264294db070f934a7c2c1f4a08c19cbc2124ed7ca441bdcd7a11a",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\storage.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\storage.py",
+    "bytes": 14026,
+    "sha256_original": "0516d64c49a1ba57f0e151162cd7a5ce76190ca638a78aa8fc76afd686642769",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\utils.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\utils.py",
+    "bytes": 1611,
+    "sha256_original": "a471f1aa21e72da4e59f4369e57359948e96f50479a81ba072253674db270c96",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\algo\\__init__.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\algo\\__init__.py",
+    "bytes": 53,
+    "sha256_original": "e56a04b85805dfcb7895358d0d347f8d5bca2a82d2fa965eb9ef4e6c7e8a3cf5",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\algo\\a2c_acktr.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\algo\\a2c_acktr.py",
+    "bytes": 4623,
+    "sha256_original": "6342c83b3ff328e8015bf5a17161f7feda99aa4183c71a4c6191a73b38ec44e1",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\algo\\gail.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\algo\\gail.py",
+    "bytes": 5652,
+    "sha256_original": "ddb8d7ccbb30e53bc5e76b3b1baaa830e2f30def35145e6ff5f9ec68f5830012",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\algo\\kfac.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\algo\\kfac.py",
+    "bytes": 7713,
+    "sha256_original": "9755d097ce85e7ad7f0d2d78bb904c2b962c1416bf9dcc668e2559f9cfb88094",
+    "redacted_lines": []
+  },
+  {
+    "source_path": "Z:\\wangyq\\UrbanNav_neo_fromPC\\a2c_ppo_acktr\\algo\\ppo.py",
+    "audit_copy": "sources\\code\\a2c_ppo_acktr\\algo\\ppo.py",
+    "bytes": 5143,
+    "sha256_original": "86d41f84dd23aa7f3713d95d981deeecb0afd73306da28fa46af1ad6430f2ff0",
+    "redacted_lines": []
+  }
+]

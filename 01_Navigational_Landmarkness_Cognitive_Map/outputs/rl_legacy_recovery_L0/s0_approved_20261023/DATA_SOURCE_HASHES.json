@@ -1,0 +1,55 @@
+{
+  "provenance": "cached local L0 static audit; source bytes were read before this approval; server paths are candidates until mounts are verified",
+  "nas_relative_to_root": "wangyq",
+  "files": [
+    {
+      "role": "UR-85 checkpoint",
+      "path": "UrbanNav_neo_fromPC/WYQ/trained_models/ppo/UrbanNav_deepmind_WYQ_dpt30_20250416-032336_80000.pt",
+      "bytes": 1734776818,
+      "sha256": "fef170f6a01c9c9ba2361b7c7b81a4ddb9f0311a145766ed7d07006f7dc28a6e"
+    },
+    {
+      "role": "new3058 graph JSON",
+      "path": "Street_view_and_points_Paris/Line_After_heading_clear_Paris_center_street_from0309_4_v1/Line_Points_3_street_view.json",
+      "bytes": 657923,
+      "sha256": "5bb3290d5d039c48b0cb649244bbb68d68b48ca93c741a775952dd02ccd31b55"
+    },
+    {
+      "role": "new3058 SHP geometry",
+      "path": "Street_view_and_points_Paris/Line_After_heading_clear_Paris_center_street_from0309_4_v1/Line_Points_3_to_road.shp",
+      "bytes": 85724,
+      "sha256": "93d95be7f3e105f43047bf26c455caa7dd9b2cd64e56b0782b81beb6b1381e8f"
+    },
+    {
+      "role": "new3058 SHP index",
+      "path": "Street_view_and_points_Paris/Line_After_heading_clear_Paris_center_street_from0309_4_v1/Line_Points_3_to_road.shx",
+      "bytes": 24564,
+      "sha256": "935b35917e88bdab745768037e24b038171d704010bd69a738dcd56bbaceece1"
+    },
+    {
+      "role": "new3058 SHP attributes",
+      "path": "Street_view_and_points_Paris/Line_After_heading_clear_Paris_center_street_from0309_4_v1/Line_Points_3_to_road.dbf",
+      "bytes": 1030804,
+      "sha256": "92f78a7f51f8bcc905b703ec40e20967f45e0ec4dbe56159d608459694f6b3d2"
+    },
+    {
+      "role": "new3058 SHP CRS",
+      "path": "Street_view_and_points_Paris/Line_After_heading_clear_Paris_center_street_from0309_4_v1/Line_Points_3_to_road.prj",
+      "bytes": 425,
+      "sha256": "f2e7fb14d55bdd8d6a3bc2c272a48729d8f9d0ad72936e20eae6a9a81c2fccd0"
+    },
+    {
+      "role": "new3058 SHP encoding",
+      "path": "Street_view_and_points_Paris/Line_After_heading_clear_Paris_center_street_from0309_4_v1/Line_Points_3_to_road.cpg",
+      "bytes": 10,
+      "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+    },
+    {
+      "role": "historical API heading",
+      "path": "Street_view_and_points_Paris/GoogleAPIMETADAT/Paris_Points_heading_3059/Paris_Points_heading_3059.csv",
+      "sha256": "00685688b909cce93259786fe8789539ebe500dce8e538ce4fa58af11b9fe539"
+    }
+  ],
+  "jpeg_sample_hashes": "S0_SMOKE_ASSETS.json; exactly 48 selected original JPEG files",
+  "not_authorized": ["UR-79 and UR-88 source substitution", "all-Paris asset scan", "large raw asset upload"]
+}

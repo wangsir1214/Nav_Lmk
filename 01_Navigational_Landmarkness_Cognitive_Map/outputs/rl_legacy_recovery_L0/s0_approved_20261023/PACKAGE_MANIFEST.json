@@ -1,0 +1,18 @@
+{
+  "status": "READY_FOR_SERVER_S0",
+  "scope": "small approved handoff only; no checkpoint, image bytes, executable legacy code or secret",
+  "originating_l0_status": "WAITING_FOR_HUMAN_L0_REVIEW",
+  "researcher_confirmation_date": "2026-10-22",
+  "approved_run_for_s0": "UR-85",
+  "files": [
+    {"path": "HUMAN_L0_APPROVAL.md", "bytes": 2590, "sha256": "83d9715481a71ef4bee39c4ac3bc61b564f9647409ca45e95926b016ce46a858"},
+    {"path": "SERVER_HANDOFF.md", "bytes": 5451, "sha256": "1767d281bf3f439ff1a67c01183605b7222d6a9b47a815556717ff79c0b29c18"},
+    {"path": "S0_INPUT_CONTRACT.json", "bytes": 3777, "sha256": "16b0fccb82b201861ed2457d429075fb64cf84f8ca75b285de852cba02939ac4"},
+    {"path": "S0_SMOKE_ASSETS.json", "bytes": 24074, "sha256": "063ff9186c511762c151d5c5822373e6d7f1541383912e78eff04caf9713d7e8"},
+    {"path": "MODEL_IO_CONTRACT.md", "bytes": 3115, "sha256": "b94e00a8e5b85e8ff678c8f0b68ddab089f8b1d304134d57921fc4710d9bf7a2"},
+    {"path": "RUN_CHECKPOINT_MATRIX.csv", "bytes": 913, "sha256": "a86d3bc4687526ce9c6797e697d0160e5c2535256c67c28ab58266c70a9df986"},
+    {"path": "checkpoint_structure.json", "bytes": 1537196, "sha256": "8bb1594be55dfa7265c2677452a02e364a0650092e31a0cac332711de41ebef1"},
+    {"path": "CODE_SOURCE_HASHES.json", "bytes": 15661, "sha256": "4ca00b3391dbcffcf6e66b766c34ae7b18b6a688e1c08403a1f40c77e506a35f"},
+    {"path": "DATA_SOURCE_HASHES.json", "bytes": 2646, "sha256": "16699a790c27b008cb40d797c81a2d1071df16344a4c9707fbbe15961d6c5b21"}
+  ]
+}
