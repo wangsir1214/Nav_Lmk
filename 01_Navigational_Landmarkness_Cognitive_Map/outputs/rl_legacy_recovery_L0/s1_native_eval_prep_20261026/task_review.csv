@@ -1,0 +1,12 @@
+item_id,decision,comment
+S0_LOCAL_REVIEW,APPROVE,"Researcher reviewed and accepts the technical recovery conclusion within the stated S0 evidence limits."
+S1A_FULL_ONLY_FIRST,APPROVE,"Full is the first future evaluation condition; this decision does not authorize a Full rollout in this round."
+EPISODE_COUNT_24,APPROVE_AS_DRAFT,"Twenty-four exploratory candidate episodes are accepted as a draft, not as a frozen valid set."
+DISTANCE_BINS_100_550M,APPROVE_AS_DRAFT,"Four draft bins are 100-200m, 200-300m, 300-400m, and 400-550m, six candidates each; server coordinates must determine final bins."
+JSON_PROXY_COORDINATES_PENDING_SHP_JOIN,APPROVE_CONDITIONAL,"Join JSON pos, SHP geometry, SHP lat/lon attributes, and runtime coordinate use; snapped-to-road differences are not automatically corruption. Return any task, goal, or success-boundary changing discrepancy for review."
+FIXED_GOAL_EVALUATOR_SHIM,APPROVE_FOR_ENV_SMOKE_ONLY,"A separate fixed single-goal adapter may be prepared and smoke-tested; do not modify legacy source. Include a semantics diff against evaluate() and CourierGame."
+SUCCESS_RADIUS_LT_100M,APPROVE,"Success is the first position strictly less than 100m from the fixed goal, with immediate termination; report any different legacy boundary."
+MAX_STEPS_1000,APPROVE,"Use 1000 environment actions as this pilot cap; do not describe it as a complete historical evaluation protocol."
+STOCHASTIC_CATEGORICAL_POLICY,APPROVE_FOR_FUTURE_FULL,"Future Full may use categorical sampling with frozen seeds; no PPO call is authorized in this round."
+SERVER_ENVIRONMENT_ONLY_SMOKE,APPROVE,"Server may run environment/data/adapter checks with predetermined actions and no PPO loading or policy rollout."
+SERVER_S1A_FULL_ROLLOUT_LATER_APPROVAL,DEFER_NOT_AUTHORIZED,"A complete Full policy rollout requires separate researcher authorization after environment smoke review."

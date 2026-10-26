@@ -1,0 +1,126 @@
+{
+  "status": "DRAFT_ONLY_NOT_ENV_VALIDATED",
+  "generator": "prepare_episode_draft.py",
+  "seed": 20261026,
+  "requested_episodes": 24,
+  "generated_episodes": 24,
+  "unique_start_goal_panos": 48,
+  "all_start_goal_panos_unique": true,
+  "all_initial_distances_outside_success_radius": true,
+  "distance_bins": [
+    {
+      "bin_index": 1,
+      "lower_m": 100.0,
+      "upper_m": 200.0,
+      "selected": 6,
+      "requested": 6
+    },
+    {
+      "bin_index": 2,
+      "lower_m": 200.0,
+      "upper_m": 300.0,
+      "selected": 6,
+      "requested": 6
+    },
+    {
+      "bin_index": 3,
+      "lower_m": 300.0,
+      "upper_m": 400.0,
+      "selected": 6,
+      "requested": 6
+    },
+    {
+      "bin_index": 4,
+      "lower_m": 400.0,
+      "upper_m": 550.0,
+      "selected": 6,
+      "requested": 6
+    }
+  ],
+  "source_graph": {
+    "path": "outputs/rl_legacy_recovery_L0/sources/data/Line_Points_3_street_view.json",
+    "sha256": "5bb3290d5d039c48b0cb649244bbb68d68b48ca93c741a775952dd02ccd31b55",
+    "nodes": 3058,
+    "links": 3310
+  },
+  "source_heading": {
+    "path": "outputs/rl_legacy_recovery_L0/sources/data/Paris_Points_heading_3059.csv",
+    "sha256": "00685688b909cce93259786fe8789539ebe500dce8e538ce4fa58af11b9fe539",
+    "rows_with_heading": 3059
+  },
+  "bfs_tree": {
+    "center": "NWV8UKuA1ODMKcudL8_BTA",
+    "depth_limit": 30,
+    "nodes": 550,
+    "edges": 549,
+    "algorithm": "NetworkX-compatible BFS neighbor insertion order over the archived node-link graph, then undirected tree"
+  },
+  "coordinate_filter": {
+    "lat_min": 48.8696,
+    "lat_max": 48.8782,
+    "lng_min": 2.2853,
+    "lng_max": 2.3053
+  },
+  "eligible_nodes_inside_bounds_with_heading": 550,
+  "pair_distance_support": [
+    {
+      "lower_m": 100.0,
+      "upper_m": 200.0,
+      "unordered_pair_count": 44233
+    },
+    {
+      "lower_m": 200.0,
+      "upper_m": 300.0,
+      "unordered_pair_count": 48497
+    },
+    {
+      "lower_m": 300.0,
+      "upper_m": 400.0,
+      "unordered_pair_count": 30084
+    },
+    {
+      "lower_m": 400.0,
+      "upper_m": 550.0,
+      "unordered_pair_count": 6630
+    }
+  ],
+  "pair_distance_summary_m": {
+    "min": 0.00373037504946254,
+    "p50": 219.91491258588007,
+    "p90": 356.5451319709091,
+    "max": 549.7896853344774
+  },
+  "selected_hop_count_distribution": {
+    "16": 1,
+    "21": 1,
+    "23": 1,
+    "27": 2,
+    "30": 1,
+    "31": 1,
+    "34": 1,
+    "39": 1,
+    "43": 1,
+    "44": 1,
+    "45": 2,
+    "47": 2,
+    "48": 2,
+    "49": 1,
+    "51": 1,
+    "52": 2,
+    "53": 1,
+    "55": 1,
+    "56": 1
+  },
+  "selected_route_distance_summary_m": {
+    "min": 170.59310861059674,
+    "median": 439.949461740366,
+    "max": 581.0530854483479
+  },
+  "selected_path_stretch_summary": {
+    "median": 1.2836486002855345,
+    "max": 2.354046077937614
+  },
+  "route_distance_note": "BFS-tree polyline distance is a static route descriptor, not measured trajectory length or proof that legacy 3-hop bearing transitions can execute that path.",
+  "coordinate_warning": "Draft coordinates derive from node-link JSON pos only. Runtime uses the approved Line_Points_3_to_road SHP attributes; server must verify every selected pano coordinate against that bundle and replace proxy goal normalization before freezing.",
+  "next_gate": "Server must rebuild the approved graph, join selected pano coordinates from the approved SHP bundle, verify candidate IDs/headings and run environment-only smoke before episodes can be frozen."
+}

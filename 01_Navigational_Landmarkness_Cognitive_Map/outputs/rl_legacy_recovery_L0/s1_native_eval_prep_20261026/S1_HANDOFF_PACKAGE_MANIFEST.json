@@ -1,0 +1,72 @@
+{
+  "format": "nav_lmk_s1_env_handoff_manifest_v1",
+  "scope": "S1 environment-only smoke handoff; no PPO or rollout authorization",
+  "manifest_self_hash": "omitted; Git commit SHA anchors this manifest",
+  "files": [
+    {
+      "path": "README.md",
+      "size_bytes": 791,
+      "sha256": "a7c21c8407524909d1bac1139df55ecd8b9785899002dfa0e2042342987028f0"
+    },
+    {
+      "path": "S0_LOCAL_REVIEW.md",
+      "size_bytes": 1790,
+      "sha256": "97c844bf7ffe4c02725c9bb03f8b6e564c90d3607fb34a12661f63ed4fab9236"
+    },
+    {
+      "path": "S0_LOCAL_REVIEW_EVIDENCE.json",
+      "size_bytes": 1594,
+      "sha256": "8f4270513c3e68ae85ef6a5cd97d08604e8c75e847f75c47747a564c9389fd22"
+    },
+    {
+      "path": "HUMAN_S1_APPROVAL.md",
+      "size_bytes": 2366,
+      "sha256": "807b1b64722d16f5dff68171f9786028a8150a97046517643f2be54b7cbdf6f0"
+    },
+    {
+      "path": "task_review.csv",
+      "size_bytes": 1885,
+      "sha256": "66e0e762bbdc2e4b4d8afad8bfd381655ef0d3f7d0c9f64df9ee0ce92a70f657"
+    },
+    {
+      "path": "S1_EVALUATION_PROTOCOL.md",
+      "size_bytes": 8661,
+      "sha256": "1dd247ddf4b6a03f204d2c3255ca8d5cfe8d984e5c608ab8ca1f4201a2b73b42"
+    },
+    {
+      "path": "S1_EPISODES_DRAFT.jsonl",
+      "size_bytes": 98294,
+      "sha256": "02b304932f492a3ec4ff07b6770b4fd08b165cbbb71dd46cd3509f670f296136"
+    },
+    {
+      "path": "EPISODE_DRAFT_AUDIT.json",
+      "size_bytes": 3602,
+      "sha256": "b2ab53d9c507b0615347f867ab982e1ac7e59d1daf148cae9eb12674fa85f2a9"
+    },
+    {
+      "path": "S1_METRICS_SPEC.md",
+      "size_bytes": 3065,
+      "sha256": "952debdefa9a1e7611e5ec2c32b478ba5672aadcf060b6f34a095888d65392c6"
+    },
+    {
+      "path": "SERVER_S1A_HANDOFF.md",
+      "size_bytes": 8112,
+      "sha256": "b52772f3ebd00f5b641c76f8adc04452ab63d17dbd5af33684c81bffef4d1112"
+    },
+    {
+      "path": "S1_PREPARATION_VALIDATION.json",
+      "size_bytes": 1030,
+      "sha256": "10e6547d89e64cc7cb9ec3f83e740cf4b30a38af84792f838f82fe573a0dcb98"
+    },
+    {
+      "path": "build_s1_handoff_manifest.py",
+      "size_bytes": 1718,
+      "sha256": "16d4c5f1b25901913617e00e94c4c36cb26c8486ef462bada71bc798ee648b40"
+    },
+    {
+      "path": "validate_s1_handoff.py",
+      "size_bytes": 3884,
+      "sha256": "f19755fa6c0fd76107e0809cf671e046e3a7da3afbc80b4aba74d90413e3cabb"
+    }
+  ]
+}

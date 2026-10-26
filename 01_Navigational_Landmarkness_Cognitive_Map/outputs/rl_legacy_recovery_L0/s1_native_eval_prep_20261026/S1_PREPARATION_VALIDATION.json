@@ -1,0 +1,37 @@
+{
+  "status": "PASS_DRAFT_STRUCTURE_ONLY",
+  "checks": {
+    "draft_only_status": true,
+    "24_candidates": true,
+    "unique_episode_ids": true,
+    "48_disjoint_start_goal_panos": true,
+    "six_per_distance_bin": true,
+    "all_initial_distances_outside_success_radius": true,
+    "route_paths_end_at_goal": true,
+    "route_hops_match_path_nodes": true,
+    "all_coordinates_marked_proxy": true,
+    "all_goal_norms_in_bounds": true,
+    "episode_seeds_unique": true,
+    "same_max_steps": true,
+    "graph_hash_still_matches": true,
+    "heading_hash_still_matches": true
+  },
+  "episodes": 24,
+  "distance_bin_counts": {
+    "[100,200)": 6,
+    "[200,300)": 6,
+    "[300,400)": 6,
+    "[400,550]": 6
+  },
+  "unique_start_goal_panos": 48,
+  "model_calls": 0,
+  "navigation_rollouts": 0,
+  "environment_smokes": 0,
+  "not_verified": [
+    "SHP coordinate joins",
+    "runtime action reachability",
+    "source image readability",
+    "actual PPO behavior",
+    "navigation success"
+  ]
+}

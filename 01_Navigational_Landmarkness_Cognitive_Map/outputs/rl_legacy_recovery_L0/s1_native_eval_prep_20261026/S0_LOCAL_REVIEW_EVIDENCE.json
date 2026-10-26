@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "branch": "origin/server-results/urbannav_ur85_s0_20261025T163610Z_a01",
+  "commit": "dafdd21bfdd97c37381344b70add301426341cfa",
+  "source_commit": "d3ba7f2f6f412bbd3692961301e666c88ecc8899",
+  "case_count": 48,
+  "artifact_index_entries": 75,
+  "argmax_action_counts": {
+    "0": 35,
+    "4": 13
+  },
+  "checks": {
+    "branch_head_matches_reported_commit": true,
+    "approved_s0_commit_is_ancestor": true,
+    "evidence_status_pass": true,
+    "source_commit_matches_approved_s0": true,
+    "s0r_did_not_execute_model": true,
+    "checkpoint_sha_matches_approved": true,
+    "all_54_current_sources_match": true,
+    "strict_structure_counts": true,
+    "case_count_48": true,
+    "case_ids_unique": true,
+    "all_cases_pass": true,
+    "all_have_two_forward_calls": true,
+    "all_bitwise_repeatable": true,
+    "all_outputs_finite": true,
+    "probabilities_valid": true,
+    "csv_argmax_matches_probabilities": true,
+    "artifact_index_has_75_unique_entries": true,
+    "artifact_manifest_entry_matches_evidence": true,
+    "scope_claims_limited": true
+  },
+  "limitations": [
+    "complete original navigation-environment equivalence",
+    "historical navigation success rate",
+    "visual dependence or landmark function",
+    "immutable training-era source",
+    "complete historical run configuration"
+  ],
+  "verification_scope": "The five public files were parsed locally. The 75 original payload bytes are not present in the public commit; their actual bytes cannot be independently rehashed from this package."
+}
