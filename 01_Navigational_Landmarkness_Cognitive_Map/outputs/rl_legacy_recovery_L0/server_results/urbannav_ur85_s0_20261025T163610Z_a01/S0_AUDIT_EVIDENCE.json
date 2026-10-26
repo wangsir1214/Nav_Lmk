@@ -1,0 +1,127 @@
+{
+  "schema_version": "s0-public-audit-v1",
+  "run_id": "urbannav_ur85_s0_20261025T163610Z_a01",
+  "status": "PASS",
+  "handoff_state": "READY_FOR_LOCAL_S0_REVIEW",
+  "source_commit": "d3ba7f2f6f412bbd3692961301e666c88ecc8899",
+  "original_finished_utc": "2026-10-26T02:31:41.617710+00:00",
+  "review_export_utc": "2026-10-26T11:58:01.345702+00:00",
+  "researcher_technical_pass_approved": true,
+  "scope": "UR-85 structure, limited observation-path equivalence and independent Full forward interface smoke only",
+  "model": {
+    "run": "UR-85",
+    "checkpoint_update": 80000,
+    "hidden_size": 512,
+    "goal_dimensions": 2,
+    "action_count": 5,
+    "checkpoint_bytes": 1734776818,
+    "checkpoint_sha256": "fef170f6a01c9c9ba2361b7c7b81a4ddb9f0311a145766ed7d07006f7dc28a6e",
+    "original_full_object_loaded": true,
+    "modules_verified": 490,
+    "saved_parameters_and_buffers_verified": 629,
+    "parameters": 627,
+    "buffers": 2,
+    "state_dict_entries": 627,
+    "nonpersistent_position_id_buffers": 2,
+    "missing": 0,
+    "unexpected": 0,
+    "mismatches": 0,
+    "additional_modules_preserved": true,
+    "partial_loading_used": false
+  },
+  "source": {
+    "approved_files": 54,
+    "execution_copy_matches": 54,
+    "comparison_copy_matches": 54,
+    "actual_imports_and_original_method_slices_approved": true,
+    "immutable_historical_training_source_proven": false
+  },
+  "environment": {
+    "python": "3.12.3",
+    "dependencies": {
+      "torch": "2.4.0",
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "transformers": "4.44.2",
+      "tokenizers": "0.19.1",
+      "pillow": "10.4.0",
+      "six": "1.16.0",
+      "setuptools": "78.1.0"
+    },
+    "cuda": "12.1",
+    "cudnn": 90100,
+    "accelerator": "NVIDIA L20",
+    "recovery": "isolated environment from verified local cached wheels at recorded package versions",
+    "evaluation_mode": true,
+    "gradients_enabled": false,
+    "deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "tf32": false,
+    "seed": 0
+  },
+  "input_equivalence": {
+    "approved_images": 48,
+    "panoramas": 3,
+    "directions_per_panorama": 16,
+    "image_size": [
+      84,
+      84
+    ],
+    "layout": "CHW",
+    "channels": "BGR",
+    "raw_dtype": "uint8",
+    "raw_range": [
+      0,
+      255
+    ],
+    "original_observation_path_executed": true,
+    "equal_channel_values": 1016064,
+    "lossless_float32_cast_before_cnn": true,
+    "internal_cnn_divide_255_per_forward": 1,
+    "resize": false,
+    "rgb_conversion": false,
+    "imagenet_normalization": false,
+    "claim": "已验证限定样本及已核验观察路径的输入一致性。"
+  },
+  "forward": {
+    "independent_cases": 48,
+    "passed": 48,
+    "failed": 0,
+    "calls": 96,
+    "calls_per_case": 2,
+    "reset_state_each_case": true,
+    "same_fixed_2d_goal": true,
+    "zero_recurrent_initial_states": true,
+    "previous_action": 0,
+    "previous_reward": 0,
+    "reset_mask": 0,
+    "bitwise_repeatable_cases": 48,
+    "maximum_repeat_difference": 0,
+    "nan_inf_cases": 0,
+    "independent_softmax_max_difference": 9.882979834507921e-08,
+    "cnn_goal_gru_policy_gru_actor_critic_each_call_count": 96
+  },
+  "preservation": {
+    "model_retrained": false,
+    "s0r_model_execution": false,
+    "comparison_source_and_checkpoint_hashes_unchanged": true,
+    "original_s0_recorded_read_only_scope": true,
+    "claim_scope": "Original recorded execution guards and specified source/checkpoint hash checks; not an audit of an entire filesystem"
+  },
+  "artifact_verification": {
+    "sha256_list_entries_verified": 75,
+    "manifest_payload_entries_verified": 74,
+    "index_scope": "74 payloads plus ARTIFACT_MANIFEST.json; SHA256SUMS excludes itself",
+    "original_sha256sums_sha256": "92cc9d17d3dd0dd75b8bc9d412a48b93355c129db14b517321d12bf656fc08a1",
+    "original_artifact_manifest_sha256": "708863ec4ee57c48fee42570ab77962420cdd57ec18677418204f00b208fe735",
+    "original_runner_sha256": "9b64a65654c7e5871589aecf2fc8415d6cc0aa24eb78a83dcb5844072317a229"
+  },
+  "not_established": [
+    "complete original navigation-environment equivalence",
+    "historical navigation success rate",
+    "visual dependence or landmark function",
+    "immutable training-era source",
+    "complete historical run configuration"
+  ],
+  "next_stage_executed": false
+}
