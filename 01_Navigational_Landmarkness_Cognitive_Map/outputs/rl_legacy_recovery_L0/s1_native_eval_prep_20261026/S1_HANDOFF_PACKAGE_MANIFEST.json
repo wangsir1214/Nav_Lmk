@@ -15,8 +15,8 @@
     },
     {
       "path": "S0_LOCAL_REVIEW_EVIDENCE.json",
-      "size_bytes": 1594,
-      "sha256": "8f4270513c3e68ae85ef6a5cd97d08604e8c75e847f75c47747a564c9389fd22"
+      "size_bytes": 1553,
+      "sha256": "0e44a2dbdf029b3caaccd6b90849859413fc1a1e1afad7c556dfebdcd0434d94"
     },
     {
       "path": "HUMAN_S1_APPROVAL.md",
@@ -40,8 +40,8 @@
     },
     {
       "path": "EPISODE_DRAFT_AUDIT.json",
-      "size_bytes": 3602,
-      "sha256": "b2ab53d9c507b0615347f867ab982e1ac7e59d1daf148cae9eb12674fa85f2a9"
+      "size_bytes": 3476,
+      "sha256": "f1dd2df93e844de27f78e66bad3182a7d9d8f44b7c52001e78cf746c7d6cb4cc"
     },
     {
       "path": "S1_METRICS_SPEC.md",
@@ -55,18 +55,18 @@
     },
     {
       "path": "S1_PREPARATION_VALIDATION.json",
-      "size_bytes": 1030,
-      "sha256": "10e6547d89e64cc7cb9ec3f83e740cf4b30a38af84792f838f82fe573a0dcb98"
+      "size_bytes": 993,
+      "sha256": "5840adc2e4be624447086d4b6d454421275a9a84df387f7a2566d8b4fe356618"
     },
     {
       "path": "build_s1_handoff_manifest.py",
-      "size_bytes": 1718,
-      "sha256": "16d4c5f1b25901913617e00e94c4c36cb26c8486ef462bada71bc798ee648b40"
+      "size_bytes": 1853,
+      "sha256": "1b7e23c4a0e8998ae6493279b9823b1e0aff19866b1b207389bbf3e99c0e845a"
     },
     {
       "path": "validate_s1_handoff.py",
-      "size_bytes": 3884,
-      "sha256": "f19755fa6c0fd76107e0809cf671e046e3a7da3afbc80b4aba74d90413e3cabb"
+      "size_bytes": 4045,
+      "sha256": "b35d90ffd5a65dc433caefd48dfca8d7bdead5cf8d04831bc0cd28106e531d12"
     }
   ]
 }

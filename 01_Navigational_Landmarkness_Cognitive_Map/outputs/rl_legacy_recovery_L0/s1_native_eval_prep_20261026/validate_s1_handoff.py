@@ -17,7 +17,7 @@ def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as stream:
         for block in iter(lambda: stream.read(1 << 20), b""):
-            digest.update(block)
+            digest.update(block.replace(b"\r\n", b"\n").replace(b"\r", b"\n"))
     return digest.hexdigest()
 
 
@@ -26,9 +26,10 @@ def main() -> None:
     file_checks = {}
     for item in manifest["files"]:
         path = ROOT / item["path"]
+        canonical_size = len(path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")) if path.is_file() else -1
         file_checks[item["path"]] = (
             path.is_file()
-            and path.stat().st_size == item["size_bytes"]
+            and canonical_size == item["size_bytes"]
             and sha256(path) == item["sha256"]
         )
 

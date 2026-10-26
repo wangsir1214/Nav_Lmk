@@ -30,7 +30,7 @@ def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as stream:
         for block in iter(lambda: stream.read(1 << 20), b""):
-            digest.update(block)
+            digest.update(block.replace(b"\r\n", b"\n").replace(b"\r", b"\n"))
     return digest.hexdigest()
 
 
@@ -40,7 +40,8 @@ def main() -> None:
         path = ROOT / name
         if not path.is_file():
             raise SystemExit(f"missing handoff file: {name}")
-        records.append({"path": name, "size_bytes": path.stat().st_size, "sha256": sha256(path)})
+        canonical_size = len(path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n"))
+        records.append({"path": name, "size_bytes": canonical_size, "sha256": sha256(path)})
     manifest = {
         "format": "nav_lmk_s1_env_handoff_manifest_v1",
         "scope": "S1 environment-only smoke handoff; no PPO or rollout authorization",
