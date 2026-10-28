@@ -1,0 +1,5034 @@
+{
+  "status": "PASS",
+  "run_id": "urbannav_ur85_s1b_step2_r1_20261028T152102Z_a01",
+  "condition_aggregates": {
+    "Full": {
+      "overall": {
+        "episodes": 24,
+        "successes": 24,
+        "timeouts": 0,
+        "success_rate": 1.0,
+        "total_actions": 1576,
+        "successful_arrival_steps_only": {
+          "n": 24,
+          "mean": 65.66666666666667,
+          "median": 64.0,
+          "min": 1.0,
+          "max": 152.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 24,
+            "mean": 94.90119495492807,
+            "median": 94.85982378129985,
+            "min": 88.88312890500026,
+            "max": 99.37079760264585
+          },
+          "minimum_distance_m": {
+            "n": 24,
+            "mean": 94.90119495492807,
+            "median": 94.85982378129985,
+            "min": 88.88312890500026,
+            "max": 99.37079760264585
+          },
+          "net_goal_progress_m": {
+            "n": 24,
+            "mean": 195.6672906619361,
+            "median": 198.18814978111962,
+            "min": 4.937344224888832,
+            "max": 371.2332975752057
+          },
+          "first_success_step": {
+            "n": 24,
+            "mean": 65.66666666666667,
+            "median": 64.0,
+            "min": 1.0,
+            "max": 152.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 24,
+            "mean": 65.66666666666667,
+            "median": 64.0,
+            "min": 1.0,
+            "max": 152.0
+          },
+          "travelled_distance_m": {
+            "n": 24,
+            "mean": 339.0480547030632,
+            "median": 367.7834616210446,
+            "min": 9.166731718370562,
+            "max": 653.0844850879898
+          },
+          "forward_actions": {
+            "n": 24,
+            "mean": 41.625,
+            "median": 37.5,
+            "min": 1.0,
+            "max": 95.0
+          },
+          "forward_moves": {
+            "n": 24,
+            "mean": 35.708333333333336,
+            "median": 33.5,
+            "min": 1.0,
+            "max": 80.0
+          },
+          "forward_stays": {
+            "n": 24,
+            "mean": 5.916666666666667,
+            "median": 1.5,
+            "min": 0.0,
+            "max": 39.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 24,
+            "mean": 0.09994232963059346,
+            "median": 0.03412698412698413,
+            "min": 0.0,
+            "max": 0.5909090909090909
+          },
+          "rotations": {
+            "n": 24,
+            "mean": 24.041666666666668,
+            "median": 24.0,
+            "min": 0.0,
+            "max": 59.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 24,
+            "mean": 29.958333333333332,
+            "median": 25.5,
+            "min": 0.0,
+            "max": 76.0
+          },
+          "longest_stationary_run": {
+            "n": 24,
+            "mean": 9.083333333333334,
+            "median": 8.0,
+            "min": 0.0,
+            "max": 20.0
+          },
+          "trailing_stationary_actions": {
+            "n": 24,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 24,
+            "mean": 4.916666666666667,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 25.0
+          },
+          "unique_panos": {
+            "n": 24,
+            "mean": 31.791666666666668,
+            "median": 33.5,
+            "min": 2.0,
+            "max": 56.0
+          },
+          "episode_reward": {
+            "n": 24,
+            "mean": 349.9076983141067,
+            "median": 326.05939965371067,
+            "min": 13.0,
+            "max": 658.6555387738304
+          },
+          "mean_action_entropy_nats": {
+            "n": 24,
+            "mean": 0.09353240137037548,
+            "median": 0.06613295271223214,
+            "min": 0.0002966619472782034,
+            "max": 0.31659294050193365
+          },
+          "final_minus_minimum_m": {
+            "n": 24,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "improving_actions": {
+            "n": 24,
+            "mean": 29.791666666666668,
+            "median": 30.5,
+            "min": 1.0,
+            "max": 58.0
+          },
+          "retreating_actions": {
+            "n": 24,
+            "mean": 5.916666666666667,
+            "median": 3.0,
+            "min": 0.0,
+            "max": 22.0
+          },
+          "equal_distance_actions": {
+            "n": 24,
+            "mean": 29.958333333333332,
+            "median": 25.5,
+            "min": 0.0,
+            "max": 76.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.6548584785793622,
+          2.0811593636594974e-08,
+          1.6542335891140847e-11,
+          2.222046337003425e-12,
+          0.3451415037066535
+        ],
+        "action_step_weighted_probabilities": [
+          0.6332953274328315,
+          2.911981369392589e-08,
+          2.3275654406216613e-11,
+          3.1898211602679602e-12,
+          0.36670464710851636
+        ],
+        "action_selection_counts": [
+          999,
+          0,
+          0,
+          0,
+          577
+        ],
+        "action_step_weighted_entropy": 0.12196920326403946
+      },
+      "[100,200)": {
+        "episodes": 6,
+        "successes": 6,
+        "timeouts": 0,
+        "success_rate": 1.0,
+        "total_actions": 291,
+        "successful_arrival_steps_only": {
+          "n": 6,
+          "mean": 48.5,
+          "median": 43.5,
+          "min": 1.0,
+          "max": 96.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 96.74888287060857,
+            "median": 96.71439220938223,
+            "min": 94.5137913669012,
+            "max": 99.37079760264585
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 96.74888287060857,
+            "median": 96.71439220938223,
+            "min": 94.5137913669012,
+            "max": 99.37079760264585
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": 60.92362121608095,
+            "median": 73.27609331542068,
+            "min": 4.937344224888832,
+            "max": 78.63496133753897
+          },
+          "first_success_step": {
+            "n": 6,
+            "mean": 48.5,
+            "median": 43.5,
+            "min": 1.0,
+            "max": 96.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 48.5,
+            "median": 43.5,
+            "min": 1.0,
+            "max": 96.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 191.4763751913927,
+            "median": 153.9740812920768,
+            "min": 9.166731718370562,
+            "max": 396.99956340028984
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 27.0,
+            "median": 25.0,
+            "min": 1.0,
+            "max": 62.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 22.166666666666668,
+            "median": 19.0,
+            "min": 1.0,
+            "max": 51.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 4.833333333333333,
+            "median": 3.5,
+            "min": 0.0,
+            "max": 11.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.13373655913978494,
+            "median": 0.14583333333333331,
+            "min": 0.0,
+            "max": 0.3333333333333333
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 21.5,
+            "median": 21.0,
+            "min": 0.0,
+            "max": 39.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 26.333333333333332,
+            "median": 24.5,
+            "min": 0.0,
+            "max": 45.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 10.666666666666666,
+            "median": 12.5,
+            "min": 0.0,
+            "max": 16.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 3.1666666666666665,
+            "median": 1.5,
+            "min": 0.0,
+            "max": 11.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 20.0,
+            "median": 18.5,
+            "min": 2.0,
+            "max": 41.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 240.2731780257623,
+            "median": 224.4432499325917,
+            "min": 13.0,
+            "max": 515.8364366598474
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.11598457931512059,
+            "median": 0.10450205618031794,
+            "min": 0.0002966619472782034,
+            "max": 0.25022475579350417
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 15.5,
+            "median": 16.0,
+            "min": 1.0,
+            "max": 30.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 6.666666666666667,
+            "median": 4.0,
+            "min": 0.0,
+            "max": 21.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 26.333333333333332,
+            "median": 24.5,
+            "min": 0.0,
+            "max": 45.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.6231341081144751,
+          2.0352067847161515e-08,
+          9.212241062877565e-12,
+          9.908569073709254e-13,
+          0.37686587635650604
+        ],
+        "action_step_weighted_probabilities": [
+          0.5590425208420692,
+          2.543844048685408e-08,
+          1.221396794117092e-11,
+          1.3445656810028115e-12,
+          0.4409574574849924
+        ],
+        "action_selection_counts": [
+          162,
+          0,
+          0,
+          0,
+          129
+        ],
+        "action_step_weighted_entropy": 0.13517965073120763
+      },
+      "[200,300)": {
+        "episodes": 6,
+        "successes": 6,
+        "timeouts": 0,
+        "success_rate": 1.0,
+        "total_actions": 246,
+        "successful_arrival_steps_only": {
+          "n": 6,
+          "mean": 41.0,
+          "median": 31.0,
+          "min": 12.0,
+          "max": 101.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 94.47018453312752,
+            "median": 93.78658687645088,
+            "min": 92.07166190702765,
+            "max": 98.53126638373547
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 94.47018453312752,
+            "median": 93.78658687645088,
+            "min": 92.07166190702765,
+            "max": 98.53126638373547
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": 134.73326036453452,
+            "median": 130.2008751811466,
+            "min": 108.06419468292371,
+            "max": 174.87405177909307
+          },
+          "first_success_step": {
+            "n": 6,
+            "mean": 41.0,
+            "median": 31.0,
+            "min": 12.0,
+            "max": 101.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 41.0,
+            "median": 31.0,
+            "min": 12.0,
+            "max": 101.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 234.76744823542188,
+            "median": 219.5089848207757,
+            "min": 121.91920420038049,
+            "max": 392.136405648256
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 27.166666666666668,
+            "median": 18.0,
+            "min": 11.0,
+            "max": 66.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 20.333333333333332,
+            "median": 18.0,
+            "min": 11.0,
+            "max": 35.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 6.833333333333333,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 39.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.1074938574938575,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.5909090909090909
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 13.833333333333334,
+            "median": 13.0,
+            "min": 1.0,
+            "max": 35.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 20.666666666666668,
+            "median": 13.0,
+            "min": 1.0,
+            "max": 74.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 6.5,
+            "median": 4.5,
+            "min": 1.0,
+            "max": 20.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 1.1666666666666667,
+            "median": 0.5,
+            "min": 0.0,
+            "max": 5.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 20.166666666666668,
+            "median": 18.5,
+            "min": 12.0,
+            "max": 35.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 293.7270059782741,
+            "median": 221.06609014758868,
+            "min": 192.8725830961235,
+            "max": 481.88949669583405
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.06726018597923968,
+            "median": 0.02041292375041431,
+            "min": 0.0008284574983708588,
+            "max": 0.31659294050193365
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 18.166666666666668,
+            "median": 16.0,
+            "min": 11.0,
+            "max": 30.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 2.1666666666666665,
+            "median": 2.0,
+            "min": 0.0,
+            "max": 5.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 20.666666666666668,
+            "median": 13.0,
+            "min": 1.0,
+            "max": 74.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.6981407550704497,
+          2.1064161961267828e-08,
+          1.9865050984189394e-11,
+          3.165137173900873e-12,
+          0.30185922133482324
+        ],
+        "action_step_weighted_probabilities": [
+          0.6585704296984718,
+          4.798797528284218e-08,
+          4.793044439717543e-11,
+          7.73201247087412e-12,
+          0.34142952147960953
+        ],
+        "action_selection_counts": [
+          163,
+          0,
+          0,
+          0,
+          83
+        ],
+        "action_step_weighted_entropy": 0.1416173800237155
+      },
+      "[300,400)": {
+        "episodes": 6,
+        "successes": 6,
+        "timeouts": 0,
+        "success_rate": 1.0,
+        "total_actions": 506,
+        "successful_arrival_steps_only": {
+          "n": 6,
+          "mean": 84.33333333333333,
+          "median": 80.5,
+          "min": 46.0,
+          "max": 152.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 94.14841992460008,
+            "median": 94.72491871962683,
+            "min": 89.76443238338675,
+            "max": 96.93030317949966
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 94.14841992460008,
+            "median": 94.72491871962683,
+            "min": 89.76443238338675,
+            "max": 96.93030317949966
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": 260.5229784489748,
+            "median": 260.4018056657684,
+            "min": 221.50224778314617,
+            "max": 296.2556767273566
+          },
+          "first_success_step": {
+            "n": 6,
+            "mean": 84.33333333333333,
+            "median": 80.5,
+            "min": 46.0,
+            "max": 152.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 84.33333333333333,
+            "median": 80.5,
+            "min": 46.0,
+            "max": 152.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 449.1218171797297,
+            "median": 426.3175725410358,
+            "min": 340.09963092243123,
+            "max": 653.0844850879898
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 54.833333333333336,
+            "median": 50.0,
+            "min": 32.0,
+            "max": 95.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 48.5,
+            "median": 48.5,
+            "min": 32.0,
+            "max": 76.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 6.333333333333333,
+            "median": 2.5,
+            "min": 0.0,
+            "max": 19.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.0903950665144695,
+            "median": 0.06507936507936508,
+            "min": 0.0,
+            "max": 0.2
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 29.5,
+            "median": 28.0,
+            "min": 14.0,
+            "max": 57.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 35.833333333333336,
+            "median": 32.0,
+            "min": 14.0,
+            "max": 76.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 9.0,
+            "median": 7.5,
+            "min": 5.0,
+            "max": 17.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 9.166666666666666,
+            "median": 9.0,
+            "min": 1.0,
+            "max": 22.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 40.333333333333336,
+            "median": 40.0,
+            "min": 31.0,
+            "max": 55.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 433.9967037331314,
+            "median": 404.47477740191846,
+            "min": 317.1136214529263,
+            "max": 655.4985033280348
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.1089405176167884,
+            "median": 0.1036414642637107,
+            "min": 0.05904753330513788,
+            "max": 0.18640950767471157
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 39.666666666666664,
+            "median": 37.5,
+            "min": 31.0,
+            "max": 58.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 8.833333333333334,
+            "median": 9.0,
+            "min": 1.0,
+            "max": 18.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 35.833333333333336,
+            "median": 32.0,
+            "min": 14.0,
+            "max": 76.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.6439744288910786,
+          2.0554021697167507e-08,
+          1.3120598317065864e-11,
+          1.5509741173546248e-12,
+          0.3560255569443149
+        ],
+        "action_step_weighted_probabilities": [
+          0.639724625459926,
+          2.3964417370049434e-08,
+          1.5503271163460637e-11,
+          1.8496557565488523e-12,
+          0.3602753558466438
+        ],
+        "action_selection_counts": [
+          329,
+          0,
+          0,
+          0,
+          177
+        ],
+        "action_step_weighted_entropy": 0.12160231271243076
+      },
+      "[400,550]": {
+        "episodes": 6,
+        "successes": 6,
+        "timeouts": 0,
+        "success_rate": 1.0,
+        "total_actions": 533,
+        "successful_arrival_steps_only": {
+          "n": 6,
+          "mean": 88.83333333333333,
+          "median": 69.5,
+          "min": 58.0,
+          "max": 152.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 94.2372924913761,
+            "median": 94.14664941861535,
+            "min": 88.88312890500026,
+            "max": 97.51553958978441
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 94.2372924913761,
+            "median": 94.14664941861535,
+            "min": 88.88312890500026,
+            "max": 97.51553958978441
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": 326.489302618154,
+            "median": 320.0568391519758,
+            "min": 304.12926263751,
+            "max": 371.2332975752057
+          },
+          "first_success_step": {
+            "n": 6,
+            "mean": 88.83333333333333,
+            "median": 69.5,
+            "min": 58.0,
+            "max": 152.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 88.83333333333333,
+            "median": 69.5,
+            "min": 58.0,
+            "max": 152.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 480.8265782057087,
+            "median": 465.3778098124804,
+            "min": 400.248105905512,
+            "max": 629.7783848262497
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 57.5,
+            "median": 44.0,
+            "min": 38.0,
+            "max": 93.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 51.833333333333336,
+            "median": 43.0,
+            "min": 38.0,
+            "max": 80.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 5.666666666666667,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 19.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.0681438353742619,
+            "median": 0.022774327122153208,
+            "min": 0.0,
+            "max": 0.2235294117647059
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 31.333333333333332,
+            "median": 28.5,
+            "min": 16.0,
+            "max": 59.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 37.0,
+            "median": 28.5,
+            "min": 17.0,
+            "max": 72.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 10.166666666666666,
+            "median": 9.5,
+            "min": 6.0,
+            "max": 17.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 6.166666666666667,
+            "median": 0.5,
+            "min": 0.0,
+            "max": 25.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 46.666666666666664,
+            "median": 43.5,
+            "min": 39.0,
+            "max": 56.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 431.63390551925914,
+            "median": 388.1345191687972,
+            "min": 267.77888368104067,
+            "max": 658.6555387738304
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.08194432257035318,
+            "median": 0.0601442578129882,
+            "min": 0.010770252340195087,
+            "max": 0.20898438514886522
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 45.833333333333336,
+            "median": 42.5,
+            "min": 37.0,
+            "max": 58.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 6.0,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 22.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 37.0,
+            "median": 28.5,
+            "min": 17.0,
+            "max": 72.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.654184622241445,
+          2.1276123040783042e-08,
+          2.3971453200430568e-11,
+          3.1812171493872777e-12,
+          0.3458153601909699
+        ],
+        "action_step_weighted_probabilities": [
+          0.6560658091567608,
+          2.731557803213598e-08,
+          2.5314488072983878e-11,
+          3.3731494460820535e-12,
+          0.3439341676782425
+        ],
+        "action_selection_counts": [
+          345,
+          0,
+          0,
+          0,
+          188
+        ],
+        "action_step_weighted_entropy": 0.10603666090623033
+      }
+    },
+    "NoImage": {
+      "overall": {
+        "episodes": 24,
+        "successes": 2,
+        "timeouts": 22,
+        "success_rate": 0.08333333333333333,
+        "total_actions": 22275,
+        "successful_arrival_steps_only": {
+          "n": 2,
+          "mean": 137.5,
+          "median": 137.5,
+          "min": 1.0,
+          "max": 274.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 24,
+            "mean": 289.50891630634527,
+            "median": 315.2065077701228,
+            "min": 86.70773201721468,
+            "max": 485.28968981822027
+          },
+          "minimum_distance_m": {
+            "n": 24,
+            "mean": 260.9566847899044,
+            "median": 255.7919353224184,
+            "min": 86.70773201721468,
+            "max": 423.7215641528783
+          },
+          "net_goal_progress_m": {
+            "n": 24,
+            "mean": 1.0595693105189223,
+            "median": 3.684427423279004,
+            "min": -76.34208940946792,
+            "max": 127.18412678779194
+          },
+          "first_success_step": {
+            "n": 2,
+            "mean": 137.5,
+            "median": 137.5,
+            "min": 1.0,
+            "max": 274.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 24,
+            "mean": 928.125,
+            "median": 1000.0,
+            "min": 1.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 24,
+            "mean": 969.8590850557639,
+            "median": 1008.6331802416387,
+            "min": 1.9721878938589834,
+            "max": 2641.7849395960784
+          },
+          "forward_actions": {
+            "n": 24,
+            "mean": 275.9583333333333,
+            "median": 263.0,
+            "min": 1.0,
+            "max": 713.0
+          },
+          "forward_moves": {
+            "n": 24,
+            "mean": 108.25,
+            "median": 121.0,
+            "min": 1.0,
+            "max": 264.0
+          },
+          "forward_stays": {
+            "n": 24,
+            "mean": 167.70833333333334,
+            "median": 138.0,
+            "min": 0.0,
+            "max": 449.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 24,
+            "mean": 0.5676762939019157,
+            "median": 0.6062188785451397,
+            "min": 0.0,
+            "max": 0.7237288135593221
+          },
+          "rotations": {
+            "n": 24,
+            "mean": 652.1666666666666,
+            "median": 690.5,
+            "min": 0.0,
+            "max": 991.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 24,
+            "mean": 819.875,
+            "median": 855.0,
+            "min": 0.0,
+            "max": 996.0
+          },
+          "longest_stationary_run": {
+            "n": 24,
+            "mean": 121.45833333333333,
+            "median": 50.0,
+            "min": 0.0,
+            "max": 676.0
+          },
+          "trailing_stationary_actions": {
+            "n": 24,
+            "mean": 73.33333333333333,
+            "median": 13.0,
+            "min": 0.0,
+            "max": 676.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 24,
+            "mean": 91.66666666666667,
+            "median": 106.0,
+            "min": 0.0,
+            "max": 201.0
+          },
+          "unique_panos": {
+            "n": 24,
+            "mean": 17.583333333333332,
+            "median": 14.0,
+            "min": 2.0,
+            "max": 78.0
+          },
+          "episode_reward": {
+            "n": 24,
+            "mean": 24.004198321970474,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 434.28262919315864
+          },
+          "mean_action_entropy_nats": {
+            "n": 24,
+            "mean": 0.4249639066479043,
+            "median": 0.4967604933753176,
+            "min": 0.040906541734878385,
+            "max": 0.6575536523471491
+          },
+          "final_minus_minimum_m": {
+            "n": 24,
+            "mean": 28.552231516440887,
+            "median": 26.439475493920156,
+            "min": 0.0,
+            "max": 95.90217041538583
+          },
+          "improving_actions": {
+            "n": 24,
+            "mean": 55.25,
+            "median": 62.0,
+            "min": 1.0,
+            "max": 133.0
+          },
+          "retreating_actions": {
+            "n": 24,
+            "mean": 53.0,
+            "median": 57.0,
+            "min": 0.0,
+            "max": 131.0
+          },
+          "equal_distance_actions": {
+            "n": 24,
+            "mean": 819.875,
+            "median": 855.0,
+            "min": 0.0,
+            "max": 996.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.3246834447831268,
+          8.569452838623022e-08,
+          6.721255836866894e-11,
+          1.023411677135154e-11,
+          0.675316474251617
+        ],
+        "action_step_weighted_probabilities": [
+          0.29848964764464303,
+          7.9622780037232e-08,
+          6.048328552674082e-11,
+          9.844331638242091e-12,
+          0.7015102817038643
+        ],
+        "action_selection_counts": [
+          6623,
+          0,
+          0,
+          0,
+          15652
+        ],
+        "action_step_weighted_entropy": 0.4142020876951015
+      },
+      "[100,200)": {
+        "episodes": 6,
+        "successes": 1,
+        "timeouts": 5,
+        "success_rate": 0.16666666666666666,
+        "total_actions": 5001,
+        "successful_arrival_steps_only": {
+          "n": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 167.09423280218246,
+            "median": 180.17541235394717,
+            "min": 97.80186330019917,
+            "max": 217.11419914750897
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 143.90806908828904,
+            "median": 150.04429699156287,
+            "min": 97.80186330019917,
+            "max": 171.61618320180386
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -9.421728715492916,
+            "median": -14.489719185331055,
+            "min": -44.80467442237975,
+            "max": 47.36734998748551
+          },
+          "first_success_step": {
+            "n": 1,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 833.5,
+            "median": 1000.0,
+            "min": 1.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 1162.623416384155,
+            "median": 1090.535387728928,
+            "min": 1.9721878938589834,
+            "max": 2641.7849395960784
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 310.1666666666667,
+            "median": 274.0,
+            "min": 1.0,
+            "max": 713.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 111.0,
+            "median": 117.0,
+            "min": 1.0,
+            "max": 264.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 199.16666666666666,
+            "median": 157.0,
+            "min": 0.0,
+            "max": 449.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.5079221411194067,
+            "median": 0.5926445379460807,
+            "min": 0.0,
+            "max": 0.7237288135593221
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 523.3333333333334,
+            "median": 561.0,
+            "min": 0.0,
+            "max": 991.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 722.5,
+            "median": 853.0,
+            "min": 0.0,
+            "max": 996.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 146.16666666666666,
+            "median": 54.0,
+            "min": 0.0,
+            "max": 676.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 118.66666666666667,
+            "median": 6.5,
+            "min": 0.0,
+            "max": 676.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 90.16666666666667,
+            "median": 100.5,
+            "min": 0.0,
+            "max": 187.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 21.833333333333332,
+            "median": 15.0,
+            "min": 2.0,
+            "max": 78.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 20.240668423775464,
+            "median": 19.33016380933522,
+            "min": 0.0,
+            "max": 54.69085424875201
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.438582555649542,
+            "median": 0.516542094670456,
+            "min": 0.040906541734878385,
+            "max": 0.5554135926813961
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 23.18616371389342,
+            "median": 17.52547685614499,
+            "min": 0.0,
+            "max": 53.81083405560284
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 56.666666666666664,
+            "median": 61.0,
+            "min": 1.0,
+            "max": 133.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 54.333333333333336,
+            "median": 56.0,
+            "min": 0.0,
+            "max": 131.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 722.5,
+            "median": 853.0,
+            "min": 0.0,
+            "max": 996.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.44202988487352074,
+          1.0440676761739691e-07,
+          8.20837688087561e-11,
+          1.020648619878488e-11,
+          0.5579700023555791
+        ],
+        "action_step_weighted_probabilities": [
+          0.3792693870596916,
+          7.827597277244313e-08,
+          4.987677445828242e-11,
+          7.578471204383756e-12,
+          0.620730540152078
+        ],
+        "action_selection_counts": [
+          1861,
+          0,
+          0,
+          0,
+          3140
+        ],
+        "action_step_weighted_entropy": 0.41524438208529046
+      },
+      "[200,300)": {
+        "episodes": 6,
+        "successes": 1,
+        "timeouts": 5,
+        "success_rate": 0.16666666666666666,
+        "total_actions": 5274,
+        "successful_arrival_steps_only": {
+          "n": 1,
+          "mean": 274.0,
+          "median": 274.0,
+          "min": 274.0,
+          "max": 274.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 214.1371777771584,
+            "median": 233.70279302890629,
+            "min": 86.70773201721468,
+            "max": 308.4385712289503
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 191.24672610308585,
+            "median": 207.1072088508164,
+            "min": 86.70773201721468,
+            "max": 254.2457184617007
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": 15.066267120503616,
+            "median": 14.860424845647103,
+            "min": -76.34208940946792,
+            "max": 127.18412678779194
+          },
+          "first_success_step": {
+            "n": 1,
+            "mean": 274.0,
+            "median": 274.0,
+            "min": 274.0,
+            "max": 274.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 879.0,
+            "median": 1000.0,
+            "min": 274.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 847.4943180563961,
+            "median": 864.0683195703515,
+            "min": 79.60681046278074,
+            "max": 1738.8684231838604
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 228.0,
+            "median": 245.0,
+            "min": 11.0,
+            "max": 483.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 91.16666666666667,
+            "median": 96.5,
+            "min": 5.0,
+            "max": 180.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 136.83333333333334,
+            "median": 148.5,
+            "min": 6.0,
+            "max": 303.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.5802642994535602,
+            "median": 0.5679230419387324,
+            "min": 0.5,
+            "max": 0.6729559748427673
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 651.0,
+            "median": 648.5,
+            "min": 115.0,
+            "max": 989.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 787.8333333333334,
+            "median": 848.0,
+            "min": 222.0,
+            "max": 995.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 171.0,
+            "median": 106.5,
+            "min": 14.0,
+            "max": 475.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 85.33333333333333,
+            "median": 79.5,
+            "min": 0.0,
+            "max": 192.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 75.83333333333333,
+            "median": 74.5,
+            "min": 2.0,
+            "max": 151.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 16.333333333333332,
+            "median": 15.5,
+            "min": 4.0,
+            "max": 30.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 75.77612486410642,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 434.28262919315864
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.36546206662099906,
+            "median": 0.46350478354031793,
+            "min": 0.049516634070597434,
+            "max": 0.5764282891946105
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 22.890451674072597,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 95.90217041538583
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 45.5,
+            "median": 50.5,
+            "min": 3.0,
+            "max": 85.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 45.666666666666664,
+            "median": 46.0,
+            "min": 2.0,
+            "max": 95.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 787.8333333333334,
+            "median": 848.0,
+            "min": 222.0,
+            "max": 995.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.2910510778025542,
+          5.761326255034536e-08,
+          2.4771554820072214e-11,
+          3.489002464295737e-12,
+          0.7089488703951171
+        ],
+        "action_step_weighted_probabilities": [
+          0.25753010956774997,
+          5.642601161002714e-08,
+          2.3864614517860542e-11,
+          3.400963635716004e-12,
+          0.7424698422674262
+        ],
+        "action_selection_counts": [
+          1368,
+          0,
+          0,
+          0,
+          3906
+        ],
+        "action_step_weighted_entropy": 0.33652793376438933
+      },
+      "[300,400)": {
+        "episodes": 6,
+        "successes": 0,
+        "timeouts": 6,
+        "success_rate": 0.0,
+        "total_actions": 6000,
+        "successful_arrival_steps_only": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "max": null
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 354.511159611174,
+            "median": 355.63471059144285,
+            "min": 321.9744443112954,
+            "max": 383.4838110549548
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 317.7782903427911,
+            "median": 324.29475700935717,
+            "min": 257.3381521831361,
+            "max": 382.3651951901269
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": 0.1602387624009225,
+            "median": 2.95981314492235,
+            "min": -31.732297560086977,
+            "max": 34.76850301232548
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 1000.0,
+            "median": 1000.0,
+            "min": 1000.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 1023.1848174375979,
+            "median": 1111.828789248475,
+            "min": 59.191440414078016,
+            "max": 2311.722098783193
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 317.5,
+            "median": 319.0,
+            "min": 24.0,
+            "max": 632.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 125.33333333333333,
+            "median": 150.0,
+            "min": 9.0,
+            "max": 235.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 192.16666666666666,
+            "median": 169.0,
+            "min": 15.0,
+            "max": 397.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.602800563710355,
+            "median": 0.6265822784810127,
+            "min": 0.4323308270676692,
+            "max": 0.678082191780822
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 682.5,
+            "median": 681.0,
+            "min": 368.0,
+            "max": 976.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 874.6666666666666,
+            "median": 850.0,
+            "min": 765.0,
+            "max": 991.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 84.66666666666667,
+            "median": 41.0,
+            "min": 19.0,
+            "max": 240.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 64.0,
+            "median": 6.5,
+            "min": 1.0,
+            "max": 240.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 109.33333333333333,
+            "median": 130.5,
+            "min": 3.0,
+            "max": 201.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 17.0,
+            "median": 12.5,
+            "min": 7.0,
+            "max": 35.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.43068897392006344,
+            "median": 0.486370608766143,
+            "min": 0.13500064029208683,
+            "max": 0.5863673617787906
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 36.73286926838293,
+            "median": 43.15069682368912,
+            "min": 0.0,
+            "max": 74.90115484219962
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 64.5,
+            "median": 75.5,
+            "min": 7.0,
+            "max": 124.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 60.833333333333336,
+            "median": 74.5,
+            "min": 2.0,
+            "max": 111.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 874.6666666666666,
+            "median": 850.0,
+            "min": 765.0,
+            "max": 991.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.3147832224525046,
+          7.50405975183573e-08,
+          3.749460168282036e-11,
+          5.549258380176288e-12,
+          0.6852167144756435
+        ],
+        "action_step_weighted_probabilities": [
+          0.31478322245250456,
+          7.504059751835731e-08,
+          3.749460168282036e-11,
+          5.5492583801762875e-12,
+          0.6852167144756435
+        ],
+        "action_selection_counts": [
+          1905,
+          0,
+          0,
+          0,
+          4095
+        ],
+        "action_step_weighted_entropy": 0.43068897392006344
+      },
+      "[400,550]": {
+        "episodes": 6,
+        "successes": 0,
+        "timeouts": 6,
+        "success_rate": 0.0,
+        "total_actions": 6000,
+        "successful_arrival_steps_only": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "max": null
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 422.29309503486616,
+            "median": 399.96904698394326,
+            "min": 388.77915758737123,
+            "max": 485.28968981822027
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 390.89365362545146,
+            "median": 391.57251162098373,
+            "min": 360.9592711097779,
+            "max": 423.7215641528783
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -1.5664999253359326,
+            "median": 7.939219492639353,
+            "min": -67.76534827691626,
+            "max": 30.194382195079356
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 1000.0,
+            "median": 1000.0,
+            "min": 1000.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 846.1337883449061,
+            "median": 670.2771398005325,
+            "min": 180.88935305610252,
+            "max": 1595.0016075890442
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 248.16666666666666,
+            "median": 209.5,
+            "min": 36.0,
+            "max": 447.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 105.5,
+            "median": 95.0,
+            "min": 16.0,
+            "max": 213.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 142.66666666666666,
+            "median": 125.0,
+            "min": 20.0,
+            "max": 274.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.5797181713243406,
+            "median": 0.5842654735272186,
+            "min": 0.42487046632124353,
+            "max": 0.7152777777777778
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 751.8333333333334,
+            "median": 790.5,
+            "min": 553.0,
+            "max": 964.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 894.5,
+            "median": 905.0,
+            "min": 787.0,
+            "max": 984.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 84.0,
+            "median": 41.0,
+            "min": 27.0,
+            "max": 263.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 25.333333333333332,
+            "median": 19.0,
+            "min": 0.0,
+            "max": 85.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 91.33333333333333,
+            "median": 86.0,
+            "min": 11.0,
+            "max": 184.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 15.166666666666666,
+            "median": 10.0,
+            "min": 6.0,
+            "max": 30.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.465122030401013,
+            "median": 0.4716701578268236,
+            "min": 0.12904573324338348,
+            "max": 0.6575536523471491
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 31.399441409414617,
+            "median": 27.524720964236025,
+            "min": 6.467650892159952,
+            "max": 75.38613072975295
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 54.333333333333336,
+            "median": 48.5,
+            "min": 8.0,
+            "max": 108.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 51.166666666666664,
+            "median": 46.5,
+            "min": 8.0,
+            "max": 105.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 894.5,
+            "median": 905.0,
+            "min": 787.0,
+            "max": 984.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.25086959400392755,
+          1.0571748585882131e-07,
+          1.2450030816302712e-10,
+          2.1691720042149246e-11,
+          0.7491303097801283
+        ],
+        "action_step_weighted_probabilities": [
+          0.2508695940039276,
+          1.0571748585882131e-07,
+          1.2450030816302712e-10,
+          2.1691720042149246e-11,
+          0.7491303097801283
+        ],
+        "action_selection_counts": [
+          1489,
+          0,
+          0,
+          0,
+          4511
+        ],
+        "action_step_weighted_entropy": 0.46512203040101296
+      }
+    },
+    "ShuffledImage": {
+      "overall": {
+        "episodes": 24,
+        "successes": 1,
+        "timeouts": 23,
+        "success_rate": 0.041666666666666664,
+        "total_actions": 23001,
+        "successful_arrival_steps_only": {
+          "n": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 24,
+            "mean": 287.88897316871896,
+            "median": 273.7964821738669,
+            "min": 97.80186330019917,
+            "max": 492.91396537950976
+          },
+          "minimum_distance_m": {
+            "n": 24,
+            "mean": 272.33930940531656,
+            "median": 251.21457930777157,
+            "min": 97.80186330019917,
+            "max": 454.439489824237
+          },
+          "net_goal_progress_m": {
+            "n": 24,
+            "mean": 2.679512448145209,
+            "median": 1.8274569603082398,
+            "min": -87.75320624838491,
+            "max": 81.18134536851898
+          },
+          "first_success_step": {
+            "n": 1,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 24,
+            "mean": 958.375,
+            "median": 1000.0,
+            "min": 1.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 24,
+            "mean": 243.92810900030887,
+            "median": 54.7818020414311,
+            "min": 0.9860939469294917,
+            "max": 1680.5977170718209
+          },
+          "forward_actions": {
+            "n": 24,
+            "mean": 684.125,
+            "median": 703.5,
+            "min": 1.0,
+            "max": 990.0
+          },
+          "forward_moves": {
+            "n": 24,
+            "mean": 27.125,
+            "median": 8.5,
+            "min": 1.0,
+            "max": 172.0
+          },
+          "forward_stays": {
+            "n": 24,
+            "mean": 657.0,
+            "median": 691.0,
+            "min": 0.0,
+            "max": 988.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 24,
+            "mean": 0.9022531027947814,
+            "median": 0.9826305138792364,
+            "min": 0.0,
+            "max": 0.997979797979798
+          },
+          "rotations": {
+            "n": 24,
+            "mean": 274.25,
+            "median": 274.5,
+            "min": 0.0,
+            "max": 710.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 24,
+            "mean": 931.25,
+            "median": 989.5,
+            "min": 0.0,
+            "max": 998.0
+          },
+          "longest_stationary_run": {
+            "n": 24,
+            "mean": 693.25,
+            "median": 839.5,
+            "min": 0.0,
+            "max": 996.0
+          },
+          "trailing_stationary_actions": {
+            "n": 24,
+            "mean": 575.2916666666666,
+            "median": 839.5,
+            "min": 0.0,
+            "max": 996.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 24,
+            "mean": 21.083333333333332,
+            "median": 1.5,
+            "min": 0.0,
+            "max": 159.0
+          },
+          "unique_panos": {
+            "n": 24,
+            "mean": 7.041666666666667,
+            "median": 6.0,
+            "min": 2.0,
+            "max": 25.0
+          },
+          "episode_reward": {
+            "n": 24,
+            "mean": 4.640650366468189,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 32.85985369597902
+          },
+          "mean_action_entropy_nats": {
+            "n": 24,
+            "mean": 0.13308414882547356,
+            "median": 0.11214040557993744,
+            "min": 0.0004632686578321358,
+            "max": 0.33820358466424566
+          },
+          "final_minus_minimum_m": {
+            "n": 24,
+            "mean": 15.549663763402364,
+            "median": 8.998116467571009,
+            "min": 0.0,
+            "max": 117.70643255094188
+          },
+          "improving_actions": {
+            "n": 24,
+            "mean": 14.291666666666666,
+            "median": 3.5,
+            "min": 0.0,
+            "max": 97.0
+          },
+          "retreating_actions": {
+            "n": 24,
+            "mean": 12.833333333333334,
+            "median": 3.5,
+            "min": 0.0,
+            "max": 75.0
+          },
+          "equal_distance_actions": {
+            "n": 24,
+            "mean": 931.25,
+            "median": 989.5,
+            "min": 0.0,
+            "max": 998.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.7225507263925529,
+          3.859090363451138e-08,
+          5.6434746179777314e-11,
+          7.474014565549378e-12,
+          0.27744923726827536
+        ],
+        "action_step_weighted_probabilities": [
+          0.7145474821096521,
+          2.3397436648467557e-08,
+          1.818727983247086e-11,
+          2.9545938806202383e-12,
+          0.28545250035967845
+        ],
+        "action_selection_counts": [
+          16419,
+          0,
+          0,
+          0,
+          6582
+        ],
+        "action_step_weighted_entropy": 0.12540692966495445
+      },
+      "[100,200)": {
+        "episodes": 6,
+        "successes": 1,
+        "timeouts": 5,
+        "success_rate": 0.16666666666666666,
+        "total_actions": 5001,
+        "successful_arrival_steps_only": {
+          "n": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 171.70373643728405,
+            "median": 168.1399620354228,
+            "min": 97.80186330019917,
+            "max": 265.75896518856973
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 148.3709130206499,
+            "median": 156.3581367533348,
+            "min": 97.80186330019917,
+            "max": 171.61618320180386
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -14.031232350594529,
+            "median": 2.468672112444416,
+            "min": -87.75320624838491,
+            "max": 11.672493093659881
+          },
+          "first_success_step": {
+            "n": 1,
+            "mean": 1.0,
+            "median": 1.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 833.5,
+            "median": 1000.0,
+            "min": 1.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 154.46086093649458,
+            "median": 26.083010936742404,
+            "min": 0.9860939469294917,
+            "max": 811.6886569802455
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 508.8333333333333,
+            "median": 536.5,
+            "min": 1.0,
+            "max": 990.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 15.833333333333334,
+            "median": 3.0,
+            "min": 1.0,
+            "max": 77.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 493.0,
+            "median": 496.5,
+            "min": 0.0,
+            "max": 987.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.8028911747714756,
+            "median": 0.986070473635406,
+            "min": 0.0,
+            "max": 0.996969696969697
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 324.6666666666667,
+            "median": 429.0,
+            "min": 0.0,
+            "max": 599.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 817.6666666666666,
+            "median": 994.0,
+            "min": 0.0,
+            "max": 998.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 658.6666666666666,
+            "median": 918.5,
+            "min": 0.0,
+            "max": 994.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 648.0,
+            "median": 918.5,
+            "min": 0.0,
+            "max": 994.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 10.0,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 53.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 6.833333333333333,
+            "median": 3.0,
+            "min": 2.0,
+            "max": 25.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 13.085959183209587,
+            "median": 13.390570530536863,
+            "min": 0.0,
+            "max": 25.51507433193813
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.20713095922823202,
+            "median": 0.23642170796983109,
+            "min": 0.007236218755949382,
+            "max": 0.3098446272149629
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 23.33282341663417,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 117.70643255094188
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 7.0,
+            "median": 2.0,
+            "min": 1.0,
+            "max": 33.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 8.833333333333334,
+            "median": 1.0,
+            "min": 0.0,
+            "max": 44.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 817.6666666666666,
+            "median": 994.0,
+            "min": 0.0,
+            "max": 998.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.659739570759696,
+          9.056397506172019e-08,
+          1.6753830270412753e-10,
+          2.0072657577882083e-11,
+          0.3402603306608201
+        ],
+        "action_step_weighted_probabilities": [
+          0.6103832487784467,
+          3.106710727723468e-08,
+          1.3821541958962593e-11,
+          1.8032812921922645e-12,
+          0.38961672671451225
+        ],
+        "action_selection_counts": [
+          3053,
+          0,
+          0,
+          0,
+          1948
+        ],
+        "action_step_weighted_entropy": 0.18661287198193244
+      },
+      "[200,300)": {
+        "episodes": 6,
+        "successes": 0,
+        "timeouts": 6,
+        "success_rate": 0.0,
+        "total_actions": 6000,
+        "successful_arrival_steps_only": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "max": null
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 223.70716732819116,
+            "median": 227.23519344749985,
+            "min": 158.3808876516697,
+            "max": 281.833999159164
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 210.55593581443426,
+            "median": 207.00718425260078,
+            "min": 158.3808876516697,
+            "max": 268.4408859806987
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": 5.496277569470858,
+            "median": -0.027302370407113585,
+            "min": -13.393113178465342,
+            "max": 43.689646582550154
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 1000.0,
+            "median": 1000.0,
+            "min": 1000.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 164.2206161047389,
+            "median": 122.53555861072894,
+            "min": 24.68491276492132,
+            "max": 443.0674484360772
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 799.5,
+            "median": 906.0,
+            "min": 346.0,
+            "max": 989.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 14.0,
+            "median": 13.0,
+            "min": 2.0,
+            "max": 28.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 785.5,
+            "median": 879.5,
+            "min": 343.0,
+            "max": 985.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.9837438643958226,
+            "median": 0.9839251454340195,
+            "min": 0.9687848383500557,
+            "max": 0.9971949509116409
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 200.5,
+            "median": 94.0,
+            "min": 11.0,
+            "max": 654.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 986.0,
+            "median": 987.0,
+            "min": 972.0,
+            "max": 998.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 868.6666666666666,
+            "median": 855.0,
+            "min": 709.0,
+            "max": 996.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 642.0,
+            "median": 855.0,
+            "min": 27.0,
+            "max": 996.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 8.833333333333334,
+            "median": 8.0,
+            "min": 0.0,
+            "max": 20.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 6.166666666666667,
+            "median": 5.5,
+            "min": 3.0,
+            "max": 11.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 5.47664228266317,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 32.85985369597902
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.07736955059641985,
+            "median": 0.047239739310771356,
+            "min": 0.0004632686578321358,
+            "max": 0.1952170011752478
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 13.151231513756898,
+            "median": 9.936470739656016,
+            "min": 0.0,
+            "max": 39.57433276250944
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 6.833333333333333,
+            "median": 6.5,
+            "min": 1.0,
+            "max": 14.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 7.166666666666667,
+            "median": 6.0,
+            "min": 1.0,
+            "max": 17.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 986.0,
+            "median": 987.0,
+            "min": 972.0,
+            "max": 998.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.8008406260461852,
+          1.0598832915127341e-08,
+          4.392385302559454e-12,
+          5.704406489958793e-13,
+          0.1991593702380614
+        ],
+        "action_step_weighted_probabilities": [
+          0.8008406260461852,
+          1.0598832915127341e-08,
+          4.392385302559454e-12,
+          5.704406489958793e-13,
+          0.19915937023806146
+        ],
+        "action_selection_counts": [
+          4797,
+          0,
+          0,
+          0,
+          1203
+        ],
+        "action_step_weighted_entropy": 0.07736955059641985
+      },
+      "[300,400)": {
+        "episodes": 6,
+        "successes": 0,
+        "timeouts": 6,
+        "success_rate": 0.0,
+        "total_actions": 6000,
+        "successful_arrival_steps_only": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "max": null
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 333.1073521170471,
+            "median": 337.25972848772113,
+            "min": 233.98827263484446,
+            "max": 404.6572513318913
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 323.8146563734698,
+            "median": 328.2573644183731,
+            "min": 233.98827263484446,
+            "max": 381.68136218737055
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": 21.564046256527764,
+            "median": 16.136086985704395,
+            "min": -18.917215878800903,
+            "max": 81.18134536851898
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 1000.0,
+            "median": 1000.0,
+            "min": 1000.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 205.3105502945115,
+            "median": 153.3291539189292,
+            "min": 50.651451582221576,
+            "max": 515.7669464655381
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 702.3333333333334,
+            "median": 716.0,
+            "min": 437.0,
+            "max": 976.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 31.333333333333332,
+            "median": 23.0,
+            "min": 5.0,
+            "max": 88.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 671.0,
+            "median": 695.0,
+            "min": 349.0,
+            "max": 964.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.9427972140396648,
+            "median": 0.965270276352507,
+            "min": 0.7986270022883295,
+            "max": 0.9932249322493225
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 297.6666666666667,
+            "median": 284.0,
+            "min": 24.0,
+            "max": 563.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 968.6666666666666,
+            "median": 977.0,
+            "min": 912.0,
+            "max": 995.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 594.6666666666666,
+            "median": 638.5,
+            "min": 113.0,
+            "max": 962.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 368.6666666666667,
+            "median": 289.0,
+            "min": 0.0,
+            "max": 962.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 23.333333333333332,
+            "median": 14.5,
+            "min": 1.0,
+            "max": 78.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 9.0,
+            "median": 9.0,
+            "min": 5.0,
+            "max": 13.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.13939948089350696,
+            "median": 0.1495160771177225,
+            "min": 0.011839504713553446,
+            "max": 0.2478142587699188
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 9.292695743577335,
+            "median": 5.957726802194799,
+            "min": 0.0,
+            "max": 28.11476803612004
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 17.833333333333332,
+            "median": 13.5,
+            "min": 4.0,
+            "max": 48.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 13.5,
+            "median": 9.5,
+            "min": 1.0,
+            "max": 40.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 968.6666666666666,
+            "median": 977.0,
+            "min": 912.0,
+            "max": 995.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.7033002133401554,
+          2.2185934228662046e-08,
+          1.3187118698097896e-11,
+          2.1013284004755806e-12,
+          0.2966997713267343
+        ],
+        "action_step_weighted_probabilities": [
+          0.7033002133401554,
+          2.2185934228662046e-08,
+          1.3187118698097893e-11,
+          2.10132840047558e-12,
+          0.2966997713267343
+        ],
+        "action_selection_counts": [
+          4214,
+          0,
+          0,
+          0,
+          1786
+        ],
+        "action_step_weighted_entropy": 0.13939948089350696
+      },
+      "[400,550]": {
+        "episodes": 6,
+        "successes": 0,
+        "timeouts": 6,
+        "success_rate": 0.0,
+        "total_actions": 6000,
+        "successful_arrival_steps_only": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "max": null
+        },
+        "metrics": {
+          "final_distance_m": {
+            "n": 6,
+            "mean": 423.0376367923534,
+            "median": 412.2576567189488,
+            "min": 376.67589181086845,
+            "max": 492.91396537950976
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 406.61573241271236,
+            "median": 401.66114884101444,
+            "min": 367.6325041596179,
+            "max": 454.439489824237
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -2.3110416828232587,
+            "median": 0.0,
+            "min": -28.024396154287786,
+            "max": 24.39679332104538
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 1000.0,
+            "median": 1000.0,
+            "min": 1000.0,
+            "max": 1000.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 451.72040866549037,
+            "median": 48.44930296196941,
+            "min": 8.178355519468028,
+            "max": 1680.5977170718209
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 725.8333333333334,
+            "median": 813.0,
+            "min": 290.0,
+            "max": 990.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 47.333333333333336,
+            "median": 6.0,
+            "min": 2.0,
+            "max": 172.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 678.5,
+            "median": 807.0,
+            "min": 194.0,
+            "max": 988.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.8795801579721622,
+            "median": 0.9928309381937143,
+            "min": 0.6268980477223427,
+            "max": 0.997979797979798
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 274.1666666666667,
+            "median": 187.0,
+            "min": 10.0,
+            "max": 710.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 952.6666666666666,
+            "median": 994.0,
+            "min": 828.0,
+            "max": 998.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 651.0,
+            "median": 928.0,
+            "min": 22.0,
+            "max": 995.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 642.5,
+            "median": 928.0,
+            "min": 0.0,
+            "max": 995.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 42.166666666666664,
+            "median": 1.5,
+            "min": 0.0,
+            "max": 159.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 6.166666666666667,
+            "median": 5.0,
+            "min": 2.0,
+            "max": 14.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.10843660458373545,
+            "median": 0.06090500624454456,
+            "min": 0.0023786454535057386,
+            "max": 0.33820358466424566
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 16.421904379641052,
+            "median": 13.451408683892197,
+            "min": 3.9855266125018716,
+            "max": 38.47447555527276
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 25.5,
+            "median": 2.5,
+            "min": 0.0,
+            "max": 97.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 21.833333333333332,
+            "median": 3.5,
+            "min": 1.0,
+            "max": 75.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 952.6666666666666,
+            "median": 994.0,
+            "min": 828.0,
+            "max": 998.0
+          }
+        },
+        "mean_episode_action_probabilities": [
+          0.7263224954241755,
+          3.101487233253589e-08,
+          4.062117801432437e-11,
+          7.15163163484397e-12,
+          0.27367747684748556
+        ],
+        "action_step_weighted_probabilities": [
+          0.7263224954241755,
+          3.101487233253589e-08,
+          4.0621178014324376e-11,
+          7.151631634843973e-12,
+          0.27367747684748556
+        ],
+        "action_selection_counts": [
+          4355,
+          0,
+          0,
+          0,
+          1645
+        ],
+        "action_step_weighted_entropy": 0.10843660458373545
+      }
+    }
+  },
+  "paired_comparisons": {
+    "NoImage": {
+      "overall": {
+        "episodes": 24,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 22,
+          "Full_1_control_1": 2
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 24,
+            "mean": -0.9166666666666666,
+            "median": -1.0,
+            "min": -1.0,
+            "max": 0.0
+          },
+          "final_distance_m": {
+            "n": 24,
+            "mean": 194.60772135141715,
+            "median": 221.27944320709082,
+            "min": -8.49812417848382,
+            "max": 390.78281182122197
+          },
+          "minimum_distance_m": {
+            "n": 24,
+            "mean": 166.0554898349763,
+            "median": 162.17483311150698,
+            "min": -8.49812417848382,
+            "max": 330.065292502862
+          },
+          "net_goal_progress_m": {
+            "n": 24,
+            "mean": -194.60772135141715,
+            "median": -221.27944320709082,
+            "min": -390.78281182122197,
+            "max": 8.49812417848382
+          },
+          "first_success_step": {
+            "n": 2,
+            "mean": 86.5,
+            "median": 86.5,
+            "min": 0.0,
+            "max": 173.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 24,
+            "mean": 862.4583333333334,
+            "median": 932.0,
+            "min": 0.0,
+            "max": 988.0
+          },
+          "travelled_distance_m": {
+            "n": 24,
+            "mean": 630.8110303527005,
+            "median": 480.8366260555031,
+            "min": -334.55899008082366,
+            "max": 2326.2971955884227
+          },
+          "forward_actions": {
+            "n": 24,
+            "mean": 234.33333333333334,
+            "median": 212.5,
+            "min": -25.0,
+            "max": 681.0
+          },
+          "forward_moves": {
+            "n": 24,
+            "mean": 72.54166666666667,
+            "median": 73.5,
+            "min": -29.0,
+            "max": 236.0
+          },
+          "forward_stays": {
+            "n": 24,
+            "mean": 161.79166666666666,
+            "median": 127.0,
+            "min": 0.0,
+            "max": 445.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 24,
+            "mean": 0.46773396427132213,
+            "median": 0.5254666953312552,
+            "min": 0.0,
+            "max": 0.7152777777777778
+          },
+          "rotations": {
+            "n": 24,
+            "mean": 628.125,
+            "median": 665.0,
+            "min": 0.0,
+            "max": 985.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 24,
+            "mean": 789.9166666666666,
+            "median": 827.5,
+            "min": 0.0,
+            "max": 991.0
+          },
+          "longest_stationary_run": {
+            "n": 24,
+            "mean": 112.375,
+            "median": 42.5,
+            "min": -6.0,
+            "max": 660.0
+          },
+          "trailing_stationary_actions": {
+            "n": 24,
+            "mean": 73.33333333333333,
+            "median": 13.0,
+            "min": 0.0,
+            "max": 676.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 24,
+            "mean": 86.75,
+            "median": 93.0,
+            "min": 0.0,
+            "max": 194.0
+          },
+          "unique_panos": {
+            "n": 24,
+            "mean": -14.208333333333334,
+            "median": -16.0,
+            "min": -49.0,
+            "max": 54.0
+          },
+          "episode_reward": {
+            "n": 24,
+            "mean": -325.90349999213635,
+            "median": -307.1602902612533,
+            "min": -658.6555387738304,
+            "max": 0.0
+          },
+          "mean_action_entropy_nats": {
+            "n": 24,
+            "mean": 0.3314315052775289,
+            "median": 0.36761951354983813,
+            "min": -0.028561592413499065,
+            "max": 0.5996513185121299
+          },
+          "final_minus_minimum_m": {
+            "n": 24,
+            "mean": 28.552231516440887,
+            "median": 26.439475493920156,
+            "min": 0.0,
+            "max": 95.90217041538583
+          },
+          "improving_actions": {
+            "n": 24,
+            "mean": 25.458333333333332,
+            "median": 25.0,
+            "min": -34.0,
+            "max": 115.0
+          },
+          "retreating_actions": {
+            "n": 24,
+            "mean": 47.083333333333336,
+            "median": 43.5,
+            "min": -3.0,
+            "max": 121.0
+          },
+          "equal_distance_actions": {
+            "n": 24,
+            "mean": 789.9166666666666,
+            "median": 827.5,
+            "min": 0.0,
+            "max": 991.0
+          },
+          "mean_probability_0": {
+            "n": 24,
+            "mean": -0.3301750337962354,
+            "median": -0.29192286586097943,
+            "min": -0.7651629116072325,
+            "max": 0.25978963358680185
+          },
+          "mean_probability_1": {
+            "n": 24,
+            "mean": 6.488293474963525e-08,
+            "median": 3.7831926636688204e-08,
+            "min": -4.7098559306594076e-08,
+            "max": 2.3337235743881024e-07
+          },
+          "mean_probability_2": {
+            "n": 24,
+            "mean": 5.067022247752811e-11,
+            "median": 1.7012173421063885e-11,
+            "min": -8.459355105871744e-11,
+            "max": 3.037040851711287e-10
+          },
+          "mean_probability_3": {
+            "n": 24,
+            "mean": 8.012070434348112e-12,
+            "median": 2.5383222813982963e-12,
+            "min": -1.465132599817627e-11,
+            "max": 5.7451134911934573e-11
+          },
+          "mean_probability_4": {
+            "n": 24,
+            "mean": 0.33017497054496353,
+            "median": 0.29192275667993944,
+            "min": -0.2597897619149568,
+            "max": 0.7651629111724318
+          }
+        }
+      },
+      "[100,200)": {
+        "episodes": 6,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 5,
+          "Full_1_control_1": 1
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 6,
+            "mean": -0.8333333333333334,
+            "median": -1.0,
+            "min": -1.0,
+            "max": 0.0
+          },
+          "final_distance_m": {
+            "n": 6,
+            "mean": 70.34534993157388,
+            "median": 85.23409440775328,
+            "min": 0.0,
+            "max": 121.48727802894368
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 47.15918621768045,
+            "median": 53.45433507389287,
+            "min": 0.0,
+            "max": 77.10239183490266
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -70.34534993157388,
+            "median": -85.23409440775328,
+            "min": -121.48727802894368,
+            "max": 0.0
+          },
+          "first_success_step": {
+            "n": 1,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 785.0,
+            "median": 941.0,
+            "min": 0.0,
+            "max": 964.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 971.1470411927622,
+            "median": 824.2346807522547,
+            "min": -170.37412413723754,
+            "max": 2326.2971955884227
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 283.1666666666667,
+            "median": 234.0,
+            "min": -7.0,
+            "max": 681.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 88.83333333333333,
+            "median": 84.0,
+            "min": -12.0,
+            "max": 236.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 194.33333333333334,
+            "median": 150.0,
+            "min": 0.0,
+            "max": 445.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.3741855819796219,
+            "median": 0.4276686182491951,
+            "min": 0.0,
+            "max": 0.5555555555555556
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 501.8333333333333,
+            "median": 537.0,
+            "min": 0.0,
+            "max": 967.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 696.1666666666666,
+            "median": 830.0,
+            "min": 0.0,
+            "max": 972.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 135.5,
+            "median": 43.0,
+            "min": 0.0,
+            "max": 660.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 118.66666666666667,
+            "median": 6.5,
+            "min": 0.0,
+            "max": 676.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 87.0,
+            "median": 95.0,
+            "min": 0.0,
+            "max": 182.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": 1.8333333333333333,
+            "median": -3.0,
+            "min": -22.0,
+            "max": 54.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": -220.03250960198685,
+            "median": -183.412505351059,
+            "min": -515.8364366598474,
+            "max": 0.0
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.3225979763344214,
+            "median": 0.3661382145993677,
+            "min": -0.028561592413499065,
+            "max": 0.5551169307341179
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 23.18616371389342,
+            "median": 17.52547685614499,
+            "min": 0.0,
+            "max": 53.81083405560284
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 41.166666666666664,
+            "median": 39.0,
+            "min": -9.0,
+            "max": 115.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 47.666666666666664,
+            "median": 45.0,
+            "min": -3.0,
+            "max": 121.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 696.1666666666666,
+            "median": 830.0,
+            "min": 0.0,
+            "max": 972.0
+          },
+          "mean_probability_0": {
+            "n": 6,
+            "mean": -0.18110422324095446,
+            "median": -0.2238786644916286,
+            "min": -0.4332403017666511,
+            "max": 0.25978963358680185
+          },
+          "mean_probability_1": {
+            "n": 6,
+            "mean": 8.40546997702354e-08,
+            "median": 6.702332638185964e-08,
+            "min": 4.374964103850269e-09,
+            "max": 2.3337235743881024e-07
+          },
+          "mean_probability_2": {
+            "n": 6,
+            "mean": 7.287152774587854e-11,
+            "median": 3.722481914602486e-11,
+            "min": -2.796101045933757e-12,
+            "max": 2.420576524593196e-10
+          },
+          "mean_probability_3": {
+            "n": 6,
+            "mean": 9.215629291413956e-12,
+            "median": 5.93993678600224e-12,
+            "min": -5.094884271450021e-13,
+            "max": 2.3269181523841772e-11
+          },
+          "mean_probability_4": {
+            "n": 6,
+            "mean": 0.1811041259990731,
+            "median": 0.223878503545906,
+            "min": -0.2597897619149568,
+            "max": 0.43324030361765575
+          }
+        }
+      },
+      "[200,300)": {
+        "episodes": 6,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 5,
+          "Full_1_control_1": 1
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 6,
+            "mean": -0.8333333333333334,
+            "median": -1.0,
+            "min": -1.0,
+            "max": 0.0
+          },
+          "final_distance_m": {
+            "n": 6,
+            "mean": 119.66699324403089,
+            "median": 137.71758535733767,
+            "min": -8.49812417848382,
+            "max": 216.36690932192266
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 96.7765415699583,
+            "median": 111.80574470543485,
+            "min": -8.49812417848382,
+            "max": 160.6788842600951
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -119.66699324403089,
+            "median": -137.71758535733767,
+            "min": -216.36690932192266,
+            "max": 8.49812417848382
+          },
+          "first_success_step": {
+            "n": 1,
+            "mean": 173.0,
+            "median": 173.0,
+            "min": 173.0,
+            "max": 173.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 838.0,
+            "median": 969.0,
+            "min": 173.0,
+            "max": 988.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 612.7268698209741,
+            "median": 633.2505505435986,
+            "min": -312.5295951854753,
+            "max": 1616.9492189834798
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 200.83333333333334,
+            "median": 204.0,
+            "min": -25.0,
+            "max": 463.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 70.83333333333333,
+            "median": 75.0,
+            "min": -29.0,
+            "max": 160.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 130.0,
+            "median": 129.0,
+            "min": 4.0,
+            "max": 303.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.4727704419597027,
+            "median": 0.5536412512218963,
+            "min": 0.08204688393367632,
+            "max": 0.6273291925465838
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 637.1666666666666,
+            "median": 639.5,
+            "min": 80.0,
+            "max": 985.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 767.1666666666666,
+            "median": 839.0,
+            "min": 148.0,
+            "max": 991.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 164.5,
+            "median": 103.0,
+            "min": -6.0,
+            "max": 468.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 85.33333333333333,
+            "median": 79.5,
+            "min": 0.0,
+            "max": 192.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 74.66666666666667,
+            "median": 71.5,
+            "min": 2.0,
+            "max": 151.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": -3.8333333333333335,
+            "median": -2.0,
+            "min": -31.0,
+            "max": 13.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": -217.9508811141677,
+            "median": -204.257707319668,
+            "min": -451.2590013084989,
+            "max": -47.606867502675414
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.2982018806417594,
+            "median": 0.3098659915897466,
+            "min": 0.021397335783090877,
+            "max": 0.5637217399812885
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 22.890451674072597,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 95.90217041538583
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 27.333333333333332,
+            "median": 31.5,
+            "min": -26.0,
+            "max": 69.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 43.5,
+            "median": 43.5,
+            "min": -3.0,
+            "max": 92.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 767.1666666666666,
+            "median": 839.0,
+            "min": 148.0,
+            "max": 991.0
+          },
+          "mean_probability_0": {
+            "n": 6,
+            "mean": -0.4070896772678955,
+            "median": -0.3785857011749978,
+            "min": -0.7651629116072325,
+            "max": -0.11512815825097278
+          },
+          "mean_probability_1": {
+            "n": 6,
+            "mean": 3.654910058907754e-08,
+            "median": 2.515611378176556e-08,
+            "min": -4.7098559306594076e-08,
+            "max": 1.0581852050649015e-07
+          },
+          "mean_probability_2": {
+            "n": 6,
+            "mean": 4.906503835882824e-12,
+            "median": 6.456651585830025e-12,
+            "min": -8.459355105871744e-11,
+            "max": 6.220947656215704e-11
+          },
+          "mean_probability_3": {
+            "n": 6,
+            "mean": 3.238652903948642e-13,
+            "median": 8.257727409273279e-13,
+            "min": -1.465132599817627e-11,
+            "max": 9.56944354834292e-12
+          },
+          "mean_probability_4": {
+            "n": 6,
+            "mean": 0.4070896490602938,
+            "median": 0.37858564306790743,
+            "min": 0.11512819308488259,
+            "max": 0.7651629111724318
+          }
+        }
+      },
+      "[300,400)": {
+        "episodes": 6,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 6,
+          "Full_1_control_1": 0
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 6,
+            "mean": -1.0,
+            "median": -1.0,
+            "min": -1.0,
+            "max": -1.0
+          },
+          "final_distance_m": {
+            "n": 6,
+            "mean": 260.3627396865739,
+            "median": 258.9540752277757,
+            "min": 226.19197709225898,
+            "max": 293.71937867156805
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 223.629870418191,
+            "median": 229.67211592079443,
+            "min": 163.67078196291885,
+            "max": 292.60076280674014
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -260.3627396865739,
+            "median": -258.9540752277757,
+            "min": -293.71937867156805,
+            "max": -226.19197709225898
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 915.6666666666666,
+            "median": 919.5,
+            "min": 848.0,
+            "max": 954.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 574.0630002578682,
+            "median": 676.4763968893335,
+            "min": -334.55899008082366,
+            "max": 1904.5007310647945
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 262.6666666666667,
+            "median": 258.0,
+            "min": -8.0,
+            "max": 587.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 76.83333333333333,
+            "median": 96.0,
+            "min": -29.0,
+            "max": 192.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 185.83333333333334,
+            "median": 162.0,
+            "min": 15.0,
+            "max": 395.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.5124054971958855,
+            "median": 0.5746648512777546,
+            "min": 0.23830097632140052,
+            "max": 0.625
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 653.0,
+            "median": 656.0,
+            "min": 338.0,
+            "max": 962.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 838.8333333333334,
+            "median": 818.0,
+            "min": 733.0,
+            "max": 977.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 75.66666666666667,
+            "median": 32.5,
+            "min": 12.0,
+            "max": 235.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 64.0,
+            "median": 6.5,
+            "min": 1.0,
+            "max": 240.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 100.16666666666667,
+            "median": 119.0,
+            "min": 2.0,
+            "max": 194.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": -23.333333333333332,
+            "median": -23.0,
+            "min": -46.0,
+            "max": -2.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": -433.9967037331314,
+            "median": -404.47477740191846,
+            "min": -655.4985033280348,
+            "max": -317.1136214529263
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.32174845630327503,
+            "median": 0.38272914450243234,
+            "min": 0.072202869016,
+            "max": 0.5273198284736527
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 36.73286926838293,
+            "median": 43.15069682368912,
+            "min": 0.0,
+            "max": 74.90115484219962
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 24.833333333333332,
+            "median": 34.5,
+            "min": -34.0,
+            "max": 88.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 52.0,
+            "median": 61.5,
+            "min": 1.0,
+            "max": 104.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 838.8333333333334,
+            "median": 818.0,
+            "min": 733.0,
+            "max": 977.0
+          },
+          "mean_probability_0": {
+            "n": 6,
+            "mean": -0.3291912064385741,
+            "median": -0.3645422666737203,
+            "min": -0.6541140756593509,
+            "max": 0.030979628990411623
+          },
+          "mean_probability_1": {
+            "n": 6,
+            "mean": 5.448657582118981e-08,
+            "median": 3.462749164105826e-08,
+            "min": 3.210750451883317e-09,
+            "max": 1.5330979580149252e-07
+          },
+          "mean_probability_2": {
+            "n": 6,
+            "mean": 2.4374003365754496e-11,
+            "median": 1.6119187294844607e-11,
+            "min": -1.7125145786875328e-11,
+            "max": 8.299584746766989e-11
+          },
+          "mean_probability_3": {
+            "n": 6,
+            "mean": 3.998284262821663e-12,
+            "median": 3.27274438701762e-12,
+            "min": -2.0107339090645785e-12,
+            "max": 1.2361062590542608e-11
+          },
+          "mean_probability_4": {
+            "n": 6,
+            "mean": 0.3291911575313285,
+            "median": 0.3645421955495579,
+            "min": -0.030979664421767694,
+            "max": 0.65411407393107
+          }
+        }
+      },
+      "[400,550]": {
+        "episodes": 6,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 6,
+          "Full_1_control_1": 0
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 6,
+            "mean": -1.0,
+            "median": -1.0,
+            "min": -1.0,
+            "max": -1.0
+          },
+          "final_distance_m": {
+            "n": 6,
+            "mean": 328.05580254349,
+            "median": 303.1394705785666,
+            "min": 299.89602868237097,
+            "max": 390.78281182122197
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 296.6563611340754,
+            "median": 294.2769838429791,
+            "min": 267.1728502695455,
+            "max": 330.065292502862
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -328.05580254349,
+            "median": -303.1394705785666,
+            "min": -390.78281182122197,
+            "max": -299.89602868237097
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 911.1666666666666,
+            "median": 930.5,
+            "min": 848.0,
+            "max": 942.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": 365.3072101391976,
+            "median": 155.2638944346517,
+            "min": -289.90488319208873,
+            "max": 1141.9330736888778
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 190.66666666666666,
+            "median": 122.0,
+            "min": -6.0,
+            "max": 405.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": 53.666666666666664,
+            "median": 22.0,
+            "min": -25.0,
+            "max": 175.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 137.0,
+            "median": 115.5,
+            "min": 19.0,
+            "max": 273.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.5115743359500786,
+            "median": 0.5254666953312552,
+            "min": 0.2850855200846844,
+            "max": 0.7152777777777778
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 720.5,
+            "median": 745.0,
+            "min": 526.0,
+            "max": 948.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 857.5,
+            "median": 843.5,
+            "min": 756.0,
+            "max": 967.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 73.83333333333333,
+            "median": 27.0,
+            "min": 19.0,
+            "max": 257.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 25.333333333333332,
+            "median": 19.0,
+            "min": 0.0,
+            "max": 85.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 85.16666666666667,
+            "median": 68.0,
+            "min": 11.0,
+            "max": 184.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": -31.5,
+            "median": -35.5,
+            "min": -49.0,
+            "max": -9.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": -431.63390551925914,
+            "median": -388.1345191687972,
+            "min": -658.6555387738304,
+            "max": -267.77888368104067
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.3831777078306598,
+            "median": 0.3838385135645669,
+            "min": 0.09392958957708208,
+            "max": 0.5996513185121299
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 31.399441409414617,
+            "median": 27.524720964236025,
+            "min": 6.467650892159952,
+            "max": 75.38613072975295
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": 8.5,
+            "median": -7.5,
+            "min": -33.0,
+            "max": 71.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 45.166666666666664,
+            "median": 29.5,
+            "min": 8.0,
+            "max": 104.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 857.5,
+            "median": 843.5,
+            "min": 756.0,
+            "max": 967.0
+          },
+          "mean_probability_0": {
+            "n": 6,
+            "mean": -0.40331502823751747,
+            "median": -0.44500009741035434,
+            "min": -0.6735776918364748,
+            "max": -0.11338917792861503
+          },
+          "mean_probability_1": {
+            "n": 6,
+            "mean": 8.444136281803827e-08,
+            "median": 3.904933630299376e-08,
+            "min": -3.328404312490183e-08,
+            "max": 2.1865971998114776e-07
+          },
+          "mean_probability_2": {
+            "n": 6,
+            "mean": 1.0052885496259654e-10,
+            "median": 2.097295694537747e-11,
+            "min": -3.4322447418630914e-11,
+            "max": 3.037040851711287e-10
+          },
+          "mean_probability_3": {
+            "n": 6,
+            "mean": 1.851050289276197e-11,
+            "median": 2.8929357509477203e-12,
+            "min": -5.193349125842913e-12,
+            "max": 5.7451134911934573e-11
+          },
+          "mean_probability_4": {
+            "n": 6,
+            "mean": 0.4033149495891584,
+            "median": 0.4450001009639034,
+            "min": 0.1133889585335851,
+            "max": 0.6735776760718224
+          }
+        }
+      }
+    },
+    "ShuffledImage": {
+      "overall": {
+        "episodes": 24,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 23,
+          "Full_1_control_1": 1
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 24,
+            "mean": -0.9583333333333334,
+            "median": -1.0,
+            "min": -1.0,
+            "max": 0.0
+          },
+          "final_distance_m": {
+            "n": 24,
+            "mean": 192.98777821379088,
+            "median": 177.32766627174115,
+            "min": 0.0,
+            "max": 399.2576937294935
+          },
+          "minimum_distance_m": {
+            "n": 24,
+            "mean": 177.43811445038853,
+            "median": 157.59747709686013,
+            "min": 0.0,
+            "max": 360.78321817422074
+          },
+          "net_goal_progress_m": {
+            "n": 24,
+            "mean": -192.98777821379088,
+            "median": -177.32766627174115,
+            "min": -399.2576937294935,
+            "max": 0.0
+          },
+          "first_success_step": {
+            "n": 1,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 24,
+            "mean": 892.7083333333334,
+            "median": 932.0,
+            "min": 0.0,
+            "max": 988.0
+          },
+          "travelled_distance_m": {
+            "n": 24,
+            "mean": -95.11994570275438,
+            "median": -223.00103240628323,
+            "min": -572.5838535628274,
+            "max": 1259.2827012383498
+          },
+          "forward_actions": {
+            "n": 24,
+            "mean": 642.5,
+            "median": 654.5,
+            "min": 0.0,
+            "max": 969.0
+          },
+          "forward_moves": {
+            "n": 24,
+            "mean": -8.583333333333334,
+            "median": -20.5,
+            "min": -64.0,
+            "max": 134.0
+          },
+          "forward_stays": {
+            "n": 24,
+            "mean": 651.0833333333334,
+            "median": 671.5,
+            "min": 0.0,
+            "max": 985.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 24,
+            "mean": 0.802310773164188,
+            "median": 0.9223930361248844,
+            "min": 0.0,
+            "max": 0.9965986394557823
+          },
+          "rotations": {
+            "n": 24,
+            "mean": 250.20833333333334,
+            "median": 244.0,
+            "min": -29.0,
+            "max": 651.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 24,
+            "mean": 901.2916666666666,
+            "median": 955.0,
+            "min": 0.0,
+            "max": 987.0
+          },
+          "longest_stationary_run": {
+            "n": 24,
+            "mean": 684.1666666666666,
+            "median": 833.0,
+            "min": 0.0,
+            "max": 987.0
+          },
+          "trailing_stationary_actions": {
+            "n": 24,
+            "mean": 575.2916666666666,
+            "median": 839.5,
+            "min": 0.0,
+            "max": 996.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 24,
+            "mean": 16.166666666666668,
+            "median": 1.0,
+            "min": -10.0,
+            "max": 159.0
+          },
+          "unique_panos": {
+            "n": 24,
+            "mean": -24.75,
+            "median": -25.0,
+            "min": -54.0,
+            "max": 9.0
+          },
+          "episode_reward": {
+            "n": 24,
+            "mean": -345.26704794763856,
+            "median": -326.05939965371067,
+            "min": -658.6555387738304,
+            "max": 0.0
+          },
+          "mean_action_entropy_nats": {
+            "n": 24,
+            "mean": 0.0395517474550981,
+            "median": 0.025908655604645392,
+            "min": -0.18416947690769125,
+            "max": 0.30954796526768474
+          },
+          "final_minus_minimum_m": {
+            "n": 24,
+            "mean": 15.549663763402364,
+            "median": 8.998116467571009,
+            "min": 0.0,
+            "max": 117.70643255094188
+          },
+          "improving_actions": {
+            "n": 24,
+            "mean": -15.5,
+            "median": -16.0,
+            "min": -53.0,
+            "max": 60.0
+          },
+          "retreating_actions": {
+            "n": 24,
+            "mean": 6.916666666666667,
+            "median": 0.5,
+            "min": -20.0,
+            "max": 74.0
+          },
+          "equal_distance_actions": {
+            "n": 24,
+            "mean": 901.2916666666666,
+            "median": 955.0,
+            "min": 0.0,
+            "max": 987.0
+          },
+          "mean_probability_0": {
+            "n": 24,
+            "mean": 0.06769224781319087,
+            "median": 0.06335328785744843,
+            "min": -0.3432231576287564,
+            "max": 0.5202566760661167
+          },
+          "mean_probability_1": {
+            "n": 24,
+            "mean": 1.7779309997916394e-08,
+            "median": 2.057471612399699e-09,
+            "min": -9.784123769698335e-08,
+            "max": 3.8656032641526394e-07
+          },
+          "mean_probability_2": {
+            "n": 24,
+            "mean": 3.989241028863646e-11,
+            "median": 3.429911924988023e-13,
+            "min": -1.106320465802173e-10,
+            "max": 9.35790806714902e-10
+          },
+          "mean_probability_3": {
+            "n": 24,
+            "mean": 5.251968228545954e-12,
+            "median": 1.2644194388711728e-13,
+            "min": -1.8208426860999705e-11,
+            "max": 1.1143610146924004e-10
+          },
+          "mean_probability_4": {
+            "n": 24,
+            "mean": -0.06769226643837815,
+            "median": -0.06335324122409375,
+            "min": -0.5202566738489298,
+            "max": 0.3432232068260239
+          }
+        }
+      },
+      "[100,200)": {
+        "episodes": 6,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 5,
+          "Full_1_control_1": 1
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 6,
+            "mean": -0.8333333333333334,
+            "median": -1.0,
+            "min": -1.0,
+            "max": 0.0
+          },
+          "final_distance_m": {
+            "n": 6,
+            "mean": 74.95485356667548,
+            "median": 73.06960579268954,
+            "min": 0.0,
+            "max": 166.3881675859239
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 51.622030150041326,
+            "median": 58.47530957010738,
+            "min": 0.0,
+            "max": 77.10239183490266
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -74.95485356667548,
+            "median": -73.06960579268954,
+            "min": -166.3881675859239,
+            "max": 0.0
+          },
+          "first_success_step": {
+            "n": 1,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 785.0,
+            "median": 941.0,
+            "min": 0.0,
+            "max": 964.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": -37.015514254898136,
+            "median": -127.1022037686435,
+            "min": -369.65416727781155,
+            "max": 692.432607542359
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 481.8333333333333,
+            "median": 496.5,
+            "min": 0.0,
+            "max": 958.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": -6.333333333333333,
+            "median": -13.5,
+            "min": -48.0,
+            "max": 62.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 488.1666666666667,
+            "median": 489.5,
+            "min": 0.0,
+            "max": 983.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.6691546156316908,
+            "median": 0.7510682904861563,
+            "min": 0.0,
+            "max": 0.9965986394557823
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 303.1666666666667,
+            "median": 400.0,
+            "min": -29.0,
+            "max": 585.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 791.3333333333334,
+            "median": 953.0,
+            "min": 0.0,
+            "max": 974.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 648.0,
+            "median": 904.5,
+            "min": 0.0,
+            "max": 981.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 648.0,
+            "median": 918.5,
+            "min": 0.0,
+            "max": 994.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 6.833333333333333,
+            "median": 0.5,
+            "min": -10.0,
+            "max": 53.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": -13.166666666666666,
+            "median": -14.5,
+            "min": -38.0,
+            "max": 9.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": -227.18721884255274,
+            "median": -208.85251430497078,
+            "min": -490.3213623279093,
+            "max": 0.0
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.0911463799131114,
+            "median": 0.07395607489225021,
+            "min": -0.06373236157129727,
+            "max": 0.30954796526768474
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 23.33282341663417,
+            "median": 0.0,
+            "min": 0.0,
+            "max": 117.70643255094188
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": -8.5,
+            "median": -13.0,
+            "min": -28.0,
+            "max": 19.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 2.1666666666666665,
+            "median": -2.0,
+            "min": -20.0,
+            "max": 43.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 791.3333333333334,
+            "median": 953.0,
+            "min": 0.0,
+            "max": 974.0
+          },
+          "mean_probability_0": {
+            "n": 6,
+            "mean": 0.03660546264522082,
+            "median": -0.014234627635800468,
+            "min": -0.3324816499986126,
+            "max": 0.5202566760661167
+          },
+          "mean_probability_1": {
+            "n": 6,
+            "mean": 7.021190721455867e-08,
+            "median": 1.0034596808362436e-08,
+            "min": -1.1844028616596839e-08,
+            "max": 3.8656032641526394e-07
+          },
+          "mean_probability_2": {
+            "n": 6,
+            "mean": 1.5832606164124993e-10,
+            "median": 4.4683106117005416e-12,
+            "min": -9.538270117368767e-12,
+            "max": 9.35790806714902e-10
+          },
+          "mean_probability_3": {
+            "n": 6,
+            "mean": 1.908180067051116e-11,
+            "median": 7.242865684398791e-13,
+            "min": -1.0849500101820317e-12,
+            "max": 1.1143610146924004e-10
+          },
+          "mean_probability_4": {
+            "n": 6,
+            "mean": -0.03660554569568584,
+            "median": 0.014234605220277058,
+            "min": -0.5202566738489298,
+            "max": 0.3324816666634189
+          }
+        }
+      },
+      "[200,300)": {
+        "episodes": 6,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 6,
+          "Full_1_control_1": 0
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 6,
+            "mean": -1.0,
+            "median": -1.0,
+            "min": -1.0,
+            "max": -1.0
+          },
+          "final_distance_m": {
+            "n": 6,
+            "mean": 129.23698279506365,
+            "median": 133.5964343961368,
+            "min": 64.37454810037356,
+            "max": 188.2671649575584
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 116.08575128130674,
+            "median": 111.96486270625712,
+            "min": 64.37454810037356,
+            "max": 174.87405177909307
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -129.23698279506365,
+            "median": -133.5964343961368,
+            "min": -188.2671649575584,
+            "max": -64.37454810037356
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 959.0,
+            "median": 969.0,
+            "min": 899.0,
+            "max": 988.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": -70.546832130683,
+            "median": -82.15779750174924,
+            "min": -351.5615660066995,
+            "max": 255.57710954527104
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 772.3333333333334,
+            "median": 894.0,
+            "min": 309.0,
+            "max": 969.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": -6.333333333333333,
+            "median": -5.0,
+            "min": -32.0,
+            "max": 15.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 778.6666666666666,
+            "median": 879.5,
+            "min": 341.0,
+            "max": 985.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.8762500069019653,
+            "median": 0.9707312169892355,
+            "min": 0.40628586000254996,
+            "max": 0.9959555106167847
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 186.66666666666666,
+            "median": 91.5,
+            "min": 2.0,
+            "max": 637.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 965.3333333333334,
+            "median": 971.0,
+            "min": 924.0,
+            "max": 987.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 862.1666666666666,
+            "median": 851.5,
+            "min": 707.0,
+            "max": 981.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 642.0,
+            "median": 855.0,
+            "min": 27.0,
+            "max": 996.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 7.666666666666667,
+            "median": 7.5,
+            "min": -5.0,
+            "max": 20.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": -14.0,
+            "median": -13.0,
+            "min": -32.0,
+            "max": -1.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": -288.250363695611,
+            "median": -221.06609014758868,
+            "min": -481.88949669583405,
+            "max": -161.34892077803204
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.010109364617180157,
+            "median": 0.02000996727034528,
+            "min": -0.18416947690769125,
+            "max": 0.16709770288774123
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 13.151231513756898,
+            "median": 9.936470739656016,
+            "min": 0.0,
+            "max": 39.57433276250944
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": -11.333333333333334,
+            "median": -9.0,
+            "min": -29.0,
+            "max": 3.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 5.0,
+            "median": 4.0,
+            "min": -3.0,
+            "max": 17.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 965.3333333333334,
+            "median": 971.0,
+            "min": 924.0,
+            "max": 987.0
+          },
+          "mean_probability_0": {
+            "n": 6,
+            "mean": 0.10269987097573548,
+            "median": 0.09246221821939549,
+            "min": -0.32264593557302257,
+            "max": 0.4557327989560786
+          },
+          "mean_probability_1": {
+            "n": 6,
+            "mean": -1.0465329046140487e-08,
+            "median": 2.988826416569631e-09,
+            "min": -9.784123769698335e-08,
+            "max": 2.0014757258976475e-08
+          },
+          "mean_probability_2": {
+            "n": 6,
+            "mean": -1.547266568162994e-11,
+            "median": 2.0285558721300912e-12,
+            "min": -1.106320465802173e-10,
+            "max": 8.494092251027832e-12
+          },
+          "mean_probability_3": {
+            "n": 6,
+            "mean": -2.5946965249049936e-12,
+            "median": 3.291854029107611e-13,
+            "min": -1.8208426860999705e-11,
+            "max": 1.3707517127109977e-12
+          },
+          "mean_probability_4": {
+            "n": 6,
+            "mean": -0.10269985109676183,
+            "median": -0.09246216886965325,
+            "min": -0.45573280603178123,
+            "max": 0.32264592380002316
+          }
+        }
+      },
+      "[300,400)": {
+        "episodes": 6,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 6,
+          "Full_1_control_1": 0
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 6,
+            "mean": -1.0,
+            "median": -1.0,
+            "min": -1.0,
+            "max": -1.0
+          },
+          "final_distance_m": {
+            "n": 6,
+            "mean": 238.95893219244712,
+            "median": 242.6370873991584,
+            "min": 140.3209024146272,
+            "max": 308.22628378405676
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 229.66623644886974,
+            "median": 233.6347233298103,
+            "min": 140.3209024146272,
+            "max": 291.9169298039838
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -238.95893219244712,
+            "median": -242.6370873991584,
+            "min": -308.22628378405676,
+            "max": -140.3209024146272
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 915.6666666666666,
+            "median": 919.5,
+            "min": 848.0,
+            "max": 954.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": -243.81126688521817,
+            "median": -288.7082828429752,
+            "min": -572.5838535628274,
+            "max": 70.35316910186475
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 647.5,
+            "median": 682.5,
+            "min": 370.0,
+            "max": 931.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": -17.166666666666668,
+            "median": -28.0,
+            "min": -55.0,
+            "max": 34.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 664.6666666666666,
+            "median": 693.5,
+            "min": 336.0,
+            "max": 962.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.8524021475251953,
+            "median": 0.9253855600616896,
+            "min": 0.6045971515420608,
+            "max": 0.952056277056277
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 268.1666666666667,
+            "median": 264.0,
+            "min": -6.0,
+            "max": 544.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 932.8333333333334,
+            "median": 946.0,
+            "min": 880.0,
+            "max": 966.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 585.6666666666666,
+            "median": 633.5,
+            "min": 96.0,
+            "max": 955.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 368.6666666666667,
+            "median": 289.0,
+            "min": 0.0,
+            "max": 962.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 14.166666666666666,
+            "median": 0.0,
+            "min": -6.0,
+            "max": 67.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": -31.333333333333332,
+            "median": -28.0,
+            "min": -49.0,
+            "max": -25.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": -433.9967037331314,
+            "median": -404.47477740191846,
+            "min": -655.4985033280348,
+            "max": -317.1136214529263
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.03045896327671857,
+            "median": 0.012789469480629805,
+            "min": -0.08098043986153947,
+            "max": 0.16197929223877044
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 9.292695743577335,
+            "median": 5.957726802194799,
+            "min": 0.0,
+            "max": 28.11476803612004
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": -21.833333333333332,
+            "median": -24.5,
+            "min": -46.0,
+            "max": 5.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 4.666666666666667,
+            "median": -2.5,
+            "min": -9.0,
+            "max": 29.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 932.8333333333334,
+            "median": 946.0,
+            "min": 880.0,
+            "max": 966.0
+          },
+          "mean_probability_0": {
+            "n": 6,
+            "mean": 0.05932578444907677,
+            "median": 0.09231842460620304,
+            "min": -0.3325760157247428,
+            "max": 0.367532249157819
+          },
+          "mean_probability_1": {
+            "n": 6,
+            "mean": 1.6319125314945414e-09,
+            "median": -6.431673900678952e-09,
+            "min": -2.3460164387967565e-08,
+            "max": 4.732392277918782e-08
+          },
+          "mean_probability_2": {
+            "n": 6,
+            "mean": 6.652038103203228e-14,
+            "median": -5.615985790520738e-12,
+            "min": -2.4766413191236082e-11,
+            "max": 4.321240399671221e-11
+          },
+          "mean_probability_3": {
+            "n": 6,
+            "mean": 5.503542831209556e-13,
+            "median": -5.682127835468155e-13,
+            "min": -3.118153823988268e-12,
+            "max": 8.632887928070303e-12
+          },
+          "mean_probability_4": {
+            "n": 6,
+            "mean": -0.0593257856175806,
+            "median": -0.09231843824577224,
+            "min": -0.3675322338248137,
+            "max": 0.3325759995361458
+          }
+        }
+      },
+      "[400,550]": {
+        "episodes": 6,
+        "success_contingency": {
+          "Full_0_control_0": 0,
+          "Full_0_control_1": 0,
+          "Full_1_control_0": 6,
+          "Full_1_control_1": 0
+        },
+        "control_minus_Full": {
+          "success": {
+            "n": 6,
+            "mean": -1.0,
+            "median": -1.0,
+            "min": -1.0,
+            "max": -1.0
+          },
+          "final_distance_m": {
+            "n": 6,
+            "mean": 328.8003443009773,
+            "median": 316.24644792555745,
+            "min": 287.7927629058682,
+            "max": 399.2576937294935
+          },
+          "minimum_distance_m": {
+            "n": 6,
+            "mean": 312.37843992133634,
+            "median": 304.36562106300977,
+            "min": 278.74937525461763,
+            "max": 360.78321817422074
+          },
+          "net_goal_progress_m": {
+            "n": 6,
+            "mean": -328.8003443009773,
+            "median": -316.24644792555745,
+            "min": -399.2576937294935,
+            "max": -287.7927629058682
+          },
+          "first_success_step": {
+            "n": 0,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "max": null
+          },
+          "steps_to_success_or_cap": {
+            "n": 6,
+            "mean": 911.1666666666666,
+            "median": 930.5,
+            "min": 848.0,
+            "max": 942.0
+          },
+          "travelled_distance_m": {
+            "n": 6,
+            "mean": -29.106169540218293,
+            "median": -387.0718681148822,
+            "min": -494.6839875245904,
+            "max": 1259.2827012383498
+          },
+          "forward_actions": {
+            "n": 6,
+            "mean": 668.3333333333334,
+            "median": 769.5,
+            "min": 197.0,
+            "max": 942.0
+          },
+          "forward_moves": {
+            "n": 6,
+            "mean": -4.5,
+            "median": -35.0,
+            "min": -64.0,
+            "max": 134.0
+          },
+          "forward_stays": {
+            "n": 6,
+            "mean": 672.8333333333334,
+            "median": 806.5,
+            "min": 181.0,
+            "max": 985.0
+          },
+          "ineffective_forward_ratio": {
+            "n": 6,
+            "mean": 0.8114363225979003,
+            "median": 0.8711143323594613,
+            "min": 0.5291805710048202,
+            "max": 0.9940740740740741
+          },
+          "rotations": {
+            "n": 6,
+            "mean": 242.83333333333334,
+            "median": 166.0,
+            "min": -22.0,
+            "max": 651.0
+          },
+          "stationary_actions_including_rotations": {
+            "n": 6,
+            "mean": 915.6666666666666,
+            "median": 958.5,
+            "min": 797.0,
+            "max": 975.0
+          },
+          "longest_stationary_run": {
+            "n": 6,
+            "mean": 640.8333333333334,
+            "median": 920.5,
+            "min": 9.0,
+            "max": 987.0
+          },
+          "trailing_stationary_actions": {
+            "n": 6,
+            "mean": 642.5,
+            "median": 928.0,
+            "min": 0.0,
+            "max": 995.0
+          },
+          "revisit_arrivals_after_departure": {
+            "n": 6,
+            "mean": 36.0,
+            "median": 1.5,
+            "min": -10.0,
+            "max": 159.0
+          },
+          "unique_panos": {
+            "n": 6,
+            "mean": -40.5,
+            "median": -40.5,
+            "min": -54.0,
+            "max": -25.0
+          },
+          "episode_reward": {
+            "n": 6,
+            "mean": -431.63390551925914,
+            "median": -388.1345191687972,
+            "min": -658.6555387738304,
+            "max": -267.77888368104067
+          },
+          "mean_action_entropy_nats": {
+            "n": 6,
+            "mean": 0.026492282013382277,
+            "median": -0.031280286177492636,
+            "min": -0.11712703758323273,
+            "max": 0.28030125082922647
+          },
+          "final_minus_minimum_m": {
+            "n": 6,
+            "mean": 16.421904379641052,
+            "median": 13.451408683892197,
+            "min": 3.9855266125018716,
+            "max": 38.47447555527276
+          },
+          "improving_actions": {
+            "n": 6,
+            "mean": -20.333333333333332,
+            "median": -38.5,
+            "min": -53.0,
+            "max": 60.0
+          },
+          "retreating_actions": {
+            "n": 6,
+            "mean": 15.833333333333334,
+            "median": 3.5,
+            "min": -11.0,
+            "max": 74.0
+          },
+          "equal_distance_actions": {
+            "n": 6,
+            "mean": 915.6666666666666,
+            "median": 958.5,
+            "min": 797.0,
+            "max": 975.0
+          },
+          "mean_probability_0": {
+            "n": 6,
+            "mean": 0.07213787318273039,
+            "median": 0.1518453444786227,
+            "min": -0.3432231576287564,
+            "max": 0.3084068712653991
+          },
+          "mean_probability_1": {
+            "n": 6,
+            "mean": 9.738749291752849e-09,
+            "median": -1.6517566403807513e-09,
+            "min": -5.748206095419696e-08,
+            "max": 1.1402677178022907e-07
+          },
+          "mean_probability_2": {
+            "n": 6,
+            "mean": 1.66497248138938e-11,
+            "median": 1.490266385476126e-12,
+            "min": -3.848468293490337e-11,
+            "max": 1.3836016058726403e-10
+          },
+          "mean_probability_3": {
+            "n": 6,
+            "mean": 3.970414485456694e-12,
+            "median": 3.9516225074875687e-13,
+            "min": -5.189884721309155e-12,
+            "max": 2.7086360592085768e-11
+          },
+          "mean_probability_4": {
+            "n": 6,
+            "mean": -0.07213788334348432,
+            "median": -0.15184535289310752,
+            "min": -0.3084068612208462,
+            "max": 0.3432232068260239
+          }
+        }
+      }
+    }
+  },
+  "donor_exposure": {
+    "action_step_weighted": {
+      "min_m": 8.411919987477798,
+      "p10_m": 61.56352400705451,
+      "p25_m": 102.32562392263362,
+      "median_m": 186.73097626558555,
+      "p75_m": 254.66699117923096,
+      "p90_m": 350.9675965366824,
+      "max_m": 444.25322120927217,
+      "n": 23001,
+      "mean_m": 188.69510136037545,
+      "lt30m_count": 979,
+      "lt30m_fraction": 0.04256336681013869,
+      "lt50m_count": 1972,
+      "lt50m_fraction": 0.08573540280857354,
+      "lt100m_count": 5484,
+      "lt100m_fraction": 0.2384244163297248,
+      "lt200m_count": 11708,
+      "lt200m_fraction": 0.509021346897961
+    },
+    "unique_source_panos_across_all_episodes": {
+      "min_m": 8.411919987477798,
+      "p10_m": 65.82980024266591,
+      "p25_m": 125.04334744761282,
+      "median_m": 223.0896829067687,
+      "p75_m": 278.3833209056532,
+      "p90_m": 364.659017908669,
+      "max_m": 444.25322120927217,
+      "n": 153,
+      "mean_m": 211.29472438850456,
+      "lt30m_count": 5,
+      "lt30m_fraction": 0.032679738562091505,
+      "lt50m_count": 7,
+      "lt50m_fraction": 0.0457516339869281,
+      "lt100m_count": 26,
+      "lt100m_fraction": 0.16993464052287582,
+      "lt200m_count": 66,
+      "lt200m_fraction": 0.43137254901960786
+    },
+    "episode_source_pairs_equal_weight": {
+      "min_m": 8.411919987477798,
+      "p10_m": 66.067081713844,
+      "p25_m": 125.01602525732055,
+      "median_m": 218.24171280459683,
+      "p75_m": 272.80263539957616,
+      "p90_m": 357.216157125934,
+      "max_m": 444.25322120927217,
+      "n": 168,
+      "mean_m": 208.98541474078428,
+      "lt30m_count": 5,
+      "lt30m_fraction": 0.02976190476190476,
+      "lt50m_count": 7,
+      "lt50m_fraction": 0.041666666666666664,
+      "lt100m_count": 28,
+      "lt100m_fraction": 0.16666666666666666,
+      "lt200m_count": 75,
+      "lt200m_fraction": 0.44642857142857145
+    },
+    "definition": "Only observations supplied before actual ShuffledImage actions. Terminal next observations excluded. NoImage mapped distances are not visual exposure."
+  },
+  "scope": "24 frozen paired episodes;48 new trajectories;Full24 referenced;no diagnostic counts",
+  "timeout_first_success_step": null,
+  "timeout_steps_to_success_or_cap": 1000,
+  "ordinary_successful_steps_mean_excludes_timeouts": true,
+  "no_SPL": true,
+  "uncertainty_intervals": "not computed; descriptive paired statistics only; action steps are not independent samples"
+}
