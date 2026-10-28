@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "run_id": "urbannav_ur85_s1c_20261028T164848Z_a01",
+  "original_artifacts_verified": 41,
+  "states": 47,
+  "forwards": 141,
+  "full_exact_reproductions": 47,
+  "full_max_abs": 0,
+  "episodes": 24,
+  "argmax_flips": {
+    "NoImage": 10,
+    "ShuffledImage": 11
+  },
+  "independent_metric_max_abs_difference": 2.220446049250313e-16,
+  "analysis_unit": "equal weight across 24 episodes after within-episode averaging",
+  "model_nonvisual_inputs_and_hidden_unchanged": true,
+  "no_navigation_or_sampling": true,
+  "protocol_commit": "347ecfe8302219437b3f39b83eda6a79908302ad",
+  "full_public_commit": "88dd7d474eb6ed08f3261b1a29b5f4dc1c5bf703",
+  "frozen_task_commit": "53d4a37204231f9482985020d6067017563c7665",
+  "p0_commit": "7f199fd11c169753317f0c107ae9a87500b2738f",
+  "original_state_manifest_sha256": "4ce0ea6961b3db99a4762deb71c2f6e5059556e2b52cdf7a1d1fbd627c80b411",
+  "checkpoint_sha256": "fef170f6a01c9c9ba2361b7c7b81a4ddb9f0311a145766ed7d07006f7dc28a6e",
+  "runner_sha256": "182ce385fb4be7e4cfb2063394ab8fd3ca9d21071d4b6d929e4d8c03eaf18c0d",
+  "no_numerical_or_source_discrepancy": true
+}

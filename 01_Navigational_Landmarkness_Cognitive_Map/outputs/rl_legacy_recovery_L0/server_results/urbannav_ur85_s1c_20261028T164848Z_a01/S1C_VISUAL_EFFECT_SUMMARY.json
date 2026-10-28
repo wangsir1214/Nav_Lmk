@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "run_id": "urbannav_ur85_s1c_20261028T164848Z_a01",
+  "analysis_unit": "episode, equal weight after within-episode average; states descriptive paired observations only",
+  "js_definition": "natural-log JS; normalize each saved probability vector by its sum in float64 for this statistic only; no smoothing; zeros contribute 0",
+  "inference_count": 141,
+  "environment_actions": 0,
+  "full_reproduction_max_abs": {
+    "raw_logits": 0.0,
+    "probabilities": 0.0,
+    "critic_value": 0.0,
+    "heading_output": 0.0,
+    "goal_hidden": 0.0,
+    "policy_hidden": 0.0
+  },
+  "full_post_hidden_exact_count": 47,
+  "conditions": {
+    "NoImage": {
+      "episodes": 24,
+      "states": 47,
+      "state_argmax_flips": 10,
+      "state_argmax_flip_fraction_descriptive_only": 0.2127659574468085,
+      "episodes_with_any_argmax_flip": 10,
+      "episode_equal_weight_mean_flip_fraction": 0.20833333333333334,
+      "episode_equal_weight_means": {
+        "js_divergence_nats": 0.11820524959880653,
+        "total_variation": 0.22298008331670852,
+        "max_absolute_probability_change": 0.2229800954889238,
+        "delta_p_action0": -0.10578669913820704,
+        "delta_p_action4": 0.10578664450318775,
+        "delta_entropy_nats": 0.11428183603977408,
+        "full_p_action0": 0.7984218114793293,
+        "full_p_action4": 0.20157816246853402,
+        "intervened_p_action0": 0.6926351123411223,
+        "intervened_p_action4": 0.3073648069717218,
+        "full_entropy_nats": 0.07947592984935883,
+        "intervened_entropy_nats": 0.19375776588913293
+      },
+      "episode_mean_js_median": 0.030008674794710033,
+      "state_js_range": [
+        1.205134130648365e-07,
+        0.691446147298804
+      ],
+      "descriptive_by_state_role": {
+        "initial": {
+          "n": 24,
+          "argmax_flips": 3,
+          "mean_js_nats": 0.058337980421734964
+        },
+        "midpoint": {
+          "n": 23,
+          "argmax_flips": 7,
+          "mean_js_nats": 0.18177757181827384
+        }
+      },
+      "largest_js_states_for_review": [
+        {
+          "state_id": "S1A-DRAFT-024.pre_action_0034",
+          "js_divergence_nats": 0.691446147298804,
+          "argmax_changed": true
+        },
+        {
+          "state_id": "S1A-DRAFT-021.pre_action_0035",
+          "js_divergence_nats": 0.6845560026019171,
+          "argmax_changed": true
+        },
+        {
+          "state_id": "S1A-DRAFT-007.pre_action_0015",
+          "js_divergence_nats": 0.6684289714158806,
+          "argmax_changed": true
+        },
+        {
+          "state_id": "S1A-DRAFT-015.pre_action_0023",
+          "js_divergence_nats": 0.6382203527296393,
+          "argmax_changed": true
+        },
+        {
+          "state_id": "S1A-DRAFT-010.pre_action_0001",
+          "js_divergence_nats": 0.5796080990420217,
+          "argmax_changed": true
+        }
+      ]
+    },
+    "ShuffledImage": {
+      "episodes": 24,
+      "states": 47,
+      "state_argmax_flips": 11,
+      "state_argmax_flip_fraction_descriptive_only": 0.23404255319148937,
+      "episodes_with_any_argmax_flip": 9,
+      "episode_equal_weight_mean_flip_fraction": 0.22916666666666666,
+      "episode_equal_weight_means": {
+        "js_divergence_nats": 0.1452976030501432,
+        "total_variation": 0.2606011948056456,
+        "max_absolute_probability_change": 0.26060121372441436,
+        "delta_p_action0": -0.1460544595115607,
+        "delta_p_action4": 0.14605439331248912,
+        "delta_entropy_nats": 0.106965068461316,
+        "full_p_action0": 0.7984218114793293,
+        "full_p_action4": 0.20157816246853402,
+        "intervened_p_action0": 0.6523673519677686,
+        "intervened_p_action4": 0.34763255578102314,
+        "full_entropy_nats": 0.07947592984935883,
+        "intervened_entropy_nats": 0.18644099831067484
+      },
+      "episode_mean_js_median": 0.041102747762738076,
+      "state_js_range": [
+        7.3101348638549905e-09,
+        0.692562199577665
+      ],
+      "descriptive_by_state_role": {
+        "initial": {
+          "n": 24,
+          "argmax_flips": 4,
+          "mean_js_nats": 0.0906088212919802
+        },
+        "midpoint": {
+          "n": 23,
+          "argmax_flips": 7,
+          "mean_js_nats": 0.20723258595481042
+        }
+      },
+      "largest_js_states_for_review": [
+        {
+          "state_id": "S1A-DRAFT-020.pre_action_0035",
+          "js_divergence_nats": 0.692562199577665,
+          "argmax_changed": true
+        },
+        {
+          "state_id": "S1A-DRAFT-007.pre_action_0015",
+          "js_divergence_nats": 0.6921184751328857,
+          "argmax_changed": true
+        },
+        {
+          "state_id": "S1A-DRAFT-011.pre_action_0006",
+          "js_divergence_nats": 0.6846604439736054,
+          "argmax_changed": true
+        },
+        {
+          "state_id": "S1A-DRAFT-021.pre_action_0035",
+          "js_divergence_nats": 0.6836727292511018,
+          "argmax_changed": true
+        },
+        {
+          "state_id": "S1A-DRAFT-024.pre_action_0034",
+          "js_divergence_nats": 0.6429164544215977,
+          "argmax_changed": true
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Measures current-image effect on immediate action distribution under Full recurrent history, not closed-loop reward or navigation benefit.",
+    "NoImage is all-zero out-of-distribution input; ShuffledImage alters spatial matching and consistency.",
+    "No localization of causal visual regions/landmarks and no cognitive-map claim.",
+    "24 episodes with 1 or 2 predetermined states; no p-values treating 47 as independent tasks."
+  ]
+}
