@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "handoff_state": "READY_FOR_LOCAL_S1A_REVIEW_AND_S1B_DESIGN",
+  "formal_run_id": "urbannav_ur85_s1a_full_20261028T071015Z_a01",
+  "diagnostic_run_id": "urbannav_ur85_s1a_step1_20261028T060452Z_a01",
+  "source_commit": "53d4a37204231f9482985020d6067017563c7665",
+  "frozen_manifest_file": "S1_EPISODES_FROZEN_v1.jsonl",
+  "frozen_manifest_sha256": "f7bec0034a33345e0537b95794f78c6562db89b15532679785108ca29f636e3b",
+  "original_artifacts_verified": 103,
+  "step1_artifacts_verified": 44,
+  "formal_episodes": 24,
+  "formal_execution_count_each": 1,
+  "formal_order": [
+    "S1A-DRAFT-001",
+    "S1A-DRAFT-002",
+    "S1A-DRAFT-003",
+    "S1A-DRAFT-004",
+    "S1A-DRAFT-005",
+    "S1A-DRAFT-006",
+    "S1A-DRAFT-007",
+    "S1A-DRAFT-008",
+    "S1A-DRAFT-009",
+    "S1A-DRAFT-010",
+    "S1A-DRAFT-011",
+    "S1A-DRAFT-012",
+    "S1A-DRAFT-013",
+    "S1A-DRAFT-014",
+    "S1A-DRAFT-015",
+    "S1A-DRAFT-016",
+    "S1A-DRAFT-017",
+    "S1A-DRAFT-018",
+    "S1A-DRAFT-019",
+    "S1A-DRAFT-020",
+    "S1A-DRAFT-021",
+    "S1A-DRAFT-022",
+    "S1A-DRAFT-023",
+    "S1A-DRAFT-024"
+  ],
+  "diagnostic_episodes_in_formal_statistics": 0,
+  "success": 24,
+  "failure": 0,
+  "timeout": 0,
+  "execution_error": 0,
+  "total_actions": 1576,
+  "forward_actions": 999,
+  "forward_moves": 857,
+  "forward_stays": 142,
+  "rotations": 577,
+  "action_counts": {
+    "0": 999,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 577
+  },
+  "action_probability_mean": [
+    0.6332953274328312,
+    2.911981369392589e-08,
+    2.3275654406216613e-11,
+    3.1898211602679602e-12,
+    0.3667046471085162
+  ],
+  "sampled_non_argmax_actions": 83,
+  "yaw_transition_mismatches": 0,
+  "mean_steps": 65.66666666666667,
+  "mean_final_distance_m": 94.90119495492807,
+  "distance_bins": {
+    "[100,200)": {
+      "episodes": 6,
+      "success": 6,
+      "timeout": 0,
+      "success_rate": 1.0,
+      "mean_steps": 48.5,
+      "mean_final_distance_m": 96.74888287060858,
+      "mean_travelled_distance_m": 191.47637519139272
+    },
+    "[200,300)": {
+      "episodes": 6,
+      "success": 6,
+      "timeout": 0,
+      "success_rate": 1.0,
+      "mean_steps": 41.0,
+      "mean_final_distance_m": 94.47018453312752,
+      "mean_travelled_distance_m": 234.76744823542188
+    },
+    "[300,400)": {
+      "episodes": 6,
+      "success": 6,
+      "timeout": 0,
+      "success_rate": 1.0,
+      "mean_steps": 84.33333333333333,
+      "mean_final_distance_m": 94.14841992460006,
+      "mean_travelled_distance_m": 449.1218171797297
+    },
+    "[400,550]": {
+      "episodes": 6,
+      "success": 6,
+      "timeout": 0,
+      "success_rate": 1.0,
+      "mean_steps": 88.83333333333333,
+      "mean_final_distance_m": 94.23729249137611,
+      "mean_travelled_distance_m": 480.82657820570864
+    }
+  },
+  "threshold_effect": {
+    "first_entry_equals_termination": 24,
+    "terminal_action_forward": 24,
+    "final_equals_minimum": 24,
+    "final_distance_min_m": 88.88312890500026,
+    "final_distance_max_m": 99.37079760264585,
+    "final_distance_mean_m": 94.90119495492807,
+    "inside_boundary_by_at_most_5m": 12,
+    "inside_boundary_by_at_most_10m": 22,
+    "interpretation": "Descriptive stopping-depth statistics under the original strict <100m rule, not alternative success rates."
+  },
+  "state_input_checks": {
+    "initial_hidden_zero_cases": 24,
+    "hidden_archive_trace_matches": 24,
+    "goal_fixed_steps": 1576,
+    "previous_action_mask_sequence_checks": 1576,
+    "model_previous_reward_zero_steps": 1576,
+    "environment_reward_separate_steps": 1576,
+    "BGR_CNN_Goal_dual_GRU_runtime_assertions": "PASS; audited existing source/hashes and runtime evidence, no new inference",
+    "max_recomputed_distance_error_m": 1.414662165188929e-09,
+    "max_recomputed_step_movement_error_m": 7.105427357601002e-15
+  },
+  "formal_vs_diagnostic_trace_comparisons": [
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "both_diagnostic_repeats_match_formal_bytes": true,
+      "sha256": "2b5de7ade8f6ea7ce794cde962212928a785ea5f814237b55f108ff494d5efbe"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "both_diagnostic_repeats_match_formal_bytes": true,
+      "sha256": "2aad1a02b645e2bd7804a61a5f5376f97b53308e958b6a144bf7798cda425a27"
+    }
+  ],
+  "checkpoint_sha256": "fef170f6a01c9c9ba2361b7c7b81a4ddb9f0311a145766ed7d07006f7dc28a6e",
+  "model": {
+    "run": "UR-85",
+    "update": 80000,
+    "modules": 490,
+    "parameter_buffer_entries": 629,
+    "hidden_size": 512,
+    "actions": 5
+  },
+  "settings": {
+    "max_actions": 1000,
+    "success": "strict distance <100m",
+    "model_previous_reward": 0,
+    "sampling": "original categorical stochastic",
+    "dtype": "float32 model; float64 raw Goal; BGR raw pixels cast without scaling",
+    "backend": {
+      "deterministic_algorithms": true,
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "tf32": false,
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "input": "84x84 BGR CHW 0..255; CNN internal /255 only",
+    "fixed_goal": true,
+    "auto_reset": false,
+    "seed_policy": "frozen seed per episode; Python/NumPy/Torch CPU/CUDA reset"
+  },
+  "dependency_versions": {
+    "torch": "2.4.0",
+    "numpy": "1.26.4",
+    "geopandas": "1.0.1",
+    "shapely": "2.0.5",
+    "pandas": "2.2.2",
+    "opencv-python": "4.11.0.86",
+    "transformers": "4.44.2"
+  },
+  "cuda_version": "12.1",
+  "runner_sha256": "b34929a655879da5ff6ffc566097951786c1edb9ad846dbeb3f0e90ed45f2812",
+  "step1_runner_sha256": "e40c2f961cf454dd208f12e4effbc65222f28b4fd56c75ee2a0e0b7115af82e5",
+  "fixed_goal_adapter_sha256": "d8af5cce993f3872b449edd4c1eaa185e38950a0854fecb2adc6a8a7b198c29d",
+  "strict_loader_sha256": "1390f253bbbabf28bf7dc77e67f0e514a6ac5434da4e3bcda164c9f4b64dcfbc",
+  "replay_limit": "Full hidden arrays remain private; stored RNG hashes require seeded replay to recover intermediate RNG state.",
+  "audit_scope": "Offline recomputation from immutable machine records; no new PPO/environment execution.",
+  "privacy_review": "Explicitly authorized Paris street-view pano IDs and public-space coordinates retained for task correspondence; no personal identity/trajectory fields or deployment paths."
+}
