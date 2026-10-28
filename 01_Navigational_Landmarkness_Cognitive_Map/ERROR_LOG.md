@@ -1,5 +1,11 @@
 # Error Log
 
+## 2026-10-28 - S1-A 本地复核技术记录
+
+- 普通 `exec_command` 启动报 `helper_unknown_error`，只读/限定路径操作在授权执行通道恢复；没有改变源数据或历史模型。
+- Windows `core.autocrlf=true` 将冻结 JSONL 的 Git LF 205360 bytes 转成工作树 CRLF 205384 bytes；直接 `Get-FileHash` 得到不同值。对指定 commit 的 Git blob 原始字节求 SHA-256 后与批准值 `f7bec0034a33345e0537b95794f78c6562db89b15532679785108ca29f636e3b` 一致。
+- 逐题 CSV 间直接浮点相等检查曾报告20题差异；采用`1e-6m`容差重检24题全部一致，最大差`1.04e-9m`。无新增服务器运行错误。
+
 ## 2026-09-28T070320Z - 任务理解和本地执行记录
 
 - 普通本地执行再次在启动时返回helper_unknown_error；路径限定的授权读取/写入成功。此前失败没有改动文件。

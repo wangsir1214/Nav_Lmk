@@ -1,5 +1,11 @@
 # Worklog
 
+## 2026-10-28 - UR-85 S1-A 独立复核与 S1-B 待审协议
+
+- 从指定 S1-A commit `88dd7d474eb6ed08f3261b1a29b5f4dc1c5bf703` 建立独立 worktree；公开包10/10个文件和冻结 manifest 的 Git blob SHA-256 通过核对。Windows checkout 的 CRLF 造成工作树字节哈希不同，已按 Git 原始字节排除假差异。
+- 从公开 episode、step trace 和 distance progression 复算24题、1576动作、动作概率、softmax/log-prob、首次进入100m、010/016停留与回访；没有运行模型或环境。
+- 在 `outputs/rl_legacy_recovery_L0/s1b_visual_dependence_prep_20261028/` 新增 S1-A 审核与 S1-B Full/NoImage/ShuffledImage 协议。当前停止于人工审核；无新 PPO rollout。
+
 ## 2026-09-28T070320Z - Qwen用法与人工审核澄清
 
 - 定点读取七份NAS请求metadata并保存来源哈希、实际prompt与图像顺序至 `_audit_outputs/qwen_usage_20260928T070320Z/`；原始结果未改。

@@ -1,0 +1,37 @@
+{
+  "schema_version": "s1b-visual-dependence-draft-v1",
+  "status": "WAITING_FOR_HUMAN_S1B_REVIEW",
+  "source": {
+    "full_results_commit": "88dd7d474eb6ed08f3261b1a29b5f4dc1c5bf703",
+    "frozen_tasks_commit": "53d4a37204231f9482985020d6067017563c7665",
+    "frozen_manifest_sha256_git_blob": "f7bec0034a33345e0537b95794f78c6562db89b15532679785108ca29f636e3b",
+    "checkpoint_sha256": "fef170f6a01c9c9ba2361b7c7b81a4ddb9f0311a145766ed7d07006f7dc28a6e",
+    "s1_env_adapter_sha256": "d8af5cce993f3872b449edd4c1eaa185e38950a0854fecb2adc6a8a7b198c29d"
+  },
+  "episodes": 24,
+  "run": "UR-85-update-80000",
+  "graph": "Paris-new3058-depth30-runtime550",
+  "success_rule": "first distance_m < 100",
+  "max_environment_actions": 1000,
+  "sampling": "original categorical stochastic",
+  "reset_per_condition_episode": ["environment", "goal_gru_hidden", "policy_gru_hidden", "previous_action", "reset_mask", "python_rng", "numpy_rng", "torch_cpu_rng", "torch_cuda_rng"],
+  "model_previous_reward_every_step": 0,
+  "environment_reward_recorded_separately": true,
+  "image_boundary": {"shape_chw": [3, 84, 84], "dtype": "uint8", "channel_order": "BGR", "range": [0, 255], "cnn_internal_divide_by_255_count": 1},
+  "conditions": {
+    "Full": {"source": "existing S1-A formal results", "new_rollout": false, "image": "legacy matched observation"},
+    "NoImage": {"new_rollout": "pending human approval", "image": "zero BGR CHW uint8", "other_inputs_changed": false},
+    "ShuffledImage": {"new_rollout": "pending human approval", "image": "fixed donor pano; donor view chosen by actual yaw minus donor heading", "other_inputs_changed": false}
+  },
+  "donor_mapping": {
+    "status": "algorithm frozen; actual 550-node mapping pending server preflight and separate hash review",
+    "seed_string": "20261028",
+    "algorithm": "sort node IDs by UTF-8 bytes; sort by SHA256 UTF-8 bytes of S1B-donor-v1|20261028| plus pano_id with ID tie-break; map each ranked ID to next ranked ID cyclically",
+    "self_mapping_allowed": false,
+    "node_count_expected": 550,
+    "image_set": "16 original 84x84 views per runtime node",
+    "view_rule": "legacy find_nearest_angle_index(current_internal_yaw - donor_heading)",
+    "outcome_based_remapping_allowed": false
+  },
+  "forbidden": ["new Full rollout", "reuse Full hidden or trajectory", "change frozen tasks", "change model or action set", "SAM or region masks", "training"]
+}
