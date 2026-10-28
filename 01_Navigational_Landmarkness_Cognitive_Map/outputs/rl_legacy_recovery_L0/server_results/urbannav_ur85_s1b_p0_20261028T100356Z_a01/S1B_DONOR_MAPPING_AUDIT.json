@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "mapping_human_approval": "PENDING",
+  "navigation_authorized": false,
+  "source_count": 550,
+  "unique_donors": 550,
+  "self_mappings": 0,
+  "source_donor_sets_equal": true,
+  "all_in_runtime_graph": true,
+  "single_cycle_length": 550,
+  "repeat_generation_byte_identical": true,
+  "independent_algorithm_check": true,
+  "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+  "seed_prefix": "S1B-donor-v1|20261028|",
+  "row_order": "SHA-256 raw digest bytes then pano UTF-8 bytes",
+  "serialization": "UTF-8, ensure_ascii=False, compact JSON separators, insertion keys rank/source_pano_id/donor_pano_id/source_sort_sha256, LF trailing newline",
+  "generator_sha256": "a1c71acd7cb06babca78df0e4147cbd62a7488d30ac3c6bc7137d0c2de4f8dd5",
+  "graph_sha256": "a189ae3c1a471b18be3f527a882c2b87c26b2d3e80c25c57de8efc9136c2535e",
+  "heading_csv_sha256": "00685688b909cce93259786fe8789539ebe500dce8e538ce4fa58af11b9fe539",
+  "distance_m": {
+    "min": 1.4337929541532757,
+    "mean": 225.12610769649484,
+    "max": 519.8759193653686
+  },
+  "same_road_segment_count": 12,
+  "same_osmid_attribute_count": 16,
+  "adjacent_segment_count": 37,
+  "within_50m_count": 16,
+  "within_100m_count": 73,
+  "road_relation_limit": "Existing nearest-road attributes and graph-linked segment relation; no new road-geometric intersection or named-street reconstruction. 50/100m are descriptive flags, never remapping criteria.",
+  "outcome_based_remapping": false
+}

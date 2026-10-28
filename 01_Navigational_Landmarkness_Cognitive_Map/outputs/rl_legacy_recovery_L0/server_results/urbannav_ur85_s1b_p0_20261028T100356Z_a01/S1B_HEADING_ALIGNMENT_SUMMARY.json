@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "explicit_boundary_tests": [
+    {
+      "relative_angle": -720,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": -360,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": -0.001,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 0,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 0.001,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 360,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 720,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": -11.25,
+      "expected": 15,
+      "actual": 15,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 11.25,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 33.75,
+      "expected": 1,
+      "actual": 1,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 348.75,
+      "expected": 15,
+      "actual": 15,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 348.750001,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 11.250001,
+      "expected": 1,
+      "actual": 1,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 11.249999,
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": -180,
+      "expected": 8,
+      "actual": 8,
+      "status": "PASS"
+    },
+    {
+      "relative_angle": 180,
+      "expected": 8,
+      "actual": 8,
+      "status": "PASS"
+    }
+  ],
+  "all_node_alignment_tests": 35200,
+  "donor_pano_stable_on_revisit": true,
+  "each_donor_all_16_views_observed_in_index_tests": true,
+  "different_source_donor_view_indices": 33136,
+  "float_heading_add_subtract_exact_tie_shifts": 0,
+  "normalization": "(theta + 360) % 360",
+  "ties": "first minimum in [0,22.5,...,360]; 360 index16 becomes0; at348.75 choose15",
+  "floating_point_note": "Use actual legacy float arithmetic without epsilon adjustment. Adding then subtracting a nonbinary heading can perturb an intended exact half-way input.",
+  "invalid_input_rejections": [
+    "Pano outside frozen mapping; no fallback permitted",
+    "Nonfinite/invalid internal yaw",
+    "Nonfinite/invalid internal yaw"
+  ],
+  "view_center_spacing_deg": 22.5,
+  "historical_view_fov_deg": 60,
+  "same_geographic_direction": "nearest available historical donor view, up to11.25 degrees quantization; no continuous reprojection",
+  "total_checks": 35216,
+  "independent_metadata_recomputation": "PASS",
+  "source_file_name": "S1B_HEADING_ALIGNMENT_TEST.json",
+  "source_sha256": "3fdb06efdac2fe354b1b85c9533d89827e31fb996a4a022a4962d62edf654b05"
+}

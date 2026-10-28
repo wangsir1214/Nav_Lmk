@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "run_id": "urbannav_ur85_s1b_p0_20261028T100356Z_a01",
+  "protocol_source_commit": "347ecfe8302219437b3f39b83eda6a79908302ad",
+  "frozen_tasks_commit": "53d4a37204231f9482985020d6067017563c7665",
+  "full_result_commit": "88dd7d474eb6ed08f3261b1a29b5f4dc1c5bf703",
+  "frozen_manifest_sha256": "f7bec0034a33345e0537b95794f78c6562db89b15532679785108ca29f636e3b",
+  "original_artifacts_verified": 59,
+  "original_checksum_file_sha256": "81007cd6d7bf596cfac43822fbecaa1a3490d6eb018751134eb0bad9a3841140",
+  "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+  "sources": 550,
+  "unique_donors": 550,
+  "self_mappings": 0,
+  "two_independent_regenerations_byte_identical_to_original": true,
+  "images_recorded_readable": 8800,
+  "prior_hash_matches": 4608,
+  "new_reproducibility_baselines": 4192,
+  "heading_checks_independently_recomputed": 35216,
+  "observation_cases_audited": 36,
+  "new_image_decodes": 0,
+  "new_model_calls": 0,
+  "new_environment_actions": 0,
+  "haversine_radius_m": 6371000,
+  "quantile_method": "linear interpolation at (n-1)*p; n=550 directed mapping pairs",
+  "distance_summary_m": {
+    "min": 1.4337929539139773,
+    "P10": 81.53385736965087,
+    "P25": 139.53398896859682,
+    "median": 227.60783355505959,
+    "P75": 299.76158954660536,
+    "P90": 371.93902333096935,
+    "max": 519.8759193660592,
+    "mean": 225.1261076964958
+  },
+  "strict_distance_less_than_m": {
+    "30": {
+      "count": 10,
+      "fraction": 0.01818181818181818,
+      "percent": 1.8181818181818181
+    },
+    "50": {
+      "count": 16,
+      "fraction": 0.02909090909090909,
+      "percent": 2.909090909090909
+    },
+    "100": {
+      "count": 73,
+      "fraction": 0.13272727272727272,
+      "percent": 13.272727272727272
+    },
+    "200": {
+      "count": 223,
+      "fraction": 0.40545454545454546,
+      "percent": 40.54545454545455
+    }
+  },
+  "max_distance_discrepancy_from_P0_m": 1.4130705494608264e-09,
+  "same_road_segment_count": 12,
+  "same_osmid_attribute_count": 16,
+  "graph_adjacent_road_segments_count": 37,
+  "road_relation_unknown_count": 0,
+  "mapping_generation_heading_test_inventory_function_AST_unchanged_across_repairs": true,
+  "mapping_approved_for_navigation": false,
+  "stop": "READY_FOR_HUMAN_S1B_MAPPING_FREEZE_REVIEW",
+  "data_provenance": [
+    {
+      "file_name": "Line_Points_3_street_view.json",
+      "sha256": "5bb3290d5d039c48b0cb649244bbb68d68b48ca93c741a775952dd02ccd31b55"
+    },
+    {
+      "file_name": "Line_Points_3_to_road.shp",
+      "sha256": "93d95be7f3e105f43047bf26c455caa7dd9b2cd64e56b0782b81beb6b1381e8f"
+    },
+    {
+      "file_name": "Line_Points_3_to_road.shx",
+      "sha256": "935b35917e88bdab745768037e24b038171d704010bd69a738dcd56bbaceece1"
+    },
+    {
+      "file_name": "Line_Points_3_to_road.dbf",
+      "sha256": "92f78a7f51f8bcc905b703ec40e20967f45e0ec4dbe56159d608459694f6b3d2"
+    },
+    {
+      "file_name": "Line_Points_3_to_road.prj",
+      "sha256": "f2e7fb14d55bdd8d6a3bc2c272a48729d8f9d0ad72936e20eae6a9a81c2fccd0"
+    },
+    {
+      "file_name": "Line_Points_3_to_road.cpg",
+      "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+    },
+    {
+      "file_name": "Paris_Points_heading_3059.csv",
+      "sha256": "00685688b909cce93259786fe8789539ebe500dce8e538ce4fa58af11b9fe539"
+    }
+  ],
+  "runtime_graph_sha256": "a189ae3c1a471b18be3f527a882c2b87c26b2d3e80c25c57de8efc9136c2535e"
+}

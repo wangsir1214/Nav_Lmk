@@ -1,0 +1,2248 @@
+{
+  "status": "PASS",
+  "tests": 36,
+  "limited_native_state_fixtures": 12,
+  "fixed_goal_resets": 2,
+  "environment_actions": 0,
+  "model_calls": 0,
+  "full_passthrough_cases": 12,
+  "noimage_cases": 12,
+  "shuffled_cases": 12,
+  "shuffled_differs_from_real_cases": 12,
+  "cases": [
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 0,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -159.59898,
+        "source_heading": -159.59898,
+        "source_view_index": 0,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 14,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_00.jpg",
+        "source_jpeg_sha256": "760f8447058493f4921b39363dfe62d6a2ea9721237a9ce0b013177ccd1f9701",
+        "supplied_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_00.jpg",
+        "supplied_jpeg_sha256": "760f8447058493f4921b39363dfe62d6a2ea9721237a9ce0b013177ccd1f9701",
+        "supplied_chw_sha256": "137738d9e544a70bdfb814a1c348d86550642332ed1b8741c81ed189b4adfbc7",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -159.59898,
+        "heading": -159.59898,
+        "view_index": 0,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 0,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -159.59898,
+        "source_heading": -159.59898,
+        "source_view_index": 0,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 14,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_00.jpg",
+        "source_jpeg_sha256": "760f8447058493f4921b39363dfe62d6a2ea9721237a9ce0b013177ccd1f9701",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -159.59898,
+        "heading": -159.59898,
+        "view_index": 0,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 0,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -159.59898,
+        "source_heading": -159.59898,
+        "source_view_index": 0,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 14,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_00.jpg",
+        "source_jpeg_sha256": "760f8447058493f4921b39363dfe62d6a2ea9721237a9ce0b013177ccd1f9701",
+        "supplied_file_name": "KjG2lbCKVyC_2WR62hCxiA_14.jpg",
+        "supplied_jpeg_sha256": "e10776fc1e59fb07f7524bfb5f9600cf5681a10e5cd2bc5f2ed6a1fe1ba5c56a",
+        "supplied_chw_sha256": "883440936a278ce9c2c775baa637bc5286d5074e86b4ae103d937beed69a1a6a",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -159.59898,
+        "heading": -159.59898,
+        "view_index": 0,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 1,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "supplied_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_chw_sha256": "c3087548f8e103f815406778345ce890e21c3c50026a2452700e7c709fecb736",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": 0.0,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 1,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": 0.0,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 1,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": "KjG2lbCKVyC_2WR62hCxiA_05.jpg",
+        "supplied_jpeg_sha256": "e6218bbe705fd1bc6633ec709cc05fd9cab7243e01f4731c898dccfb1ce57b57",
+        "supplied_chw_sha256": "096e1c49b73f9ecadfd8d75f9f30157bf78294e8a1dbddb129201fdec32be579",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": 0.0,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 2,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "supplied_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_chw_sha256": "c3087548f8e103f815406778345ce890e21c3c50026a2452700e7c709fecb736",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": 0.0,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 2,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": 0.0,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 2,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": "KjG2lbCKVyC_2WR62hCxiA_05.jpg",
+        "supplied_jpeg_sha256": "e6218bbe705fd1bc6633ec709cc05fd9cab7243e01f4731c898dccfb1ce57b57",
+        "supplied_chw_sha256": "096e1c49b73f9ecadfd8d75f9f30157bf78294e8a1dbddb129201fdec32be579",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": 0.0,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 3,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -11.25,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "supplied_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_chw_sha256": "c3087548f8e103f815406778345ce890e21c3c50026a2452700e7c709fecb736",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -11.25,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 3,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -11.25,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -11.25,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 3,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -11.25,
+        "source_heading": -159.59898,
+        "source_view_index": 7,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_07.jpg",
+        "source_jpeg_sha256": "219c67431401fe2651d769ca8f9933240a174ecaca54811d43ae6b74b47cfd8d",
+        "supplied_file_name": "KjG2lbCKVyC_2WR62hCxiA_05.jpg",
+        "supplied_jpeg_sha256": "e6218bbe705fd1bc6633ec709cc05fd9cab7243e01f4731c898dccfb1ce57b57",
+        "supplied_chw_sha256": "096e1c49b73f9ecadfd8d75f9f30157bf78294e8a1dbddb129201fdec32be579",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -11.25,
+        "heading": -159.59898,
+        "view_index": 7,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 4,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -110.67172,
+        "source_heading": -159.59898,
+        "source_view_index": 2,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 0,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_02.jpg",
+        "source_jpeg_sha256": "88ed02350f031e19cde29358de7264bcf7d8cf94a15f98d101ac63a3d1cc1eab",
+        "supplied_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_02.jpg",
+        "supplied_jpeg_sha256": "88ed02350f031e19cde29358de7264bcf7d8cf94a15f98d101ac63a3d1cc1eab",
+        "supplied_chw_sha256": "7631c22568a4580a06b19d01e7d1cbc0ddf6f514fd693c5a2cd8bd7e39a9ceb0",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -110.67172,
+        "heading": -159.59898,
+        "view_index": 2,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 4,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -110.67172,
+        "source_heading": -159.59898,
+        "source_view_index": 2,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 0,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_02.jpg",
+        "source_jpeg_sha256": "88ed02350f031e19cde29358de7264bcf7d8cf94a15f98d101ac63a3d1cc1eab",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -110.67172,
+        "heading": -159.59898,
+        "view_index": 2,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 4,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -110.67172,
+        "source_heading": -159.59898,
+        "source_view_index": 2,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 0,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_02.jpg",
+        "source_jpeg_sha256": "88ed02350f031e19cde29358de7264bcf7d8cf94a15f98d101ac63a3d1cc1eab",
+        "supplied_file_name": "KjG2lbCKVyC_2WR62hCxiA_00.jpg",
+        "supplied_jpeg_sha256": "61ce26583973af044916689577afe7485ab47498ac8986771628589867353506",
+        "supplied_chw_sha256": "50037005875a67ee42a3f6ae041f2ff4bd2ec8a9f265984aa3c1e240aecdf5a3",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -110.67172,
+        "heading": -159.59898,
+        "view_index": 2,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 5,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -133.17172,
+        "source_heading": -159.59898,
+        "source_view_index": 1,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 15,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_01.jpg",
+        "source_jpeg_sha256": "69b762b93977c13c1b9731b98b36bbab7199eeca0a396845f6d88b04389c9a14",
+        "supplied_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_01.jpg",
+        "supplied_jpeg_sha256": "69b762b93977c13c1b9731b98b36bbab7199eeca0a396845f6d88b04389c9a14",
+        "supplied_chw_sha256": "4345849992c0600d1f3f4b8c00a6c37f9d40fd7f00e46f98502ce723629e3464",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -133.17172,
+        "heading": -159.59898,
+        "view_index": 1,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 5,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -133.17172,
+        "source_heading": -159.59898,
+        "source_view_index": 1,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 15,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_01.jpg",
+        "source_jpeg_sha256": "69b762b93977c13c1b9731b98b36bbab7199eeca0a396845f6d88b04389c9a14",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -133.17172,
+        "heading": -159.59898,
+        "view_index": 1,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-001",
+      "fixture": 5,
+      "metadata": {
+        "source_pano_id": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "current_internal_yaw": -133.17172,
+        "source_heading": -159.59898,
+        "source_view_index": 1,
+        "donor_pano_id": "KjG2lbCKVyC_2WR62hCxiA",
+        "donor_heading": -121.92172,
+        "donor_view_index": 15,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "Hwhwu0UJyfAiSg-0G7_Upg_01.jpg",
+        "source_jpeg_sha256": "69b762b93977c13c1b9731b98b36bbab7199eeca0a396845f6d88b04389c9a14",
+        "supplied_file_name": "KjG2lbCKVyC_2WR62hCxiA_15.jpg",
+        "supplied_jpeg_sha256": "da55ae7907db9902f1d004f88fce9bc23034c796836c980cec03fdf2e2f713e0",
+        "supplied_chw_sha256": "4cb0d30965d82a0cc616e72b1bda902586a90dd26f0d1c5723acad84e12f3ff8",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "Hwhwu0UJyfAiSg-0G7_Upg",
+        "coords": {
+          "lat": 48.87299475237861,
+          "lng": 2.293097012753493,
+          "lat_normalized": 0.39473864867564945,
+          "lng_normalized": 0.3898506376746488
+        },
+        "yaw": -133.17172,
+        "heading": -159.59898,
+        "view_index": 1,
+        "goal": "eEpOiQm3ZT6CdZMIz2hlfQ",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 0,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": -169.94511,
+        "source_heading": -169.94511,
+        "source_view_index": 0,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_00.jpg",
+        "source_jpeg_sha256": "9324124cd67b41cc81b7301c22fa4a26efc8dac5ce1763b3e4222c10d9e48f87",
+        "supplied_file_name": "l85JvmwFMV6ryNm7cuKWOg_00.jpg",
+        "supplied_jpeg_sha256": "9324124cd67b41cc81b7301c22fa4a26efc8dac5ce1763b3e4222c10d9e48f87",
+        "supplied_chw_sha256": "e6c07091895c13750b650516a3160026abaffbf993e82e55c7b65de23d668658",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": -169.94511,
+        "heading": -169.94511,
+        "view_index": 0,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 0,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": -169.94511,
+        "source_heading": -169.94511,
+        "source_view_index": 0,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_00.jpg",
+        "source_jpeg_sha256": "9324124cd67b41cc81b7301c22fa4a26efc8dac5ce1763b3e4222c10d9e48f87",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": -169.94511,
+        "heading": -169.94511,
+        "view_index": 0,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 0,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": -169.94511,
+        "source_heading": -169.94511,
+        "source_view_index": 0,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 5,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_00.jpg",
+        "source_jpeg_sha256": "9324124cd67b41cc81b7301c22fa4a26efc8dac5ce1763b3e4222c10d9e48f87",
+        "supplied_file_name": "k5aftsgaKwyI4puLycLT1g_05.jpg",
+        "supplied_jpeg_sha256": "d12db77cfc7cc14c417332b3b77b6ad62c96ddfada9eb5de2daab2bd3c57ddb5",
+        "supplied_chw_sha256": "64ca7a9d29e4aae40abf9b7e8ff14e9b6134ebf68c728311d899790d6bcab7a0",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": -169.94511,
+        "heading": -169.94511,
+        "view_index": 0,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 1,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -169.94511,
+        "source_view_index": 8,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_08.jpg",
+        "source_jpeg_sha256": "76883e95e374a4ed7c6a21b4f8b553b96fe41116507c801238eddb82f3dad4d9",
+        "supplied_file_name": "l85JvmwFMV6ryNm7cuKWOg_08.jpg",
+        "supplied_jpeg_sha256": "76883e95e374a4ed7c6a21b4f8b553b96fe41116507c801238eddb82f3dad4d9",
+        "supplied_chw_sha256": "5e3d957ffebf5d13465ac8806d34d565357642efb1402f515ed794f69e36ced7",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 6,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 0.0,
+        "heading": -169.94511,
+        "view_index": 8,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 1,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -169.94511,
+        "source_view_index": 8,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_08.jpg",
+        "source_jpeg_sha256": "76883e95e374a4ed7c6a21b4f8b553b96fe41116507c801238eddb82f3dad4d9",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 0.0,
+        "heading": -169.94511,
+        "view_index": 8,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 1,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -169.94511,
+        "source_view_index": 8,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_08.jpg",
+        "source_jpeg_sha256": "76883e95e374a4ed7c6a21b4f8b553b96fe41116507c801238eddb82f3dad4d9",
+        "supplied_file_name": "k5aftsgaKwyI4puLycLT1g_12.jpg",
+        "supplied_jpeg_sha256": "42d8d65c9d105b8f96d7badf4545b14036d0b369e9fc286a0118a4d5c2be415f",
+        "supplied_chw_sha256": "aed1d19afdbdf35b0d3421254c5415a16cfd2bc8f458f6d7ef72a732d38b251e",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 0.0,
+        "heading": -169.94511,
+        "view_index": 8,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 2,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -169.94511,
+        "source_view_index": 8,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_08.jpg",
+        "source_jpeg_sha256": "76883e95e374a4ed7c6a21b4f8b553b96fe41116507c801238eddb82f3dad4d9",
+        "supplied_file_name": "l85JvmwFMV6ryNm7cuKWOg_08.jpg",
+        "supplied_jpeg_sha256": "76883e95e374a4ed7c6a21b4f8b553b96fe41116507c801238eddb82f3dad4d9",
+        "supplied_chw_sha256": "5e3d957ffebf5d13465ac8806d34d565357642efb1402f515ed794f69e36ced7",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 6,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 0.0,
+        "heading": -169.94511,
+        "view_index": 8,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 2,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -169.94511,
+        "source_view_index": 8,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_08.jpg",
+        "source_jpeg_sha256": "76883e95e374a4ed7c6a21b4f8b553b96fe41116507c801238eddb82f3dad4d9",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 0.0,
+        "heading": -169.94511,
+        "view_index": 8,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 2,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 0.0,
+        "source_heading": -169.94511,
+        "source_view_index": 8,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_08.jpg",
+        "source_jpeg_sha256": "76883e95e374a4ed7c6a21b4f8b553b96fe41116507c801238eddb82f3dad4d9",
+        "supplied_file_name": "k5aftsgaKwyI4puLycLT1g_12.jpg",
+        "supplied_jpeg_sha256": "42d8d65c9d105b8f96d7badf4545b14036d0b369e9fc286a0118a4d5c2be415f",
+        "supplied_chw_sha256": "aed1d19afdbdf35b0d3421254c5415a16cfd2bc8f458f6d7ef72a732d38b251e",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 0.0,
+        "heading": -169.94511,
+        "view_index": 8,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 3,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": -11.25,
+        "source_heading": -169.94511,
+        "source_view_index": 7,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_07.jpg",
+        "source_jpeg_sha256": "d6b271db8a91b6fe54e7e076f8fe6fe7ba442a8f4aa5cf2145e69a60a6ed7ce9",
+        "supplied_file_name": "l85JvmwFMV6ryNm7cuKWOg_07.jpg",
+        "supplied_jpeg_sha256": "d6b271db8a91b6fe54e7e076f8fe6fe7ba442a8f4aa5cf2145e69a60a6ed7ce9",
+        "supplied_chw_sha256": "1826bd795fcc98e0d96a17f26b84dd283ec5a7c91fc55680fa73e68ea47c32f3",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": -11.25,
+        "heading": -169.94511,
+        "view_index": 7,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 3,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": -11.25,
+        "source_heading": -169.94511,
+        "source_view_index": 7,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_07.jpg",
+        "source_jpeg_sha256": "d6b271db8a91b6fe54e7e076f8fe6fe7ba442a8f4aa5cf2145e69a60a6ed7ce9",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": -11.25,
+        "heading": -169.94511,
+        "view_index": 7,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 3,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": -11.25,
+        "source_heading": -169.94511,
+        "source_view_index": 7,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 12,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_07.jpg",
+        "source_jpeg_sha256": "d6b271db8a91b6fe54e7e076f8fe6fe7ba442a8f4aa5cf2145e69a60a6ed7ce9",
+        "supplied_file_name": "k5aftsgaKwyI4puLycLT1g_12.jpg",
+        "supplied_jpeg_sha256": "42d8d65c9d105b8f96d7badf4545b14036d0b369e9fc286a0118a4d5c2be415f",
+        "supplied_chw_sha256": "aed1d19afdbdf35b0d3421254c5415a16cfd2bc8f458f6d7ef72a732d38b251e",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": -11.25,
+        "heading": -169.94511,
+        "view_index": 7,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 4,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 91.20561,
+        "source_heading": -169.94511,
+        "source_view_index": 12,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 0,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_12.jpg",
+        "source_jpeg_sha256": "7a57c2192f2ffdcc846c181651da5ea1e0b641d6d27f59259aeb5dcf40b64acb",
+        "supplied_file_name": "l85JvmwFMV6ryNm7cuKWOg_12.jpg",
+        "supplied_jpeg_sha256": "7a57c2192f2ffdcc846c181651da5ea1e0b641d6d27f59259aeb5dcf40b64acb",
+        "supplied_chw_sha256": "fae181e88626d43c175a2a6069c72da448604f9f2e6512ea96f175faa7d44b41",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 2,
+        "maximum": 232
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 91.20561,
+        "heading": -169.94511,
+        "view_index": 12,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 4,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 91.20561,
+        "source_heading": -169.94511,
+        "source_view_index": 12,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 0,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_12.jpg",
+        "source_jpeg_sha256": "7a57c2192f2ffdcc846c181651da5ea1e0b641d6d27f59259aeb5dcf40b64acb",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 91.20561,
+        "heading": -169.94511,
+        "view_index": 12,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 4,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 91.20561,
+        "source_heading": -169.94511,
+        "source_view_index": 12,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 0,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_12.jpg",
+        "source_jpeg_sha256": "7a57c2192f2ffdcc846c181651da5ea1e0b641d6d27f59259aeb5dcf40b64acb",
+        "supplied_file_name": "k5aftsgaKwyI4puLycLT1g_00.jpg",
+        "supplied_jpeg_sha256": "5a12b3b1d4438a33560004a1aa5f09ff0391a7be5367d05c4284962f22053d76",
+        "supplied_chw_sha256": "fce44770c86fce9f36a72cf234f1733cf2cee95d26d4d3764f8f006e2711d423",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 91.20561,
+        "heading": -169.94511,
+        "view_index": 12,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 5,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 68.70560999999998,
+        "source_heading": -169.94511,
+        "source_view_index": 11,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 15,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "Full-Passthrough",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_11.jpg",
+        "source_jpeg_sha256": "38b7abc97752a011f25129b05c3ac9fa9a9f8386e4d1a0ee2bc4b1a48c3e681a",
+        "supplied_file_name": "l85JvmwFMV6ryNm7cuKWOg_11.jpg",
+        "supplied_jpeg_sha256": "38b7abc97752a011f25129b05c3ac9fa9a9f8386e4d1a0ee2bc4b1a48c3e681a",
+        "supplied_chw_sha256": "f20a2bbc5c1008326936e83877bc91a9bc762823a70831ff8e7c578008df39f8",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 215
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 68.70560999999998,
+        "heading": -169.94511,
+        "view_index": 11,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 5,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 68.70560999999998,
+        "source_heading": -169.94511,
+        "source_view_index": 11,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 15,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "NoImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_11.jpg",
+        "source_jpeg_sha256": "38b7abc97752a011f25129b05c3ac9fa9a9f8386e4d1a0ee2bc4b1a48c3e681a",
+        "supplied_file_name": null,
+        "supplied_jpeg_sha256": null,
+        "supplied_chw_sha256": "a82fa4fe46e667154cb9f28c37bc383277f6fcb6a21116e6ec3a83c292b89952",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 0
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 68.70560999999998,
+        "heading": -169.94511,
+        "view_index": 11,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    },
+    {
+      "episode_id": "S1A-DRAFT-024",
+      "fixture": 5,
+      "metadata": {
+        "source_pano_id": "l85JvmwFMV6ryNm7cuKWOg",
+        "current_internal_yaw": 68.70560999999998,
+        "source_heading": -169.94511,
+        "source_view_index": 11,
+        "donor_pano_id": "k5aftsgaKwyI4puLycLT1g",
+        "donor_heading": 79.95561,
+        "donor_view_index": 15,
+        "mapping_sha256": "124a15f173615f18320f8019dcf8d83525e5f3afab83adc2e1f2b9d0f0237f7c",
+        "condition": "ShuffledImage",
+        "source_file_name": "l85JvmwFMV6ryNm7cuKWOg_11.jpg",
+        "source_jpeg_sha256": "38b7abc97752a011f25129b05c3ac9fa9a9f8386e4d1a0ee2bc4b1a48c3e681a",
+        "supplied_file_name": "k5aftsgaKwyI4puLycLT1g_15.jpg",
+        "supplied_jpeg_sha256": "606e628d8abceeb2bdfa9d1c5b9ff5d38ef27d4499cada0f601888f9a55b71b6",
+        "supplied_chw_sha256": "90c735a47232b236bc0ae153749dd9a51c38a6b9fdfbf81c8639ac5c8b523464",
+        "shape": [
+          3,
+          84,
+          84
+        ],
+        "dtype": "uint8",
+        "channel_order": "BGR",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "nonvisual_same_object_and_values": true,
+      "environment_and_rng_unchanged": true,
+      "legacy_viewimage_matches_cv2_pixels": true,
+      "preserved_observation_fields": [
+        "goal",
+        "yaw",
+        "yaw_label"
+      ],
+      "legacy_batch_obs_equal_value_cast": true,
+      "goal_dtype_before": "float64",
+      "goal_dtype_batched": "float32",
+      "runtime_state": {
+        "pano": "l85JvmwFMV6ryNm7cuKWOg",
+        "coords": {
+          "lat": 48.87400509819367,
+          "lng": 2.292779695243254,
+          "lat_normalized": 0.5122207201943514,
+          "lng_normalized": 0.37398476216270427
+        },
+        "yaw": 68.70560999999998,
+        "heading": -169.94511,
+        "view_index": 11,
+        "goal": "XE3mDbiXiRmIDIoUmpMYFw",
+        "step": 0
+      },
+      "nonvisual_sha256": {
+        "goal_hidden": "1ba107b4e848a9dfa507028c40f2ee00d1ce41dc11e27ba2d47843a9c6c53426",
+        "policy_hidden": "1d32b1c5b6b3b4d5d24ce987d68d8b79ae41e7f602af3552ebcdac15c4268e92",
+        "previous_action": "4f4b9b7d8b86633e2824e2f439819357b0cd010ab410ea1a691b12c5f94e91e0",
+        "previous_reward": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "mask": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "status": "PASS"
+    }
+  ],
+  "scope": "Observation and equal-value CPU cast only; no CNN/PPO forward, no causal action or recurrent-output claim",
+  "batch_obs_source": "Exact AST nodes _to_tensor and batch_obs compiled from hash-verified legacy file; policy module not imported"
+}

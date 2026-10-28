@@ -1,0 +1,92 @@
+{
+  "version": "s1b-p0-executed-v1",
+  "original_artifact_index": "S1B_P0_ARTIFACT_INDEX.csv",
+  "files": [
+    {
+      "file": "s1b_visual_adapter_v1.py",
+      "actual_execution_sha256": "a1c71acd7cb06babca78df0e4147cbd62a7488d30ac3c6bc7137d0c2de4f8dd5",
+      "public_source_sha256": "a1c71acd7cb06babca78df0e4147cbd62a7488d30ac3c6bc7137d0c2de4f8dd5",
+      "deployment_redaction_counts": {
+        "execution_root": 0,
+        "data_root": 0,
+        "container_hostname": 0,
+        "container_label": 0
+      },
+      "otherwise_byte_identical": true
+    },
+    {
+      "file": "run_s1b_p0.attempt01.py",
+      "actual_execution_sha256": "1683bcb0f868ad608ac58c0b114154b739efd1262a0aa67ab0dab25215c619d5",
+      "public_source_sha256": "e07229487757d57e7899e223620457d131975c7241b1569c6f91609a3c55e439",
+      "deployment_redaction_counts": {
+        "execution_root": 1,
+        "data_root": 3,
+        "container_hostname": 0,
+        "container_label": 0
+      },
+      "otherwise_byte_identical": true
+    },
+    {
+      "file": "run_s1b_p0.attempt02.py",
+      "actual_execution_sha256": "29ab6c75667ce113d7a4350c4583d777607cd407790f8c2fde86fe87c5b680e7",
+      "public_source_sha256": "ff3f141b6122219b651bccb76ca9903b0514112612122fc5e71995df98944603",
+      "deployment_redaction_counts": {
+        "execution_root": 1,
+        "data_root": 3,
+        "container_hostname": 0,
+        "container_label": 0
+      },
+      "otherwise_byte_identical": true
+    },
+    {
+      "file": "run_s1b_p0.attempt03.py",
+      "actual_execution_sha256": "80d0b9673c87c4e7197d7a1ddb27c53cc8cbd37d5c74249d4630176faf33ba6d",
+      "public_source_sha256": "bbd5399e605ae6a69d88fab84860c238f54981aea58130f7b4dad8a53bceb404",
+      "deployment_redaction_counts": {
+        "execution_root": 1,
+        "data_root": 3,
+        "container_hostname": 0,
+        "container_label": 0
+      },
+      "otherwise_byte_identical": true
+    },
+    {
+      "file": "run_s1b_p0.py",
+      "actual_execution_sha256": "5bc6facaf5143c6176f595b4fa2c195d24a79396a9fb25f43d68bf3e00aa0e13",
+      "public_source_sha256": "869655fab5a132a8324b2b34814e86b6a948846c253befc5ba8a1521d67485ca",
+      "deployment_redaction_counts": {
+        "execution_root": 1,
+        "data_root": 3,
+        "container_hostname": 0,
+        "container_label": 0
+      },
+      "otherwise_byte_identical": true
+    },
+    {
+      "file": "resume_s1b_p0_observations.py",
+      "actual_execution_sha256": "34d014db9bd9e911c45c7f2214d9b03d097ba079ed649d6ea6c5d64e14d908bb",
+      "public_source_sha256": "34d014db9bd9e911c45c7f2214d9b03d097ba079ed649d6ea6c5d64e14d908bb",
+      "deployment_redaction_counts": {
+        "execution_root": 0,
+        "data_root": 0,
+        "container_hostname": 0,
+        "container_label": 0
+      },
+      "otherwise_byte_identical": true
+    },
+    {
+      "file": "prepare_s1b_p0.py",
+      "actual_execution_sha256": "f87e5d1ae6eeab0b7e83ac0fba6aceea0f9d18a9223d1d0b896d0adb5c2668d7",
+      "public_source_sha256": "8042a6b5636c7979bdaae200d521eb2c6822d159fe97caa9e1a355c6e53afd6f",
+      "deployment_redaction_counts": {
+        "execution_root": 1,
+        "data_root": 0,
+        "container_hostname": 1,
+        "container_label": 1
+      },
+      "otherwise_byte_identical": true
+    }
+  ],
+  "redactions": "Only deployment literal substitutions: execution root→__EXECUTION_CODE_ROOT__, data root→__APPROVED_DATA_ROOT__, confirmed hostname→__CONFIRMED_CONTAINER_HOSTNAME__, container label→__CONFIRMED_CONTAINER_LABEL__. No logic, whitespace, function or test changes.",
+  "review_sources_not_a_new_runner": true
+}

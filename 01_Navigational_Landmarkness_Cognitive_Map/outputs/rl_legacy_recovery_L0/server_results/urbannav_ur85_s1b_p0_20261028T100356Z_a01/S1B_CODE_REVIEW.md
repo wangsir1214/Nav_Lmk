@@ -1,0 +1,23 @@
+# 已执行代码审核与脱敏关联
+
+协议commit：`347ecfe8302219437b3f39b83eda6a79908302ad`；P0 run：`urbannav_ur85_s1b_p0_20261028T100356Z_a01`。
+
+公开源码只把两类部署根路径、已确认容器hostname与容器名称改成占位符；其余字节逐一比较一致。s1b_visual_adapter_v1.py无需脱敏，公开字节与实际执行文件完全相同。原始hash同时可在59项产物索引中追溯。
+
+|源码|实际执行SHA-256|公开副本SHA-256|
+|---|---|---|
+|s1b_visual_adapter_v1.py|`a1c71acd7cb06babca78df0e4147cbd62a7488d30ac3c6bc7137d0c2de4f8dd5`|`a1c71acd7cb06babca78df0e4147cbd62a7488d30ac3c6bc7137d0c2de4f8dd5`|
+|run_s1b_p0.attempt01.py|`1683bcb0f868ad608ac58c0b114154b739efd1262a0aa67ab0dab25215c619d5`|`e07229487757d57e7899e223620457d131975c7241b1569c6f91609a3c55e439`|
+|run_s1b_p0.attempt02.py|`29ab6c75667ce113d7a4350c4583d777607cd407790f8c2fde86fe87c5b680e7`|`ff3f141b6122219b651bccb76ca9903b0514112612122fc5e71995df98944603`|
+|run_s1b_p0.attempt03.py|`80d0b9673c87c4e7197d7a1ddb27c53cc8cbd37d5c74249d4630176faf33ba6d`|`bbd5399e605ae6a69d88fab84860c238f54981aea58130f7b4dad8a53bceb404`|
+|run_s1b_p0.py|`5bc6facaf5143c6176f595b4fa2c195d24a79396a9fb25f43d68bf3e00aa0e13`|`869655fab5a132a8324b2b34814e86b6a948846c253befc5ba8a1521d67485ca`|
+|resume_s1b_p0_observations.py|`34d014db9bd9e911c45c7f2214d9b03d097ba079ed649d6ea6c5d64e14d908bb`|`34d014db9bd9e911c45c7f2214d9b03d097ba079ed649d6ea6c5d64e14d908bb`|
+|prepare_s1b_p0.py|`f87e5d1ae6eeab0b7e83ac0fba6aceea0f9d18a9223d1d0b896d0adb5c2668d7`|`8042a6b5636c7979bdaae200d521eb2c6822d159fe97caa9e1a355c6e53afd6f`|
+
+版本角色：attempt01/02为生成映射前失败的验证器；attempt03完成实际mapping、8800图像、heading检查后在观察字段断言失败；无attempt后缀的run_s1b_p0.py由resume脚本导入，实际执行修正后的观察测试和图重建函数。prepare脚本只核验来源/哈希，不加载模型。
+
+mapping_bytes与VisualAdapter均在同一份s1b_visual_adapter_v1.py内；其replace仅返回dict(observation)并替换view_image。它不接收环境、hidden、previous action/reward或mask，不调用RNG。所有非视觉观察保留原对象；BGR uint8 CHW→原batch_obs等值float32→原CNN唯一/255。
+
+证据边界：36项限定样本观察/CPU cast检查和静态源代码审阅支持接口只改图像；本轮未重新执行这些样本或CNN。新干预路径的闭环状态、GPU推理和重复性仍需下一阶段经授权验证。公开源码用于审核，不是在本轮授权执行的导航runner。
+
+SOURCE_PROVENANCE.json记录逐文件替换次数、原始及公开hash；私有逐字根路径替换表保留服务器，未上传。PREFLIGHT_REPAIRS.diff来自实际四个验证器版本的脱敏源码差异。

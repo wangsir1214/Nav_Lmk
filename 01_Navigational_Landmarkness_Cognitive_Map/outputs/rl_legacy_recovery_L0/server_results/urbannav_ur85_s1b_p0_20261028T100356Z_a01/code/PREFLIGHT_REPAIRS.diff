@@ -1,0 +1,86 @@
+--- code/run_s1b_p0.attempt01.py
++++ code/run_s1b_p0.attempt02.py
+@@ -71,7 +71,8 @@
+         p=frame.f_code.co_filename; name=frame.f_code.co_name
+         if p==str(CODE/'pano_data.py') and name in {'load_all_pano_data','load_all_pano_data_depth','__init__'}:
+             raise PermissionError('Full image-library preload prohibited')
+-        if p.startswith(str(CODE)) and name=='step' and ('urbannav' in p or 's1_fixed_goal' in p):
++        environment_step_files={str(CODE/'urbannav.py'),str(CODE/'urbannav_vec.py'),str(BASE/'s1_adapters/s1_fixed_goal_r1.py')}
++        if p in environment_step_files and name=='step':
+             counts['environment_step_calls']+=1
+             raise PermissionError('Environment actions not part of P0')
+         if '/torch/nn/modules/module.py' in p and name in {'_call_impl','_wrapped_call_impl'}:
+--- code/run_s1b_p0.attempt02.py
++++ code/run_s1b_p0.attempt03.py
+@@ -54,6 +54,9 @@
+ 
+ def isolation(out):
+     counts=collections.Counter()
++    environment_step_files={str(CODE/'urbannav.py'),str(CODE/'urbannav_vec.py'),str(BASE/'s1_adapters/s1_fixed_goal_r1.py')}
++    pano_data_file=str(CODE/'pano_data.py')
++    observed_files={str(CODE/'observations.py'),pano_data_file,str(CODE/'pano_graph.py')}
+     def audit(event,args):
+         if event=='open' and isinstance(args[0],(str,bytes,os.PathLike)):
+             p=Path(os.fsdecode(args[0])).absolute(); mode,flags=args[1:3]
+@@ -69,16 +72,15 @@
+     def profile(frame,event,arg):
+         if event!='call':return
+         p=frame.f_code.co_filename; name=frame.f_code.co_name
+-        if p==str(CODE/'pano_data.py') and name in {'load_all_pano_data','load_all_pano_data_depth','__init__'}:
++        if p==pano_data_file and name in {'load_all_pano_data','load_all_pano_data_depth','__init__'}:
+             raise PermissionError('Full image-library preload prohibited')
+-        environment_step_files={str(CODE/'urbannav.py'),str(CODE/'urbannav_vec.py'),str(BASE/'s1_adapters/s1_fixed_goal_r1.py')}
+         if p in environment_step_files and name=='step':
+             counts['environment_step_calls']+=1
+             raise PermissionError('Environment actions not part of P0')
+         if '/torch/nn/modules/module.py' in p and name in {'_call_impl','_wrapped_call_impl'}:
+             counts['model_calls']+=1
+             raise PermissionError('Model forward prohibited in P0')
+-        if p in {str(CODE/'observations.py'),str(CODE/'pano_data.py'),str(CODE/'pano_graph.py')}:
++        if p in observed_files:
+             if name in {'observation','get_pano_perspective','fetch','build_graph','set_BFS_graph'}:counts[Path(p).name+':'+name]+=1
+     sys.setprofile(profile)
+     return counts
+@@ -108,7 +110,7 @@
+         sr=sf[sf.panoid==p];hr=hf[hf.panoid==p]
+         assert len(sr)==len(hr)==1,('Missing or duplicate SHP/heading',p)
+         row=sr.iloc[0];heading=float(hr.iloc[0].heading_from_api)
+-        assert math.isfinite(heading) and pg.get_heading(p)==heading
++        assert math.isfinite(heading) and pg.get_heading(p)==pano_graph.ConstrainAngle(180,heading)
+         coords=pg.get_coords(p)
+         assert coords['lat']==row['lat'] and coords['lng']==row['lon']
+         assert all(math.isfinite(float(x)) for x in coords.values())
+--- code/run_s1b_p0.attempt03.py
++++ code/run_s1b_p0.py
+@@ -292,7 +292,7 @@
+         cfg=copy.deepcopy(config);cfg['seed']=ep['evaluation_seed']
+         env=FixedGoalEnv(cfg,pg,ds,ep['start_pano_id'],ep['goal_pano_id'],ep['initial_internal_yaw_deg'],1000)
+         obs,_=env.reset();resets+=1
+-        assert set(obs)=={'view_image','goal'} and obs['goal'].dtype==np.float64
++        assert set(obs)=={'view_image','goal','yaw','yaw_label'} and obs['goal'].dtype==np.float64
+         assert np.array_equal(obs['goal'],ep['goal_normalized_2d'])
+         donor=adapter.mapping[ep['start_pano_id']];dh=adapter.headings[donor]
+         # Isolated observation fixtures, NOT environment actions or trajectories.
+@@ -319,10 +319,13 @@
+             for condition in ['Full-Passthrough','NoImage','ShuffledImage']:
+                 result,meta=adapter.replace(obs,condition=condition,source_pano=st['pano'],yaw=st['yaw'])
+                 assert set(result)==set(obs) and result['goal'] is obs['goal']
++                for key in set(obs)-{'view_image'}:
++                    assert result[key] is obs[key]
+                 assert np.array_equal(obs['view_image'],before_image) and np.array_equal(obs['goal'],before_goal)
+                 assert snapshot()==before
+                 batch=batch_obs([result],torch.device('cpu'))
+-                assert torch.equal(batch['goal'],full_batch['goal'])
++                for key in set(obs)-{'view_image'}:
++                    assert torch.equal(batch[key],full_batch[key])
+                 assert tuple(batch['view_image'].shape)==(1,3,84,84) and batch['view_image'].dtype==torch.float32
+                 assert torch.equal(batch['view_image'][0],torch.from_numpy(result['view_image']).float())
+                 if condition=='Full-Passthrough':
+@@ -334,6 +337,7 @@
+                     changed+=not np.array_equal(result['view_image'],real)
+                 cases.append({'episode_id':ep['episode_id'],'fixture':fixture,'metadata':meta,
+                     'nonvisual_same_object_and_values':True,'environment_and_rng_unchanged':True,'legacy_viewimage_matches_cv2_pixels':True,
++                    'preserved_observation_fields':sorted(set(obs)-{'view_image'}),
+                     'legacy_batch_obs_equal_value_cast':True,'goal_dtype_before':'float64','goal_dtype_batched':'float32',
+                     'runtime_state':st,'nonvisual_sha256':before['nonvisual_hashes'],'status':'PASS'})
+         assert env._frame_count==0
