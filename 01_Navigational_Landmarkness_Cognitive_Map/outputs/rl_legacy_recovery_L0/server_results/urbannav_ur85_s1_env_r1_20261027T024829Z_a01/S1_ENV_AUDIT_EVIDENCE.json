@@ -1,0 +1,320 @@
+{
+  "schema_version": "s1-env-public-evidence-v1",
+  "run_id": "urbannav_ur85_s1_env_r1_20261027T024829Z_a01",
+  "parent_run_id": "urbannav_ur85_s1_env_20261027T022512Z_a01",
+  "status": "PASS",
+  "handoff_state": "READY_FOR_LOCAL_S1A_FREEZE_REVIEW",
+  "researcher_environment_pass_accepted": true,
+  "source_handoff_commit": "fa0ce423d7c35e3f0f217c947ed502f8f014e1d3",
+  "source_run_finished_utc": "2026-10-27T13:50:16.776616+00:00",
+  "exported_utc": "2026-10-28T02:14:09.646164+00:00",
+  "graph": {
+    "depth": 30,
+    "source_nodes": 3058,
+    "source_edges": 3310,
+    "runtime_nodes": 550,
+    "runtime_edges": 549,
+    "center_pano_id": "NWV8UKuA1ODMKcudL8_BTA",
+    "actual_legacy_graph_methods_executed": [
+      "PanoGraph.__init__",
+      "build_graph",
+      "set_BFS_graph"
+    ]
+  },
+  "episode_validation": {
+    "count": 24,
+    "PASS": 24,
+    "NEEDS_REVIEW": 0,
+    "INVALID": 0,
+    "original_order_and_ids_preserved": true,
+    "candidate_not_frozen": true,
+    "core_environment_parameters_reconstructed": 24,
+    "start_goal_panos": 48,
+    "decoded_images": 768,
+    "images_per_pano": 16,
+    "distance_bins_each": 6,
+    "minimum_initial_distance_m": 102.739207525088,
+    "maximum_initial_distance_m": 464.889569225222,
+    "geometry_crs": "EPSG:3857",
+    "runtime_coordinate_source": "SHP lat/lon attributes",
+    "json_attribute_coordinate_offset_m_max": 0.0,
+    "geometry_transform_offset_m_max": 2.122168459636208e-09
+  },
+  "native_tests": {
+    "fixture_episode_ids": [
+      "S1A-DRAFT-001",
+      "S1A-DRAFT-013",
+      "S1A-DRAFT-024"
+    ],
+    "real_environment_actions": 31,
+    "reward_comparisons": 30,
+    "repeatable_reset_fixtures": 3,
+    "all_five_actions_verified": true,
+    "forward_and_stay_verified": true,
+    "goal_fixed": true,
+    "pixel_state_equivalence": true,
+    "scope": "three native fixtures only; not dynamic rollout verification of all 24 episodes"
+  },
+  "synthetic_tests": {
+    "strict_success_boundary_cases": [
+      {
+        "distance_m": 200,
+        "reward": 0,
+        "amplitude": 5,
+        "success": false,
+        "timeout": false,
+        "pass": true
+      },
+      {
+        "distance_m": 150,
+        "reward": 2.5,
+        "amplitude": 5,
+        "success": false,
+        "timeout": false,
+        "pass": true
+      },
+      {
+        "distance_m": 100,
+        "reward": 5.0,
+        "amplitude": 5,
+        "success": false,
+        "timeout": false,
+        "pass": true
+      },
+      {
+        "distance_m": 99,
+        "reward": 5,
+        "amplitude": 5,
+        "success": true,
+        "timeout": false,
+        "pass": true
+      }
+    ],
+    "timeout_cases": [
+      {
+        "frame_count": 999,
+        "success": false,
+        "timeout": false,
+        "pass": true
+      },
+      {
+        "frame_count": 1000,
+        "success": false,
+        "timeout": true,
+        "pass": true
+      }
+    ],
+    "success_priority_at_cap": {
+      "success": true,
+      "timeout": false,
+      "pass": true
+    },
+    "post_terminal_rejected": true,
+    "goal_resampling_calls": 0,
+    "scope": "isolated scalar metric fixtures; timeout counter initialized to 998 then two actions; not a 1000-step navigation run"
+  },
+  "execution_boundaries": {
+    "policy_calls": 0,
+    "checkpoint_reads": 0,
+    "training_executed": false,
+    "navigation_rollouts": 0,
+    "archive_phase_environment_actions": 0
+  },
+  "data_assets": [
+    {
+      "role": "new3058 graph JSON",
+      "file_name": "Line_Points_3_street_view.json",
+      "sha256": "5bb3290d5d039c48b0cb649244bbb68d68b48ca93c741a775952dd02ccd31b55",
+      "bytes": 657923
+    },
+    {
+      "role": "new3058 SHP geometry",
+      "file_name": "Line_Points_3_to_road.shp",
+      "sha256": "93d95be7f3e105f43047bf26c455caa7dd9b2cd64e56b0782b81beb6b1381e8f",
+      "bytes": 85724
+    },
+    {
+      "role": "new3058 SHP index",
+      "file_name": "Line_Points_3_to_road.shx",
+      "sha256": "935b35917e88bdab745768037e24b038171d704010bd69a738dcd56bbaceece1",
+      "bytes": 24564
+    },
+    {
+      "role": "new3058 SHP attributes",
+      "file_name": "Line_Points_3_to_road.dbf",
+      "sha256": "92f78a7f51f8bcc905b703ec40e20967f45e0ec4dbe56159d608459694f6b3d2",
+      "bytes": 1030804
+    },
+    {
+      "role": "new3058 SHP CRS",
+      "file_name": "Line_Points_3_to_road.prj",
+      "sha256": "f2e7fb14d55bdd8d6a3bc2c272a48729d8f9d0ad72936e20eae6a9a81c2fccd0",
+      "bytes": 425
+    },
+    {
+      "role": "new3058 SHP encoding",
+      "file_name": "Line_Points_3_to_road.cpg",
+      "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2",
+      "bytes": 10
+    },
+    {
+      "role": "historical API heading",
+      "file_name": "Paris_Points_heading_3059.csv",
+      "sha256": "00685688b909cce93259786fe8789539ebe500dce8e538ce4fa58af11b9fe539",
+      "bytes": 383633
+    }
+  ],
+  "code_versions": {
+    "legacy": [
+      {
+        "relative_file": "pano_graph.py",
+        "sha256": "e4034ec9bf3436a81595eb8e49728ef8c873077090643185fd88a73517bad9de",
+        "in_original_approved_hash_list": true
+      },
+      {
+        "relative_file": "pano_data.py",
+        "sha256": "64933903f45b32ed675d4146ab10c82692d75bdcf5241d8a13334591a4882309",
+        "in_original_approved_hash_list": true
+      },
+      {
+        "relative_file": "urbannav.py",
+        "sha256": "a113f9e6daeca12a109c517c28f669fa3fa5f92b43dc16ac7a59137e17918737",
+        "in_original_approved_hash_list": true
+      },
+      {
+        "relative_file": "urbannav_vec.py",
+        "sha256": "d4913708c060defa5558a83adf68ca958edafe81660415677d9ebd090a16a8dc",
+        "in_original_approved_hash_list": true
+      },
+      {
+        "relative_file": "observations.py",
+        "sha256": "6c7e5c26f307540a5421bec5d1fa48e0dd2ade14dd73a6f7c6e7c3db05a1314e",
+        "in_original_approved_hash_list": true
+      },
+      {
+        "relative_file": "courier_game.py",
+        "sha256": "38fab06e0d1df1ced025b2785c54b4cc55fbd9e5136e029eba4babd5da77e97f",
+        "in_original_approved_hash_list": true
+      },
+      {
+        "relative_file": "game.py",
+        "sha256": "adbcec687dbe43bc0332fb9afd18359c38b8335c5dc590efd379dede1b220430",
+        "in_original_approved_hash_list": true
+      },
+      {
+        "relative_file": "Equirec2Perspec.py",
+        "sha256": "cb828195a47e924bbe0aa6620d6a06bfb03907715cc242fde43a508bd67f50b0",
+        "in_original_approved_hash_list": true
+      },
+      {
+        "relative_file": "node_cache.py",
+        "sha256": "45e7a1b83f22859b8530f3e85992c582763727a09b4483f675cd8353a5167b17",
+        "in_original_approved_hash_list": false
+      }
+    ],
+    "tested_adapter_and_runner_sha256": {
+      "s1_fixed_goal_r1.py": "d8af5cce993f3872b449edd4c1eaa185e38950a0854fecb2adc6a8a7b198c29d",
+      "s1_audit_r1.py": "e91ae97e9e84a3128cf4e6cf045e6970bae4c12d7acd83f2d032f7626104c044",
+      "s1_tests_r1.py": "b35ace968afb3c08feac235c00c6449205409763a740fbaae94e0fc10729fae0"
+    }
+  },
+  "dependency_versions": {
+    "pyogrio": "0.9.0",
+    "pyparsing": "3.1.1",
+    "affine": "2.4.0",
+    "geographiclib": "2.0",
+    "gym": "0.26.2",
+    "snuggs": "1.4.7",
+    "gym-notices": "0.0.8",
+    "python-dateutil": "2.8.2",
+    "pyproj": "3.6.1",
+    "click": "8.1.7",
+    "cloudpickle": "3.0.0",
+    "click-plugins": "1.1.1",
+    "mercantile": "1.2.1",
+    "cycler": "0.12.1",
+    "geopandas": "1.0.1",
+    "joblib": "1.3.2",
+    "shapely": "2.0.5",
+    "tzdata": "2024.1",
+    "rasterio": "1.3.10",
+    "cligj": "0.7.2",
+    "contourpy": "1.1.1",
+    "xyzservices": "2024.6.0",
+    "pytz": "2024.2",
+    "fonttools": "4.43.1",
+    "absl-py": "2.0.0",
+    "pandas": "2.2.2",
+    "attrs": "23.1.0",
+    "geopy": "2.4.1",
+    "matplotlib": "3.8.0",
+    "kiwisolver": "1.4.5",
+    "contextily": "1.6.1",
+    "sympy": "1.12",
+    "idna": "3.4",
+    "huggingface-hub": "0.24.7",
+    "PyYAML": "6.0.1",
+    "mpmath": "1.3.0",
+    "urllib3": "2.2.3",
+    "fsspec": "2024.9.0",
+    "opencv-python": "4.11.0.86",
+    "typing_extensions": "4.13.1",
+    "pip": "24.0",
+    "tqdm": "4.66.1",
+    "nvidia-cudnn-cu12": "9.1.0.70",
+    "nvidia-nvjitlink-cu12": "12.6.68",
+    "nvidia-nccl-cu12": "2.20.5",
+    "nvidia-curand-cu12": "10.3.2.106",
+    "nvidia-cublas-cu12": "12.1.3.1",
+    "nvidia-cufft-cu12": "11.0.2.54",
+    "transformers": "4.44.2",
+    "networkx": "3.3",
+    "pillow": "10.4.0",
+    "Jinja2": "3.1.2",
+    "nvidia-nvtx-cu12": "12.1.105",
+    "tokenizers": "0.19.1",
+    "safetensors": "0.4.5",
+    "nvidia-cusolver-cu12": "11.4.5.107",
+    "MarkupSafe": "2.1.3",
+    "certifi": "2023.7.22",
+    "filelock": "3.12.4",
+    "requests": "2.31.0",
+    "torch": "2.4.0",
+    "triton": "3.0.0",
+    "six": "1.16.0",
+    "packaging": "24.1",
+    "nvidia-cusparse-cu12": "12.1.0.106",
+    "numpy": "1.26.4",
+    "regex": "2023.10.3",
+    "nvidia-cuda-cupti-cu12": "12.1.105",
+    "nvidia-cuda-nvrtc-cu12": "12.1.105",
+    "charset-normalizer": "3.3.2",
+    "setuptools": "78.1.0",
+    "nvidia-cuda-runtime-cu12": "12.1.105"
+  },
+  "dependency_strategy": "S0 base plus isolated additive extension; 31 cached wheels; protected core packages unchanged",
+  "original_artifact_index": {
+    "sha256_entries_verified": 56,
+    "manifest_payload_entries": 55,
+    "scope": "55 payloads plus ARTIFACT_MANIFEST.json; SHA256SUMS excludes itself",
+    "sha256sums_sha256": "aa331fe7fb2c6e547db2bfdf1a2abcb7490c470da6fbca3086bd0c9d7403c151"
+  },
+  "evidence_source_hashes": {
+    "EPISODE_RUNTIME_VALIDATION.csv": "264d33e3ee9b189516ff1ef32e12948b149ce864d79d1ea797d55d6675ea4191",
+    "COORDINATE_PROVENANCE_AUDIT.csv": "22b6cc4936714dad6a90e9903c145481da7a6fdb7ca7ae31cde24c59b5cfe5c0",
+    "ACTION_TRANSITION_TEST.json": "468379b417ac52722abab68c760783faba03aad6be7145675a29348e29964462",
+    "GOAL_AND_TERMINATION_TEST.json": "e89cd2c90e95e27306024aba0619af2c00de7a7b97ca13c6038ad158d17a9538",
+    "RUNTIME_CONFIG.json": "13a8fe92354e979977a5f2c5c44ed3e58984cff4b7b5710c2e9b7075f6589eaa",
+    "FINAL_VERIFICATION.json": "37ea97b8b1a59b49f4556752933e5f054ad0184d1151f79906dbf58f555a1dda"
+  },
+  "pending_review": [
+    "formal freeze of 24 tasks",
+    "future policy seed/RNG application and complete PPO runner integration",
+    "fixed-goal semantics versus historical random multi-goal evaluate"
+  ],
+  "publication_review": {
+    "street_view_pano_ids_and_coordinates_retained_for_task_correspondence": true,
+    "no_personal_trajectory_or_identity_fields_published": true,
+    "internal_paths_credentials_raw_logs_images_weights_environments_excluded": true
+  }
+}
