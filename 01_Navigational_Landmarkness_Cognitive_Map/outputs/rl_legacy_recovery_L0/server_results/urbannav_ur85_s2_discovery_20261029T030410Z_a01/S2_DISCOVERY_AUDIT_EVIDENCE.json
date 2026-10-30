@@ -1,0 +1,308 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+  "run_id": "urbannav_ur85_s2_discovery_20261029T030410Z_a01",
+  "export_utc": "20261030T080545Z",
+  "original_artifacts_verified": 127,
+  "sam_images": 8800,
+  "runtime_nodes": 550,
+  "raw_sam_masks": 264102,
+  "nonempty_unique_atomic84": 260613,
+  "empty84_footprints": 1524,
+  "additional_duplicate_footprints": 1965,
+  "states": 47,
+  "episodes": 24,
+  "unique_scored_views": 45,
+  "unique_view_candidate_entries": 1413,
+  "candidate_state_interventions": 1458,
+  "original_forwards": 1505,
+  "matched": 857,
+  "unmatched": 601,
+  "unmatched_fraction": 0.4122085048010974,
+  "argmax_changes": 11,
+  "states_with_argmax_change": 3,
+  "Full_max_abs": 0,
+  "independently_recomputed_metric_max_error": 0.0,
+  "candidate_input_pixel_hashes_verified": 1458,
+  "controls_reselected_by_geometry_only": 857,
+  "matched_by_type": {
+    "Atomic Region": 847,
+    "Structural / Layout Cue": 10
+  },
+  "positive_paired_JS": 419,
+  "negative_paired_JS": 438,
+  "composite_unique_views": 135,
+  "composites_with_component_overlap": 75,
+  "composites_identical_to_component": 43,
+  "composite_state_entries_identical_to_component": 43,
+  "episode_equal_mean_state_max_JS": 0.035431254660563495,
+  "episode_equal_mean_state_mean_JS": 0.003222683700539843,
+  "thresholds": [
+    {
+      "JS_strictly_greater_than": 0.0001,
+      "candidate_state_count": 246,
+      "candidate_state_fraction": 0.16872427983539096,
+      "states_with_any": 29,
+      "episodes_with_any": 20,
+      "episode_equal_candidate_fraction": 0.171225014995714
+    },
+    {
+      "JS_strictly_greater_than": 0.001,
+      "candidate_state_count": 130,
+      "candidate_state_fraction": 0.08916323731138547,
+      "states_with_any": 25,
+      "episodes_with_any": 19,
+      "episode_equal_candidate_fraction": 0.09342969244448963
+    },
+    {
+      "JS_strictly_greater_than": 0.01,
+      "candidate_state_count": 40,
+      "candidate_state_fraction": 0.027434842249657063,
+      "states_with_any": 16,
+      "episodes_with_any": 12,
+      "episode_equal_candidate_fraction": 0.02999322746545588
+    },
+    {
+      "JS_strictly_greater_than": 0.05,
+      "candidate_state_count": 17,
+      "candidate_state_fraction": 0.011659807956104253,
+      "states_with_any": 10,
+      "episodes_with_any": 8,
+      "episode_equal_candidate_fraction": 0.011696755442595705
+    },
+    {
+      "JS_strictly_greater_than": 0.1,
+      "candidate_state_count": 6,
+      "candidate_state_fraction": 0.00411522633744856,
+      "states_with_any": 5,
+      "episodes_with_any": 4,
+      "episode_equal_candidate_fraction": 0.0054687862852402245
+    }
+  ],
+  "area_and_effects_by_type": {
+    "Atomic Region": {
+      "n": 1229,
+      "area_fraction_quantiles": {
+        "0": 0.0001417233560090703,
+        "0.1": 0.0005668934240362812,
+        "0.25": 0.0015589569160997733,
+        "0.5": 0.004393424036281179,
+        "0.75": 0.015447845804988663,
+        "0.9": 0.10192743764172343,
+        "1": 0.7271825396825397
+      },
+      "JS_quantiles": {
+        "0": 0.0,
+        "0.1": 5.385317384986861e-12,
+        "0.25": 1.553090404440666e-09,
+        "0.5": 1.9347951943064263e-07,
+        "0.75": 1.5084413134504668e-05,
+        "0.9": 0.0002542453526408419,
+        "1": 0.10616309229802165
+      }
+    },
+    "Composite Cue": {
+      "n": 141,
+      "area_fraction_quantiles": {
+        "0": 0.020691609977324263,
+        "0.1": 0.07553854875283447,
+        "0.25": 0.20068027210884354,
+        "0.5": 0.30853174603174605,
+        "0.75": 0.37315759637188206,
+        "0.9": 0.4121315192743764,
+        "1": 0.5789399092970522
+      },
+      "JS_quantiles": {
+        "0": 3.1394171782649905e-13,
+        "0.1": 6.270877071527671e-11,
+        "0.25": 7.101071317745462e-08,
+        "0.5": 9.054511158922215e-06,
+        "0.75": 0.0008584375750977714,
+        "0.9": 0.008882651221280069,
+        "1": 0.10002847362684006
+      }
+    },
+    "Structural / Layout Cue": {
+      "n": 88,
+      "area_fraction_quantiles": {
+        "0": 0.02366780045351474,
+        "0.1": 0.031235827664399092,
+        "0.25": 0.036139455782312924,
+        "0.5": 0.04365079365079365,
+        "0.75": 0.05038265306122449,
+        "0.9": 0.055172902494331065,
+        "1": 0.0844671201814059
+      },
+      "JS_quantiles": {
+        "0": 2.0399817267993942e-14,
+        "0.1": 1.0462840856674875e-09,
+        "0.25": 7.116318037377555e-08,
+        "0.5": 4.04254838103281e-06,
+        "0.75": 0.0005034835969360394,
+        "0.9": 0.007954928794475583,
+        "1": 0.6043876698599095
+      }
+    }
+  },
+  "missing_control_reasons": {
+    "no_same_operational_type_and_position_stratum": 168,
+    "all_remaining_masks_overlap_above_IoU_0.1": 171,
+    "no_area_ratio_match": 246,
+    "no_centroid_distance_match": 16
+  },
+  "archive_only": {
+    "new_model_forwards": 0,
+    "new_segmentation": 0,
+    "new_rollouts": 0,
+    "new_training": 0
+  },
+  "source_hashes": {
+    "SHA256SUMS": "cfa1ea9f18c627d6d2f4ddcf627b220634e0cbcdfdce9db118fa25578f6e06eb",
+    "FROZEN_CANDIDATE_PLAN.json": "f1111db4871c21b34296cc5de578745751d023979fbf75089759173241fedfa5",
+    "DISCOVERY_STATE_MANIFEST.jsonl": "4ce0ea6961b3db99a4762deb71c2f6e5059556e2b52cdf7a1d1fbd627c80b411",
+    "CANDIDATE_FUNCTIONAL_RESPONSES.csv": "ea1e7d9d6d62c80cc6cf6e61b9bc9bfd4d2716aa9757141d089815eefeddeccb",
+    "MATCHED_CONTROL_COMPARISON.csv": "ebe8f45c4ba0149f4cb830fbc84ca4b86f71b3263131a56d382d5e07a14c23ba",
+    "SAM_SEGMENTATION_INVENTORY.csv": "0eb9eb7816806d192685ec1c14449fb79eb140735ad283b5894c3036c1060d67"
+  },
+  "sam": {
+    "official_repo": "https://github.com/facebookresearch/sam2",
+    "revision": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+    "checkpoint_url": "https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt",
+    "checkpoint_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "bytes": 184416285,
+    "packages": {
+      "torch": "2.7.0a0+7c8ec84dab.nv25.3",
+      "torchvision": "0.22.0a0",
+      "numpy": "1.26.4",
+      "hydra-core": "1.3.2",
+      "omegaconf": "2.3.0",
+      "iopath": "0.1.10",
+      "Pillow": "11.1.0",
+      "SAM-2": "1.0"
+    }
+  },
+  "PPO_checkpoint_sha256": "fef170f6a01c9c9ba2361b7c7b81a4ddb9f0311a145766ed7d07006f7dc28a6e",
+  "executed_code_index": [
+    {
+      "file": "source/analyze_responses.py",
+      "bytes": 7894,
+      "sha256": "4f81cb482b0ae3fd16be8d9705dd80fc1c02a312fd40a8938d8ee5d38011243a"
+    },
+    {
+      "file": "source/assemble_visual_review.py",
+      "bytes": 3286,
+      "sha256": "c70e1991beb745bbd1b040ffc2a8897104be3e37c20f11df26f7fcb0da011052"
+    },
+    {
+      "file": "source/asset_preflight.py",
+      "bytes": 2349,
+      "sha256": "d1b0a1f5730e30eb43c1b092514335b251a2ba480cad0fe27233e9230cec7045"
+    },
+    {
+      "file": "source/build_candidates.py",
+      "bytes": 6378,
+      "sha256": "7ad562bbe4425e9db211a0c18a2e258a24c4fad3190e6fdcc8319ae5cd03a8c9"
+    },
+    {
+      "file": "source/build_review.py",
+      "bytes": 10546,
+      "sha256": "a0e2238bb773f06ad502519cacebea0b1f03f9df517362cf66c56afc2fc6c4af"
+    },
+    {
+      "file": "source/configure.py",
+      "bytes": 4779,
+      "sha256": "9167bc893bad6eba7fb5824f820266fef9038cac31daa4ad4c25d183f04defdb"
+    },
+    {
+      "file": "source/discovery_ppo_runner.py",
+      "bytes": 18220,
+      "sha256": "af0dbed7ac2f416d3aae276ac5acff55c2f2bbe34a961cfe788c28c6b2bf1e45"
+    },
+    {
+      "file": "source/enrich_analysis.py",
+      "bytes": 2715,
+      "sha256": "af9d363af82f52d09f12df9c5a0b0504df86663d69c15ea4e54cb50af4379180"
+    },
+    {
+      "file": "source/finalize.py",
+      "bytes": 15368,
+      "sha256": "a9a1bf2d73102aed9b85bd334a9d2918ec883d8aae77b733d67016b8d81f9150"
+    },
+    {
+      "file": "source/finalize_when_ready.sh",
+      "bytes": 540,
+      "sha256": "27c0ecc5d0b73eba819269a3f01bda20829eaced4962fad0818ddb5d2e837b93"
+    },
+    {
+      "file": "source/index_library.py",
+      "bytes": 5323,
+      "sha256": "36acfb68dfb80fc7eeacc703fa7dd83a6cdb3426e16f920ab2c16f11ea3f79f6"
+    },
+    {
+      "file": "source/index_when_ready.sh",
+      "bytes": 672,
+      "sha256": "c5a0b1599ea50dc825229dbe86e8e84d503dc6aba44754a960347838ad2acf91"
+    },
+    {
+      "file": "source/make_example_panels.py",
+      "bytes": 5029,
+      "sha256": "a1ccfa8ff03600f086df5f3f2d699e3bac59328960bef165ff6d6dcc502d7cc2"
+    },
+    {
+      "file": "source/masked_visual_adapter.py",
+      "bytes": 2100,
+      "sha256": "185f96cacdddc9f55ca25c4839ca6499b0dec9f0c019833b72460edc7a56a86d"
+    },
+    {
+      "file": "source/postprocess_when_ready.sh",
+      "bytes": 794,
+      "sha256": "2f0882ba2f031c7966bd504fec6a32eb82120a9fa624ef812a2e9cce412d73df"
+    },
+    {
+      "file": "source/prepare_ppo.py",
+      "bytes": 5927,
+      "sha256": "561e335f750c6b8cd4347cb98e5c8213306558cfdea28785f43320211bd889d3"
+    },
+    {
+      "file": "source/qc_montage.py",
+      "bytes": 1476,
+      "sha256": "e380011de2532f38b7cdae74edad736f5560ef579554ed68de07b9a9a2d8b60c"
+    },
+    {
+      "file": "source/run_shard1_after_priority.sh",
+      "bytes": 517,
+      "sha256": "d184bd249161c15233c06b6c2580a69d6c052777ba9633d9635fc5192cfa5694"
+    },
+    {
+      "file": "source/sam_batch.py",
+      "bytes": 8034,
+      "sha256": "24d54057ab5fcaa351acb75f990af379ef368328461cbd44fed248dd10caef58"
+    },
+    {
+      "file": "source/sam_batch_full.py",
+      "bytes": 8090,
+      "sha256": "1cbd33ed23137d0a47a38b30808c92bcdb80bfe6fadcc6731d732177712d2481"
+    },
+    {
+      "file": "source/score_when_ready.sh",
+      "bytes": 1003,
+      "sha256": "3e75dc397551f3530119c57b802900823312285f30cd2a0bd496edbc318f1fd9"
+    },
+    {
+      "file": "source/test_review_browser.py",
+      "bytes": 3331,
+      "sha256": "310061424ae8a8f957e0eac85bc36ecd19d109fa20ac57dba24ffb264432995f"
+    },
+    {
+      "file": "source/test_review_javascript.cjs",
+      "bytes": 3780,
+      "sha256": "4b6f3ebe541fade6de787c1b649a868793eaad81a1319da0b0b4c0a5218d1820"
+    },
+    {
+      "file": "source/validate_functional.py",
+      "bytes": 9787,
+      "sha256": "8e903ae4a975380032551bd1749806f3d5f92702b08e5908135387d3dc206b25"
+    }
+  ],
+  "semantics_verified": false,
+  "public_data_review": "Only public-street pano identifiers and research state linkage retained; no personal identities, credentials, internal paths, imagery or hidden tensors exported."
+}

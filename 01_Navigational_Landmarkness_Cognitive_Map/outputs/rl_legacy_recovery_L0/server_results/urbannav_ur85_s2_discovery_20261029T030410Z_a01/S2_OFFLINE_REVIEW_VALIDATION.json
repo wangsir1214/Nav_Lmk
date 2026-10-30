@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "states": 47,
+  "candidate_interactions": 1458,
+  "matched_control_canvas_checks": 857,
+  "all_canvas_BGR_CHW_hashes_equal_actual_PPO_inputs": true,
+  "actual_embedded_JS_executed": true,
+  "backend": "Node vm + minimal DOM and synchronous PNG-backed canvas adapter; not a browser rendering/layout test",
+  "script_sha256": "5b5ea5da2169b8aa98111b102eabcfacc6fc79d1b787eeeb61eaf7c435bf6a71",
+  "node_version": "v22.18.0",
+  "playwright_package": "1.55.0",
+  "browser_limitation": "Chromium could not start because system shared libraries are absent; no system packages installed.",
+  "external_network_used": false
+}

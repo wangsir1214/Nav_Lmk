@@ -1,0 +1,123 @@
+{
+  "run_id": "urbannav_ur85_s2_discovery_20261029T030410Z_a01",
+  "export_utc": "20261030T080545Z",
+  "status": "complete",
+  "archive_only": true,
+  "source_run_artifact_count": 127,
+  "archive_base_main_commit": "b0f166e312e1914ede77a38d89ed566b19557132",
+  "source_run_provenance": "S2_DISCOVERY_AUDIT_EVIDENCE.json",
+  "files": [
+    {
+      "file": "ERROR_LOG.md",
+      "bytes": 400,
+      "sha256": "12ea974f1786ce60b138337952bd48f7c3b83dc7de54c30146c20ee486e92d8a"
+    },
+    {
+      "file": "RESULTS_SUMMARY.md",
+      "bytes": 270,
+      "sha256": "62544798063198120acb03a73a024be8c61d308511ecca4abccfe2761e78f4d0"
+    },
+    {
+      "file": "S2_ARTIFACT_INDEX.csv",
+      "bytes": 12288,
+      "sha256": "8f2d465ea76cab48053ccd17020c20f8f4ce883074928460c1961fff0b39c260"
+    },
+    {
+      "file": "S2_CANDIDATE_FUNCTIONAL_RESPONSES.csv",
+      "bytes": 1676020,
+      "sha256": "a81e1547a510f56f8fe8ec2ba577fe2d24bc789112cf8d0264782868bad06518"
+    },
+    {
+      "file": "S2_CANDIDATE_PROVENANCE.md",
+      "bytes": 2731,
+      "sha256": "ff1d0361467e71176b51877ff08a2700f9024619f3b002320a0b2a536c14863c"
+    },
+    {
+      "file": "S2_CANDIDATE_REGISTRY.csv",
+      "bytes": 863371,
+      "sha256": "b34a7d4d3cdde01976df8dc9e5247772e27ec76893570aba305d6f5e72c5459a"
+    },
+    {
+      "file": "S2_CASE_REVIEW_NOTES.md",
+      "bytes": 3904,
+      "sha256": "713118833424167bac30d2593a1c45f6f92286fd3206ee41f7322f485cbade14"
+    },
+    {
+      "file": "S2_COMPOSITE_CANDIDATES.csv",
+      "bytes": 88685,
+      "sha256": "5191ab8b43c7e9654ff811c0c5a91647da9ca3c6a4618cef3ae57beaa3518e3b"
+    },
+    {
+      "file": "S2_DATA_DICTIONARY.md",
+      "bytes": 954,
+      "sha256": "f227178e0f6d01cfaabef164837618cd364d6e7f7ea17956091ade36c64d914f"
+    },
+    {
+      "file": "S2_DISCOVERY_AUDIT_EVIDENCE.json",
+      "bytes": 10395,
+      "sha256": "056ad11aabe9b1e698cde3370d664e52d5a5e927d4afc5b89cbb8f8e4fb7c048"
+    },
+    {
+      "file": "S2_DISCOVERY_PUBLIC_SUMMARY.md",
+      "bytes": 1289,
+      "sha256": "c988f438b4149a499112fcaa7b9f541976c318d2b53b034f5c02abef38d6c675"
+    },
+    {
+      "file": "S2_EFFECT_DISTRIBUTION_ANALYSIS.md",
+      "bytes": 3396,
+      "sha256": "ee8b298477734a54521ad1441e74e7c43c12e3f749235b22771d50a4a538bf05"
+    },
+    {
+      "file": "S2_EFFECT_THRESHOLDS.csv",
+      "bytes": 412,
+      "sha256": "7693b2941015d3c6db575aaca85b6aa3e092118b9efd36c99951425973c1d342"
+    },
+    {
+      "file": "S2_EPISODE_LEVEL_SUMMARY.csv",
+      "bytes": 4324,
+      "sha256": "72f52f5203a67a619df8057541fe73142bfe050c6ea8c3176834cb814e13961a"
+    },
+    {
+      "file": "S2_FOCUS_CASE_EFFECTS.csv",
+      "bytes": 736,
+      "sha256": "240e10156eddee73af3be97ffa5129162bb1b351f02893db545b04e8ba2ee3b1"
+    },
+    {
+      "file": "S2_MATCHED_CONTROL_COMPARISON.csv",
+      "bytes": 581883,
+      "sha256": "782cd9efa439eeaea0405a0c3ef4af6b0a0e7dea284162ca17cd630194d7b007"
+    },
+    {
+      "file": "S2_OFFLINE_REVIEW_VALIDATION.json",
+      "bytes": 641,
+      "sha256": "c5a721b6d8e99ab890d273ce1f7642d14efa06321aa67603be3f4a225c621546"
+    },
+    {
+      "file": "S2_SAM_INVENTORY_SUMMARY.csv",
+      "bytes": 22638,
+      "sha256": "f149421862e6e87a8aadcd6da9c04b6e69e03e40c7391aad0b263674696164d3"
+    },
+    {
+      "file": "S2_SCORED_VIEW_SOURCE_INDEX.csv",
+      "bytes": 15595,
+      "sha256": "1abef9694afe0f629d6e0c4923a95eaa06a21ce3a94d093ad99842468a452342"
+    },
+    {
+      "file": "S2_STATE_LEVEL_SUMMARY.csv",
+      "bytes": 15096,
+      "sha256": "38c72767c60581a81587c49de4374ccee462f74c918a4a054f0e134ca2918830"
+    },
+    {
+      "file": "TODO.md",
+      "bytes": 369,
+      "sha256": "42129b4fd2420f91eacf9344aaf7e1d4a19cfc86e16ab455c8a6976ff70c2bc2"
+    },
+    {
+      "file": "WORKLOG.md",
+      "bytes": 293,
+      "sha256": "ab76d1ff1a623a77c592c8e5d15ced7c126c4028f885648535a3000bbc145592"
+    }
+  ],
+  "checksum_scope": "SHA256SUMS covers every other public file including this manifest; manifest files excludes itself and SHA256SUMS",
+  "private_assets_published": false
+}
